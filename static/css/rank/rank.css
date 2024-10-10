@@ -19,6 +19,7 @@ html {
     text-align: left;
     width: 100%;
 }
+
 * {
     box-sizing: border-box;
     font-family: inherit;
@@ -517,7 +518,7 @@ section.top-100 .expert-filter {
     flex-direction: column;
     -webkit-box-align: center;
     align-items: center;
-    width: 100%;
+    width: 85%;
 }
 .jmEgZQ .expert-card:not(:last-child) {
     margin-bottom: 16px;
@@ -673,12 +674,10 @@ section.top-100 .expert-filter {
     flex-shrink: 0;
 }
 .hRBByN {
-    display: -webkit-box;
     text-overflow: ellipsis;
     line-height: inherit;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    -webkit-line-clamp: 1;
     word-break: keep-all;
 }
 .fWJMcv .expert-card__info__meta__item-title {
@@ -734,4 +733,56 @@ section.top-100 .expert-filter {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.fWJMcv .expert-card__info__meta__item-value {
+    display: flex;
+    width: 72%;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.25px;
+    font-weight: 500;
+    color: rgb(16, 28, 51);
+    flex-shrink: 0;
+}
+.iibRav {
+    display: flex;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+    color: rgb(38, 86, 246);
+    width: fit-content;
+    margin-left: 4px;
+}
+.jMpWRp .expert-card__info .expert-card__inquire {
+    width: fit-content;
+    margin-top: 16px;
+    z-index: 2;
+}
+.dQrice {
+    position: relative;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 0px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: rgb(38, 86, 246);
+    color: rgb(255, 255, 255);
+    padding: 8px 17px;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.25px;
+    font-weight: 700;
+}
+.dQrice:focus,
+.dQrice:hover {
+    background-color: rgb(56, 122, 252);
 }
