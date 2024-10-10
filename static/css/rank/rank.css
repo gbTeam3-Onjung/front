@@ -623,7 +623,6 @@ section.top-100 .expert-filter {
 .jiqeXF {
     display: -webkit-box;
     text-overflow: ellipsis;
-    white-space: pre-wrap;
     line-height: inherit;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -656,6 +655,11 @@ section.top-100 .expert-filter {
 .jMpWRp .expert-card__info__meta__item-spacer {
     width: 4px;
 }
+.fWJMcv .expert-card__info__meta__item-spacer {
+    width: 12%;
+    height: 100%;
+    flex-shrink: 0;
+}
 .fWJMcv .expert-card__info__meta__item-value {
     display: flex;
     width: 72%;
@@ -671,10 +675,63 @@ section.top-100 .expert-filter {
 .hRBByN {
     display: -webkit-box;
     text-overflow: ellipsis;
-    white-space: pre-wrap;
     line-height: inherit;
     -webkit-box-orient: vertical;
     overflow: hidden;
     -webkit-line-clamp: 1;
     word-break: keep-all;
+}
+.fWJMcv .expert-card__info__meta__item-title {
+    display: block;
+    width: 26%;
+    font-size: 10px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    font-weight: 500;
+    color: rgb(111, 119, 133);
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+.jMpWRp > a .expert-card__right,
+.jMpWRp > button .expert-card__right {
+    display: flex;
+    overflow: hidden;
+}
+.jMpWRp .expert-card__portfolio-container:not(:last-child) {
+    margin-right: 8px;
+}
+.jMpWRp .expert-card__portfolio-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+}
+.jMpWRp .expert-card__portfolio-container .expert-card__portfolio {
+    width: 120px;
+    height: 120px;
+}
+.FYvcO .card-image {
+    overflow: hidden;
+    width: 100%;
+}
+.jslVlk {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+}
+.jslVlk > div {
+    position: absolute;
+    inset: 0px;
+}
+.FYvcO .observer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.FYvcO .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
