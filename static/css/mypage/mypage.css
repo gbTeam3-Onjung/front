@@ -19,15 +19,18 @@ body {
     font-size: 14px;
 }
 
-body, html {
+body,
+html {
     -webkit-text-size-adjust: none;
     -moz-text-size-adjust: none;
     text-size-adjust: none;
 }
 
-body, html {
+body,
+html {
     background-color: #fff;
-    font: 12px / 18px "Noto Sans KR", NanumGothic, "나눔고딕", "Nanum Gothic", "맑은 고딕", "Malgun Gothic", Dotum;
+    font: 12px / 18px "Noto Sans KR", NanumGothic, "나눔고딕", "Nanum Gothic",
+        "맑은 고딕", "Malgun Gothic", Dotum;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
@@ -204,7 +207,13 @@ a {
     text-decoration: none;
 }
 
-a,h1, h2, h3, h4, h5, h6 {
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: inherit;
     font-size: inherit;
 }
@@ -298,24 +307,3 @@ img {
 .gZOzPL {
     padding: 16px 0px 24px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
