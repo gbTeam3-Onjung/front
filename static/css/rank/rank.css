@@ -101,6 +101,7 @@ section.top-rank .top-rank-filter {
     letter-spacing: inherit;
     font-weight: inherit;
     width: 100%;
+    outline: none;
 }
 input,
 select {
@@ -342,6 +343,10 @@ section.top-100 > h3 .tooltip {
     margin-left: 8px;
     font-weight: 500;
 }
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
 .tooltip-icon {
     user-select: none;
     display: inline-block;
@@ -352,45 +357,26 @@ section.top-100 > h3 .tooltip {
     height: 16px;
 }
 .tooltip-content {
-    color: rgb(255, 255, 255);
-    background: rgba(0, 0, 0, 0.8);
-}
-.tooltip-content {
-    margin-top: -16px;
-    --top: none;
-    --bottom: 0;
-    --right: none;
-    --rotateDeg: 90deg;
-    --translateX: 0;
-    --translateY: 100%;
-}
-.tooltip-content {
-    left: 50%;
-    top: 0px;
-    transform: translate(-50%, -100%);
-}
-
-.tooltip-content {
     position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     padding: 8px;
     border-radius: 4px;
     font-size: 12px;
-    top: -40px;
-    left: 50%;
-    transform: translateX(-50%);
     white-space: nowrap;
-    z-index: 10;
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.2s, visibility 0.2s;
+    z-index: 10;
 }
-
-.tooltip-content.show {
+.tooltip:hover .tooltip-content {
     visibility: visible;
     opacity: 1;
 }
+
 section.top-100 .expert-filter {
     margin-top: 16px;
 }
