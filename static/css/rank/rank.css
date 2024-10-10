@@ -651,7 +651,6 @@ section.top-100 .expert-list {
     line-height: inherit;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    -webkit-line-clamp: 1;
     word-break: keep-all;
     width: 43px;
 }
@@ -707,7 +706,6 @@ section.top-100 .expert-list {
     line-height: inherit;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    -webkit-line-clamp: 1;
     word-break: break-all;
 }
 .profile-container .expert-card__info__user-profile__description {
