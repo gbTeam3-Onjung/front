@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>봉사 랭킹</title>
+        <link rel="stylesheet" href="../../static/css/rank/rank.css" />
+        <link
+            rel="icon"
+            href="https://cdn-dantats.stunning.kr/static/feature/loudFavicon/loud-favicon-32-new.png"
+        />
+    </head>
+    <body>
+        <main class="expert-rank-page">
+            <section class="top-rank">
+                <div class="top-rank-filter">
+                    <section class="filter-display expert-filter">
+                        <div class="filters">
+                            <label class="date-input date-range" for="input"
+                                ><div class="react-datepicker-wrapper">
+                                    <div
+                                        class="react-datepicker__input-container"
+                                    >
+                                        <input type="text" value="2024년 9월" />
+                                    </div>
+                                </div>
+                                <svg
+                                    class="date-range-icon"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <rect
+                                        x="3.6"
+                                        y="6.6"
+                                        width="16.8"
+                                        height="13.8"
+                                        rx="1.4"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.2"
+                                    ></rect>
+                                    <path
+                                        d="M7.5 6V4.5"
+                                        stroke="currentColor"
+                                        stroke-width="1.2"
+                                        stroke-linecap="round"
+                                    ></path>
+                                    <path
+                                        d="M16.5 6V4.5"
+                                        stroke="currentColor"
+                                        stroke-width="1.2"
+                                        stroke-linecap="round"
+                                    ></path>
+                                    <path
+                                        d="M4.5 10.5H21"
+                                        stroke="currentColor"
+                                        stroke-width="1.2"
+                                    ></path>
+                                    <rect
+                                        x="7.5"
+                                        y="13.5"
+                                        width="3"
+                                        height="3"
+                                        rx="0.5"
+                                        fill="currentColor"
+                                    ></rect>
+                                    <defs></defs>
+                                </svg>
+                            </label>
+                        </div>
+                    </section>
+                    <h2>TOP 디자이너</h2>
+                </div>
+                <div class="rank-cards">
+                    <article class="rank-img-size expert-rank-card">
+                        <h3>
+                            <img
+                                name="SparklingHeart"
+                                src="https://cdn-dantats.stunning.kr/static/emoji/SparklingHeart32px.png"
+                            />
+                            칭찬 후기를 많이 받았어요!
+                        </h3>
+                        <img
+                            class="rank-image"
+                            id="image.expert.rank.christykulas"
+                            src="https://cdn-dantats.stunning.kr/static/feature/expert/rank/pc_like.png"
+                        />
+                        <ul class="rank-list praise-rank-list"></ul>
+                    </article>
+                    <article class="rank-img-size expert-rank-card">
+                        <h3>
+                            <img
+                                name="Trophy"
+                                src="https://cdn-dantats.stunning.kr/static/emoji/Trophy32px.png"
+                                class="sc-llJcti hkAQYM"
+                            />
+                            콘테스트 우승을 많이 했어요.
+                        </h3>
+                        <img
+                            class="sc-llJcti hkAQYM rank-image"
+                            id="image.expert.rank.garryfadel"
+                            src="https://cdn-dantats.stunning.kr/static/feature/expert/rank/pc_contest.png"
+                        />
+                        <ul class="rank-list contest-rank-list"></ul>
+                    </article>
+                    <article class="rank-img-size expert-rank-card">
+                        <h3>
+                            <img
+                                name="ShoppingBags"
+                                src="https://cdn-dantats.stunning.kr/static/emoji/ShoppingBags32px.png"
+                                class="sc-llJcti hkAQYM"
+                            />
+                            상품을 많이 판매했어요.
+                        </h3>
+                        <img
+                            class="sc-llJcti hkAQYM rank-image"
+                            id="image.expert.rank.rhondaschneider"
+                            src="https://cdn-dantats.stunning.kr/static/feature/expert/rank/pc_market.png"
+                        />
+                        <ul class="rank-list sales-rank-list"></ul>
+                    </article>
+                </div>
+            </section>
+            <section class="top-100">
+                <h3>
+                    TOP 100
+                    <div class="tooltip">
+                        <svg
+                            color="#AAB1BC"
+                            viewBox="0 0 16 16"
+                            class="tooltip-icon"
+                            id="tooltip-trigger"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M10.182 7.891C10.059 8.067 9.822 8.291 9.471 8.565L9.125 8.833C8.937 8.98 8.812 9.151 8.75 9.346C8.711 9.47 8.69 9.662 8.687 9.922H7.364C7.383 9.372 7.435 8.993 7.52 8.783C7.604 8.573 7.822 8.33 8.171 8.057L8.527 7.779C8.644 7.691 8.738 7.595 8.81 7.491C8.94 7.312 9.004 7.115 9.004 6.9C9.004 6.653 8.932 6.427 8.787 6.224C8.643 6.02 8.379 5.918 7.995 5.918C7.619 5.918 7.352 6.044 7.195 6.294C7.037 6.545 6.958 6.806 6.958 7.076H5.547C5.586 6.148 5.911 5.491 6.519 5.103C6.903 4.856 7.375 4.732 7.935 4.732C8.67 4.732 9.282 4.908 9.769 5.259C10.255 5.611 10.498 6.132 10.498 6.822C10.498 7.245 10.393 7.602 10.182 7.891ZM7.329 12.002H8.789V10.591H7.329V12.002ZM8 0C3.582 0 0 3.582 0 8C0 12.418 3.582 16 8 16C12.419 16 16 12.418 16 8C16 3.582 12.419 0 8 0Z"
+                            ></path>
+                            <defs></defs>
+                        </svg>
+                        <div class="tooltip-content" id="tooltip">
+                            콘테스트 우승 이력, 거래량, 만족도 등의 활동
+                            데이터를 종합적으로 고려하여 랭킹이 산정됩니다.
+                        </div>
+                    </div>
+                </h3>
+                <section class="sc-gvRZDQ iZzeUG expert-filter">
+                    <div class="filters">
+                        <div class="sc-kgflAQ jOecJz order">
+                            <div class="header-wrap">
+                                <div class="wrap-title"></div>
+                                <input type="text" readonly="" value="기본순" />
+                                <svg
+                                    class="sc-gKXOVf iFpvod arrow"
+                                    viewBox="0 0 12 12"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M3.68888 11.0004C3.85188 11.0004 4.01388 10.9424 4.13688 10.8264L8.81688 6.43738C9.06088 6.20738 9.06088 5.83638 8.81588 5.60738L4.07988 1.17438C3.83288 0.942377 3.43288 0.942377 3.18588 1.17138C2.93888 1.40038 2.93788 1.77238 3.18388 2.00338L7.47788 6.02238L3.24088 9.99738C2.99588 10.2294 2.99688 10.6014 3.24488 10.8294C3.36788 10.9434 3.52888 11.0004 3.68888 11.0004Z"
+                                    ></path>
+                                    <defs></defs>
+                                </svg>
+                            </div>
+                            <div class="bottom-wrap">
+                                <div
+                                    width="100%"
+                                    height="8px"
+                                    class="sc-hKMtZM bNUqOG"
+                                ></div>
+                                <div class="list-wrap">
+                                    <div class="item active">기본순</div>
+                                    <div class="item">리뷰순</div>
+                                    <div class="item">별점순</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="jmEgZQ expert-list">
+                    <div class="scroll-destination">
+                        <div class="sc-foDcoF jMpWRp expert-card">
+                            <a href="/m/chldbrhks" class="sc-cCsOjp hLIslS"
+                                ><div class="expert-card__left">
+                                    <div
+                                        class="sc-eYPhOV jGHGic expert-card__info__avatar"
+                                    >
+                                        <span class="sc-fmRtwQ hOSfWt avatar"
+                                            ><img
+                                                src="https://cdn-dantats.stunning.kr/prod/users/fa970db0-abdd-4b41-a512-de0e18e3d27c/avatar/ZswD8qqqrARGSgFX.11.jpg.small?q=80&amp;t=crop&amp;s=320x320&amp;f=webp"
+                                                alt="CORKSTUDIO의 프로필"
+                                        /></span>
+                                    </div>
+                                    <div class="expert-card__info">
+                                        <div
+                                            class="sc-zsjhC hQkiHF expert-card__info__user-profile"
+                                        >
+                                            <div
+                                                class="expert-card__info__user-profile__nick"
+                                            >
+                                                <div
+                                                    class="sc-jmNpzm kTMcTF user-nick-wrapper"
+                                                >
+                                                    <p class="sc-ehmTmK jQTFDi">
+                                                        <span
+                                                            class="sc-lkwKjF hdBjzP nick"
+                                                            >CORKSTUDIO</span
+                                                        >
+                                                    </p>
+                                                    <div
+                                                        class="user-nick-wrapper__labels"
+                                                    ></div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="expert-card__info__user-profile__introduction"
+                                            >
+                                                <p class="sc-ehmTmK jrVdRh">
+                                                    이유있는 디자인으로 성공적인
+                                                    브랜딩을 실현합니다.
+                                                </p>
+                                            </div>
+                                            <div
+                                                class="expert-card__info__user-profile__description"
+                                            >
+                                                <p class="sc-ehmTmK jiqeXF">
+                                                    Brand eXperience Designer
+                                                    Corkstudio
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="expert-card__info__meta">
+                                            <div
+                                                class="sc-erPKsr fWJMcv expert-card__info__meta__item"
+                                            >
+                                                <span
+                                                    class="expert-card__info__meta__item-title"
+                                                    >총 수익</span
+                                                >
+                                                <div
+                                                    class="expert-card__info__meta__item-spacer"
+                                                ></div>
+                                                <div
+                                                    class="expert-card__info__meta__item-value"
+                                                >
+                                                    <p class="sc-ehmTmK hRBByN">
+                                                        <span
+                                                            class="number-text__number-container"
+                                                            ><span
+                                                                class="number number-text__number"
+                                                                >3</span
+                                                            ><span
+                                                                class="unit number-text__unit"
+                                                                >억</span
+                                                            ></span
+                                                        ><span
+                                                            class="number-text__suffix"
+                                                        >
+                                                            원+</span
+                                                        >
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="sc-erPKsr fWJMcv expert-card__info__meta__item"
+                                            >
+                                                <span
+                                                    class="expert-card__info__meta__item-title"
+                                                    >우승</span
+                                                >
+                                                <div
+                                                    class="expert-card__info__meta__item-spacer"
+                                                ></div>
+                                                <div
+                                                    class="expert-card__info__meta__item-value"
+                                                >
+                                                    <p class="sc-ehmTmK hRBByN">
+                                                        <span
+                                                            class="number-text__number-container"
+                                                            ><span
+                                                                class="number number-text__number"
+                                                                >5</span
+                                                            ><span
+                                                                class="unit number-text__unit"
+                                                                >00</span
+                                                            ></span
+                                                        ><span
+                                                            class="number-text__suffix"
+                                                        >
+                                                            회+</span
+                                                        >
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="sc-erPKsr fWJMcv expert-card__info__meta__item"
+                                            >
+                                                <span
+                                                    class="expert-card__info__meta__item-title"
+                                                    >총 거래</span
+                                                >
+                                                <div
+                                                    class="expert-card__info__meta__item-spacer"
+                                                ></div>
+                                                <div
+                                                    class="expert-card__info__meta__item-value"
+                                                >
+                                                    <p class="sc-ehmTmK hRBByN">
+                                                        <span
+                                                            class="number-text__number-container"
+                                                            ><span
+                                                                class="number number-text__number"
+                                                                >7</span
+                                                            ><span
+                                                                class="unit number-text__unit"
+                                                                >00</span
+                                                            ></span
+                                                        ><span
+                                                            class="number-text__suffix"
+                                                        >
+                                                            건+</span
+                                                        >
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="sc-erPKsr fWJMcv expert-card__info__meta__item"
+                                            >
+                                                <span
+                                                    class="expert-card__info__meta__item-title"
+                                                    >마켓</span
+                                                >
+                                                <div
+                                                    class="expert-card__info__meta__item-spacer"
+                                                ></div>
+                                                <div
+                                                    class="expert-card__info__meta__item-value"
+                                                >
+                                                    <p class="sc-ehmTmK hRBByN">
+                                                        <span
+                                                            class="number-text__number-container"
+                                                            ><span
+                                                                class="number number-text__number"
+                                                                >9</span
+                                                            ><span
+                                                                class="unit number-text__unit"
+                                                                >0</span
+                                                            ></span
+                                                        ><span
+                                                            class="number-text__suffix"
+                                                        >
+                                                            회+</span
+                                                        >
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="sc-erPKsr fWJMcv expert-card__info__meta__item"
+                                            >
+                                                <span
+                                                    class="expert-card__info__meta__item-title"
+                                                    >리뷰</span
+                                                >
+                                                <div
+                                                    class="expert-card__info__meta__item-spacer"
+                                                ></div>
+                                                <div
+                                                    class="expert-card__info__meta__item-value"
+                                                >
+                                                    <p class="sc-ehmTmK hRBByN">
+                                                        <span
+                                                            class="number-text__number-container"
+                                                            ><span
+                                                                class="number number-text__number"
+                                                                >1</span
+                                                            ><span
+                                                                class="unit number-text__unit"
+                                                                >00</span
+                                                            ></span
+                                                        ><span
+                                                            class="number-text__suffix"
+                                                        >
+                                                            개+</span
+                                                        >
+                                                    </p>
+                                                    <div
+                                                        class="sc-iJkHyd iibRav"
+                                                        width="0"
+                                                    >
+                                                        <svg
+                                                            class="sc-gKXOVf iFpvod icon"
+                                                            viewBox="0 0 12 12"
+                                                        >
+                                                            <path
+                                                                fill-rule="evenodd"
+                                                                clip-rule="evenodd"
+                                                                d="M10.9643 4.74338C10.8835 4.50089 10.6777 4.32673 10.4285 4.2884L7.79006 3.88509L6.60669 1.35936C6.38168 0.880213 5.61832 0.880213 5.39331 1.35936L4.20994 3.88509L1.57152 4.2884C1.32235 4.32673 1.11651 4.50089 1.03567 4.74338C0.954003 4.99004 1.01484 5.25836 1.19484 5.44252L3.11741 7.41577L2.66156 10.2073C2.61989 10.469 2.72656 10.7256 2.9424 10.8773C3.0574 10.9589 3.19074 10.9998 3.32408 10.9998C3.43492 10.9998 3.54492 10.9723 3.64576 10.9165L6 9.61401L8.35424 10.9165C8.57675 11.0398 8.84759 11.0264 9.0576 10.8773C9.27344 10.7256 9.38011 10.469 9.33761 10.2065L8.88259 7.41577L10.8052 5.44252C10.9852 5.25836 11.046 4.99004 10.9643 4.74338Z"
+                                                            ></path>
+                                                            <defs></defs>
+                                                        </svg>
+                                                        5.0
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button
+                                            class="sc-kDDrLX dQrice expert-card__inquire"
+                                        >
+                                            <span class="visual-correction"
+                                                >견적 문의</span
+                                            >
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="expert-card__right">
+                                    <div
+                                        class="expert-card__portfolio-container 0"
+                                    >
+                                        <div
+                                            class="sc-eXBvqI FYvcO cover expert-card__portfolio"
+                                        >
+                                            <div
+                                                class="sc-evrZIY jslVlk aspect-ratio-card-wrapper card-image"
+                                            >
+                                                <div>
+                                                    <div class="observer"></div>
+                                                    <img
+                                                        src="https://cdn-dantats.stunning.kr/prod/portfolios/fa970db0-abdd-4b41-a512-de0e18e3d27c/covers/SETbxtvUCTbJgS5e.%E1%84%85%E1%85%A6%E1%84%86%E1%85%A1%E1%84%8B%E1%85%A5%E1%84%92%E1%85%A1%E1%86%A8%E1%84%8B%E1%85%AF%E1%86%AB-%E1%84%85%E1%85%A9%E1%84%80%E1%85%A9-t.jpg.small?s=1200x1200&amp;e=0x0&amp;t=crop&amp;q=100&amp;f=webp"
+                                                        alt="의 레마어학원 이미지"
+                                                        class="sc-llJcti hkAQYM"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="expert-card__portfolio-container 1"
+                                    >
+                                        <div
+                                            class="sc-eXBvqI FYvcO cover expert-card__portfolio"
+                                        >
+                                            <div
+                                                class="sc-evrZIY jslVlk aspect-ratio-card-wrapper card-image"
+                                            >
+                                                <div>
+                                                    <div class="observer"></div>
+                                                    <img
+                                                        src="https://cdn-dantats.stunning.kr/prod/portfolios/fa970db0-abdd-4b41-a512-de0e18e3d27c/covers/X8f6VD8EW4NRfBde.%E1%84%86%E1%85%B5%E1%84%83%E1%85%A1%E1%86%B7365%E1%84%92%E1%85%A1%E1%86%AB%E1%84%8B%E1%85%B4%E1%84%8B%E1%85%AF%E1%86%AB-%E1%84%85%E1%85%A9%E1%84%80%E1%85%A9-th.jpg.small?s=1200x1200&amp;e=0x0&amp;t=crop&amp;q=100&amp;f=webp"
+                                                        alt="의 미담365한의원 이미지"
+                                                        class="sc-llJcti hkAQYM"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="expert-card__portfolio-container 2"
+                                    >
+                                        <div
+                                            class="sc-eXBvqI FYvcO cover expert-card__portfolio"
+                                        >
+                                            <div
+                                                class="sc-evrZIY jslVlk aspect-ratio-card-wrapper card-image"
+                                            >
+                                                <div>
+                                                    <div class="observer"></div>
+                                                    <img
+                                                        src="https://cdn-dantats.stunning.kr/prod/portfolios/fa970db0-abdd-4b41-a512-de0e18e3d27c/covers/DYS9dfLWDvY6N9bS.%E1%84%87%E1%85%A5%E1%86%B7%E1%84%89%E1%85%A5%E1%86%A8%E1%84%8B%E1%85%A7%E1%86%BC%E1%84%8E%E1%85%B5%E1%84%80%E1%85%AA-%E1%84%85%E1%85%A9%E1%84%80%E1%85%A9-th.jpg.small?s=1200x1200&amp;e=0x0&amp;t=crop&amp;q=100&amp;f=webp"
+                                                        alt="의 범석영치과 이미지"
+                                                        class="sc-llJcti hkAQYM"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="expert-card__portfolio-container 3"
+                                    >
+                                        <div
+                                            class="sc-eXBvqI FYvcO cover expert-card__portfolio"
+                                        >
+                                            <div
+                                                class="sc-evrZIY jslVlk aspect-ratio-card-wrapper card-image"
+                                            >
+                                                <div>
+                                                    <div class="observer"></div>
+                                                    <img
+                                                        src="https://cdn-dantats.stunning.kr/prod/portfolios/fa970db0-abdd-4b41-a512-de0e18e3d27c/covers/PNTd47hANiZx9M3Y.ESPE-Logo-th.jpg.small?s=1200x1200&amp;e=0x0&amp;t=crop&amp;q=100&amp;f=webp"
+                                                        alt="의 Espe 이미지"
+                                                        class="sc-llJcti hkAQYM"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="expert-card__portfolio-container 4"
+                                    >
+                                        <div
+                                            class="sc-eXBvqI FYvcO cover expert-card__portfolio"
+                                        >
+                                            <div
+                                                class="sc-evrZIY jslVlk aspect-ratio-card-wrapper card-image"
+                                            >
+                                                <div>
+                                                    <div class="observer"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div></div
+                            ></a>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </body>
+
+    <script src="../../static/js/rank/rank.js"></script>
+</html>
