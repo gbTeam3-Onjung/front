@@ -9,6 +9,16 @@ html body #root {
     padding: 0;
 }
 
+header {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+main {
+    display: block;
+    unicode-bidi: isolate;
+}
+
 div {
     display: block;
     unicode-bidi: isolate;
@@ -295,20 +305,86 @@ img {
     display: none;
 }
 
-.gZOzPL {
-    padding: 16px 0px 24px;
+.llFeMS .profile-contents-box-wrap {
+    margin-left: 59px;
+    padding: 0px 0px 209px 20px;
 }
 
-.cZwvbz {
-    background: rgb(255, 255, 255);
+.gHJKWx {
     display: flex;
-    -webkit-box-align: center;
-    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: end;
+    align-items: end;
+    margin-bottom: 32px;
 }
 
+.bSDLlO {
+    display: inline-block;
+}
 
+.bSDLlO .header-title {
+    color: rgb(16, 28, 51);
+    font-size: 22px;
+    line-height: 34px;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
 
+.bSDLlO .header-desc {
+    word-break: keep-all;
+    color: rgb(64, 74, 92);
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.25px;
+    font-weight: 500;
+}
 
+.ldAEia .sub-title1 {
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.ldAEia .content.empty {
+    color: rgb(111, 119, 133);
+}
+
+.ldAEia .content {
+    width: 100%;
+    color: rgb(15, 28, 52);
+    line-height: 21px;
+    letter-spacing: -0.5px;
+    white-space: pre-line;
+    overflow: hidden;
+    display: -webkit-box;
+    max-height: fit-content;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+}
+
+.cuSphL .profile-page-contents {
+    padding: 32px 0px 120px;
+}
+
+.ldAEia {
+    width: 100%;
+}
+
+.ldAEia .sub-title1 {
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.ldAEia .content.empty {
+    color: rgb(111, 119, 133);
+}
 
 
 
