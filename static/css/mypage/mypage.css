@@ -1,0 +1,321 @@
+html body #root {
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+body {
+    color: #101c33;
+    font-size: 14px;
+}
+
+body, html {
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+body, html {
+    background-color: #fff;
+    font: 12px / 18px "Noto Sans KR", NanumGothic, "나눔고딕", "Nanum Gothic", "맑은 고딕", "Malgun Gothic", Dotum;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+}
+
+.bFedaP {
+    width: 100%;
+}
+
+html body #root #app .wrap {
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.euCbBu {
+    position: relative;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.llFeMS {
+    padding-top: 35px;
+}
+
+.llFeMS .mypage-whole-wrap {
+    overflow-x: hidden;
+    margin-bottom: 200px;
+}
+
+.llFeMS .mypage-whole-wrap .mypage-box {
+    box-sizing: border-box;
+    margin: 0px auto;
+    max-width: 1440px;
+    min-width: 1200px;
+    padding: 0px 80px;
+    position: relative;
+    width: 100%;
+}
+
+.llFeMS .mypage-wrap.mypage-left-area {
+    transition: 0.5s;
+    min-width: 218px;
+    max-width: 218px;
+}
+
+.llFeMS .mypage-whole-wrap .mypage-wrap {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.iVMGsu {
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(233, 235, 237);
+    border-radius: 8px;
+    padding: 24px;
+    min-width: 14.5%;
+}
+
+.iVMGsu .mypage-member-info {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.iVMGsu .mypage-member-info .profile-thumb-img {
+    position: relative;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 12px;
+}
+
+.iVMGsu .mypage-member-info .profile-thumb-img .member-thumb {
+    background-color: rgb(238, 238, 238);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.iVMGsu .mypage-member-info .member-id {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.iVMGsu .mypage-member-info .member-id .info-role {
+    background: rgba(38, 86, 246, 0.07);
+    border-radius: 80px;
+    box-sizing: border-box;
+    min-width: 53px;
+    width: max-content;
+    height: 22px;
+    padding: 2px 10px;
+    margin-bottom: 12px;
+    color: rgb(38, 86, 246);
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.25px;
+    font-weight: 700;
+}
+
+.iVMGsu .mypage-member-info .member-id .info-nick {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    word-break: break-all;
+    color: rgb(16, 28, 51);
+    font-size: 15px;
+    line-height: 23px;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.iVMGsu .mypage-member-info .member-id .info-email {
+    margin-bottom: 20px;
+    color: rgb(142, 148, 160);
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.25px;
+    font-weight: 400;
+}
+
+.iVMGsu .memeber-profile-modification {
+    width: 91px;
+    height: 32px;
+    padding: 0px;
+    color: rgb(64, 74, 92);
+    font-weight: 400;
+}
+
+.biYqFz {
+    position: relative;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 0px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    color: rgb(64, 74, 92);
+    padding: 6px 17px;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.25px;
+    font-weight: 700;
+}
+
+a {
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+}
+
+a,h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.biYqFz .visual-correction {
+    padding-bottom: 2px;
+}
+
+.gNTKJg {
+    padding-top: 24px;
+    padding-bottom: 80px;
+}
+
+.fLaAlD {
+    border-top: 1px solid rgb(219, 222, 226);
+    padding: 16px 0px;
+}
+
+.fLaAlD:first-child {
+    border-top: unset;
+}
+
+.fLaAlD:first-child {
+    padding: 0px 0px 16px;
+}
+
+.fLaAlD .lnb-title {
+    width: 100%;
+    padding: 11px 0px;
+    color: rgb(16, 28, 51);
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.25px;
+    font-weight: 700;
+}
+
+.fLaAlD .lnb-title > img {
+    width: 18px;
+    height: auto;
+    margin-right: 13px;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+.hHDwuD .lnb-item.active {
+    background: rgb(245, 248, 255);
+    border-radius: 4px;
+}
+
+.hHDwuD .lnb-item {
+    width: 100%;
+    height: 41px;
+}
+
+.hHDwuD .lnb-item.active > a {
+    color: rgb(38, 86, 246);
+    font-weight: 700;
+}
+
+.hHDwuD .lnb-item > a {
+    width: 218px;
+    padding: 10px 32px;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: rgb(111, 119, 133);
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.25px;
+    font-weight: 500;
+}
+
+.hLIslS {
+    display: inline-block;
+}
+
+.llFeMS .mypage-wrap.mypage-right-area {
+    width: calc(100% - 218px);
+}
+
+.llFeMS .mypage-whole-wrap .mypage-wrap {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.llFeMS .crumb-wrapper {
+    display: none;
+}
+
+.gZOzPL {
+    padding: 16px 0px 24px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
