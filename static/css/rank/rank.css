@@ -975,3 +975,11 @@ button .expert-card__right {
 .react-datepicker__tab-loop.active {
     display: block;
 }
+.hkAQYM {
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+}
+.user-nick-wrapper__labels {
+    display: flex;
+}

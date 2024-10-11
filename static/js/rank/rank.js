@@ -225,14 +225,31 @@ let cardHTML = `
                     <div class="expert-card__info__user-profile">
                         <div class="expert-card__info__user-profile__nick">
                             <div class="user-nick-wrapper">
+                                <div class="user-nick-wrapper__labels">
+                                    <div class="tooltip user-nick-wrapper__label-tooltip">
+                                    <label data-label-type="label-Image" class="product-label user-nick-wrapper__labels__item">
+
+                                    <img
+                                    src="https://cdn-dantats.stunning.kr/static/feature/label/label-check.png" 
+                                    class="hkAQYM">
+                                    </label>
+
+                                    <div class="tooltip-content ">
+                                    우승 10회 이상 전문가
+                                    </div>
+                                </div>
+                                
                                 <p title="CORKSTUDIO">
                                     <span class="nick">CORKSTUDIO</span>
+                                    
                                 </p>
-                                <div class="user-nick-wrapper__labels">
+                            
                                     <div></div>
-                                    <div></div>
+                                    
                                 </div>
+                                
                             </div>
+                            
                         </div>
                         <div class="expert-card__info__user-profile__introduction">
                             <p title="이유있는 디자인으로 성공적인 브랜딩을 실현합니다.">
