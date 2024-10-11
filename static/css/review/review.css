@@ -65,6 +65,7 @@ h6 {
     display: flex;
     justify-content: space-between;
     margin-top: -50px;
+    width: 1000px;
 }
 .review-score-container {
     display: flex;
@@ -192,6 +193,7 @@ img {
 main .review-list-wrap {
     display: flex;
     flex-direction: row;
+    position: relative;
 }
 .review-list-wrap .review-list {
     width: 75%;
@@ -203,7 +205,6 @@ main .review-list-wrap {
     margin-right: 12px;
 }
 .tab-wrap .tabs {
-    position: sticky;
     top: 110px;
     z-index: 1;
     background: rgb(255, 255, 255);
@@ -226,6 +227,7 @@ main .review-list-wrap {
 }
 .tab-container > .tab.active {
     position: relative;
+    left: 242px;
 }
 .tab-container > .tab {
     cursor: pointer;
@@ -247,6 +249,22 @@ main .review-list-wrap {
     line-height: 23px;
     letter-spacing: -0.5px;
     width: 144px;
+}
+.visual-correction {
+    margin-left: 800px;
+    margin-bottom: 100px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 0px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: rgb(38, 86, 246);
+    color: rgb(255, 255, 255);
+    padding: 8px 17px;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.25px;
+    font-weight: 700;
 }
 .arrow-icon .header-wrap {
     padding: 7px 17px;
@@ -430,14 +448,11 @@ main .review-list-wrap {
     display: flex;
 }
 .review-rate-star .stunning-star.active {
-    color: rgb(255, 184, 0);
+    fill: rgb(255, 184, 0);
 }
 .review-rate-star .stunning-star {
-    color: rgb(191, 198, 210);
-}
-.review-rate-star .stunning-star {
+    fill: rgb(191, 198, 210);
     width: 16px;
-    color: rgb(255, 184, 0);
     height: 16px;
 }
 .avatar-container .review-user-info .review-user {
@@ -553,11 +568,17 @@ a {
     height: 12px;
 }
 .review-thumbnail-head-container {
-    position: sticky;
-    top: 145px;
+    position: absolute;
+    top: -68px;
+    right: 0px;
     height: 100%;
     width: 25%;
     padding-left: 24px;
+}
+
+.sticky {
+    position: sticky;
+    top: 50px;
 }
 .review-thumbnail-head-container .review-thumbnail-head {
     display: flex;
@@ -658,4 +679,7 @@ h6 {
 .right-bar-container {
     display: flex;
     flex-flow: wrap;
+}
+.review-list-filter {
+    display: flex;
 }
