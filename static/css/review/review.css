@@ -614,7 +614,7 @@ h6 {
 .right-bar-container > div {
     width: calc(33.3333% - 6px);
     flex-shrink: 0;
-    margin-right: 8px;
+    margin-right: 6px;
     margin-bottom: 12px;
 }
 .right-bar-img-wrap > a {
