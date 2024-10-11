@@ -58,7 +58,6 @@ const setStarRating = (score, reviewElement) => {
     });
 };
 
-// 봉사활동 후기 게시글 생성 함수
 const showVolunteerPosts = () => {
     [...Array(10)].forEach(() => {
         const score = 4;
@@ -159,7 +158,7 @@ window.addEventListener("scroll", () => {
     const scrollPosition = window.scrollY;
 
     if (scrollPosition > 200) {
-        // 필요한 위치에 따라 값 조정
+        // 필요한 위치에 따라 값 조정해야함
         element.classList.add("sticky");
     } else {
         element.classList.remove("sticky");
