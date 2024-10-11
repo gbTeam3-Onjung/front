@@ -68,16 +68,17 @@ html body #root #app .wrap {
     flex-direction: column;
 }
 
-.llFeMS {
+
+.Guzgb {
     padding-top: 35px;
 }
 
-.llFeMS .mypage-whole-wrap {
+.Guzgb .mypage-whole-wrap {
     overflow-x: hidden;
     margin-bottom: 200px;
 }
 
-.llFeMS .mypage-whole-wrap .mypage-box {
+.Guzgb .mypage-whole-wrap .mypage-box {
     box-sizing: border-box;
     margin: 0px auto;
     max-width: 1440px;
@@ -87,18 +88,18 @@ html body #root #app .wrap {
     width: 100%;
 }
 
-.llFeMS .mypage-wrap.mypage-left-area {
+.Guzgb .mypage-wrap.mypage-left-area {
     transition: 0.5s;
     min-width: 218px;
     max-width: 218px;
 }
 
-.llFeMS .mypage-whole-wrap .mypage-wrap {
+.Guzgb .mypage-whole-wrap .mypage-wrap {
     display: inline-block;
     vertical-align: top;
 }
 
-.iVMGsu {
+.laWyuX {
     background: rgb(255, 255, 255);
     border: 1px solid rgb(233, 235, 237);
     border-radius: 8px;
@@ -106,21 +107,21 @@ html body #root #app .wrap {
     min-width: 14.5%;
 }
 
-.iVMGsu .mypage-member-info {
+.laWyuX .mypage-member-info {
     display: flex;
     flex-direction: column;
     -webkit-box-align: center;
     align-items: center;
 }
 
-.iVMGsu .mypage-member-info .profile-thumb-img {
+.laWyuX .mypage-member-info .profile-thumb-img {
     position: relative;
     width: 54px;
     height: 54px;
     margin-bottom: 12px;
 }
 
-.iVMGsu .mypage-member-info .profile-thumb-img .member-thumb {
+.laWyuX .mypage-member-info .profile-thumb-img .member-thumb {
     background-color: rgb(238, 238, 238);
     background-position: center center;
     background-repeat: no-repeat;
@@ -133,14 +134,14 @@ html body #root #app .wrap {
     object-fit: cover;
 }
 
-.iVMGsu .mypage-member-info .member-id {
+.laWyuX .mypage-member-info .member-id {
     display: flex;
     flex-direction: column;
     -webkit-box-align: center;
     align-items: center;
 }
 
-.iVMGsu .mypage-member-info .member-id .info-role {
+.laWyuX .mypage-member-info .member-id .info-role {
     background: rgba(38, 86, 246, 0.07);
     border-radius: 80px;
     box-sizing: border-box;
@@ -156,23 +157,23 @@ html body #root #app .wrap {
     font-weight: 700;
 }
 
-.iVMGsu .mypage-member-info .member-id .info-nick {
+.laWyuX .mypage-member-info .member-id .info-nick {
     display: -webkit-box;
-    overflow: hidden;
+    /* overflow: hidden; */
     text-overflow: ellipsis;
-    white-space: pre-wrap;
+    /* white-space: pre-wrap; */
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
     word-break: break-all;
     color: rgb(16, 28, 51);
-    font-size: 15px;
+    font-size: 14px;
     line-height: 23px;
     letter-spacing: -0.5px;
     font-weight: 700;
     margin-bottom: 4px;
 }
 
-.iVMGsu .mypage-member-info .member-id .info-email {
+.laWyuX .mypage-member-info .member-id .info-email {
     margin-bottom: 20px;
     color: rgb(142, 148, 160);
     font-size: 12px;
@@ -181,12 +182,24 @@ html body #root #app .wrap {
     font-weight: 400;
 }
 
-.iVMGsu .memeber-profile-modification {
+.laWyuX .member-profile {
     width: 91px;
     height: 32px;
     padding: 0px;
     color: rgb(64, 74, 92);
     font-weight: 400;
+}
+
+.biYqFz .visual-correction {
+    /* padding-bottom: 2px; */
+    content: "";
+    position: absolute;
+    inset: 0px;
+    border: 1px solid;
+    border-radius: 4px;
+    border-color: rgb(219, 222, 226);
+    width: 89px;
+    height: 20px;
 }
 
 .biYqFz {
@@ -210,36 +223,9 @@ html body #root #app .wrap {
     font-weight: 700;
 }
 
-a {
-    color: inherit;
-    cursor: pointer;
-    outline: none;
-    text-decoration: none;
-}
-
-a,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: inherit;
-    font-size: inherit;
-}
-
-.biYqFz .visual-correction {
-    padding-bottom: 2px;
-}
-
 .gNTKJg {
     padding-top: 24px;
     padding-bottom: 80px;
-}
-
-.fLaAlD {
-    border-top: 1px solid rgb(219, 222, 226);
-    padding: 16px 0px;
 }
 
 .fLaAlD:first-child {
@@ -266,20 +252,6 @@ h6 {
     margin-right: 13px;
 }
 
-img {
-    vertical-align: bottom;
-}
-
-.hHDwuD .lnb-item.active {
-    background: rgb(245, 248, 255);
-    border-radius: 4px;
-}
-
-.hHDwuD .lnb-item {
-    width: 100%;
-    height: 41px;
-}
-
 .hHDwuD .lnb-item.active > a {
     color: rgb(38, 86, 246);
     font-weight: 700;
@@ -301,97 +273,39 @@ img {
     display: inline-block;
 }
 
-.llFeMS .mypage-wrap.mypage-right-area {
-    width: calc(100% - 218px);
+a {
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
 }
 
-.llFeMS .mypage-whole-wrap .mypage-wrap {
-    display: inline-block;
-    vertical-align: top;
+a, h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-size: inherit;
 }
 
-.llFeMS .crumb-wrapper {
-    display: none;
+.fLaAlD {
+    border-top: 1px solid rgb(219, 222, 226);
+    padding: 16px 0px;
 }
 
-.llFeMS .profile-contents-box-wrap {
-    margin-left: 59px;
-    padding: 0px 0px 209px 20px;
+.hHDwuD .lnb-item {
+    width: 100%;
+    height: 41px;
 }
 
-.gHJKWx {
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: end;
-    align-items: end;
-    margin-bottom: 32px;
-}
-
-.bSDLlO {
-    display: inline-block;
-}
-
-.bSDLlO .header-title {
-    color: rgb(16, 28, 51);
-    font-size: 22px;
-    line-height: 34px;
-    letter-spacing: -0.5px;
-    font-weight: 700;
-    margin-bottom: 8px;
-}
-
-.bSDLlO .header-desc {
-    word-break: keep-all;
-    color: rgb(64, 74, 92);
+.hHDwuD .lnb-item > a {
+    width: 218px;
+    padding: 10px 32px;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: rgb(111, 119, 133);
     font-size: 14px;
     line-height: 21px;
     letter-spacing: -0.25px;
     font-weight: 500;
 }
 
-.ldAEia .sub-title1 {
-    font-size: 18px;
-    line-height: 26px;
-    letter-spacing: -0.5px;
-    font-weight: 700;
-    margin-bottom: 16px;
-}
 
-.ldAEia .content.empty {
-    color: rgb(111, 119, 133);
-}
-
-.ldAEia .content {
-    width: 100%;
-    color: rgb(15, 28, 52);
-    line-height: 21px;
-    letter-spacing: -0.5px;
-    white-space: pre-line;
-    overflow: hidden;
-    display: -webkit-box;
-    max-height: fit-content;
-    -webkit-line-clamp: 7;
-    -webkit-box-orient: vertical;
-}
-
-.cuSphL .profile-page-contents {
-    padding: 32px 0px 120px;
-}
-
-.ldAEia {
-    width: 100%;
-}
-
-.ldAEia .sub-title1 {
-    font-size: 18px;
-    line-height: 26px;
-    letter-spacing: -0.5px;
-    font-weight: 700;
-    margin-bottom: 16px;
-}
-
-.ldAEia .content.empty {
-    color: rgb(111, 119, 133);
-}
 
