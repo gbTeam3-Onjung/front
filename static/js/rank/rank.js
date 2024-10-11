@@ -225,14 +225,31 @@ let cardHTML = `
                     <div class="expert-card__info__user-profile">
                         <div class="expert-card__info__user-profile__nick">
                             <div class="user-nick-wrapper">
+                                <div class="user-nick-wrapper__labels">
+                                    <div class="tooltip user-nick-wrapper__label-tooltip">
+                                    <label data-label-type="label-Image" class="product-label user-nick-wrapper__labels__item">
+
+                                    <img
+                                    src="https://cdn-dantats.stunning.kr/static/feature/label/label-check.png" 
+                                    class="hkAQYM">
+                                    </label>
+
+                                    <div class="tooltip-content ">
+                                    우승 10회 이상 전문가
+                                    </div>
+                                </div>
+                                
                                 <p title="CORKSTUDIO">
                                     <span class="nick">CORKSTUDIO</span>
+                                    
                                 </p>
-                                <div class="user-nick-wrapper__labels">
+                            
                                     <div></div>
-                                    <div></div>
+                                    
                                 </div>
+                                
                             </div>
+                            
                         </div>
                         <div class="expert-card__info__user-profile__introduction">
                             <p title="이유있는 디자인으로 성공적인 브랜딩을 실현합니다.">
@@ -253,9 +270,9 @@ let cardHTML = `
                                 <p title=" 원+">
                                     <span class="number-text__number-container">
                                         <span class="number number-text__number">3</span>
-                                        <span class="unit number-text__unit">억</span>
+                                       
                                     </span>
-                                    <span class="number-text__suffix">원+</span>
+                                    <span class="number-text__suffix">억원+ </span>
                                 </p>
                             </div>
                         </div>
@@ -265,8 +282,8 @@ let cardHTML = `
                             <div class="expert-card__info__meta__item-value">
                                 <p class="info-meta-default" title="00">
                                     <span class="number-text__number-container">
-                                        <span class="number number-text__number">5</span>
-                                        <span class="unit number-text__unit">00</span>
+                                        <span class="number number-text__number">500</span>
+                                        
                                     </span>
                                     <span class="number-text__suffix">회+</span>
                                 </p>
@@ -278,8 +295,8 @@ let cardHTML = `
                             <div class="expert-card__info__meta__item-value">
                                 <p class="info-meta-default" title=" 건+">
                                     <span class="number-text__number-container">
-                                        <span class="number number-text__number">7</span>
-                                        <span class="unit number-text__unit">00</span>
+                                        <span class="number number-text__number">700</span>
+                                       
                                     </span>
                                     <span class="number-text__suffix">건+</span>
                                 </p>
@@ -291,8 +308,8 @@ let cardHTML = `
                             <div class="expert-card__info__meta__item-value">
                                 <p class="info-meta-default" title=" 회+">
                                     <span class="number-text__number-container">
-                                        <span class="number number-text__number">9</span>
-                                        <span class="unit number-text__unit">0</span>
+                                        <span class="number number-text__number">90</span>
+                                      
                                     </span>
                                     <span class="number-text__suffix">회+</span>
                                 </p>
@@ -304,8 +321,8 @@ let cardHTML = `
                             <div class="expert-card__info__meta__item-value">
                                 <p class="info-meta-default" title="00">
                                     <span class="number-text__number-container">
-                                        <span class="number number-text__number">1</span>
-                                        <span class="unit number-text__unit">00</span>
+                                        <span class="number number-text__number">100</span>
+                                       
                                     </span>
                                     <span class="number-text__suffix">개+</span>
                                 </p>
@@ -313,7 +330,7 @@ let cardHTML = `
                                     <svg class="icon-default icon" viewBox="0 0 12 12">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9643 4.74338C10.8835 4.50089 10.6777 4.32673 10.4285 4.2884L7.79006 3.88509L6.60669 1.35936C6.38168 0.880213 5.61832 0.880213 5.39331 1.35936L4.20994 3.88509L1.57152 4.2884C1.32235 4.32673 1.11651 4.50089 1.03567 4.74338C0.954003 4.99004 1.01484 5.25836 1.19484 5.44252L3.11741 7.41577L2.66156 10.2073C2.61989 10.469 2.72656 10.7256 2.9424 10.8773C3.0574 10.9589 3.19074 10.9998 3.32408 10.9998C3.43492 10.9998 3.54492 10.9723 3.64576 10.9165L6 9.61401L8.35424 10.9165C8.57675 11.0398 8.84759 11.0264 9.0576 10.8773C9.27344 10.7256 9.38011 10.469 9.33761 10.2065L8.88259 7.41577L10.8052 5.44252C10.9852 5.25836 11.046 4.99004 10.9643 4.74338Z"></path>
                                     </svg>
-                                    5.0
+                                    4.8
                                 </div>
                             </div>
                         </div>
