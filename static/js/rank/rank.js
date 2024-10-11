@@ -396,7 +396,7 @@ let cardHTML = `
     </div>
 `;
 
-container.innerHTML = cardHTML.repeat(20);
+container.innerHTML = cardHTML.repeat(10);
 
 const inputContainer = document.querySelector(
     ".react-datepicker__input-container"
