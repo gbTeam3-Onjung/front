@@ -251,12 +251,19 @@ html body #root #app .wrap {
     height: auto;
     margin-right: 13px;
 }
-
-.hHDwuD .lnb-item.active > a {
+/***********************************************************************/
+/* 선택됬을 때 색깔 */
+/* .hHDwuD .lnb-item.active > a {
     color: rgb(38, 86, 246);
     font-weight: 700;
-}
+} */
 
+/* 기본 색깔 */
+.hHDwuD .lnb-item.active > a {
+    color: rgb(111, 119, 133);
+    font-weight: 400;
+}
+/************************************************************************/
 .hHDwuD .lnb-item > a {
     width: 218px;
     padding: 10px 32px;
@@ -476,4 +483,12 @@ button {
     font-weight: 500;
 }
 
+.tab-content {
+    min-height: 900px;
+    display: none;
+}
 
+.tab-content.active {
+    height: fit-content;
+    display: block;
+}
