@@ -307,5 +307,35 @@ a, h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
 }
 
+.dSCesS .side-layout .profile-main {
+    position: relative;
+    padding: 24px 0px 0px 40px;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    max-width: calc(100% - 302px);
+}
 
+.dSCesS .profile-page-contents {
+    padding: 32px 0px 120px;
+}
+
+.cuAJGg {
+    width: 100%;
+}
+
+.cuAJGg .sub-title1 {
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.cuAJGg .content.empty {
+    color: rgb(111, 119, 133);
+}
+
+.llFeMS .mypage-wrap.mypage-right-area {
+    width: calc(100% - 218px);
+}
 
