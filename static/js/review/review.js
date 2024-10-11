@@ -58,7 +58,6 @@ const setStarRating = (score, reviewElement) => {
     });
 };
 
-// 봉사활동 후기 게시글 생성 함수
 const showVolunteerPosts = () => {
     [...Array(10)].forEach(() => {
         const score = 4;
