@@ -361,3 +361,7 @@ a {
     text-decoration: underline;
     text-underline-position: under;
 }
+input:focus {
+    border-color:blue; 
+    outline: none;
+}
