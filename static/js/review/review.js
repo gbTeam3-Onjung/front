@@ -158,7 +158,7 @@ window.addEventListener("scroll", () => {
     const scrollPosition = window.scrollY;
 
     if (scrollPosition > 200) {
-        // 필요한 위치에 따라 값 조정
+        // 필요한 위치에 따라 값 조정해야함
         element.classList.add("sticky");
     } else {
         element.classList.remove("sticky");
