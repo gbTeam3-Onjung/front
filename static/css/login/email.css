@@ -444,29 +444,3 @@ form div.register-input-box {
     letter-spacing: normal; /* 글자 간격을 동일하게 유지 */
     font-family: inherit; /* 부모의 font-family 상속 */
 }
-/* 경고 상태일 때 스타일 */
-input.warning {
-    border: 1px solid #f05050; /* 경고 색상 */
-}
-
-/* 포커스 상태에서도 경고 색상 유지 */
-input.warning:focus {
-    border: 1px solid #f05050; /* 포커스 시 경고 색상 유지 */
-}
-/* 성공 스타일 */
-input.success-sign, input.success-sign:focus {
-    border: 1px solid #189f14; /* 성공 색상 */
-}
-
-
-/* 기본 포커스 스타일 */
-input:focus {
-    border-color: blue; /* 기본 포커스 색상 */
-    outline: none;
-}
-
-/* 포커스 시 경고 상태인 경우 파란색 대신 경고 색상 적용 */
-input.warning:focus {
-    border-color: #f05050; /* 경고 색상 유지 */
-}
-

@@ -6,10 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const emailCodeInput = document.getElementById("email-code");
     const passwordInput = document.getElementById("password");
     const passwordConfirmInput = document.getElementById("password-confirm");
-    const messageSpan = document.createElement("span");
     const emailCodeBox = document.querySelector(".register-email-code-box");
     const countdownTimer = document.getElementById("countdown-timer");
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.(com|net)$/;
+    const passwordWarningMessage = document.querySelector(
+        ".password-warning-msg"
+    );
 
     let timerInterval;
     let isCodeSent = false;
@@ -25,31 +27,60 @@ document.addEventListener("DOMContentLoaded", function () {
     // 이메일 입력 필드에서 입력이 변경될 때
     emailInput.addEventListener("input", function () {
         const emailValue = emailInput.value.trim();
+        const successMessage = document.querySelector(".desc-span.success-msg");
+        const warningMessage = document.querySelector(".desc-span.warning-msg");
 
-        // 초기값이 없을 때
         if (emailValue === "") {
             emailInput.classList.remove("success-sign", "warning");
-            emailInput.style.border = "1px solid #ccc"; // 초기값
-            emailInput.style.outline = ""; // 기본 아웃라인 스타일
+            emailInput.style.border = "1px solid #ccc"; // 기본 테두리 색상으로 복원
+            emailInput.style.outline = ""; // 기본 아웃라인으로 복원
             sendAuthButton.classList.remove("button-send-active");
+
+            if (successMessage) successMessage.style.display = "none";
+            if (warningMessage) warningMessage.style.display = "none";
         } else {
             sendAuthButton.classList.add("button-send-active");
-            emailInput.classList.remove("warning"); // 경고 스타일 제거
-            emailInput.style.borderColor = "blue"; // 기본 포커스 스타일
-            emailInput.style.outline = ""; // 기본 아웃라인 스타일
+            emailInput.classList.remove("warning");
+            emailInput.style.borderColor = "blue"; // 기본 포커스 색상으로 변경
+
+            if (successMessage) successMessage.style.display = "none";
         }
     });
 
-    // 인증 버튼 클릭 시 이메일 형식 검사
+    // 인증 버튼 클릭 시 이메일 유효성 검사 및 인증번호 발송
     sendAuthButton.addEventListener("click", function () {
         const emailValue = emailInput.value.trim();
+
         if (emailRegex.test(emailValue)) {
             emailInput.classList.remove("warning");
             emailInput.classList.add("success-sign"); // 성공 스타일 추가
             emailInput.style.border = "1px solid #189f14"; // 성공 색상 적용
-            showSuccessMessage("인증 번호가 발송되었습니다.");
+
+            showSuccessMessage("인증 번호가 발송되었습니다.", emailInput);
+
+            // 인증번호 입력란 초기화
+            emailCodeInput.value = ""; // 인증번호 입력란 값 초기화
+            emailCodeInput.classList.remove("success-sign", "warning");
+            emailCodeInput.style.borderColor = "#ccc"; // 기본 테두리 색상으로 복원
+            emailCodeInput.style.outline = ""; // 기본 아웃라인으로 복원
+
+            const existingSuccessMessage = emailCodeBox.querySelector(
+                ".desc-span.success-msg"
+            );
+            const existingWarningMessage = emailCodeBox.querySelector(
+                ".desc-span.warning-msg"
+            );
+
+            if (existingSuccessMessage) {
+                existingSuccessMessage.remove(); // 기존 성공 메시지 삭제
+            }
+
+            if (existingWarningMessage) {
+                existingWarningMessage.remove(); // 기존 경고 메시지 삭제
+            }
+
             emailCodeBox.style.display = "block"; // 인증번호 입력란 표시
-            isCodeSent = true; // 인증 번호 요청 상태 변경
+            isCodeSent = true; // 인증번호 요청 상태 변경
 
             // 10분 카운트다운 시작
             let timeLeft = 10 * 60; // 10분
@@ -66,9 +97,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (timeLeft <= 0) {
                     clearInterval(timerInterval);
                     countdownTimer.textContent = ""; // 타이머 텍스트 초기화
-                    showWarningMessage("입력 시간을 초과하였습니다."); // 메시지 표시
-                    isCodeSent = false; // 인증번호 요청 상태 초기화
+                    showWarningMessage(
+                        "입력 시간을 초과하였습니다.",
+                        emailCodeInput
+                    ); // 인증번호 입력란 밑에 표시
                     emailCodeBox.style.display = "none"; // 인증번호 입력란 숨김
+                    isCodeSent = false; // 인증번호 요청 상태 초기화
                 }
                 timeLeft--;
             }, 1000);
@@ -76,51 +110,62 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             emailInput.classList.add("warning");
             emailInput.style.borderColor = "#f05050"; // 경고 색상으로 변경
-            showWarningMessage("이메일 형식이 올바르지 않습니다.");
+            showWarningMessage("이메일 형식이 올바르지 않습니다.", emailInput); // 이메일 입력란 밑에 경고 메시지 출력
         }
     });
 
-    // 이메일 입력란에서 값을 지웠을 때 처리
+    // 이메일 입력 필드에서 경고 메시지 숨기기
     emailInput.addEventListener("input", function () {
         const existingWarningMessage = document.querySelector(
             ".desc-span.warning-msg"
         );
+        const successMessage = document.querySelector(".desc-span.success-msg");
 
         if (emailInput.value.length === 0) {
-            // 이메일 입력란이 비어 있는 경우
-            emailInput.classList.remove("success-sign", "warning"); // 성공 및 경고 스타일 제거
-            emailInput.style.borderColor = "#ccc"; // 기본 테두리 색상으로 복원
-            emailInput.style.outline = ""; // 기본 아웃라인으로 복원
-
-            // 인증번호 입력란과 버튼 상태 초기화
-            emailCodeBox.style.display = "none"; // 인증번호 입력란 숨김
-            sendAuthButton.textContent = "인증"; // 버튼 텍스트를 "인증"으로 변경
+            emailInput.classList.remove("success-sign", "warning");
+            emailInput.style.borderColor = "#ccc";
+            emailInput.style.outline = "";
+            emailCodeBox.style.display = "none";
+            sendAuthButton.textContent = "인증";
+            emailCodeInput.value = "";
+            countdownTimer.textContent = "";
+            clearInterval(timerInterval);
 
             if (existingWarningMessage) {
-                existingWarningMessage.style.display = "none"; // 경고 메시지 숨김
+                existingWarningMessage.style.display = "none";
+            }
+            if (successMessage) {
+                successMessage.style.display = "none";
             }
         } else {
-            // 값이 하나라도 있을 경우
             if (existingWarningMessage) {
-                existingWarningMessage.style.display = "none"; // 경고 메시지 숨김
+                existingWarningMessage.style.display = "none";
             }
-            sendAuthButton.textContent = "인증"; // 버튼 텍스트를 "인증"으로 변경
-            emailCodeBox.style.display = "none"; // 인증번호 입력란 숨김
+            sendAuthButton.textContent = "인증";
+            emailCodeBox.style.display = "none";
         }
     });
 
-    // 인증 번호 입력 필드에서 입력이 변경될 때
+    // 인증 번호 입력 필드에서 값을 지웠을 때 처리
     emailCodeInput.addEventListener("input", function () {
-        const inputValue = emailCodeInput.value.trim();
-        const confirmButton = document.querySelector(
-            ".register-email-code-box .button-btn-send"
+        const successMessage = document.querySelector(
+            ".register-email-code-box .desc-span.success-msg"
         );
 
-        // 입력이 있을 때 버튼에 활성화 클래스 추가
-        if (inputValue !== "") {
-            confirmButton.classList.add("button-send-active"); // 활성화 상태 클래스 추가
+        if (emailCodeInput.value.length < 6) {
+            if (successMessage) {
+                successMessage.style.display = "none";
+            }
+        }
+
+        if (emailCodeInput.value.length === 0) {
+            emailCodeInput.classList.remove("success-sign", "warning");
+            emailCodeInput.style.borderColor = "#ccc";
+            emailCodeInput.style.outline = "";
+            confirmButton.classList.remove("button-send-active");
         } else {
-            confirmButton.classList.remove("button-send-active"); // 활성화 상태 클래스 제거
+            confirmButton.classList.add("button-send-active");
+            emailCodeInput.style.borderColor = "blue";
         }
     });
 
@@ -133,79 +178,162 @@ document.addEventListener("DOMContentLoaded", function () {
             const inputCode = emailCodeInput.value.trim();
             const correctCode = "123456"; // 예시: 올바른 인증번호
 
+            const warningMessage = emailCodeInput
+                .closest(".register-with-btn-box")
+                .querySelector(".desc-span.warning-msg");
+
             if (inputCode === "") {
-                showWarningMessage("인증번호를 입력해 주세요."); // 입력이 비어있을 경우
+                showWarningMessage("인증번호를 입력해 주세요.", emailCodeInput);
+                emailCodeInput.classList.add("warning");
+                emailCodeInput.style.borderColor = "#f05050";
             } else if (inputCode !== correctCode) {
-                showWarningMessage("인증번호가 일치하지 않습니다.");
+                showWarningMessage(
+                    "인증번호가 일치하지 않습니다.",
+                    emailCodeInput
+                );
+                emailCodeInput.classList.add("warning");
+                emailCodeInput.style.borderColor = "#f05050";
             } else {
-                // 인증 성공 처리
-                clearInterval(timerInterval); // 타이머 중지
-                countdownTimer.textContent = ""; // 타이머 초기화
-                emailInput.classList.remove("warning"); // 경고 스타일 제거
-                emailInput.classList.add("success-sign"); // 성공 스타일 추가
-                emailInput.style.border = "1px solid #189f14"; // 성공 색상 적용
-                alert("인증이 완료되었습니다."); // 성공 알림
+                clearInterval(timerInterval);
+                countdownTimer.textContent = "";
+                emailCodeInput.classList.remove("warning");
+                emailCodeInput.classList.add("success-sign");
+                emailCodeInput.style.borderColor = "#189f14";
+
+                if (warningMessage) {
+                    warningMessage.style.display = "none";
+                }
+
+                showSuccessMessage("인증 되었습니다.", emailCodeInput);
             }
         }
     });
 
-    // 비밀번호 확인 입력 시 유효성 검사
-    passwordConfirmInput.addEventListener("input", function () {
-        const passwordValue = passwordInput.value.trim();
-        const passwordConfirmValue = passwordConfirmInput.value.trim();
-        const warningMessageSpan = document.querySelector(
-            ".desc-span.warning-msg"
-        );
-
-        // 비밀번호와 비밀번호 확인이 일치하지 않을 때
-        if (
-            passwordConfirmValue !== "" &&
-            passwordValue !== passwordConfirmValue
-        ) {
-            warningMessageSpan.style.display = "block"; // 경고 메시지 표시
-        } else {
-            warningMessageSpan.style.display = "none"; // 경고 메시지 숨김
-        }
+    // 비밀번호 입력 필드 포커스 시 테두리 색상 변경
+    passwordInput.addEventListener("focus", function () {
+        passwordInput.style.borderColor = "blue";
     });
 
-    // 비밀번호 표시/숨기기 함수
-    window.togglePasswordVisibility = function (inputId, imgElement) {
-        const passwordInput = document.getElementById(inputId);
-        if (passwordInput.type === "password") {
-            passwordInput.type = "text"; // 비밀번호를 텍스트로 변경
-            imgElement.src =
-                "https://accounts-front.stunning.kr/assets/img/login/ico-visible.png"; // 비밀번호 보이기 아이콘으로 변경
+    passwordInput.addEventListener("focusout", function () {
+        passwordInput.style.borderColor = "#ccc"; // 기본 테두리 색상으로 복원
+    });
+
+    passwordConfirmInput.addEventListener("focus", function () {
+        passwordConfirmInput.style.borderColor = "blue";
+    });
+
+    passwordConfirmInput.addEventListener("focusout", function () {
+        passwordConfirmInput.style.borderColor = "#ccc"; // 기본 테두리 색상으로 복원
+    });
+
+    // 완료 버튼 클릭 시 비밀번호 유효성 검사 실행
+    completeButton.addEventListener("click", function () {
+        validatePasswords();
+    });
+});
+
+// 경고 메시지를 출력하는 함수
+function showWarningMessage(message, element) {
+    const parentElement = element.closest(".register-with-btn-box");
+
+    let existingMessage = parentElement.querySelector(".desc-span.warning-msg");
+
+    if (!existingMessage) {
+        const warningMessage = document.createElement("span");
+        warningMessage.className = "desc-span warning-msg";
+        warningMessage.textContent = message;
+        warningMessage.style.display = "block";
+        parentElement.appendChild(warningMessage);
+    } else {
+        existingMessage.textContent = message;
+        existingMessage.style.display = "block";
+    }
+}
+
+// 성공 메시지를 출력하는 함수
+function showSuccessMessage(message, element) {
+    const parentElement = element.closest(".register-with-btn-box");
+
+    const existingMessage = parentElement.querySelector(
+        ".desc-span.success-msg"
+    );
+    if (existingMessage) {
+        existingMessage.remove();
+    }
+
+    const successMessage = document.createElement("span");
+    successMessage.className = "desc-span success-msg";
+    successMessage.textContent = message;
+    successMessage.style.display = "block";
+
+    parentElement.appendChild(successMessage);
+}
+
+// 비밀번호 보이게 하는 로직
+function togglePasswordVisibility(inputId, btn) {
+    const passwordInput = document.getElementById(inputId);
+    const passwordShowBtn = btn;
+
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        passwordShowBtn.src =
+            "https://accounts-front.stunning.kr/assets/img/login/ico-visible.png";
+    } else {
+        passwordInput.type = "password";
+        passwordShowBtn.src =
+            "https://accounts-front.stunning.kr/assets/img/login/ico-hidden.png";
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const completeButton = document.querySelector(".register-btn-complete");
+    const passwordInput = document.getElementById("password");
+    const passwordConfirmInput = document.getElementById("password-confirm");
+    const passwordWarningMessage = document.querySelector(
+        ".password-warning-msg"
+    );
+
+    // 완료 버튼 클릭 시 비밀번호 유효성 검사 실행
+    completeButton.addEventListener("click", function () {
+        validatePasswords();
+    });
+
+    // 비밀번호 유효성 검사 함수
+    function validatePasswords() {
+        const passwordValue = passwordInput.value.trim();
+        const passwordConfirmValue = passwordConfirmInput.value.trim();
+
+        // 초기화: 경고 메시지와 테두리 색상 리셋
+        passwordWarningMessage.style.display = "none";
+        passwordInput.classList.remove("warning");
+        passwordConfirmInput.classList.remove("warning");
+        passwordInput.style.borderColor = "#ccc"; // 기본 테두리 색상
+        passwordConfirmInput.style.borderColor = "#ccc"; // 기본 테두리 색상
+
+        if (passwordValue.length < 6 || passwordConfirmValue.length < 6) {
+            // 비밀번호가 6자 미만일 때 경고 메시지 출력
+            passwordWarningMessage.textContent = "6자 이상 입력하세요";
+            passwordWarningMessage.style.display = "block";
+            passwordInput.classList.add("warning");
+            passwordConfirmInput.classList.add("warning");
+            passwordInput.style.borderColor = "#f05050"; // 경고 색상
+            passwordConfirmInput.style.borderColor = "#f05050"; // 경고 색상
+        } else if (passwordValue !== passwordConfirmValue) {
+            // 비밀번호와 비밀번호 확인이 일치하지 않을 때 경고 메시지 출력
+            passwordWarningMessage.textContent =
+                "비밀번호가 일치하지 않습니다.";
+            passwordWarningMessage.style.display = "block";
+            passwordInput.classList.add("warning");
+            passwordConfirmInput.classList.add("warning");
+            passwordInput.style.borderColor = "#f05050"; // 경고 색상
+            passwordConfirmInput.style.borderColor = "#f05050"; // 경고 색상
         } else {
-            passwordInput.type = "password"; // 다시 비밀번호로 변경
-            imgElement.src =
-                "https://accounts-front.stunning.kr/assets/img/login/ico-hidden.png"; // 비밀번호 숨기기 아이콘으로 변경
-        }
-    };
-
-    function showSuccessMessage(message) {
-        messageSpan.className = "desc-span successmsg-msg"; // 성공 메시지 스타일
-        messageSpan.textContent = message; // 성공 메시지 텍스트
-        const emailInputBox = sendAuthButton.closest(".register-with-btn-box");
-        emailInputBox.appendChild(messageSpan); // 메시지 추가
-    }
-
-    function showWarningMessage(message) {
-        const existingMessage = document.querySelector(
-            ".desc-span.warning-msg"
-        );
-        if (existingMessage) {
-            existingMessage.remove(); // 기존 메시지 제거
-        }
-        messageSpan.className = "desc-span warning-msg"; // 경고 메시지 스타일
-        messageSpan.textContent = message; // 경고 메시지 텍스트
-        const emailInputBox = sendAuthButton.closest(".register-with-btn-box");
-        emailInputBox.appendChild(messageSpan); // 메시지 추가
-    }
-
-    function removeExistingMessage() {
-        const existingMessage = document.querySelector(".desc-span");
-        if (existingMessage) {
-            existingMessage.remove(); // 기존 메시지 제거
+            // 비밀번호가 6자 이상이고 일치하는 경우
+            passwordWarningMessage.style.display = "none"; // 경고 메시지 숨김
+            passwordInput.classList.remove("warning");
+            passwordConfirmInput.classList.remove("warning");
+            passwordInput.style.borderColor = "blue"; // 성공 시 색상
+            passwordConfirmInput.style.borderColor = "blue"; // 성공 시 색상
         }
     }
 });
