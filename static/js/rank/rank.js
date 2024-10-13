@@ -174,7 +174,7 @@ tooltipTrigger.addEventListener("mouseout", () => {
 });
 
 // 드롭다운 필터 설정
-const filterContainer = document.querySelector(".jOecJz");
+const filterContainer = document.querySelector(".filter-default");
 const headerWrap = filterContainer.querySelector(".header-wrap");
 const bottomWrap = filterContainer.querySelector(".bottom-wrap");
 const arrow = filterContainer.querySelector(".arrow");
@@ -209,4 +209,236 @@ document.addEventListener("click", (event) => {
         bottomWrap.style.visibility = "hidden";
         arrow.style.transform = "rotate(90deg)";
     }
+});
+
+const container = document.querySelector(".expert-list-container");
+let cardHTML = `
+    <div class="expert-card-container expert-card">
+        <a href="/m/chldbrhks">
+            <div class="expert-card__left">
+                <div class="expert-card__info__avatar">
+                    <span class="profile-img-container avatar">
+                        <img src="https://cdn-dantats.stunning.kr/prod/users/fa970db0-abdd-4b41-a512-de0e18e3d27c/avatar/ZswD8qqqrARGSgFX.11.jpg.small?q=80&amp;t=crop&amp;s=320x320&amp;f=webp" alt="CORKSTUDIO의 프로필"/>
+                    </span>
+                </div>
+                <div class="expert-card__info">
+                    <div class="expert-card__info__user-profile">
+                        <div class="expert-card__info__user-profile__nick">
+                            <div class="user-nick-wrapper">
+                                <div class="user-nick-wrapper__labels">
+                                    <div class="tooltip user-nick-wrapper__label-tooltip">
+                                    <label data-label-type="label-Image" class="product-label user-nick-wrapper__labels__item">
+
+                                    <img
+                                    src="https://cdn-dantats.stunning.kr/static/feature/label/label-check.png" 
+                                    class="hkAQYM">
+                                    </label>
+
+                                    <div class="tooltip-content ">
+                                    우승 10회 이상 전문가
+                                    </div>
+                                </div>
+                                
+                                <p title="CORKSTUDIO">
+                                    <span class="nick">CORKSTUDIO</span>
+                                    
+                                </p>
+                            
+                                    <div></div>
+                                    
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        <div class="expert-card__info__user-profile__introduction">
+                            <p title="이유있는 디자인으로 성공적인 브랜딩을 실현합니다.">
+                                이유있는 디자인으로 성공적인 브랜딩을 실현합니다.
+                            </p>
+                        </div>
+                        <div class="expert-card__info__user-profile__description">
+                            <p title="Brand eXperience Designer Corkstudio">
+                                Brand eXperience Designer Corkstudio
+                            </p>
+                        </div>
+                    </div>
+                    <div class="expert-card__info__meta">
+                        <div class="info-meta-container expert-card__info__meta__item">
+                            <span class="expert-card__info__meta__item-title">총 수익</span>
+                            <div class="expert-card__info__meta__item-spacer"></div>
+                            <div class="expert-card__info__meta__item-value">
+                                <p title=" 원+">
+                                    <span class="number-text__number-container">
+                                        <span class="number number-text__number">3</span>
+                                       
+                                    </span>
+                                    <span class="number-text__suffix">억원+ </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="info-meta-container expert-card__info__meta__item">
+                            <span class="expert-card__info__meta__item-title">우승</span>
+                            <div class="expert-card__info__meta__item-spacer"></div>
+                            <div class="expert-card__info__meta__item-value">
+                                <p class="info-meta-default" title="00">
+                                    <span class="number-text__number-container">
+                                        <span class="number number-text__number">500</span>
+                                        
+                                    </span>
+                                    <span class="number-text__suffix">회+</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="info-meta-container expert-card__info__meta__item">
+                            <span class="expert-card__info__meta__item-title">총 거래</span>
+                            <div class="expert-card__info__meta__item-spacer"></div>
+                            <div class="expert-card__info__meta__item-value">
+                                <p class="info-meta-default" title=" 건+">
+                                    <span class="number-text__number-container">
+                                        <span class="number number-text__number">700</span>
+                                       
+                                    </span>
+                                    <span class="number-text__suffix">건+</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="info-meta-container expert-card__info__meta__item">
+                            <span class="expert-card__info__meta__item-title">마켓</span>
+                            <div class="expert-card__info__meta__item-spacer"></div>
+                            <div class="expert-card__info__meta__item-value">
+                                <p class="info-meta-default" title=" 회+">
+                                    <span class="number-text__number-container">
+                                        <span class="number number-text__number">90</span>
+                                      
+                                    </span>
+                                    <span class="number-text__suffix">회+</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="info-meta-container expert-card__info__meta__item">
+                            <span class="expert-card__info__meta__item-title">리뷰</span>
+                            <div class="expert-card__info__meta__item-spacer"></div>
+                            <div class="expert-card__info__meta__item-value">
+                                <p class="info-meta-default" title="00">
+                                    <span class="number-text__number-container">
+                                        <span class="number number-text__number">100</span>
+                                       
+                                    </span>
+                                    <span class="number-text__suffix">개+</span>
+                                </p>
+                                <div class="rate" width="0">
+                                    <svg class="icon-default icon" viewBox="0 0 12 12">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9643 4.74338C10.8835 4.50089 10.6777 4.32673 10.4285 4.2884L7.79006 3.88509L6.60669 1.35936C6.38168 0.880213 5.61832 0.880213 5.39331 1.35936L4.20994 3.88509L1.57152 4.2884C1.32235 4.32673 1.11651 4.50089 1.03567 4.74338C0.954003 4.99004 1.01484 5.25836 1.19484 5.44252L3.11741 7.41577L2.66156 10.2073C2.61989 10.469 2.72656 10.7256 2.9424 10.8773C3.0574 10.9589 3.19074 10.9998 3.32408 10.9998C3.43492 10.9998 3.54492 10.9723 3.64576 10.9165L6 9.61401L8.35424 10.9165C8.57675 11.0398 8.84759 11.0264 9.0576 10.8773C9.27344 10.7256 9.38011 10.469 9.33761 10.2065L8.88259 7.41577L10.8052 5.44252C10.9852 5.25836 11.046 4.99004 10.9643 4.74338Z"></path>
+                                    </svg>
+                                    4.8
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="inquiry-button expert-card__inquire">
+                        <span class="visual-correction">견적 문의</span>
+                    </button>
+                </div>
+            </div>
+            <div class="expert-card__right">
+                <div class="expert-card__portfolio-container 0">
+                    <div class="card-img-container cover expert-card__portfolio">
+                        <div class="card-image-default aspect-ratio-card-wrapper card-image">
+                            <div>
+                                <div class="observer"></div>
+                                <img src="https://cdn-dantats.stunning.kr/prod/portfolios/fa970db0-abdd-4b41-a512-de0e18e3d27c/covers/SETbxtvUCTbJgS5e.%E1%84%85%E1%85%A6%E1%84%86%E1%85%A1%E1%84%8B%E1%85%A5%E1%84%92%E1%85%A1%E1%86%A8%E1%84%8B%E1%85%AF%E1%86%AB-%E1%84%85%E1%85%A9%E1%84%80%E1%85%A9-t.jpg.small?s=1200x1200&amp;e=0x0&amp;t=crop&amp;q=100&amp;f=webp" alt="의 레마어학원 이미지"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="expert-card__portfolio-container 1">
+                    <div class="card-img-container cover expert-card__portfolio">
+                        <div class="card-image-default aspect-ratio-card-wrapper card-image">
+                            <div>
+                                <div class="observer"></div>
+                                <img src="https://cdn-dantats.stunning.kr/prod/portfolios/fa970db0-abdd-4b41-a512-de0e18e3d27c/covers/X8f6VD8EW4NRfBde.%E1%84%86%E1%85%B5%E1%84%83%E1%85%A1%E1%86%B7365%E1%84%92%E1%85%A1%E1%86%AB%E1%84%8B%E1%85%B4%E1%84%8B%E1%85%AF%E1%86%AB-%E1%84%85%E1%85%A9%E1%84%80%E1%85%A9-th.jpg.small?s=1200x1200&amp;e=0x0&amp;t=crop&amp;q=100&amp;f=webp" alt="의 미담365한의원 이미지"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="expert-card__portfolio-container 2">
+                    <div class="card-img-container cover expert-card__portfolio">
+                        <div class="card-image-default aspect-ratio-card-wrapper card-image">
+                            <div>
+                                <div class="observer"></div>
+                                <img src="https://cdn-dantats.stunning.kr/prod/portfolios/fa970db0-abdd-4b41-a512-de0e18e3d27c/covers/DYS9dfLWDvY6N9bS.%E1%84%87%E1%85%A5%E1%86%B7%E1%84%89%E1%85%A5%E1%86%A8%E1%84%8B%E1%85%A7%E1%86%BC%E1%84%8E%E1%85%B5%E1%84%80%E1%85%AA-%E1%84%85%E1%85%A9%E1%84%80%E1%85%A9-th.jpg.small?s=1200x1200&amp;e=0x0&amp;t=crop&amp;q=100&amp;f=webp" alt="의 범석영치과 이미지"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="expert-card__portfolio-container 3">
+                    <div class="card-img-container cover expert-card__portfolio">
+                        <div class="card-image-default aspect-ratio-card-wrapper card-image">
+                            <div>
+                                <div class="observer"></div>
+                                <img src="https://cdn-dantats.stunning.kr/prod/portfolios/fa970db0-abdd-4b41-a512-de0e18e3d27c/covers/PNTd47hANiZx9M3Y.ESPE-Logo-th.jpg.small?s=1200x1200&amp;e=0x0&amp;t=crop&amp;q=100&amp;f=webp" alt="의 Espe 이미지"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="expert-card__portfolio-container 4">
+                    <div class="card-img-container cover expert-card__portfolio">
+                        <div class="card-image-default aspect-ratio-card-wrapper card-image">
+                            <div>
+                                <div class="observer"></div>
+                                <img src="https://cdn-dantats.stunning.kr/prod/portfolios/fa970db0-abdd-4b41-a512-de0e18e3d27c/covers/5VbQaRNneCj4vNbY.%E1%84%8B%E1%85%A9%E1%86%AF%E1%84%87%E1%85%A1%E1%84%85%E1%85%B3%E1%86%AB%E1%84%8F%E1%85%B5%E1%84%8C%E1%85%B3-%E1%84%85%E1%85%A9%E1%84%80%E1%85%A9-th.jpg.small?s=1200x1200&amp;e=0x0&amp;t=crop&amp;q=100&amp;f=webp" alt="의 ALL바른키즈 이미지"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+`;
+
+container.innerHTML = cardHTML.repeat(10);
+
+const inputContainer = document.querySelector(
+    ".react-datepicker__input-container"
+);
+const tabLoop = document.querySelector(".react-datepicker__tab-loop");
+const dateDisplay = document.querySelector(
+    ".react-datepicker__input-container input"
+);
+const monthElements = document.querySelectorAll(
+    ".react-datepicker__month-text"
+);
+const currentYear = 2024;
+
+// inputContainer를 클릭했을 때 tabLoop의 가시성을 토글
+inputContainer.addEventListener("click", (e) => {
+    tabLoop.classList.toggle("active");
+});
+
+// 문서의 다른 부분을 클릭했을 때 tabLoop를 숨김
+document.addEventListener("click", (e) => {
+    if (!inputContainer.contains(e.target) && !tabLoop.contains(e.target)) {
+        tabLoop.classList.remove("active"); // 클릭한 요소가 inputContainer와 tabLoop 외부일 때 숨김
+    }
+});
+
+// 각 월 요소에 클릭 이벤트 추가
+monthElements.forEach((monthElement, index) => {
+    monthElement.addEventListener("click", () => {
+        // 선택한 월로 상단 날짜 업데이트
+        const selectedMonth = index + 1;
+        dateDisplay.value = `${currentYear}년 ${selectedMonth}월`;
+
+        // 모든 월에서 active 클래스 제거 후, 클릭한 월에 추가
+        monthElements.forEach((el) =>
+            el.classList.remove(
+                "react-datepicker__month-text--keyboard-selected"
+            )
+        );
+        monthElement.classList.add(
+            "react-datepicker__month-text--keyboard-selected"
+        );
+
+        tabLoop.classList.remove("active");
+    });
 });
