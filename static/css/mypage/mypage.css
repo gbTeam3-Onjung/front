@@ -223,7 +223,7 @@ html body #root #app .wrap {
     font-weight: 700;
 }
 
-.gNTKJg {
+.gNTzg {
     padding-top: 24px;
     padding-bottom: 80px;
 }
@@ -830,7 +830,11 @@ input, select {
     font-size: 15px;
     line-height: 23px;
     letter-spacing: -0.5px;
+    margin-top: 124px;
+    text-align: center;
+    /* white-space: pre-wrap; */
 }
+
 
 .kjzWjC > .empty-image {
     margin-bottom: 16px;
