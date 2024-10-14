@@ -263,6 +263,7 @@ body form[name=register-form] .stunning-box span.success-msg {
     padding-left: 15px;
     color: #189f14;
 }
+
 body form[name=register-form] .stunning-box span {
     margin-top: 5px;
     display: none;
@@ -287,6 +288,13 @@ form div.register-input-box{
 }
 
 body form[name=register-form] .stunning-box span.warning-msg {
+    display: block;
+    background: url(https://accounts-front.stunning.kr/assets/img/common/ico-caution.png) 0 1px no-repeat;
+    background-size: 12px 12px;
+    padding-left: 14px;
+    color: #f21724;
+}
+body form[name=register-form] .stunning-box span.warning-msg2 {
     display: block;
     background: url(https://accounts-front.stunning.kr/assets/img/common/ico-caution.png) 0 1px no-repeat;
     background-size: 12px 12px;
