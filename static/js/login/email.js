@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ".password-warning-msg"
     );
     const passwordShowBtns = document.querySelectorAll(".password-show-btn");
-    const checkboxWarningMessage = document.getElementById("checkbox-warning");
+    const checkboxWarningMessage = document.querySelector(".warning-msg2");
 
     let timerInterval; // 타이머 인터벌 변수
     let isCodeSent = false; // 인증번호 발송 여부를 나타내는 플래그
@@ -233,7 +233,6 @@ document.addEventListener("DOMContentLoaded", function () {
             showWarningMessage("이메일 주소를 입력해 주세요.", emailInput);
             emailInput.classList.add("warning");
             emailInput.style.borderColor = "#f05050"; // 경고 색상으로 변경
-            return; // 함수 종료
         }
 
         // 인증번호 입력 필드가 비어 있을 때 경고 메시지 표시
@@ -241,23 +240,93 @@ document.addEventListener("DOMContentLoaded", function () {
             showWarningMessage("인증번호를 입력해 주세요.", emailCodeInput);
             emailCodeInput.classList.add("warning");
             emailCodeInput.style.borderColor = "#f05050"; // 경고 색상으로 변경
-            return; // 함수 종료
         }
 
         if (!checkbox.checked) {
             checkboxWarningMessage.style.display = "block"; // 경고 메시지 표시
             console.log("경고 메시지 표시됨: 이용약관에 동의해야합니다.");
-
-            return; // 함수 종료
         } else {
             checkboxWarningMessage.style.display = "none"; // 체크박스가 체크되면 경고 메시지 숨기기
         }
         validatePasswords();
     });
 
+    // 체크박스 상태가 변경될 때 경고 메시지 표시/숨기기
+    checkbox.addEventListener("change", function () {
+        if (checkbox.checked) {
+            checkboxWarningMessage.style.display = "none"; // 체크박스가 체크되면 경고 메시지 숨기기
+        }
+    });
+
     // 완료 버튼 클릭 시 비밀번호 유효성 검사 함수
     completeButton.addEventListener("click", function () {
         validatePasswords(); // 비밀번호 유효성 검사 함수 호출
+    });
+
+    // 비밀번호 입력 필드에서 포커스 스타일 적용
+    passwordInput.addEventListener("focus", function () {
+        if (
+            !passwordInput.classList.contains("warning") &&
+            !passwordInput.classList.contains("success-sign")
+        ) {
+            passwordInput.style.borderColor = "blue"; // 기본 포커스 스타일
+        }
+    });
+
+    passwordInput.addEventListener("blur", function () {
+        if (
+            !passwordInput.classList.contains("warning") &&
+            !passwordInput.classList.contains("success-sign")
+        ) {
+            passwordInput.style.borderColor = "#ccc"; // 포커스 해제 시 기본 테두리 색상
+        }
+    });
+
+    // 비밀번호 확인 필드에서 포커스 스타일 적용
+    passwordConfirmInput.addEventListener("focus", function () {
+        if (
+            !passwordConfirmInput.classList.contains("warning") &&
+            !passwordConfirmInput.classList.contains("success-sign")
+        ) {
+            passwordConfirmInput.style.borderColor = "blue"; // 기본 포커스 스타일
+        }
+    });
+
+    passwordConfirmInput.addEventListener("blur", function () {
+        if (
+            !passwordConfirmInput.classList.contains("warning") &&
+            !passwordConfirmInput.classList.contains("success-sign")
+        ) {
+            passwordConfirmInput.style.borderColor = "#ccc"; // 포커스 해제 시 기본 테두리 색상
+        }
+    });
+
+    // 비밀번호 입력 필드에서 입력 값이 변경될 때 호출되는 함수
+    passwordInput.addEventListener("input", function () {
+        if (passwordInput.value.length > 0) {
+            passwordInput.style.borderColor = "blue"; // 입력 중 기본 포커스 스타일
+        } else {
+            passwordInput.style.borderColor = "#ccc"; // 입력이 없을 경우 기본 테두리 색상
+        }
+
+        // 경고나 성공 상태 해제
+        passwordInput.classList.remove("warning", "success-sign");
+        const warningMessage = document.querySelector(".password-warning-msg");
+        if (warningMessage) warningMessage.style.display = "none";
+    });
+
+    // 비밀번호 확인 필드에서 입력 값이 변경될 때 호출되는 함수
+    passwordConfirmInput.addEventListener("input", function () {
+        if (passwordConfirmInput.value.length > 0) {
+            passwordConfirmInput.style.borderColor = "blue"; // 입력 중 기본 포커스 스타일
+        } else {
+            passwordConfirmInput.style.borderColor = "#ccc"; // 입력이 없을 경우 기본 테두리 색상
+        }
+
+        // 경고나 성공 상태 해제
+        passwordConfirmInput.classList.remove("warning", "success-sign");
+        const warningMessage = document.querySelector(".password-warning-msg");
+        if (warningMessage) warningMessage.style.display = "none";
     });
 
     // 비밀번호 유효성 검사 함수
