@@ -2,7 +2,7 @@ const tabs = document.querySelectorAll(".tabs .tab");
 const contentContainer = document.querySelector(".content-wrap"); // 내용 섹션 컨테이너
 const commentSection = document.querySelector(".comment-wrap"); // 댓글 섹션
 const commentTextarea = document.querySelector(".comment-textarea"); // 댓글 입력창
-const submitButton = document.querySelector(".submit-comment-button"); // 댓글 작성 버튼
+const submitButton = document.querySelector(".submit-comment-button"); // 댓글 작성 버튼 
 
 // 탭 클릭 이벤트 처리
 tabs.forEach((tab, index) => {
