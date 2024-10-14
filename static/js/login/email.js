@@ -12,6 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const passwordWarningMessage = document.querySelector(
         ".password-warning-msg"
     );
+    const passwordWarningMessage2 = document.querySelector(
+        ".password-warning-msg2"
+    );
     const passwordShowBtns = document.querySelectorAll(".password-show-btn");
     const checkboxWarningMessage = document.querySelector(".warning-msg2");
 
@@ -336,6 +339,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // 초기화: 경고 메시지와 테두리 색상 리셋
         passwordWarningMessage.style.display = "none";
+        passwordWarningMessage2.style.display = "none";
         passwordInput.classList.remove("warning");
         passwordConfirmInput.classList.remove("warning");
         passwordInput.style.borderColor = "#ccc"; // 기본 테두리 색상
@@ -367,10 +371,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // 비밀번호와 확인 비밀번호가 일치하지 않을 때 경고 메시지 표시
         if (passwordValue !== passwordConfirmValue) {
-            passwordWarningMessage.textContent =
+            passwordWarningMessage2.textContent =
                 "비밀번호가 일치하지 않습니다.";
-            passwordWarningMessage.style.display = "block";
-            passwordWarningMessage.classList.add("warning-msg"); // 경고 스타일 추가
+            passwordWarningMessage2.style.display = "block";
+            passwordWarningMessage2.classList.add("warning-msg"); // 경고 스타일 추가
             passwordInput.classList.add("warning");
             passwordConfirmInput.classList.add("warning");
             passwordInput.style.borderColor = "#f05050"; // 경고 색상
