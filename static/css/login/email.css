@@ -125,8 +125,6 @@ h3, h4, h5, li, p, span {
 }
 p {
     display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     unicode-bidi: isolate;
@@ -143,7 +141,7 @@ form div.register-input-box {
 }
 .label-text {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 140%;
     display: flex;
     align-items: center;
@@ -167,8 +165,7 @@ input[type="text" i] {
     padding-block: 1px;
     padding-inline: 2px;
 }
-input:not([type="file" i], [type="image" i], [type="checkbox" i], [type="radio" i]) {
-}
+
 input {
     text-rendering: auto;
     color: fieldtext;
@@ -316,7 +313,7 @@ form div.register-input-box {
     width: 20px;
     height: 20px;
     cursor: pointer;
-    top: 84px;
+    top: 53px;
     right: 11px;
 }
 
@@ -443,4 +440,9 @@ form div.register-input-box {
 .register-input-box input[type="text"] {
     letter-spacing: normal; /* 글자 간격을 동일하게 유지 */
     font-family: inherit; /* 부모의 font-family 상속 */
+}
+
+#checkbox-warning {
+    display: none ;
+    color: red ;
 }
