@@ -50,10 +50,6 @@ html {
     height: 100%;
     overflow: hidden;
 }
-.slick-slider .slick-track,
-.slick-slider .slick-list {
-    transform: translate3d(0px, 0px, 0px);
-}
 .background-wrapper.thumbnail-background-slider.slick-slider
     .slick-list
     .slick-track {
@@ -491,81 +487,14 @@ a {
     font-weight: 700;
     color: rgb(142, 148, 160);
 }
-.tooltip-style {
-    position: relative;
-    display: flex;
-    font-size: 12px;
-    line-height: 18px;
-    letter-spacing: -0.25px;
-}
+
 .prize-wrap .help .help-icon {
     margin-top: 1px;
     margin-left: 5px;
     width: 12px;
     height: 12px;
 }
-.tooltip-icon-help {
-    user-select: none;
-    display: inline-block;
-    fill: currentcolor;
-    flex-shrink: 0;
-    width: 24px;
-    height: 24px;
-}
-.prize-wrap .help .tooltip-content {
-    min-width: 110px;
-}
-.tooltip-style .tooltip-content {
-    color: rgb(255, 255, 255);
-    background: rgba(0, 0, 0, 0.8);
-}
-.tooltip-style .tooltip-content {
-    margin-top: 16px;
-    --top: 0;
-    --bottom: 0;
-    --right: none;
-    --rotateDeg: 270deg;
-    --translateX: 0;
-    --translateY: -100%;
-}
-.tooltip-style .tooltip-content {
-    left: 50%;
-    top: 100%;
-    transform: translate(-50%, 0px);
-}
-.tooltip-style .tooltip-content {
-    white-space: pre;
-    text-align: center;
-    position: absolute;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    padding: 6px 12px;
-    visibility: hidden;
-    border-radius: 5px;
-    z-index: 10;
-}
-.tooltip-style .tooltip-content::before {
-    position: absolute;
-    height: 0px;
-    width: 0px;
-    content: "";
-    border-style: solid;
-    border-image: initial;
-    pointer-events: none;
-    border-width: 8px;
-    left: var(--left);
-    top: var(--top);
-    right: var(--right);
-    bottom: var(--bottom);
-    margin-left: var(--marginLeft);
-    transform: translate(var(--translateX), var(--translateY))
-        rotate(var(--rotateDeg));
-    border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0)
-        rgba(255, 255, 255, 0) rgba(0, 0, 0, 0.8);
-}
+
 .right-title-wrap.end .prize .total-prize {
     font-size: 14px;
     line-height: 21px;
@@ -664,9 +593,7 @@ a {
     line-height: 14.8px;
     font-weight: 700;
 }
-.donation-btn-wrap .tooltip {
-    width: 100%;
-}
+
 .donation-btn-container {
     position: relative;
     display: flex;
@@ -700,7 +627,7 @@ a {
 .donation-btn-style:hover {
     background-color: rgb(78, 118, 249);
 }
-.comment-wrap {
+.comment-wrap-fr {
     width: 100%;
     background-color: rgb(255, 255, 255);
 }
@@ -889,7 +816,7 @@ a {
 .submit-comment-button {
     align-self: flex-end;
     padding: 8px 16px;
-    background-color: rgb(78, 118, 249);
+    background-color: rgb(38, 86, 246);
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -899,4 +826,19 @@ a {
 
 .submit-comment-button:hover {
     background-color: rgb(78, 118, 249);
+}
+.graph_status {
+    padding-right: 2px;
+}
+.graph_bar {
+    width: 100%;
+    height: 10px;
+    margin-top: 3px;
+    background: #bfd0fb;
+}
+.graph_bar span {
+    display: inline-block;
+    height: 10px;
+    background: rgb(38, 86, 246);
+    vertical-align: top;
 }

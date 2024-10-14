@@ -1,4 +1,4 @@
-const tabs = document.querySelectorAll(".tabs .tab"); // 탭 선택
+const tabs = document.querySelectorAll(".tabs .tab");
 const contentContainer = document.querySelector(".content-wrap"); // 내용 섹션 컨테이너
 const commentSection = document.querySelector(".comment-wrap"); // 댓글 섹션
 const commentTextarea = document.querySelector(".comment-textarea"); // 댓글 입력창
