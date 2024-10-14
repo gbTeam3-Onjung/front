@@ -1142,5 +1142,16 @@ ol, ul {
     font-weight: 400;
 }
 
+table {
+    width: 100%; /* 테이블 전체 너비를 지정 */
+    table-layout: fixed; /* 테이블 레이아웃을 고정으로 설정하여 열 너비가 고정되게 함 */
+  }
 
+  thead th {
+    width: 25%; /* <thead>의 각 열에 너비를 개별적으로 설정 */
+  }
+
+  tbody td {
+    width: 25%; /* <tbody>의 각 열에도 너비를 설정 */
+  }
 
