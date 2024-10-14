@@ -1115,3 +1115,8 @@ table {
     width: 25%; /* <tbody>의 각 열에도 너비를 설정 */
   }
 
+  .mypage-right-area {
+    min-height: 900px;
+    display: none;
+}
+
