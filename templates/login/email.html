@@ -127,11 +127,15 @@
                                             placeholder="6자 이상"
                                             autocomplete="new-password"
                                         />
+                                        <span
+                                            class="desc-span password-warning-msg"
+                                            style="display: none"
+                                        ></span>
+                                        <!-- 경고 메시지 표시할 span 추가 -->
                                         <label for="password-confirm"></label>
                                         <img
                                             class="password-show-btn"
                                             src="https://accounts-front.stunning.kr/assets/img/login/ico-hidden.png"
-                                            onclick="togglePasswordVisibility('password', this)"
                                         />
                                     </div>
                                     <div class="register-input-box input-box">
@@ -148,7 +152,6 @@
                                         <img
                                             class="password-show-btn"
                                             src="https://accounts-front.stunning.kr/assets/img/login/ico-hidden.png"
-                                            onclick="togglePasswordVisibility('password-confirm', this)"
                                         />
                                     </div>
                                     <span
@@ -180,6 +183,16 @@
                                             개인정보취급방침(필수), 마케팅정보
                                             수집동의(선택)
                                         </p>
+                                        <span
+                                            class="desc-span warning-msg"
+                                            id="checkbox-warning"
+                                            style="
+                                                display: none;
+                                                color: #f05050;
+                                            "
+                                        >
+                                            이용약관에 동의해야합니다.
+                                        </span>
                                     </div>
                                     <div
                                         class="register-flex-div"
