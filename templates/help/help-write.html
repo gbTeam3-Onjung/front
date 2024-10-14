@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../../static/css/help/help.css" />
+        <link rel="stylesheet" href="../../static/css/help/help-write.css" />
         <link
             rel="icon"
             type="image/x-icon"
@@ -11,6 +11,106 @@
         />
         <title>문의 작성</title>
     </head>
-    <body></body>
+    <body>
+        <header class="header-wrap">
+            <div class="header-container">
+                <div class="header">
+                    <div class="help-logo">
+                        <a href="https://www.loud.kr/" target="_blank">
+                            <img
+                                src="https://help.loud.kr/hc/theming_assets/01HZKZ8AF22DN6ZA42CE4143EF"
+                                alt="온정 고객센터 페이지"
+                            />
+                        </a>
+                        <span>
+                            <a
+                                title="고객센터 홈"
+                                href="https://help.loud.kr/hc/ko"
+                                >고객센터</a
+                            >
+                        </span>
+                    </div>
+                    <div class="go-to-write-button-container">
+                        <a
+                            href="https://help.loud.kr/hc/ko/requests/new"
+                            class="go-to-write-button"
+                            >문의하기</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main role="main">
+            <div class="app-divider"></div>
+            <div class="app">
+                <div class="app-inner">
+                    <nav class="sub-nav">
+                        <ol class="breadcrumbs">
+                            <li title="온정 고객센터">
+                                <a href="https://help.loud.kr/hc/ko"
+                                    >온정 고객센터</a
+                                >
+                            </li>
+                            <li title="문의 등록">문의 등록</li>
+                        </ol>
+                        <div></div>
+                    </nav>
+                    <h1>문의 등록</h1>
+                    <div class="form">
+                        <form
+                            id="new-request"
+                            class="request-form"
+                            data-form
+                            data-form-type="request"
+                            action="https://help.loud.kr/hc/ko/request"
+                            accept-charset="UTF-8"
+                            method="post"
+                        >
+                            <div class="form-field">
+                                <label for="help-type-select"
+                                    >문의항목을 선택해주세요.</label
+                                >
+                                <a
+                                    class="help-type-input"
+                                    tabindex="0"
+                                    aria-label="문의항목을 선택해주세요."
+                                    style="max-width: 100%"
+                                    >일반 문의</a
+                                >
+                                <select
+                                    name="help-type"
+                                    id="help-type-select"
+                                    aria-label="문의항목을 선택해주세요."
+                                    autofocus="autofocus"
+                                    style="display: none"
+                                >
+                                    <option selected="selected" value="-">
+                                        -
+                                    </option>
+                                    <option value=" 일반 문의">
+                                        일반 문의
+                                    </option>
+                                    <option value="봉사단체 가입 문의">
+                                        봉사단체 가입 문의
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="form-field">
+                                <label for="requester_email">
+                                    이메일 주소
+                                </label>
+                                <input
+                                    type="text"
+                                    name="requester_email"
+                                    id="requester_email"
+                                    placeholder="이메일 주소를 입력해주세요."
+                                />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
     <script src="../../static/js/help/help-write.js"></script>
 </html>
