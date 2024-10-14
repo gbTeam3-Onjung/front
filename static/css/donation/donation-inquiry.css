@@ -809,6 +809,7 @@ a {
     border: 1px solid #ddd;
     border-radius: 5px;
     resize: none;
+    outline: none;
 }
 
 .submit-comment-button {

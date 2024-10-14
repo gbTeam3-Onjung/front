@@ -32,6 +32,7 @@ submitButton.addEventListener("click", () => {
         alert("댓글을 입력해주세요.");
     }
 });
+
 // 예시로 넣은 데이터
 const totalPrize = 50000;
 const currentPrize = 30000;
