@@ -265,5 +265,79 @@ img {
     line-height: 180%;
     word-break: break-all;
     width: 746px;
-    height: 100px;
+}
+.fhVFfT {
+    margin-bottom: 72px;
+    margin-top: 24px;
+    background-color: rgb(255, 255, 255);
+}
+.kqKmnY button {
+    cursor: pointer;
+}
+.dPiekb {
+    position: relative;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 0px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    color: rgb(64, 74, 92);
+    padding: 8px 17px;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.25px;
+    font-weight: 700;
+    margin-left: auto;
+}
+.dPiekb::before {
+    border-color: rgb(219, 222, 226);
+}
+.dPiekb::before {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    border: 1px solid;
+    border-radius: 4px;
+}
+.dPiekb .visual-correction {
+    padding-bottom: 1px;
+}
+.ieeiGG {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgb(219, 222, 226);
+    border-bottom: 1px solid rgb(219, 222, 226);
+}
+ol,
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+.ieeiGG li:not(:last-child) {
+    margin-bottom: 16px;
+}
+.ieeiGG li {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 15px;
+    line-height: 23px;
+    letter-spacing: -0.5px;
+    font-weight: 500;
+}
+.ieeiGG li .file-name {
+    display: block;
+    color: rgb(64, 74, 92);
+    margin-right: 16px;
+}
+.ieeiGG li .file-download {
+    flex-shrink: 0;
 }
