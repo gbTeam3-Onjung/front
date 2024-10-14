@@ -1124,3 +1124,11 @@ table {
     display: none;
 }
 
+.date-range.active {
+    border-color: rgb(38 86 246 / 35%);
+}
+
+.fIGvfF .date-range-input:focus {
+    outline: none;
+}
+
