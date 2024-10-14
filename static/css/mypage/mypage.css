@@ -223,7 +223,7 @@ html body #root #app .wrap {
     font-weight: 700;
 }
 
-.gNTKJg {
+.gNTzg {
     padding-top: 24px;
     padding-bottom: 80px;
 }
@@ -252,26 +252,13 @@ html body #root #app .wrap {
     margin-right: 13px;
     
 }
-/***********************************************************************/
-/* 선택됬을 때 색깔 */ 
- .hHDwuD .lnb-item.active {
-    color: rgb(38, 86, 246);
-    font-weight: 700;
-    background: rgb(245, 248, 255);
-    border-radius: 4px;
-} 
-
-/* 기본 색깔 */
-.hHDwuD .lnb-item {
-    color: rgb(111, 119, 133);
-    font-weight: 700;
-    border-radius: 4px;
-}
-
-.hHDwuD > li{
+/**************************************************************/
+/* li .없애기 */
+/* .hHDwuD > li{
     display: block;
-}
+} */
 
+/* 최초 페이지(마이 프로필) */
 .hHDwuD .lnb-item.active > a {
     color: rgb(38, 86, 246);
     font-weight: 700;
@@ -279,13 +266,7 @@ html body #root #app .wrap {
     border-radius: 4px;
 }
 
-.hHDwuD .lnb-item > a {
-    color: rgb(111, 119, 133);
-    font-weight: 700;
-    border-radius: 4px;
-}
-
-/************************************************************************/
+/* 기본 css */
 .hHDwuD .lnb-item > a {
     width: 218px;
     padding: 10px 32px;
@@ -297,6 +278,17 @@ html body #root #app .wrap {
     letter-spacing: -0.25px;
     font-weight: 500;
 }
+
+/* 기존 스타일 유지하며(블러) */
+.lnb-item a:hover {
+    color: rgb(38, 86, 246);
+    font-weight: 700;
+    text-decoration: none;
+    /* background-color: #f5f5f5; */
+}
+
+
+/************************************************************************/
 
 .hLIslS {
     display: inline-block;
@@ -323,18 +315,6 @@ a, h1, h2, h3, h4, h5, h6 {
 .hHDwuD .lnb-item {
     width: 100%;
     height: 41px;
-}
-
-.hHDwuD .lnb-item > a {
-    width: 218px;
-    padding: 10px 32px;
-    box-sizing: border-box;
-    cursor: pointer;
-    color: rgb(111, 119, 133);
-    font-size: 14px;
-    line-height: 21px;
-    letter-spacing: -0.25px;
-    font-weight: 500;
 }
 
 .dSCesS .side-layout .profile-main {
@@ -504,20 +484,6 @@ button {
 .tab-content.active {
     height: fit-content;
     display: block;
-}
-
-/* 기존 스타일 유지하며(블러) */
-.lnb-item .active a {
-    background-color: #446eab;
-    color: #fff;
-    font-weight: 700;
-}
-
-.lnb-item a:hover {
-    color: rgb(38, 86, 246);
-    font-weight: 700;
-    text-decoration: none;
-    /* background-color: #f5f5f5; */
 }
 
 /***********************************************/
@@ -864,7 +830,11 @@ input, select {
     font-size: 15px;
     line-height: 23px;
     letter-spacing: -0.5px;
+    margin-top: 124px;
+    text-align: center;
+    /* white-space: pre-wrap; */
 }
+
 
 .kjzWjC > .empty-image {
     margin-bottom: 16px;
@@ -1148,4 +1118,9 @@ table {
   tbody td {
     width: 25%; /* <tbody>의 각 열에도 너비를 설정 */
   }
+
+  .mypage-right-area {
+    min-height: 900px;
+    display: none;
+}
 
