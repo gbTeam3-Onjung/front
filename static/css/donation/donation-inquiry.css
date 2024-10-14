@@ -293,7 +293,7 @@ img {
     line-height: 21px;
     letter-spacing: -0.25px;
     font-weight: 700;
-    margin-left: auto;
+    margin-left: 575px;
 }
 .dPiekb::before {
     border-color: rgb(219, 222, 226);
@@ -340,4 +340,42 @@ ul {
 }
 .ieeiGG li .file-download {
     flex-shrink: 0;
+}
+.ieeiGG li .file-download .size {
+    color: rgb(142, 148, 160);
+    margin-right: 16px;
+}
+.kFugxy {
+    position: relative;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 0px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    color: rgb(64, 74, 92);
+    padding: 4px 14px;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.25px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.kFugxy::before {
+    border-color: rgb(219, 222, 226);
+}
+.kFugxy::before {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    border: 1px solid;
+    border-radius: 4px;
+}
+.kFugxy .visual-correction {
+    padding-bottom: 2px;
 }
