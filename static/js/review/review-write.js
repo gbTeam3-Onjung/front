@@ -10,7 +10,7 @@ let uploadedFiles = new Set(); // 업로드된 파일을 저장하는 Set
 // 파일 선택 시 호출되는 함수
 fileInput.addEventListener("change", (event) => {
     handleFiles(event.target.files);
-    fileInput.value = ""; // 같은 파일을 다시 선택할 수 있도록 초기화
+    fileInput.value = "";
 });
 
 // 드래그한 파일이 드롭존에 들어왔을 때 스타일 변경

@@ -1,3 +1,72 @@
+// 사이드배너 해당 세션 클릭이벤트
+document.addEventListener("DOMContentLoaded", () => {
+    // 모든 lnb-item 요소를 선택
+    const Items = document.querySelectorAll(".lnb-item");
+
+    if (Items.length === 0) {
+        console.error("lnb-item 요소를 찾을 수 없습니다. HTML을 확인해주세요.");
+    } else {
+        console.log(`총 ${Items.length}개의 lnb-item 요소를 찾았습니다.`);
+
+        // 각 lnb-item 요소에 클릭 이벤트 리스너를 추가
+        Items.forEach((item, index) => {
+            console.log(`이벤트 리스너를 추가 중인 요소 인덱스: ${index}`);
+            item.addEventListener("click", (e) => {
+                try {
+                    // 기본 동작 방지 및 이벤트 전파 차단
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log("클릭 이벤트 발생. 요소:", item);
+
+                    // 모든 항목에서 active 클래스 제거
+                    Items.forEach((i) => {
+                        i.classList.remove("active");
+                        console.log("active 클래스 제거된 항목:", i);
+                    });
+
+                    // 클릭된 항목에 active 클래스 추가
+                    item.classList.add("active");
+                    console.log("active 클래스 추가된 항목:", item);
+                } catch (error) {
+                    console.error("클릭 이벤트 처리 중 오류 발생:", error);
+                }
+            });
+        });
+    }
+});
+
+// z-index로 화면 보이기 / 숨기기
+// document.addEventListener("DOMContentLoaded", () => {
+//     // 버튼과 컨텐츠 요소를 선택합니다.
+//     const container1 = document.getElementById("container1");
+//     const container2 = document.getElementById("container2");
+//     const showContainer1Btn = document.getElementById("showContainer1");
+//     const showContainer2Btn = document.getElementById("showContainer2");
+
+//     // 컨텐츠 1 보기 버튼에 클릭 이벤트 리스너 추가
+//     showContainer1Btn.addEventListener("click", () => {
+//         // 컨텐츠 1을 보여주고, 컨텐츠 2는 숨깁니다.
+//         container1.style.display = "block";
+//         container2.style.display = "none";
+
+//         // z-index 설정을 통해 다른 요소들 위로 보이게 함
+//         container1.style.zIndex = 10;
+//         container2.style.zIndex = 1;
+//     });
+
+//     // 컨텐츠 2 보기 버튼에 클릭 이벤트 리스너 추가
+//     showContainer2Btn.addEventListener("click", () => {
+//         // 컨텐츠 2를 보여주고, 컨텐츠 1은 숨깁니다.
+//         container2.style.display = "block";
+//         container1.style.display = "none";
+
+//         // z-index 설정을 통해 다른 요소들 위로 보이게 함
+//         container2.style.zIndex = 10;
+//         container1.style.zIndex = 1;
+//     });
+// });
+
+//  클릭 이벤트 추가 div 보여주기
 const showTab = (tabId, element) => {
     // 일단 모든 tab-content를 숨김
     const tabcontent = document.getElementsByClassName("tab-content");
@@ -9,7 +78,7 @@ const showTab = (tabId, element) => {
     document.getElementById(tabId).classList.add("active");
 
     // 사이드바 메뉴의 활성화 상태 변경
-    const tablinks = document.querySelectorAll(".sidebar-nav ul li");
+    const tablinks = document.querySelectorAll(".gNTKJg a");
     tablinks.forEach((link) => {
         link.classList.remove("active");
     });
@@ -17,188 +86,43 @@ const showTab = (tabId, element) => {
     // 현재 클릭된 요소의 부모 li에 active 클래스 추가
     element.parentElement.classList.add("active");
 };
-document.addEventListener("click", () => {
-    // 데이터 편집 가능 요소 설정
-    const editableElements = document.querySelectorAll(".data-editable");
 
-    editableElements.forEach((element) => {
-        // 각 요소에 대해 반복적으로 처리하는 코드 블록을 정의
-        element.addEventListener("click", () => {
-            const currentText = element.innerText;
-            const input = document.createElement("input");
-            input.type = "text";
-            // 생성된 입력 필드의 유형을 text로 설정
+document
+    .getElementById("mypage-link")
+    .addEventListener("click", () => showTab("mypage", this));
 
-            input.value =
-                currentText.trim() === "정보를 입력해주세요."
-                    ? ""
-                    : currentText.trim();
-            // 만약 현재 텍스트가 "정보를 입력해주세요."인 경우, 입력 필드를 비워두고
-            // 그렇지 않으면, 기존 텍스트를 입력 필드에 표시
-            // trim() 메서드는 텍스트의 앞뒤 공백 제거
-            element.innerHTML = "";
-            element.appendChild(input);
-            input.focus();
-            input.addEventListener("blur", () => {
-                const newText =
-                    input.value.trim() === ""
-                        ? "정보를 입력해주세요."
-                        : input.value.trim();
-                // 만약 입력 필드가 비어 있다면, 기본 메시지("정보를 입력해주세요.")를 사용
-                element.innerText = newText;
-            });
+document
+    .getElementById("payment-link")
+    .addEventListener("click", () => showTab("payment", this));
 
-            // input.addEventListener("keydown", (e) => {
-            //     if (e.key === "Enter") {
-            //         input.blur();
-            //     }
-            // });
-        });
-    });
+document
+    .getElementById("boost-link")
+    .addEventListener("click", () => showTab("boost", this));
 
-// 문의 렌더링
-const renderInquiries = () => {
-    const inquiryList = document.querySelector(".inquiry-list");
-    const emptyComponent = document.querySelector(
-        "#myinquiry .empty-component"
-    );
+document
+    .getElementById("donaition-link")
+    .addEventListener("click", () => showTab("donaition", this));
 
-    // 페이지네이션 처리된 문의 목록
-    const reversedInquiries = inquiries.slice().reverse(); // 데이터 복사 및 반전
-    const paginatedInquiries = paginate(reversedInquiries, currentInquiryPage);
+document
+    .getElementById("charge-link")
+    .addEventListener("click", () => showTab("charge", this));
 
-    if (paginatedInquiries.length === 0) {
-        inquiryList.style.display = "none";
-        emptyComponent.style.display = "block";
-    } else {
-        inquiryList.style.display = "block";
-        emptyComponent.style.display = "none";
-        inquiryList.innerHTML = `
-            <table class="news-center-table" style="margin-top: 0; margin-bottom: 20px;">
-                <colgroup>
-                    <col style="width: 57px;">
-                    <col style="width: 132px;">
-                    <col style="width: 703px;">
-                    <col style="width: 104px;">
-                </colgroup>
-                <thead class="news-center-table-head">
-                    <tr>
-                        <th>번호</th>
-                        <th>구분</th>
-                        <th>제목</th>
-                        <th>등록일</th>
-                    </tr>
-                </thead>
-                <tbody class="news-center-table-body">
-                ${paginatedInquiries
-                    .map(
-                        (inquiry, index) => `
-                    <tr class="news-data-rows" data-forloop="${
-                        reversedInquiries.length -
-                        (currentInquiryPage - 1) * itemsPerPage -
-                        index
-                    }">
-                        <td class="news-center-table-body-number">${
-                            reversedInquiries.length -
-                            (currentInquiryPage - 1) * itemsPerPage -
-                            index
-                        }</td>
-                        <td class="news-center-table-body-category">문의</td>
-                        <td class="news-center-table-body-title"><span>${
-                            inquiry.title
-                        }</span></td>
-                        <td class="news-center-table-body-date">${
-                            inquiry.date
-                        }</td>
-                    </tr>
-                `
-                    )
-                    .join("")}
-                </tbody>
-            </table>
-        `;
-    }
+document
+    .getElementById("notice-link")
+    .addEventListener("click", () => showTab("notice", this));
 
-    updatePaginationButton(reversedInquiries, currentInquiryPage, "myinquiry");
-};
+document
+    .getElementById("volunteer-link")
+    .addEventListener("click", () => showTab("volunteer", this));
 
-// 알림 렌더링 함수
-const renderNotifications = (notificationData = notifications) => {
-    const notificationList = document.querySelector(".noti-body");
-    const emptyComponent = document.querySelector(".empty-component");
+document
+    .getElementById("Inquiry-link")
+    .addEventListener("click", () => showTab("Inquiry", this));
 
-    const reversedNotifications = notificationData.slice().reverse(); // 알림 데이터를 역순으로 표시
-    const paginatedNotifications = paginate(
-        reversedNotifications,
-        currentNotificationPage
-    );
+document
+    .getElementById("postscript-link")
+    .addEventListener("click", () => showTab("postscript", this));
 
-    if (paginatedNotifications.length === 0) {
-        notificationList.style.display = "none";
-        emptyComponent.style.display = "block";
-    } else {
-        notificationList.style.display = "block";
-        emptyComponent.style.display = "none";
-        notificationList.innerHTML = paginatedNotifications
-            .map(
-                (notification) => `
-                <div class="noti-box unread">
-                    <div class="noti-box-wrapper with-img">
-                        <img
-                            class="noti-img"
-                            src="${notification.img}"
-                            alt="알림 이미지"
-                        />
-                        <div class="noti-box-content">
-                            <div class="noti-title">
-                                ${notification.content}
-                            </div>
-                            <div class="noti-date">
-                                ${notification.date}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            `
-            )
-            .join("");
-    }
-
-    updatePaginationButton(
-        reversedNotifications,
-        currentNotificationPage,
-        "mynotice"
-    );
-};
-
-// 초기 렌더링
-renderPosts();
-renderReplies();
-renderInquiries();
-// renderPoints();
-renderNotifications();
-
-// 기술명과 경험 필드의 값이 빈 값이 아닌지 확인하는 함수
-function updateButtonState() {
-    const techName = document.querySelector(".stack-search-typing-input").value;
-    const experience = document.querySelector(
-        'select[name="experience"]'
-    ).value;
-    const submitButton = document.querySelector(
-        ".btn.btn-8-20.btn-partner.btn-submit"
-    );
-
-    if (techName !== "" && experience !== "") {
-        // 값이 모두 채워져 있으면 버튼 색상 변경
-        submitButton.style.backgroundColor = "#00a878";
-        submitButton.style.color = "#fff";
-        submitButton.style.border = "#00a878";
-        submitButton.style.cursor = "pointer";
-    } else {
-        // 값이 비어 있으면 원래 상태로 복원 (원래 색상으로 복원)
-        submitButton.style.backgroundColor = ""; // 원래 배경색으로 복원
-        submitButton.style.color = ""; // 원래 글자색으로 복원
-        submitButton.style.border = ""; // 원래 테두리색으로 복원
-        submitButton.style.cursor = ""; // 원래 커서 상태로 복원
-    }
-}
+document
+    .getElementById("gratitude-link")
+    .addEventListener("click", () => showTab("gratitude", this));
