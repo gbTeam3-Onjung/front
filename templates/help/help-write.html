@@ -67,31 +67,30 @@
                             method="post"
                         >
                             <div class="form-field">
-                                <label for="#">
+                                <label for="request-type-select">
                                     문의항목을 선택해주세요.
                                 </label>
-                                <label for="request-type-select"
-                                    ><a
-                                        class="request-type-input"
-                                        tabindex="0"
-                                        aria-label="문의항목을 선택해주세요."
-                                        style="max-width: 100%"
-                                        >-</a
-                                    ></label
+                                <a
+                                    class="request-type-input"
+                                    tabindex="0"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                    aria-label="문의항목을 선택해주세요."
+                                    style="max-width: 100%"
+                                    >-</a
                                 >
                                 <select
                                     name="request-type"
                                     id="request-type-select"
                                     aria-label="문의항목을 선택해주세요."
                                     autofocus="autofocus"
+                                    style="display: none"
                                 >
                                     <option selected="selected" value="-">
                                         -
                                     </option>
-                                    <option value=" 일반 문의">
-                                        일반 문의
-                                    </option>
-                                    <option value="봉사단체 가입 문의">
+                                    <option value="111">일반 문의</option>
+                                    <option value="222">
                                         봉사단체 가입 문의
                                     </option>
                                 </select>
