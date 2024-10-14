@@ -311,6 +311,11 @@ textarea {
     box-sizing: border-box;
 }
 
+.form-field .request-type-input.active {
+    border: 1px solid #2656F6;
+    display: none;
+}
+
 .request-type-input:after {
     right: 20px;
     top: 16px;
@@ -328,6 +333,14 @@ textarea {
 
 .form-field ~ .form-field-agreements {
     margin-top: 30px;
+}
+
+select#request-type-select {
+    display: none;
+}
+
+select#request-type-select.active {
+    display: block;
 }
 
 .form-field.required > label::after, .form-field-agreements > label::after {
