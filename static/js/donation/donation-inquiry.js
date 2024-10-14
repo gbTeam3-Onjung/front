@@ -27,8 +27,19 @@ submitButton.addEventListener("click", () => {
     const commentText = commentTextarea.value.trim();
     if (commentText) {
         alert(`댓글이 작성되었습니다: ${commentText}`);
-        commentTextarea.value = ""; // 입력창 초기화
+        commentTextarea.value = "";
     } else {
         alert("댓글을 입력해주세요.");
     }
 });
+// 예시로 넣은 데이터
+const totalPrize = 50000;
+const currentPrize = 30000;
+
+const percentage = Math.floor((currentPrize / totalPrize) * 100);
+
+document.querySelector(".graph-status .num").textContent = percentage;
+document.querySelector(".graph-bar span").style.width = `${percentage}%`;
+document.querySelector(
+    ".total-prize"
+).textContent = `${currentPrize} 포인트 / ${totalPrize} 포인트`;
