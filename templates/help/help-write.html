@@ -62,11 +62,11 @@
                             class="request-form"
                             data-form
                             data-form-type="request"
-                            action="https://help.loud.kr/hc/ko/request"
+                            action="/help/write"
                             accept-charset="UTF-8"
                             method="post"
                         >
-                            <div class="form-field">
+                            <div class="form-field" style="position: relative">
                                 <label for="request-type-select">
                                     문의항목을 선택해주세요.
                                 </label>
@@ -75,6 +75,7 @@
                                     tabindex="0"
                                     aria-haspopup="true"
                                     aria-expanded="false"
+                                    aria-controls="request-type-area"
                                     aria-label="문의항목을 선택해주세요."
                                     style="max-width: 100%"
                                     >-</a
@@ -94,6 +95,12 @@
                                         봉사단체 가입 문의
                                     </option>
                                 </select>
+                                <div id="request-type-area">
+                                    <div value="111">&nbsp;일반 문의</div>
+                                    <div value="222">
+                                        &nbsp;봉사단체 가입 문의
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-field required">
                                 <label for="requester-email">
@@ -149,7 +156,7 @@
                                     <input
                                         type="file"
                                         multiple="true"
-                                        id="request-attachments"
+                                        id="attach-input"
                                         data-fileupload="true"
                                         data-dropzone="upload-dropzone"
                                     />
@@ -158,8 +165,15 @@
                                         또는 파일을 여기로 드래그
                                     </span>
                                 </div>
+                                <ul
+                                    id="attachments-upload-pool"
+                                    class="attachments-upload-pool"
+                                ></ul>
                             </div>
-                            <div class="form-field-agreements">
+                            <div
+                                class="form-field-agreements"
+                                style="clear: both"
+                            >
                                 <p id="request-agreements">
                                     (주)온정은 정보통신망 이용촉진 및 정보보호
                                     등 관한 법률을 준수하며 고객님의 개인정보를

@@ -40,7 +40,7 @@ document.querySelector(
     ".total-prize"
 ).textContent = `${currentPrize} 포인트 / ${totalPrize} 포인트`;
 
-// 초기 댓글 데이터 배열
+// 예시 댓글 데이터 배열
 const comments = [
     {
         user: "로고싱",
@@ -113,3 +113,25 @@ const renderComments = () => {
 
 // 페이지가 로드될 때 댓글 렌더링
 renderComments();
+
+const commentTextarea = document.getElementById("comment-content");
+const submitButton = document.querySelector(".submit-comment-button");
+
+// textarea 입력 이벤트 처리
+commentTextarea.addEventListener("input", () => {
+    if (commentTextarea.value.trim() !== "") {
+        submitButton.disabled = false;
+    } else {
+        submitButton.disabled = true;
+    }
+});
+
+// 댓글 작성 버튼 클릭 이벤트 처리
+submitButton.addEventListener("click", () => {
+    const commentText = commentTextarea.value.trim();
+    if (commentText) {
+        alert(`댓글이 작성되었습니다: ${commentText}`);
+        commentTextarea.value = "";
+        submitButton.disabled = true;
+    }
+});
