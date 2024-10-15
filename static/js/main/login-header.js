@@ -20,6 +20,16 @@ document
         }
     });
 
+// // 마우스가 헤더 밖으로 나가면 드롭다운 닫기
+// document.querySelector("#gnb").addEventListener("mouseleave", function () {
+//     const notiPopup = document.querySelector(".noti-popup");
+//     const profilePopup = document.querySelector(".profile-popup");
+
+//     // 드롭다운 숨기기
+//     notiPopup.style.display = "none";
+//     profilePopup.style.display = "none";
+// });
+
 document.querySelector(".opener").addEventListener("click", function () {
     const profilePopup = document.querySelector(".profile-popup");
     const notiPopup = document.querySelector(".noti-popup");
