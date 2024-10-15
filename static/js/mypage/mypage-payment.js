@@ -366,23 +366,6 @@ toggleElements.forEach(function (element) {
     });
 });
 
-// 버튼과 date-filter 요소 선택
-document.addEventListener("DOMContentLoaded", function () {
-    var initializationButton = document.getElementById("Initialization");
-    if (initializationButton) {
-        initializationButton.addEventListener("click", function () {
-            var dateFilterElement = document.querySelector(".date-filter");
-            if (dateFilterElement) {
-                var childElements =
-                    dateFilterElement.querySelectorAll(".active");
-                childElements.forEach(function (element) {
-                    element.classList.remove("active");
-                });
-            }
-        });
-    }
-});
-
 // // 모든 탭 요소를 선택합니다.
 const tabs = document.querySelectorAll(".tab");
 
@@ -396,3 +379,37 @@ tabs.forEach((tab) => {
         tab.classList.add("active");
     });
 });
+
+// 페이지 로드 후 초기화 버튼에 이벤트 리스너 등록하는 로직
+document.addEventListener("DOMContentLoaded", function () {
+    document.body.addEventListener("click", function (event) {
+        // 초기화 버튼 클릭 시 동작 확인
+        if (event.target && event.target.id === "Initialization") {
+            console.log("Initialization button clicked");
+            resetActiveClasses();
+        }
+    });
+});
+
+// 결제 내역 및 후원 내역 둘 다 초기화가 가능하도록 공통 함수 정의
+function resetActiveClasses() {
+    // 모든 date-filter 클래스 요소를 가져옵니다.
+    var dateFilterElements = document.querySelectorAll(".date-filter");
+
+    if (dateFilterElements.length > 0) {
+        dateFilterElements.forEach(function (dateFilterElement) {
+            console.log("Resetting active classes in date-filter element");
+            var childElements = dateFilterElement.querySelectorAll(".active");
+            if (childElements.length > 0) {
+                childElements.forEach(function (element) {
+                    console.log("Removing active class from element");
+                    element.classList.remove("active");
+                });
+            } else {
+                console.log("No active children found in date-filter element");
+            }
+        });
+    } else {
+        console.log("No date-filter elements found on the page");
+    }
+}
