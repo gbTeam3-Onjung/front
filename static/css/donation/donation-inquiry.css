@@ -13,7 +13,6 @@
 .content-container-main {
     position: relative;
     flex-grow: 1;
-    flex-shrink: 0;
     display: flex;
     flex-direction: column;
 }
@@ -46,43 +45,35 @@ html {
     width: 100%;
     height: 400px;
 }
-.background-wrapper.thumbnail-background-slider.slick-slider {
+.background-wrapper.thumbnail-background.slick {
     height: 100%;
 }
-.slick-slider {
+.slick {
     box-sizing: border-box;
     display: block;
     position: relative;
     touch-action: pan-y;
     user-select: none;
 }
-.background-wrapper.thumbnail-background-slider.slick-slider .slick-list {
+.background-wrapper.thumbnail-background.slick .slick-list {
     height: 100%;
     overflow: hidden;
 }
-.background-wrapper.thumbnail-background-slider.slick-slider
-    .slick-list
-    .slick-track {
+.background-wrapper.thumbnail-background.slick .slick-list .slick-track {
     height: 100%;
 }
-.slick-slider .slick-track,
-.slick-slider .slick-list {
+.slick .slick-track,
+.slick .slick-list {
     transform: translate3d(0px, 0px, 0px);
 }
 
 .slick-initialized .slick-slide {
     display: block;
 }
-.gWteaU
-    .thumbnail-background-slider.slick-slider
-    .slick-list
-    .slick-track
-    > div
-    > div
-    div {
+.gWteaU .thumbnail-background.slick .slick-list .slick-track > div > div div {
     height: 100%;
 }
-.thumbnail-slider-item {
+.thumbnail-item {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07))
         rgb(236, 236, 236);
 }
@@ -124,31 +115,32 @@ menu.sub-tab {
     height: 100%;
     flex-grow: 1;
     max-width: 760px;
+    margin-top: 130px;
 }
-.slider-content-wrapper {
+.content-wrapper {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
-.slider-content-wrapper .main-thumbnail-slider-container {
+.content-wrapper .main-thumbnail-container {
     display: flex;
     flex-direction: column;
     width: calc(78% - 12.48px);
 }
-.slider-content-wrapper .main-thumbnail-slider {
+.content-wrapper .main-thumbnail {
     filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 20px);
     margin: 0px;
     width: 100%;
     overflow: visible;
 }
-.slider-content-wrapper .main-thumbnail-slider .slick-slider img {
+.content-wrapper .main-thumbnail .slick img {
     border-radius: 4px;
     background-color: white;
 }
 .tabs-navigation-wrapper {
     background-color: rgb(255, 255, 255);
     position: sticky;
-    top: 112px;
+    top: 110px;
     z-index: 3;
 }
 .tabs-navigation-wrapper > div {
@@ -368,7 +360,6 @@ ul {
     padding-bottom: 2px;
 }
 .main-info-wrap .main-info > .space {
-    flex-shrink: 0;
     width: 40px;
 }
 .main-info-wrap .main-info > .right {
@@ -381,9 +372,9 @@ ul {
 }
 .sticky-box {
     position: sticky;
-    top: 20px; /* 화면 상단에서 20px 아래에 고정 */
-    width: 100%; /* 부모 요소에 맞게 크기 설정 */
-    max-width: 400px; /* 최대 크기 설정 */
+    top: 180px;
+    width: 100%;
+    max-width: 400px;
 }
 .right-title-wrap {
     width: 100%;
