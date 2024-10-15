@@ -11,6 +11,7 @@ const attachInput = document.querySelector("#attach-input");
 let i = 0;
 
 HTMLCollection.prototype.forEach = Array.prototype.forEach;
+HTMLCollection.prototype.filter = Array.prototype.filter;
 
 requestTypeInput.addEventListener("focus", (e) => {
     e.target.ariaExpanded = "true";
@@ -28,15 +29,15 @@ requestTypeInput.addEventListener("focus", (e) => {
     requestTypeArea.style.left = `${
         requestTypeInput.getBoundingClientRect().left
     }`;
-    console.log(requestTypeInput.getBoundingClientRect().top);
-    console.log(requestTypeArea);
+    // console.log(requestTypeInput.getBoundingClientRect().top);
+    // console.log(requestTypeArea);
 });
 
-requestTypeInput.addEventListener("blur", (e) => {
-    e.target.ariaExpanded = "false";
-    requestTypeArea.classList.toggle("active");
-    requestTypeInput.classList.toggle("active");
-});
+// requestTypeInput.addEventListener("blur", (e) => {
+//     e.target.ariaExpanded = "false";
+//     requestTypeArea.classList.toggle("active");
+//     requestTypeInput.classList.toggle("active");
+// });
 
 requestTypeArea.children.forEach((child) => {
     child.addEventListener("mouseenter", (e) => {
@@ -44,6 +45,18 @@ requestTypeArea.children.forEach((child) => {
     });
     child.addEventListener("mouseleave", (e) => {
         e.target.style.backgroundColor = "";
+    });
+    child.addEventListener("click", (e) => {
+        console.log(e.target.innerText);
+        requestTypeInput.innerText = e.target.innerText;
+        requestTypeSelect.children.forEach((child) => {
+            child.selected =
+                child.innerText.trim() === e.target.innerText ? "true" : "";
+        });
+        requestTypeInput.ariaExpanded = "false";
+        requestTypeArea.classList.toggle("active");
+        requestTypeInput.classList.toggle("active");
+        console.log(requestTypeSelect.value);
     });
 });
 
@@ -86,8 +99,6 @@ attachInput.addEventListener("change", (e) => {
         attachCancelButton.addEventListener("click", (e) => {
             // 첨부파일 목록에서 해당 파일 삭제
             attachInfo.value = "";
-            console.log(e.target);
-            console.log(e.target.parentElement);
             attachmentsUploadPool.removeChild(
                 e.target.parentElement.parentElement
             );
