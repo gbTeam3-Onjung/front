@@ -89,17 +89,17 @@ document.getElementById("submit-review").addEventListener("click", (e) => {
 
     // 필수 항목 검증
     if (!companyName) {
-        alert("");
+        alert("필수 항목을 확인해주세요.");
         return;
     }
 
     if (!serviceContents) {
-        alert("봉사 내용을 입력해주세요.");
+        alert("한 줄 소개를 입력해주세요.");
         return;
     }
 
     if (!reviewContent) {
-        alert("봉사활동 후기를 작성해주세요.");
+        alert("내용을 작성해주세요.");
         return;
     }
 
@@ -137,9 +137,9 @@ const updateDateRange = () => {
         if (dayCount >= 0) {
             dateCountDisplay.textContent = dayCount;
         } else {
-            dateCountDisplay.textContent = "0";
+            dateCountDisplay.textContent = "X";
         }
     } else {
-        dateCountDisplay.textContent = "0";
+        dateCountDisplay.textContent = "X";
     }
 };
