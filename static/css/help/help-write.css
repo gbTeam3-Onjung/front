@@ -208,6 +208,12 @@ textarea {
     overflow: auto;
 }
 
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 .app-divider {
     border-top: 1px solid #ddd;
     margin-bottom: 20px;
@@ -313,7 +319,6 @@ textarea {
 
 .form-field .request-type-input.active {
     border: 1px solid #2656F6;
-    display: none;
 }
 
 .request-type-input:after {
@@ -444,6 +449,12 @@ select#request-type-select.active {
     box-sizing: border-box;
 }
 
+.form-field-agreements label.checked:before {
+    background: rgba(31, 77, 234, 1) url(https://help.loud.kr/hc/theming_assets/01HZKZ89P472EA15MDJ4YBF8BM) 50% 50% no-repeat;
+    background-size: 16px;
+    border: rgba(31, 77, 234, 1);
+}
+
 #request-agreements-check {
     display: none;
     opacity: 0;
@@ -480,6 +491,97 @@ select#request-type-select.active {
 .form footer input[type="submit"]:hover {
     background-color: #0e2d95;
 }
+
+#request-type-area {
+    display: none;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    background: #fff;
+    border: 1px solid #aaa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    min-width: 100px;
+    position: absolute !important;
+    z-index: 999;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+#request-type-area.active {
+    display: block;
+}
+
+#request-type-area > div {
+    height: 28px;
+    line-height: 28px;
+}
+
+.attach-file {
+    border-radius: 3px;
+    clear: left;
+    float: left;
+    font-size: 12px;
+    margin-top: 10px;
+    overflow: hidden;
+    padding: 5px;
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.attach-file:last-of-type {
+    margin-bottom: 30px;
+}
+
+.attach-file .attach-text-wrap {
+    color: #333;
+    display: inline-block;
+    max-width: calc(100% - 30px);
+    overflow: hidden;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+    z-index: 1;
+}
+
+.attach-text-wrap::before {
+    color: #888;
+    content: "📎";
+    font-family: "entypo";
+    margin-right: 5px;
+}
+
+.attach-file .attach-cancel-button {
+    color: #888;
+    cursor: pointer;
+    float: right;
+    font-weight: bold;
+    margin-right: 5px;
+    position: relative;
+    z-index: 1;
+}
+
+.attach-cancel-button::before {
+    content: "X";
+    font-family: "entypo";
+    font-size: 10px;
+}
+
+.attach-file .upload-progress {
+    background-color: #0072ef;
+    height: 2px;
+    transition: width .5s linear;
+    visibility: hidden;
+    width: 5%;
+}
+
+
 
 
 
