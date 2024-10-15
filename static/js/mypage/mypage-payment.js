@@ -348,6 +348,316 @@ const boostCancelCount = boosts.filter(
 ).length;
 document.getElementById("boost-cancelCount").textContent = boostCancelCount;
 
+/*********************기부**********************/
+const donaitions = [
+    {
+        id: 1,
+        status: "완료",
+        price: "100",
+        date: "2024.03.01",
+    },
+    {
+        id: 2,
+        status: "완료",
+        price: "3000",
+        date: "2024.03.02",
+    },
+    {
+        id: 3,
+        status: "완료",
+        price: "1000",
+        date: "2024.03.03",
+    },
+    {
+        id: 4,
+        status: "완료",
+        price: "700",
+        date: "2024.03.04",
+    },
+    {
+        id: 5,
+        status: "완료",
+        price: "1500",
+        date: "2024.03.05",
+    },
+    {
+        id: 6,
+        status: "취소",
+        price: "100",
+        date: "2024.03.01",
+    },
+    {
+        id: 7,
+        status: "취소",
+        price: "3000",
+        date: "2024.03.02",
+    },
+    {
+        id: 8,
+        status: "취소",
+        price: "1000",
+        date: "2024.03.03",
+    },
+    {
+        id: 9,
+        status: "취소",
+        price: "700",
+        date: "2024.03.04",
+    },
+    {
+        id: 10,
+        status: "취소",
+        price: "1500",
+        date: "2024.03.05",
+    },
+    {
+        id: 11,
+        status: "취소",
+        price: "1000",
+        date: "2024.03.11",
+    },
+];
+
+// 기부 내역 렌더링▼
+const renderDonaitions = () => {
+    // 1. boost 배열 확인
+    console.log(donaitions); // boost 배열이 제대로 정의되고, 데이터가 있는지 확인
+
+    // 2. HTML 요소 선택 확인
+    const donaitionList = document.querySelector(".donaition-list");
+    const emptyComponent = document.querySelector(
+        "#donaition .empty-component"
+    );
+
+    console.log(donaitionList, emptyComponent); // 요소들이 정상적으로 선택되고 있는지 확인
+
+    // 이후 기존의 코드
+    if (donaitions.length === 0) {
+        donaitionList.style.display = "none";
+        emptyComponent.style.display = "block";
+    } else {
+        donaitionList.style.display = "block";
+        emptyComponent.style.display = "none";
+        donaitionList.innerHTML = `
+            <table class="news-center-table" style="margin-top: 0; margin-bottom: 20px;">
+                <colgroup>
+                    <col style="width: 57px;">
+                    <col style="width: 132px;">
+                    <col style="width: 150px;">
+                    <col style="width: 104px;">
+                </colgroup>
+                <thead class="news-center-table-head">
+                    <tr>
+                        <th>기부 번호</th>
+                        <th>구분</th>
+                        <th>금액</th>
+                        <th>결제 일</th>
+                    </tr>
+                </thead>
+                <tbody class="news-center-table-body">
+                ${donaitions
+                    .map(
+                        (donaition) => `
+                    <tr class="news-data-rows" data-forloop="${donaition.id}">
+                        <td class="news-center-table-body-number">${
+                            donaition.id
+                        }</td>
+                        <td class="news-center-table-body-category">${
+                            "기부 " + donaition.status
+                        }</td>
+                        <td class="news-center-table-body-title"><span>${
+                            donaition.price + "원"
+                        }</span></td>
+                        <td class="news-center-table-body-date">${
+                            donaition.date
+                        }</td>
+                    </tr>
+                `
+                    )
+                    .join("")}
+                </tbody>
+            </table>
+        `;
+    }
+};
+renderDonaitions(donaitions);
+
+// 전체 항목 숫자 증가
+const donaitionTotalCount = donaitions.filter(
+    (donaition) => donaition.status === "완료" || donaition.status === "취소"
+).length;
+document.getElementById("donaition-totalCount").textContent =
+    donaitionTotalCount;
+
+// 후원 완료 숫자 증가
+const donaitionCompletedCount = donaitions.filter(
+    (donaition) => donaition.status === "완료"
+).length;
+document.getElementById("donaition-completedCount").textContent =
+    donaitionCompletedCount;
+
+// 후원 취소 숫자 감소
+const donaitionCancelCount = donaitions.filter(
+    (donaition) => donaition.status === "취소"
+).length;
+document.getElementById("donaition-cancelCount").textContent =
+    donaitionCancelCount;
+
+/*********************봉사 활동**********************/
+const donaitions = [
+    {
+        id: 1,
+        status: "완료",
+        price: "100",
+        date: "2024.03.01",
+    },
+    {
+        id: 2,
+        status: "완료",
+        price: "3000",
+        date: "2024.03.02",
+    },
+    {
+        id: 3,
+        status: "완료",
+        price: "1000",
+        date: "2024.03.03",
+    },
+    {
+        id: 4,
+        status: "완료",
+        price: "700",
+        date: "2024.03.04",
+    },
+    {
+        id: 5,
+        status: "완료",
+        price: "1500",
+        date: "2024.03.05",
+    },
+    {
+        id: 6,
+        status: "취소",
+        price: "100",
+        date: "2024.03.01",
+    },
+    {
+        id: 7,
+        status: "취소",
+        price: "3000",
+        date: "2024.03.02",
+    },
+    {
+        id: 8,
+        status: "취소",
+        price: "1000",
+        date: "2024.03.03",
+    },
+    {
+        id: 9,
+        status: "취소",
+        price: "700",
+        date: "2024.03.04",
+    },
+    {
+        id: 10,
+        status: "취소",
+        price: "1500",
+        date: "2024.03.05",
+    },
+    {
+        id: 11,
+        status: "취소",
+        price: "1000",
+        date: "2024.03.11",
+    },
+];
+
+// 기부 내역 렌더링▼
+const renderDonaitions = () => {
+    // 1. boost 배열 확인
+    console.log(donaitions); // boost 배열이 제대로 정의되고, 데이터가 있는지 확인
+
+    // 2. HTML 요소 선택 확인
+    const donaitionList = document.querySelector(".donaition-list");
+    const emptyComponent = document.querySelector(
+        "#donaition .empty-component"
+    );
+
+    console.log(donaitionList, emptyComponent); // 요소들이 정상적으로 선택되고 있는지 확인
+
+    // 이후 기존의 코드
+    if (donaitions.length === 0) {
+        donaitionList.style.display = "none";
+        emptyComponent.style.display = "block";
+    } else {
+        donaitionList.style.display = "block";
+        emptyComponent.style.display = "none";
+        donaitionList.innerHTML = `
+            <table class="news-center-table" style="margin-top: 0; margin-bottom: 20px;">
+                <colgroup>
+                    <col style="width: 57px;">
+                    <col style="width: 132px;">
+                    <col style="width: 150px;">
+                    <col style="width: 104px;">
+                </colgroup>
+                <thead class="news-center-table-head">
+                    <tr>
+                        <th>기부 번호</th>
+                        <th>구분</th>
+                        <th>금액</th>
+                        <th>결제 일</th>
+                    </tr>
+                </thead>
+                <tbody class="news-center-table-body">
+                ${donaitions
+                    .map(
+                        (donaition) => `
+                    <tr class="news-data-rows" data-forloop="${donaition.id}">
+                        <td class="news-center-table-body-number">${
+                            donaition.id
+                        }</td>
+                        <td class="news-center-table-body-category">${
+                            "기부 " + donaition.status
+                        }</td>
+                        <td class="news-center-table-body-title"><span>${
+                            donaition.price + "원"
+                        }</span></td>
+                        <td class="news-center-table-body-date">${
+                            donaition.date
+                        }</td>
+                    </tr>
+                `
+                    )
+                    .join("")}
+                </tbody>
+            </table>
+        `;
+    }
+};
+renderDonaitions(donaitions);
+
+// 전체 항목 숫자 증가
+const donaitionTotalCount = donaitions.filter(
+    (donaition) => donaition.status === "완료" || donaition.status === "취소"
+).length;
+document.getElementById("donaition-totalCount").textContent =
+    donaitionTotalCount;
+
+// 후원 완료 숫자 증가
+const donaitionCompletedCount = donaitions.filter(
+    (donaition) => donaition.status === "완료"
+).length;
+document.getElementById("donaition-completedCount").textContent =
+    donaitionCompletedCount;
+
+// 후원 취소 숫자 감소
+const donaitionCancelCount = donaitions.filter(
+    (donaition) => donaition.status === "취소"
+).length;
+document.getElementById("donaition-cancelCount").textContent =
+    donaitionCancelCount;
+
 /*********************공통*********************/
 
 // 모든 .fItXBi.toggle 요소를 선택
