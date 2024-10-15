@@ -191,7 +191,7 @@ select {
 .menu-container {
     display: flex;
     -webkit-box-align: start;
-    align-items: start;
+    align-items: center;
     flex-direction: row;
 }
 .header {
