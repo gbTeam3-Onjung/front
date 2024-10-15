@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url("https://fonts.googleapis.com/earlyaccess/notosanskr.css");
+@import url("https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css");
 body, html {
     -webkit-text-size-adjust: none;
     -moz-text-size-adjust: none;
@@ -586,7 +589,7 @@ p {
     border-image: initial;
     pointer-events: none;
     border-width: 8px;
-    left: var(--left);
+    left: 337px;
     top: var(--top);
     right: var(--right);
     bottom: var(--bottom);
@@ -604,7 +607,7 @@ p {
     border-image: initial;
     pointer-events: none;
     border-width: 8px;
-    left: var(--left);
+    left: 337px;
     top: var(--top);
     right: var(--right);
     bottom: var(--bottom);
@@ -812,7 +815,7 @@ p {
     border-image: initial;
     pointer-events: none;
     border-width: 8px;
-    left: var(--left);
+    left: 59px;
     top: var(--top);
     right: var(--right);
     bottom: var(--bottom);
