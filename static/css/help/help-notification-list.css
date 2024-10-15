@@ -83,6 +83,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 a {
     text-decoration: none;
     background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
 }
 
 a:hover {
@@ -129,6 +132,13 @@ p {
 h4 {
     font-family: inherit;
 
+}
+
+button {
+    background: transparent;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
 }
 
 .app-divider {
@@ -299,6 +309,109 @@ h4 {
     width: 112px;
 }
 
+.pagination-wrap {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 24px 40px;
+    margin-top: 24px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(233, 235, 237);
+    border-radius: 16px;
+    width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pagination-container {
+    max-width: 711px;
+    display: flex;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow: auto;
+    margin: 0 auto;
+    scroll-behavior: smooth;
+    -webkit-box-pack: start;
+    justify-content: center;
+}
+
+.pagination-num-container {
+    margin-right: 8px;
+}
+
+.pagination-num {
+    flex-shrink: 0;
+    margin-bottom: 0px;
+    position: relative;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: -0.25px;
+    padding: 7px 15px 8px;
+    border-radius: 80px;
+    color: rgb(111, 119, 133);
+    border: 1px solid rgb(219, 222, 226);
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+.pagination-num.active {
+    color: rgb(255, 255, 255);
+    background-color: rgb(142, 148, 160);
+    border-color: rgb(142, 148, 160);
+    opacity: 0.8;
+}
+
+.next-button {
+    right: 0px;
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+    border: 0px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    color: rgb(64, 74, 92);
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.25px;
+    font-weight: 700;
+    border-radius: 50%;
+    padding: 11px;
+}
+
+.pagination-num::before, .next-button::before {
+    border-radius: 50%;
+    border-color: rgb(219, 222, 226);
+    content: "";
+    position: absolute;
+    inset: 0px;
+    border: 1px solid;
+}
+
+.next-button > svg {
+    width: 14px;
+    height: 14px;
+    margin: 0px;
+    user-select: none;
+    display: inline-block;
+    fill: currentcolor;
+    flex-shrink: 0;
+
+}
 
 
 
