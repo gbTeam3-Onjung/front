@@ -54,13 +54,13 @@ attachInput.addEventListener("change", (e) => {
     reader.readAsDataURL(file);
     // 첨부파일 객체 생성
     const attachFile = `<li class="attach-file">
-                            <a target="_blank" class="attach-text-wrap">${
-                                file.name
-                            }</a>
                             <label style="margin-bottom: 0; font-size: 0">
                                     <span class="attach-cancel-button" id=attach-cancel-button-${++i}></span>
                                     <input type="file" style="display:none" id=attach-info-${i} disabled/>
                             </label>
+                            <a target="_blank" class="attach-text-wrap">${
+                                file.name
+                            }</a>
                         </li>`;
 
     attachmentsUploadPool.innerHTML += attachFile;

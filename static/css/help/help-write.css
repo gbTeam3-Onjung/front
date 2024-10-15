@@ -530,7 +530,7 @@ select#request-type-select.active {
     position: relative;
     width: 50%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .attach-file:last-of-type {
@@ -562,7 +562,7 @@ select#request-type-select.active {
     cursor: pointer;
     float: right;
     font-weight: bold;
-    margin: 0 5px 0 15px;
+    margin-right: 5px;
     position: relative;
     z-index: 1;
 }
