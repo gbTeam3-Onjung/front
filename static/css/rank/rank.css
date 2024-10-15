@@ -84,12 +84,12 @@ section.top-rank .top-rank-filter {
     border: 0;
     width: 100%;
 }
-.react-datepicker__input-container {
+.react-datepicker-input-container {
     position: relative;
     display: inline-block;
     width: 100%;
 }
-.date-input .react-datepicker__input-container > input,
+.date-input .react-datepicker-input-container > input,
 .date-input .date-range-input {
     flex-grow: 1;
     background-color: transparent;
@@ -525,8 +525,8 @@ section.top-100 .expert-list {
     justify-content: space-between;
 }
 
-.expert-card-container > a .expert-card__left,
-.expert-card-container > button .expert-card__left {
+.expert-card-container > a .expert-card-left,
+.expert-card-container > button .expert-card-left {
     display: flex;
     flex-shrink: 0;
     margin-right: 16px;
@@ -553,14 +553,14 @@ section.top-100 .expert-list {
     border-radius: 50%;
     border: 1px solid rgb(245, 246, 247);
 }
-.expert-card-container .expert-card__info {
+.expert-card-container .expert-card-info {
     margin-left: 24px;
     position: relative;
     z-index: 1;
     display: flex;
     flex-direction: column;
 }
-.expert-card-container .expert-card__info__user-profile {
+.expert-card-container .expert-card-info-user-profile {
     margin-top: 0px;
 }
 .profile-container {
@@ -568,7 +568,7 @@ section.top-100 .expert-list {
     color: rgb(16, 28, 51);
     font-weight: 700;
 }
-.expert-card-container .expert-card__info .expert-card__inquire {
+.expert-card-container .expert-card-info .expert-card-inquire {
     width: fit-content;
     margin-top: 16px;
     z-index: 2;
@@ -596,30 +596,30 @@ section.top-100 .expert-list {
 .inquiry-button .visual-correction {
     padding-bottom: 1px;
 }
-.expert-card-container .expert-card__info__meta {
+.expert-card-container .expert-card-info-meta {
     width: 100%;
     display: flex;
     margin-top: 8px;
     -webkit-box-pack: start;
     justify-content: flex-start;
 }
-.expert-card-container .expert-card__info__meta__item {
+.expert-card-container .expert-card-info-meta-item {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
     width: fit-content;
 }
-.expert-card-container .expert-card__info__meta__item-title {
+.expert-card-container .expert-card-info-meta-item-title {
     width: fit-content;
 }
-.expert-card-container .expert-card__info__meta__item-spacer {
+.expert-card-container .expert-card-info-meta-item-spacer {
     width: 4px;
 }
-.info-meta-container .expert-card__info__meta__item-spacer {
+.info-meta-container .expert-card-info-meta-item-spacer {
     height: 100%;
     flex-shrink: 0;
 }
-.info-meta-container .expert-card__info__meta__item-value {
+.info-meta-container .expert-card-info-meta-item-value {
     display: flex;
     width: 72%;
     -webkit-box-align: center;
@@ -645,7 +645,7 @@ section.top-100 .expert-list {
     align-items: center;
     position: relative;
 }
-.info-meta-container .expert-card__info__meta__item-title {
+.info-meta-container .expert-card-info-meta-item-title {
     display: block;
     font-size: 10px;
     line-height: 15px;
@@ -671,13 +671,13 @@ section.top-100 .expert-list {
     line-height: 24px;
     letter-spacing: -0.5px;
 }
-.expert-card-container .expert-card__info__user-profile__introduction {
+.expert-card-container .expert-card-info-user-profile-introduction {
     font-size: 14px;
     line-height: 21px;
     letter-spacing: -0.25px;
     margin-top: 16px;
 }
-.profile-container .expert-card__info__user-profile__introduction {
+.profile-container .expert-card-info-user-profile-introduction {
     font-size: 12px;
     line-height: 18px;
     letter-spacing: -0.25px;
@@ -694,7 +694,7 @@ section.top-100 .expert-list {
     overflow: hidden;
     word-break: break-all;
 }
-.profile-container .expert-card__info__user-profile__description {
+.profile-container .expert-card-info-user-profile-description {
     color: rgb(111, 119, 133);
     font-size: 12px;
     line-height: 18px;
@@ -704,12 +704,12 @@ section.top-100 .expert-list {
     position: relative;
 }
 
-.expert-card__info__meta__item-spacer {
+.expert-card-info-meta-item-spacer {
     height: 100%;
     flex-shrink: 0;
 }
 
-.expert-card__info__meta__item-title {
+.expert-card-info-meta-item-title {
     display: block;
     width: 26%;
     font-size: 10px;
@@ -720,18 +720,18 @@ section.top-100 .expert-list {
     flex-shrink: 0;
     white-space: nowrap;
 }
-.expert-card__info__meta__item-title {
+.expert-card-info-meta-item-title {
     width: fit-content;
 }
-a .expert-card__right,
-button .expert-card__right {
+a .expert-card-right,
+button .expert-card-right {
     display: flex;
     overflow: hidden;
 }
-.expert-card__portfolio-container:not(:last-child) {
+.expert-card-portfolio-container:not(:last-child) {
     margin-right: 8px;
 }
-.expert-card__portfolio-container {
+.expert-card-portfolio-container {
     position: relative;
     overflow: hidden;
     border-radius: 4px;
@@ -739,7 +739,7 @@ button .expert-card__right {
     height: 120px;
     flex-shrink: 0;
 }
-.expert-card__portfolio-container .expert-card__portfolio {
+.expert-card-portfolio-container .expert-card-portfolio {
     width: 120px;
     height: 120px;
 }
@@ -838,24 +838,24 @@ button .expert-card__right {
     border: 1px solid rgb(219, 222, 226);
     padding: 24px;
 }
-.date-input .react-datepicker .react-datepicker__triangle {
+.date-input .react-datepicker .react-datepicker-triangle {
     display: none;
 }
-.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle {
+.react-datepicker-popper[data-placement^="bottom"] .react-datepicker-triangle {
     top: 0;
     margin-top: -8px;
 }
-.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle,
-.react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle {
+.react-datepicker-popper[data-placement^="bottom"] .react-datepicker-triangle,
+.react-datepicker-popper[data-placement^="top"] .react-datepicker-triangle {
     margin-left: -4px;
     position: absolute;
     width: 0;
 }
-.date-input .react-datepicker .react-datepicker__navigation--previous {
+.date-input .react-datepicker .react-datepicker-navigation--previous {
     left: initial;
     transform: rotate(180deg);
 }
-.date-input .react-datepicker .react-datepicker__navigation {
+.date-input .react-datepicker .react-datepicker-navigation {
     width: 30px;
     height: 30px;
     top: initial;
@@ -864,8 +864,8 @@ button .expert-card__right {
 }
 .date-input
     .react-datepicker
-    .react-datepicker__navigation
-    .react-datepicker__navigation-icon {
+    .react-datepicker-navigation
+    .react-datepicker-navigation-icon {
     position: relative;
     top: initial;
     left: initial;
@@ -877,10 +877,10 @@ button .expert-card__right {
     align-items: center;
     color: rgb(16, 28, 51);
 }
-.react-datepicker__month-container {
+.react-datepicker-month-container {
     float: left;
 }
-.date-input .react-datepicker .react-datepicker__header {
+.date-input .react-datepicker .react-datepicker-header {
     display: flex;
     height: 30px;
     -webkit-box-align: center;
@@ -897,40 +897,40 @@ button .expert-card__right {
     border: 0px;
     margin-bottom: 32px;
 }
-.react-datepicker__header:not(.react-datepicker__header--has-time-select) {
+.react-datepicker-header:not(.react-datepicker-header--has-time-select) {
     border-top-right-radius: 0.3rem;
 }
-.react-datepicker-time__header,
+.react-datepicker-time-header,
 .react-datepicker-year-header,
-.react-datepicker__current-month {
+.react-datepicker-current-month {
     margin-top: 0;
     color: #000;
     font-weight: 700;
     font-size: 0.944rem;
 }
-.react-datepicker__month {
+.react-datepicker-month {
     margin: 0.4rem;
     text-align: center;
 }
 .date-input
     .react-datepicker
-    .react-datepicker__month-wrapper:not(:last-child) {
+    .react-datepicker-month-wrapper:not(:last-child) {
     margin-bottom: 30px;
 }
-.date-input .react-datepicker .react-datepicker__month-wrapper {
+.date-input .react-datepicker .react-datepicker-month-wrapper {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
 }
 .date-input
     .react-datepicker
-    .react-datepicker__month-wrapper
-    .react-datepicker__month-text:not(:last-child) {
+    .react-datepicker-month-wrapper
+    .react-datepicker-month-text:not(:last-child) {
     margin-right: 24px;
 }
 .react-datepicker
-    .react-datepicker__month-wrapper
-    .react-datepicker__month-text {
+    .react-datepicker-month-wrapper
+    .react-datepicker-month-text {
     font-size: 12px;
     line-height: 18px;
     letter-spacing: -0.25px;
@@ -943,36 +943,36 @@ button .expert-card__right {
     white-space: nowrap;
     width: 57px;
 }
-.react-datepicker__month .react-datepicker__month-text,
-.react-datepicker__month .react-datepicker__quarter-text {
+.react-datepicker-month .react-datepicker-month-text,
+.react-datepicker-month .react-datepicker-quarter-text {
     display: inline-block;
     width: 4rem;
     margin: 2px;
 }
-.react-datepicker__month-text {
+.react-datepicker-month-text {
     cursor: pointer;
 }
 .date-input
     .react-datepicker
-    .react-datepicker__month-wrapper
-    .react-datepicker__month-text--keyboard-selected {
+    .react-datepicker-month-wrapper
+    .react-datepicker-month-text--keyboard-selected {
     background-color: rgb(16, 28, 51);
     color: rgb(255, 255, 255);
     border: 0px;
 }
 .date-input
     .react-datepicker
-    .react-datepicker__month-wrapper
-    .react-datepicker__month--disabled {
+    .react-datepicker-month-wrapper
+    .react-datepicker-month--disabled {
     background-color: rgb(245, 246, 247);
     color: rgb(170, 177, 188);
     border: 0px;
 }
-.react-datepicker__tab-loop {
+.react-datepicker-tab-loop {
     display: none;
 }
 
-.react-datepicker__tab-loop.active {
+.react-datepicker-tab-loop.active {
     display: block;
 }
 .hkAQYM {
@@ -980,6 +980,6 @@ button .expert-card__right {
     height: 14px;
     margin-right: 5px;
 }
-.user-nick-wrapper__labels {
+.user-nick-wrapper-labels {
     display: flex;
 }
