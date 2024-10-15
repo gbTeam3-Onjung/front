@@ -658,6 +658,114 @@ const volunteerCancelCount = volunteers.filter(
 document.getElementById("volunteer-cancelCount").textContent =
     volunteerCancelCount;
 
+/*********************내 문의**********************/
+const inquirys = [
+    {
+        id: 1,
+        status: "대기중",
+        inquiries: "문의 내용 요약1",
+        date: "2024.03.01",
+    },
+    {
+        id: 2,
+        status: "완료",
+        inquiries: "문의 내용 요약2",
+        date: "2024.03.02",
+    },
+    {
+        id: 3,
+        status: "완료",
+        inquiries: "문의 내용 요약3",
+        date: "2024.03.03",
+    },
+    {
+        id: 4,
+        status: "대기중",
+        inquiries: "문의 내용 요약4",
+        date: "2024.03.04",
+    },
+    {
+        id: 5,
+        status: "대기중",
+        inquiries: "문의 내용 요약5",
+        date: "2024.03.05",
+    },
+];
+
+// 문의 내역 렌더링▼
+const renderInquirys = () => {
+    // 1. boost 배열 확인
+    console.log(inquirys); // boost 배열이 제대로 정의되고, 데이터가 있는지 확인
+
+    // 2. HTML 요소 선택 확인
+    const inquiryList = document.querySelector(".inquiry-list");
+    const emptyComponent = document.querySelector("#inquiry .empty-component");
+
+    console.log(inquiryList, emptyComponent); // 요소들이 정상적으로 선택되고 있는지 확인
+
+    // 이후 기존의 코드
+    if (inquirys.length === 0) {
+        inquiryList.style.display = "none";
+        emptyComponent.style.display = "block";
+    } else {
+        inquiryList.style.display = "block";
+        emptyComponent.style.display = "none";
+        inquiryList.innerHTML = `
+            <table class="news-center-table" style="margin-top: 0; margin-bottom: 20px;">
+                <colgroup>
+                    <col style="width: 57px;">
+                    <col style="width: 132px;">
+                    <col style="width: 150px;">
+                    <col style="width: 104px;">
+                </colgroup>
+                <thead class="news-center-table-head">
+                    <tr>
+                        <th>문의 번호</th>
+                        <th>상태</th>
+                        <th>문의 내용</th>
+                        <th>작성 날짜</th>
+                    </tr>
+                </thead>
+                <tbody class="news-center-table-body">
+                ${inquirys
+                    .map(
+                        (inquiry) => `
+                    <tr class="news-data-rows" data-forloop="${inquiry.id}">
+                        <td class="news-center-table-body-number">${inquiry.id}</td>
+                        <td class="news-center-table-body-category">${inquiry.status}</td>
+                        <td class="news-center-table-body-title"><span>${inquiry.inquiries}</span></td>
+                        <td class="news-center-table-body-date">${inquiry.date}</td>
+                    </tr>
+                `
+                    )
+                    .join("")}
+                </tbody>
+            </table>
+        `;
+    }
+};
+renderInquirys(inquirys);
+
+// 전체 항목 숫자 증가
+const inquiryTotalCount = inquirys.filter(
+    (inquiry) => inquiry.status === "완료" || inquiry.status === "대기중"
+).length;
+document.getElementById("inquiry-totalCount").textContent = inquiryTotalCount;
+
+// 답변 완료 숫자 증가
+const inquiryCompletedCount = inquirys.filter(
+    (inquiry) => inquiry.status === "완료"
+).length;
+document.getElementById("inquiry-completedCount").textContent =
+    inquiryCompletedCount;
+
+// 답변 대기중 숫자 감소
+const inquiryStandbyCount = inquirys.filter(
+    (inquiry) => inquiry.status === "대기중"
+).length;
+document.getElementById("inquiry-standbyCount").textContent =
+    inquiryStandbyCount;
+
 /*********************공통*********************/
 
 // 모든 .fItXBi.toggle 요소를 선택
