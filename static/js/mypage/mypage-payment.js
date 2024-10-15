@@ -394,16 +394,137 @@ renderPosts();
 //     }
 // };
 
-// 결제 완료 숫자 증가
-function updateCompletedCount() {
-    const list = document.getElementById("payment-List");
-    const items = Array.from(list.getElementsByTagName("tr"));
+// 전체 항목 숫자 증가
+const totalCount = payments.filter(
+    (payment) => payment.status === "완료" || payment.status === "취소"
+).length;
+document.getElementById("totalCount").textContent = totalCount;
 
-    // "완료"라는 문구가 포함된 항목의 개수를 계산합니다.
-    const completedCount = items.filter((item) =>
-        item.textContent.includes("완료")
+// 결제 완료 숫자 증가
+const completedCount = payments.filter(
+    (payment) => payment.status === "완료"
+).length;
+document.getElementById("completedCount").textContent = completedCount;
+
+// 결제 취소 숫자 감소
+const cancelCount = payments.filter(
+    (payment) => payment.status === "취소"
+).length;
+document.getElementById("cancelCount").textContent = cancelCount;
+
+// // 모든 탭 요소를 선택합니다.
+// const tabs = document.querySelectorAll(".tab");
+
+// // 각 탭에 클릭 이벤트를 추가합니다.
+// tabs.forEach((tab) => {
+//     tab.addEventListener("click", () => {
+//         // 모든 탭에서 active 클래스를 제거합니다.
+//         tabs.forEach((t) => t.classList.remove("active"));
+
+//         // 클릭된 탭에 active 클래스를 추가합니다.
+//         tab.classList.add("active");
+//     });
+// });
+
+// 각 탭을 선택하고 클릭 이벤트를 추가합니다.
+document.querySelectorAll(".tab").forEach((tab, index) => {
+    tab.addEventListener("click", () => {
+        // 모든 탭에서 active 클래스 제거하고, 클릭된 탭에 active 클래스 추가
+        document
+            .querySelectorAll(".tab")
+            .forEach((t) => t.classList.remove("active"));
+        tab.classList.add("active");
+
+        // 필터링된 결제 내역 표시
+        let filteredPayments = [];
+        if (index === 0) {
+            // "전체" 탭
+            filteredPayments = payments;
+        } else if (index === 1) {
+            // "결제 완료" 탭
+            filteredPayments = payments.filter(
+                (payment) => payment.status === "완료"
+            );
+        } else if (index === 2) {
+            // "결제 취소" 탭
+            filteredPayments = payments.filter(
+                (payment) => payment.status === "취소"
+            );
+        }
+
+        displayPayments(filteredPayments);
+    });
+});
+
+// 초기 상태에서 전체 결제 항목을 표시
+displayPayments(payments);
+
+// 결제 항목을 화면에 표시하는 함수
+function displayPayments(paymentList) {
+    const paymentListDiv = document.querySelector(".payment-list");
+    paymentListDiv.innerHTML = ""; // 기존 내용을 초기화
+
+    if (paymentList.length === 0) {
+        // 결제 내역이 없을 경우 empty component 표시
+        document.querySelector(".empty-component .empty").style.display =
+            "block";
+        paymentListDiv.style.display = "none";
+    } else {
+        // 결제 내역이 있는 경우 목록 표시
+        document.querySelector(".empty-component .empty").style.display =
+            "none";
+        paymentListDiv.style.display = "block";
+
+        // 동적으로 <table>을 생성하여 payment 데이터를 표시
+        paymentListDiv.innerHTML = `
+            <table class="news-center-table" style="margin-top: 0; margin-bottom: 20px;">
+                <colgroup>
+                    <col style="width: 57px;">
+                    <col style="width: 132px;">
+                    <col style="width: 150px;">
+                    <col style="width: 104px;">
+                </colgroup>
+                <thead class="news-center-table-head">
+                    <tr>
+                        <th>번호</th>
+                        <th>구분</th>
+                        <th>금액</th>
+                        <th>결제일</th>
+                    </tr>
+                </thead>
+                <tbody class="news-center-table-body">
+                    ${paymentList
+                        .map(
+                            (payment) => `
+                                <tr class="news-data-rows" data-forloop="${payment.id}">
+                                    <td class="news-center-table-body-number">${payment.id}</td>
+                                    <td class="news-center-table-body-category">결제 ${payment.status}</td>
+                                    <td class="news-center-table-body-title"><span>${payment.price}원</span></td>
+                                    <td class="news-center-table-body-date">${payment.date}</td>
+                                </tr>
+                            `
+                        )
+                        .join("")}
+                </tbody>
+            </table>
+        `;
+    }
+}
+
+// 결제 완료, 결제 취소 항목 수를 업데이트하는 함수
+function updateCounts() {
+    const totalCount = payments.length;
+    const completedCount = payments.filter(
+        (payment) => payment.status === "완료"
+    ).length;
+    const cancelCount = payments.filter(
+        (payment) => payment.status === "취소"
     ).length;
 
-    // 완료된 항목의 개수를 지정된 위치에 표시합니다.
+    document.getElementById("totalCount").textContent = totalCount;
     document.getElementById("completedCount").textContent = completedCount;
+    document.getElementById("cancelCount").textContent = cancelCount;
 }
+
+// 페이지 로드 시 전체 개수 업데이트
+updateCounts();
