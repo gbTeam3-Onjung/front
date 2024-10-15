@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url("https://fonts.googleapis.com/earlyaccess/notosanskr.css");
+@import url("https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css");
 body, html {
     -webkit-text-size-adjust: none;
     -moz-text-size-adjust: none;
@@ -586,7 +589,7 @@ p {
     border-image: initial;
     pointer-events: none;
     border-width: 8px;
-    left: var(--left);
+    left: 337px;
     top: var(--top);
     right: var(--right);
     bottom: var(--bottom);
@@ -604,7 +607,7 @@ p {
     border-image: initial;
     pointer-events: none;
     border-width: 8px;
-    left: var(--left);
+    left: 337px;
     top: var(--top);
     right: var(--right);
     bottom: var(--bottom);
@@ -696,7 +699,7 @@ p {
     line-height: inherit;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    -webkit-line-clamp: 1;
+    /* -webkit-line-clamp: 1; */
     word-break: break-word;
 }
 .hvowwg .gnb-profile-box-content .gnb-profile-box-menus {
@@ -753,7 +756,7 @@ p {
     line-height: 23px;
     letter-spacing: -0.5px;
     position: absolute;
-    right: -35px;
+    right: -61px;
     top: 30px;
 }
 .bvvilt .tooltip-content.show {
@@ -795,7 +798,7 @@ p {
     border-image: initial;
     pointer-events: none;
     border-width: 8px;
-    left: var(--left);
+    left: 59px;
     top: var(--top);
     right: var(--right);
     bottom: var(--bottom);
@@ -812,7 +815,7 @@ p {
     border-image: initial;
     pointer-events: none;
     border-width: 8px;
-    left: var(--left);
+    left: 59px;
     top: var(--top);
     right: var(--right);
     bottom: var(--bottom);
@@ -822,7 +825,7 @@ p {
     margin-top: 1px;
 }
 .jtevuk {
-    width: 400px;
+    width: 292px;
     height: 411px;
 }
 .jtevuk .noti-head {
@@ -834,6 +837,7 @@ p {
     line-height: 21px;
     letter-spacing: -0.25px;
     font-weight: 500;
+    /* border-bottom: 1px solid rgb(219, 222, 226); */
 }
 .jtevuk .noti-head > span {
     color: rgb(38, 86, 246);
@@ -900,3 +904,48 @@ p {
     align-items: center;
 }
 
+.hyjtze {
+    padding-top: 24px;
+    padding-bottom: 9.5px;
+    border-bottom: 1px solid rgb(233, 235, 237);
+}
+
+.divider{
+    width: 400px;
+    height: 1px;
+    background-color: rgb(233, 235, 237);
+    margin: 10px 0; 
+}
+.on-noti{
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    height: 370px;
+    border-top: 1px solid rgb(219, 222, 226);
+    text-align: start;
+    padding: 0px; 
+    width: 100%;
+}
+.noti-title,
+.noti-date {
+    color: #616161;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 400;
+}
+.noti-box-content {
+    display: inline-block;
+    vertical-align: top;
+}
+.noti-box{
+    border-bottom: 1px solid rgb(219, 222, 226)
+}
+.bpfqva .toolbar-area .toolbar-row .util .util-btns > li.member div.opener:hover {
+    opacity: 0.7;
+}
+.hkjhsp::after{
+    content: "•";
+    color: #f00;
+    position: absolute;
+    left: 23px;
+    top: -2px;
+}
