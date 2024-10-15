@@ -367,15 +367,32 @@ toggleElements.forEach(function (element) {
 });
 
 // 버튼과 date-filter 요소 선택
-var initializationButton = document.getElementById("Initialization");
-var dateFilterElement = document.querySelector(".date-filter");
+document.addEventListener("DOMContentLoaded", function () {
+    var initializationButton = document.getElementById("Initialization");
+    if (initializationButton) {
+        initializationButton.addEventListener("click", function () {
+            var dateFilterElement = document.querySelector(".date-filter");
+            if (dateFilterElement) {
+                var childElements =
+                    dateFilterElement.querySelectorAll(".active");
+                childElements.forEach(function (element) {
+                    element.classList.remove("active");
+                });
+            }
+        });
+    }
+});
 
-// 버튼 클릭 이벤트 추가
-initializationButton.addEventListener("click", function () {
-    // date-filter의 자식 요소들 중 active 클래스를 가진 요소를 선택하여 제거
-    var childElements = dateFilterElement.querySelectorAll(".active");
+// // 모든 탭 요소를 선택합니다.
+const tabs = document.querySelectorAll(".tab");
 
-    childElements.forEach(function (element) {
-        element.classList.remove("active");
+// 각 탭에 클릭 이벤트를 추가합니다.
+tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+        // 모든 탭에서 active 클래스를 제거합니다.
+        tabs.forEach((t) => t.classList.remove("active"));
+
+        // 클릭된 탭에 active 클래스를 추가합니다.
+        tab.classList.add("active");
     });
 });
