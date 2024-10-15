@@ -380,36 +380,106 @@ tabs.forEach((tab) => {
     });
 });
 
-// 페이지 로드 후 초기화 버튼에 이벤트 리스너 등록하는 로직
+// // 페이지 로드 후 초기화 버튼에 이벤트 리스너 등록하는 로직
+// document.addEventListener("DOMContentLoaded", function () {
+//     document.body.addEventListener("click", function (event) {
+//         // 초기화 버튼 클릭 시 동작 확인
+//         if (event.target && event.target.id === "Initialization") {
+//             resetActiveClasses();
+//         }
+//     });
+// });
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     const gNTKJgElement = document.querySelector(".gNTKJg");
+//     const dateButtons = document.querySelectorAll(
+//         ".date-button .fItXBi.toggle"
+//     );
+
+//     if (gNTKJgElement && dateButtons) {
+//         // gNTKJg 내부의 lnb-item 요소를 찾습니다.
+//         const lnbItems = gNTKJgElement.querySelectorAll(".lnb-item");
+
+//         lnbItems.forEach((lnbItem) => {
+//             const observer = new MutationObserver((mutationsList) => {
+//                 mutationsList.forEach((mutation) => {
+//                     if (
+//                         mutation.type === "attributes" &&
+//                         mutation.attributeName === "class"
+//                     ) {
+//                         // lnb-item이 active 상태로 변경되었을 때 실행
+//                         if (lnbItem.classList.contains("active")) {
+//                             dateButtons.forEach((toggleElement) => {
+//                                 if (
+//                                     toggleElement.classList.contains("active")
+//                                 ) {
+//                                     // active가 있으면 즉시 제거
+//                                     toggleElement.classList.remove("active");
+//                                 }
+//                             });
+//                         }
+//                     }
+//                 });
+//             });
+
+//             // 각 lnb-item의 class 속성을 감시하도록 설정합니다.
+//             observer.observe(lnbItem, {
+//                 attributes: true,
+//                 attributeFilter: ["class"],
+//             });
+//         });
+//     }
+// });
+
 document.addEventListener("DOMContentLoaded", function () {
+    const gNTKJgElement = document.querySelector(".gNTKJg");
+    const dateButtons = document.querySelectorAll(
+        ".date-button .fItXBi.toggle"
+    );
+    const lnbItems = gNTKJgElement
+        ? gNTKJgElement.querySelectorAll(".lnb-item")
+        : [];
+
+    // 초기화 버튼에 이벤트 리스너 등록
     document.body.addEventListener("click", function (event) {
-        // 초기화 버튼 클릭 시 동작 확인
         if (event.target && event.target.id === "Initialization") {
-            console.log("Initialization button clicked");
             resetActiveClasses();
         }
     });
-});
 
-// 결제 내역 및 후원 내역 둘 다 초기화가 가능하도록 공통 함수 정의
-function resetActiveClasses() {
-    // 모든 date-filter 클래스 요소를 가져옵니다.
-    var dateFilterElements = document.querySelectorAll(".date-filter");
-
-    if (dateFilterElements.length > 0) {
-        dateFilterElements.forEach(function (dateFilterElement) {
-            console.log("Resetting active classes in date-filter element");
-            var childElements = dateFilterElement.querySelectorAll(".active");
-            if (childElements.length > 0) {
-                childElements.forEach(function (element) {
-                    console.log("Removing active class from element");
-                    element.classList.remove("active");
-                });
-            } else {
-                console.log("No active children found in date-filter element");
-            }
-        });
-    } else {
-        console.log("No date-filter elements found on the page");
+    // 초기화 버튼 클릭 시 모든 active 클래스 제거
+    function resetActiveClasses() {
+        lnbItems.forEach((lnbItem) => lnbItem.classList.remove("active"));
+        dateButtons.forEach((toggleElement) =>
+            toggleElement.classList.remove("active")
+        );
     }
-}
+
+    // lnb-item이 active 상태로 변경될 때 date-button의 active 상태를 제거
+    lnbItems.forEach((lnbItem) => {
+        const observer = new MutationObserver((mutationsList) => {
+            mutationsList.forEach((mutation) => {
+                if (
+                    mutation.type === "attributes" &&
+                    mutation.attributeName === "class"
+                ) {
+                    // lnb-item이 active 상태로 변경되었을 때 실행
+                    if (lnbItem.classList.contains("active")) {
+                        dateButtons.forEach((toggleElement) => {
+                            if (toggleElement.classList.contains("active")) {
+                                // active가 있으면 즉시 제거
+                                toggleElement.classList.remove("active");
+                            }
+                        });
+                    }
+                }
+            });
+        });
+
+        // 각 lnb-item의 class 속성을 감시하도록 설정합니다.
+        observer.observe(lnbItem, {
+            attributes: true,
+            attributeFilter: ["class"],
+        });
+    });
+});
