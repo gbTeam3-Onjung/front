@@ -76,14 +76,6 @@ const removeFile = (file, listItem) => {
     fileList.removeChild(listItem); // 목록에서 해당 항목 제거
 };
 
-document.querySelectorAll(".star-rating input").forEach((radio) => {
-    radio.addEventListener("change", (e) => {
-        const rating = e.target.value;
-        document.getElementById("rating-value").textContent = rating;
-        console.log(`별점 ${rating}점이 선택되었습니다.`);
-    });
-});
-
 document.getElementById("submit-review").addEventListener("click", (e) => {
     // 필수 항목 선택
     const companyName = document
@@ -97,7 +89,7 @@ document.getElementById("submit-review").addEventListener("click", (e) => {
 
     // 필수 항목 검증
     if (!companyName) {
-        alert("봉사 단체명을 입력해주세요.");
+        alert("");
         return;
     }
 
@@ -111,11 +103,43 @@ document.getElementById("submit-review").addEventListener("click", (e) => {
         return;
     }
 
-    if (!rating) {
-        alert("별점을 선택해주세요.");
-        return;
-    }
-
     alert("후기가 성공적으로 제출되었습니다!");
     // 하고 여기서 목록 페이지로 이동
 });
+const updateCharCount = (input) => {
+    const charCountSpan = document.getElementById("charCount");
+    charCountSpan.textContent = input.value.length;
+};
+
+const validateAndDisplayNumber = (input) => {
+    input.value = input.value.replace(/[^0-9]/, ""); // 숫자 이외 제거
+    const number = input.value;
+    const formatted = number ? formatNumberToKorean(number) : "0";
+    document.getElementById("formattedNumber").textContent = formatted;
+};
+
+//날짜 설정
+
+const updateDateRange = () => {
+    const startDateInput = document.getElementById("start-date").value;
+    const endDateInput = document.getElementById("end-date").value;
+    const dateCountDisplay = document.getElementById("date-count");
+
+    if (startDateInput && endDateInput) {
+        const startDate = new Date(startDateInput);
+        const endDate = new Date(endDateInput);
+
+        // 일 수 계산 (종료일 - 시작일)
+        const timeDiff = endDate.getTime() - startDate.getTime();
+        const dayCount = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+
+        // 날짜 유효성 검사
+        if (dayCount >= 0) {
+            dateCountDisplay.textContent = dayCount;
+        } else {
+            dateCountDisplay.textContent = "0";
+        }
+    } else {
+        dateCountDisplay.textContent = "0";
+    }
+};
