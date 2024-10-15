@@ -1,3 +1,20 @@
+@media (max-width: 430px) and (min-height: 932px) {
+    body {
+        overflow-x: hidden;
+    }
+    .content-container {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .review-thumbnail-head-container {
+        display: none;
+    }
+    .review-list-wrap .review-list {
+        width: 100% !important;
+    }
+}
+
 body,
 html {
     background-color: #fff;
