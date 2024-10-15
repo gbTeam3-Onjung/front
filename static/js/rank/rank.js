@@ -231,7 +231,7 @@ let cardHTML = `
 
                                     <img
                                     src="https://cdn-dantats.stunning.kr/static/feature/label/label-check.png" 
-                                    class="hkAQYM">
+                                    class="blue-check">
                                     </label>
 
                                     <div class="tooltip-content ">
