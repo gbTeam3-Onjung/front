@@ -75,6 +75,7 @@
                                     tabindex="0"
                                     aria-haspopup="true"
                                     aria-expanded="false"
+                                    aria-controls="request-type-area"
                                     aria-label="문의항목을 선택해주세요."
                                     style="max-width: 100%"
                                     >-</a
@@ -149,7 +150,7 @@
                                     <input
                                         type="file"
                                         multiple="true"
-                                        id="request-attachments"
+                                        id="attach-input"
                                         data-fileupload="true"
                                         data-dropzone="upload-dropzone"
                                     />
@@ -158,6 +159,10 @@
                                         또는 파일을 여기로 드래그
                                     </span>
                                 </div>
+                                <ul
+                                    id="attachments-upload-pool"
+                                    class="attachments-upload-pool"
+                                ></ul>
                             </div>
                             <div class="form-field-agreements">
                                 <p id="request-agreements">
@@ -199,6 +204,10 @@
                 </div>
             </div>
         </main>
+        <div id="request-type-area">
+            <div value="111">일반 문의</div>
+            <div value="222">봉사단체 가입 문의</div>
+        </div>
     </body>
     <script src="../../static/js/help/help-write.js"></script>
 </html>
