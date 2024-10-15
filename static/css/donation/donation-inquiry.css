@@ -1,6 +1,17 @@
+@media (max-width: 1920px) {
+    .container-main-body {
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .container-main-body {
+        padding: 8px;
+    }
+}
+
 .content-container-main {
     position: relative;
-    -webkit-box-flex: 1;
     flex-grow: 1;
     flex-shrink: 0;
     display: flex;
@@ -42,7 +53,6 @@ html {
     box-sizing: border-box;
     display: block;
     position: relative;
-    -webkit-tap-highlight-color: transparent;
     touch-action: pan-y;
     user-select: none;
 }
@@ -96,13 +106,11 @@ menu.sub-tab {
     margin: 0px auto;
     width: 1280px;
     height: 100%;
-    -webkit-box-flex: 1;
     flex-grow: 1;
 }
 .container-main-body {
     display: flex;
     flex-direction: column;
-    -webkit-box-pack: start;
     justify-content: flex-start;
     width: 100%;
 }
@@ -110,19 +118,16 @@ menu.sub-tab {
     display: flex;
     flex-direction: column;
     height: 100%;
-    margin-left: 240px;
 }
 .main-info-wrap .main-info > .left {
     width: 0px;
     height: 100%;
-    -webkit-box-flex: 1;
     flex-grow: 1;
     max-width: 760px;
 }
 .slider-content-wrapper {
     width: 100%;
     display: flex;
-    -webkit-box-pack: justify;
     justify-content: space-between;
 }
 .slider-content-wrapper .main-thumbnail-slider-container {
@@ -168,9 +173,7 @@ menu.sub-tab {
 }
 .tab-sticker {
     display: inline-flex;
-    -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
     align-items: center;
     border-radius: 80px;
     text-align: center;
@@ -215,15 +218,15 @@ menu.sub-tab {
 }
 .content-title {
     display: flex;
-    -webkit-box-pack: start;
-    justify-content: flex-start;
-    -webkit-box-align: center;
-    align-items: center;
+    justify-content: space-between; /* 텍스트와 버튼을 양 끝에 배치 */
+    align-items: center; /* 수직 중앙 정렬 */
     margin-bottom: 16px;
     font-size: 22px;
     line-height: 34px;
     letter-spacing: -0.5px;
     font-weight: 700;
+    width: 100%; /* 부모 컨테이너 전체 사용 */
+    white-space: nowrap; /* 줄 바꿈 방지 */
 }
 .content-content {
     font-size: 14px;
@@ -254,9 +257,10 @@ li {
     line-height: 180%;
 }
 img {
-    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
-
 .attach-title-container {
     margin-bottom: 72px;
     margin-top: 24px;
@@ -268,9 +272,7 @@ img {
 .download-all-btn {
     position: relative;
     display: inline-flex;
-    -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
     align-items: center;
     border-radius: 4px;
     cursor: pointer;
@@ -284,7 +286,6 @@ img {
     line-height: 21px;
     letter-spacing: -0.25px;
     font-weight: 700;
-    margin-left: 575px;
 }
 .download-all-btn::before {
     border-color: rgb(219, 222, 226);
@@ -315,9 +316,7 @@ ul {
 }
 .attach-list li {
     display: flex;
-    -webkit-box-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
     align-items: center;
     font-size: 15px;
     line-height: 23px;
@@ -339,9 +338,7 @@ ul {
 .attach-save {
     position: relative;
     display: inline-flex;
-    -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
     align-items: center;
     border-radius: 4px;
     cursor: pointer;
@@ -375,18 +372,18 @@ ul {
     width: calc(8.33333%);
 }
 .main-info-wrap .main-info > .right {
-    flex-shrink: 0;
-    width: calc(33.3333%);
-    height: 100%;
     position: relative;
+    display: flex;
+    flex-direction: column;
     align-items: flex-end;
-    -webkit-box-pack: end;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    width: calc(33.3333%);
 }
 .sticky-box {
-    position: fixed;
-    top: 50px;
-    width: 500px;
+    position: sticky;
+    top: 20px; /* 화면 상단에서 20px 아래에 고정 */
+    width: 100%; /* 부모 요소에 맞게 크기 설정 */
+    max-width: 400px; /* 최대 크기 설정 */
 }
 .right-title-wrap {
     width: 100%;
@@ -419,7 +416,6 @@ ul {
 }
 .right-title-container .user-info {
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
 }
 .right-title-container .user-info .avatar {
@@ -451,7 +447,6 @@ a {
 .right-title-container .user-info .user-info-text-wrapper {
     display: flex;
     flex-direction: row;
-    -webkit-box-align: center;
     align-items: center;
 }
 .right-title-container .user-info .user-info-text-wrapper .company {
@@ -463,10 +458,8 @@ a {
     margin-right: 2px;
 }
 .user-nick-container {
-    display: -webkit-box;
     text-overflow: ellipsis;
     line-height: inherit;
-    -webkit-box-orient: vertical;
     overflow: hidden;
     -webkit-line-clamp: 1;
     word-break: break-all;
@@ -480,7 +473,6 @@ a {
 .prize-wrap .help {
     padding-bottom: 4px;
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
     font-weight: 700;
     color: rgb(142, 148, 160);
@@ -506,14 +498,11 @@ a {
 }
 .prize-wrap .prizes li {
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
 }
 .prizes-info {
     display: inline-flex;
-    -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
     align-items: center;
     border-radius: 80px;
     text-align: center;
@@ -556,7 +545,6 @@ a {
     margin-top: 24px;
     display: flex;
     flex-direction: row;
-    -webkit-box-pack: justify;
     justify-content: space-between;
     margin-bottom: 32px;
     align-items: flex-start;
@@ -603,9 +591,8 @@ a {
 .donation-btn-style {
     position: relative;
     display: inline-flex;
-    -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
+
     align-items: center;
     border-radius: 4px;
     cursor: pointer;
@@ -643,7 +630,6 @@ a {
     flex-direction: column;
     width: 100%;
     margin-top: 32px;
-    border-bottom: 1px solid rgb(219, 222, 226);
 }
 .comment-container {
     display: flex;
@@ -665,9 +651,8 @@ a {
 }
 .comment-container .contest-comment-show .contest-comment-userinfo {
     display: flex;
-    -webkit-box-pack: start;
     justify-content: flex-start;
-    -webkit-box-align: center;
+
     align-items: center;
     color: rgb(142, 148, 160);
     flex-wrap: wrap;
@@ -694,18 +679,14 @@ a {
 }
 .comment-container .contest-comment-show .contest-comment-userinfo > div {
     display: flex;
-    -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
     align-items: center;
     padding: 0px 5px;
 }
 
 .nickname-text {
-    display: -webkit-box;
     text-overflow: ellipsis;
     line-height: inherit;
-    -webkit-box-orient: vertical;
     overflow: hidden;
     -webkit-line-clamp: 1;
     word-break: break-word;
@@ -720,7 +701,6 @@ a {
 }
 .comment-container .contest-comment-show .contest-comment-content {
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
     padding: 16px 0px;
     width: 100%;
@@ -728,9 +708,7 @@ a {
 .comment-container .contest-comment-show .contest-comment-buttons {
     display: flex;
     flex-direction: row;
-    -webkit-box-pack: end;
     justify-content: flex-end;
-    -webkit-box-align: center;
     align-items: center;
     width: 100%;
     margin-bottom: 5px;
@@ -762,9 +740,8 @@ a {
 }
 .comment-container .contest-comment-show .contest-comment-userinfo {
     display: flex;
-    -webkit-box-pack: start;
     justify-content: flex-start;
-    -webkit-box-align: center;
+
     align-items: center;
     color: rgb(142, 148, 160);
     flex-wrap: wrap;
@@ -821,6 +798,8 @@ a {
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 16px;
 }
 
 .submit-comment-button:hover {

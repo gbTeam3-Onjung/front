@@ -215,19 +215,19 @@ const container = document.querySelector(".expert-list-container");
 let cardHTML = `
     <div class="expert-card-container expert-card">
         <a href="/m/chldbrhks">
-            <div class="expert-card__left">
-                <div class="expert-card__info__avatar">
+            <div class="expert-card-left">
+                <div class="expert-card-info-avatar">
                     <span class="profile-img-container avatar">
                         <img src="https://cdn-dantats.stunning.kr/prod/users/fa970db0-abdd-4b41-a512-de0e18e3d27c/avatar/ZswD8qqqrARGSgFX.11.jpg.small?q=80&amp;t=crop&amp;s=320x320&amp;f=webp" alt="CORKSTUDIO의 프로필"/>
                     </span>
                 </div>
-                <div class="expert-card__info">
-                    <div class="expert-card__info__user-profile">
-                        <div class="expert-card__info__user-profile__nick">
+                <div class="expert-card-info">
+                    <div class="expert-card-info-user-profile">
+                        <div class="expert-card-info-user-profile-nick">
                             <div class="user-nick-wrapper">
-                                <div class="user-nick-wrapper__labels">
-                                    <div class="tooltip user-nick-wrapper__label-tooltip">
-                                    <label data-label-type="label-Image" class="product-label user-nick-wrapper__labels__item">
+                                <div class="user-nick-wrapper-labels">
+                                    <div class="tooltip user-nick-wrapper-label-tooltip">
+                                    <label data-label-type="label-Image" class="product-label user-nick-wrapper-labels-item">
 
                                     <img
                                     src="https://cdn-dantats.stunning.kr/static/feature/label/label-check.png" 
@@ -251,80 +251,80 @@ let cardHTML = `
                             </div>
                             
                         </div>
-                        <div class="expert-card__info__user-profile__introduction">
+                        <div class="expert-card-info-user-profile-introduction">
                             <p title="이유있는 디자인으로 성공적인 브랜딩을 실현합니다.">
                                 이유있는 디자인으로 성공적인 브랜딩을 실현합니다.
                             </p>
                         </div>
-                        <div class="expert-card__info__user-profile__description">
+                        <div class="expert-card-info-user-profile-description">
                             <p title="Brand eXperience Designer Corkstudio">
                                 Brand eXperience Designer Corkstudio
                             </p>
                         </div>
                     </div>
-                    <div class="expert-card__info__meta">
-                        <div class="info-meta-container expert-card__info__meta__item">
-                            <span class="expert-card__info__meta__item-title">총 수익</span>
-                            <div class="expert-card__info__meta__item-spacer"></div>
-                            <div class="expert-card__info__meta__item-value">
+                    <div class="expert-card-info-meta">
+                        <div class="info-meta-container expert-card-info-meta-item">
+                            <span class="expert-card-info-meta-item-title">총 수익</span>
+                            <div class="expert-card-info-meta-item-spacer"></div>
+                            <div class="expert-card-info-meta-item-value">
                                 <p title=" 원+">
-                                    <span class="number-text__number-container">
-                                        <span class="number number-text__number">3</span>
+                                    <span class="number-text-number-container">
+                                        <span class="number number-text-number">3</span>
                                        
                                     </span>
-                                    <span class="number-text__suffix">억원+ </span>
+                                    <span class="number-text-suffix">억원+ </span>
                                 </p>
                             </div>
                         </div>
-                        <div class="info-meta-container expert-card__info__meta__item">
-                            <span class="expert-card__info__meta__item-title">우승</span>
-                            <div class="expert-card__info__meta__item-spacer"></div>
-                            <div class="expert-card__info__meta__item-value">
+                        <div class="info-meta-container expert-card-info-meta-item">
+                            <span class="expert-card-info-meta-item-title">우승</span>
+                            <div class="expert-card-info-meta-item-spacer"></div>
+                            <div class="expert-card-info-meta-item-value">
                                 <p class="info-meta-default" title="00">
-                                    <span class="number-text__number-container">
-                                        <span class="number number-text__number">500</span>
+                                    <span class="number-text-number-container">
+                                        <span class="number number-text-number">500</span>
                                         
                                     </span>
-                                    <span class="number-text__suffix">회+</span>
+                                    <span class="number-text-suffix">회+</span>
                                 </p>
                             </div>
                         </div>
-                        <div class="info-meta-container expert-card__info__meta__item">
-                            <span class="expert-card__info__meta__item-title">총 거래</span>
-                            <div class="expert-card__info__meta__item-spacer"></div>
-                            <div class="expert-card__info__meta__item-value">
+                        <div class="info-meta-container expert-card-info-meta-item">
+                            <span class="expert-card-info-meta-item-title">총 거래</span>
+                            <div class="expert-card-info-meta-item-spacer"></div>
+                            <div class="expert-card-info-meta-item-value">
                                 <p class="info-meta-default" title=" 건+">
-                                    <span class="number-text__number-container">
-                                        <span class="number number-text__number">700</span>
+                                    <span class="number-text-number-container">
+                                        <span class="number number-text-number">700</span>
                                        
                                     </span>
-                                    <span class="number-text__suffix">건+</span>
+                                    <span class="number-text-suffix">건+</span>
                                 </p>
                             </div>
                         </div>
-                        <div class="info-meta-container expert-card__info__meta__item">
-                            <span class="expert-card__info__meta__item-title">마켓</span>
-                            <div class="expert-card__info__meta__item-spacer"></div>
-                            <div class="expert-card__info__meta__item-value">
+                        <div class="info-meta-container expert-card-info-meta-item">
+                            <span class="expert-card-info-meta-item-title">마켓</span>
+                            <div class="expert-card-info-meta-item-spacer"></div>
+                            <div class="expert-card-info-meta-item-value">
                                 <p class="info-meta-default" title=" 회+">
-                                    <span class="number-text__number-container">
-                                        <span class="number number-text__number">90</span>
+                                    <span class="number-text-number-container">
+                                        <span class="number number-text-number">90</span>
                                       
                                     </span>
-                                    <span class="number-text__suffix">회+</span>
+                                    <span class="number-text-suffix">회+</span>
                                 </p>
                             </div>
                         </div>
-                        <div class="info-meta-container expert-card__info__meta__item">
-                            <span class="expert-card__info__meta__item-title">리뷰</span>
-                            <div class="expert-card__info__meta__item-spacer"></div>
-                            <div class="expert-card__info__meta__item-value">
+                        <div class="info-meta-container expert-card-info-meta-item">
+                            <span class="expert-card-info-meta-item-title">리뷰</span>
+                            <div class="expert-card-info-meta-item-spacer"></div>
+                            <div class="expert-card-info-meta-item-value">
                                 <p class="info-meta-default" title="00">
-                                    <span class="number-text__number-container">
-                                        <span class="number number-text__number">100</span>
+                                    <span class="number-text-number-container">
+                                        <span class="number number-text-number">100</span>
                                        
                                     </span>
-                                    <span class="number-text__suffix">개+</span>
+                                    <span class="number-text-suffix">개+</span>
                                 </p>
                                 <div class="rate" width="0">
                                     <svg class="icon-default icon" viewBox="0 0 12 12">
@@ -335,14 +335,14 @@ let cardHTML = `
                             </div>
                         </div>
                     </div>
-                    <button class="inquiry-button expert-card__inquire">
+                    <button class="inquiry-button expert-card-inquire">
                         <span class="visual-correction">견적 문의</span>
                     </button>
                 </div>
             </div>
-            <div class="expert-card__right">
-                <div class="expert-card__portfolio-container 0">
-                    <div class="card-img-container cover expert-card__portfolio">
+            <div class="expert-card-right">
+                <div class="expert-card-portfolio-container 0">
+                    <div class="card-img-container cover expert-card-portfolio">
                         <div class="card-image-default aspect-ratio-card-wrapper card-image">
                             <div>
                                 <div class="observer"></div>
@@ -351,8 +351,8 @@ let cardHTML = `
                         </div>
                     </div>
                 </div>
-                <div class="expert-card__portfolio-container 1">
-                    <div class="card-img-container cover expert-card__portfolio">
+                <div class="expert-card-portfolio-container 1">
+                    <div class="card-img-container cover expert-card-portfolio">
                         <div class="card-image-default aspect-ratio-card-wrapper card-image">
                             <div>
                                 <div class="observer"></div>
@@ -361,8 +361,8 @@ let cardHTML = `
                         </div>
                     </div>
                 </div>
-                <div class="expert-card__portfolio-container 2">
-                    <div class="card-img-container cover expert-card__portfolio">
+                <div class="expert-card-portfolio-container 2">
+                    <div class="card-img-container cover expert-card-portfolio">
                         <div class="card-image-default aspect-ratio-card-wrapper card-image">
                             <div>
                                 <div class="observer"></div>
@@ -371,8 +371,8 @@ let cardHTML = `
                         </div>
                     </div>
                 </div>
-                <div class="expert-card__portfolio-container 3">
-                    <div class="card-img-container cover expert-card__portfolio">
+                <div class="expert-card-portfolio-container 3">
+                    <div class="card-img-container cover expert-card-portfolio">
                         <div class="card-image-default aspect-ratio-card-wrapper card-image">
                             <div>
                                 <div class="observer"></div>
@@ -381,8 +381,8 @@ let cardHTML = `
                         </div>
                     </div>
                 </div>
-                <div class="expert-card__portfolio-container 4">
-                    <div class="card-img-container cover expert-card__portfolio">
+                <div class="expert-card-portfolio-container 4">
+                    <div class="card-img-container cover expert-card-portfolio">
                         <div class="card-image-default aspect-ratio-card-wrapper card-image">
                             <div>
                                 <div class="observer"></div>
@@ -399,14 +399,14 @@ let cardHTML = `
 container.innerHTML = cardHTML.repeat(10);
 
 const inputContainer = document.querySelector(
-    ".react-datepicker__input-container"
+    ".react-datepicker-input-container"
 );
-const tabLoop = document.querySelector(".react-datepicker__tab-loop");
+const tabLoop = document.querySelector(".react-datepicker-tab-loop");
 const dateDisplay = document.querySelector(
-    ".react-datepicker__input-container input"
+    ".react-datepicker-input-container input"
 );
 const monthElements = document.querySelectorAll(
-    ".react-datepicker__month-text"
+    ".react-datepicker-month-text"
 );
 const currentYear = 2024;
 
@@ -432,11 +432,11 @@ monthElements.forEach((monthElement, index) => {
         // 모든 월에서 active 클래스 제거 후, 클릭한 월에 추가
         monthElements.forEach((el) =>
             el.classList.remove(
-                "react-datepicker__month-text--keyboard-selected"
+                "react-datepicker-month-text--keyboard-selected"
             )
         );
         monthElement.classList.add(
-            "react-datepicker__month-text--keyboard-selected"
+            "react-datepicker-month-text--keyboard-selected"
         );
 
         tabLoop.classList.remove("active");
