@@ -494,7 +494,7 @@ select#request-type-select.active {
 
 #request-type-area {
     display: none;
-    top: 0%;
+    bottom: 0%;
     left: 0%;
     width: 100%;
     height: auto;
@@ -514,6 +514,11 @@ select#request-type-select.active {
     display: block;
 }
 
+#request-type-area > div {
+    height: 28px;
+    line-height: 28px;
+}
+
 .attach-file {
     border-radius: 3px;
     clear: left;
@@ -526,6 +531,10 @@ select#request-type-select.active {
     width: 50%;
     display: flex;
     justify-content: space-between;
+}
+
+.attach-file:last-of-type {
+    margin-bottom: 30px;
 }
 
 .attach-file .attach-text-wrap {

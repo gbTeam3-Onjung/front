@@ -17,27 +17,7 @@ requestTypeInput.addEventListener("focus", (e) => {
     e.target.ariaExpanded = "true";
     requestTypeArea.classList.toggle("active");
     requestTypeInput.classList.toggle("active");
-    requestTypeArea.style.width = `${
-        requestTypeInput.getBoundingClientRect().width
-    }`;
-    requestTypeArea.style.height = `${
-        requestTypeInput.getBoundingClientRect().height
-    }`;
-    requestTypeArea.style.top = `${
-        requestTypeInput.getBoundingClientRect().top
-    }`;
-    requestTypeArea.style.left = `${
-        requestTypeInput.getBoundingClientRect().left
-    }`;
-    // console.log(requestTypeInput.getBoundingClientRect().top);
-    // console.log(requestTypeArea);
 });
-
-// requestTypeInput.addEventListener("blur", (e) => {
-//     e.target.ariaExpanded = "false";
-//     requestTypeArea.classList.toggle("active");
-//     requestTypeInput.classList.toggle("active");
-// });
 
 requestTypeArea.children.forEach((child) => {
     child.addEventListener("mouseenter", (e) => {

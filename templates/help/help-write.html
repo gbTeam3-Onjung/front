@@ -66,7 +66,7 @@
                             accept-charset="UTF-8"
                             method="post"
                         >
-                            <div class="form-field">
+                            <div class="form-field" style="position: relative">
                                 <label for="request-type-select">
                                     문의항목을 선택해주세요.
                                 </label>
@@ -95,6 +95,12 @@
                                         봉사단체 가입 문의
                                     </option>
                                 </select>
+                                <div id="request-type-area">
+                                    <div value="111">&nbsp;일반 문의</div>
+                                    <div value="222">
+                                        &nbsp;봉사단체 가입 문의
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-field required">
                                 <label for="requester-email">
@@ -164,7 +170,10 @@
                                     class="attachments-upload-pool"
                                 ></ul>
                             </div>
-                            <div class="form-field-agreements">
+                            <div
+                                class="form-field-agreements"
+                                style="clear: both"
+                            >
                                 <p id="request-agreements">
                                     (주)온정은 정보통신망 이용촉진 및 정보보호
                                     등 관한 법률을 준수하며 고객님의 개인정보를
@@ -204,10 +213,6 @@
                 </div>
             </div>
         </main>
-        <div id="request-type-area">
-            <div value="111">일반 문의</div>
-            <div value="222">봉사단체 가입 문의</div>
-        </div>
     </body>
     <script src="../../static/js/help/help-write.js"></script>
 </html>
