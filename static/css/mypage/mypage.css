@@ -1199,9 +1199,12 @@ input, select {
 }
 
 .payment-list,
-.reply-list,
+.boost-list,
+.donaition-list,
+.volunteer-list,
 .inquiry-list,
-.point-list {
+.postscript-list,
+.gratitude-list {
     margin-top: 20px;
     height: 217px;
 }

@@ -494,7 +494,7 @@
                                                                                 전체
                                                                             </div>
                                                                             <label
-                                                                                id="totalCount"
+                                                                                id="payment-totalCount"
                                                                                 class="ezikFA"
                                                                                 >0</label
                                                                             >
@@ -513,7 +513,7 @@
                                                                                 완료
                                                                             </div>
                                                                             <label
-                                                                                id="completedCount"
+                                                                                id="payment-completedCount"
                                                                                 class="ezikFA"
                                                                                 >0</label
                                                                             >
@@ -532,7 +532,7 @@
                                                                                 취소
                                                                             </div>
                                                                             <label
-                                                                                id="cancelCount"
+                                                                                id="payment-cancelCount"
                                                                                 class="ezikFA"
                                                                                 >0</label
                                                                             >
@@ -545,6 +545,7 @@
                                                             class="content-inner"
                                                         >
                                                             <div
+                                                                id="payment-list"
                                                                 class="payment-list"
                                                                 style="
                                                                     display: block;
@@ -583,7 +584,9 @@
                                                         </div>
                                                     </main>
                                                 </div>
+
                                                 <!-- 후원 내역 -->
+
                                                 <div
                                                     id="boost"
                                                     class="profile-contents-box-wrap tab-content"
@@ -617,65 +620,50 @@
                                                                 후원/취소일시
                                                             </div>
                                                             <div
-                                                                class="date-input"
+                                                                class="option date-container"
                                                             >
+                                                                <span
+                                                                    class="date-span"
+                                                                    >날짜지정</span
+                                                                >
                                                                 <label
-                                                                    class="fIGvfF date-range"
+                                                                    class="company-name"
                                                                 >
                                                                     <input
-                                                                        readonly=""
-                                                                        placeholder="내용 입력"
-                                                                        class="date-range-input"
-                                                                        value=""
+                                                                        type="date"
+                                                                        id="end-date"
+                                                                        placeholder="시작 날짜를 선택하세요"
+                                                                        onchange="updateDateRange()"
                                                                     />
-                                                                    <svg
-                                                                        class="cAfwXx date-range-icon"
-                                                                        viewBox="0 0 24 24"
+                                                                </label>
+                                                                <span
+                                                                    class="then"
+                                                                    ><strong
+                                                                        >-</strong
                                                                     >
-                                                                        <rect
-                                                                            x="3.6"
-                                                                            y="6.6"
-                                                                            width="16.8"
-                                                                            height="13.8"
-                                                                            rx="1.4"
-                                                                            fill="none"
-                                                                            stroke="currentColor"
-                                                                            stroke-width="1.2"
-                                                                        ></rect>
-                                                                        <path
-                                                                            d="M7.5 6V4.5"
-                                                                            stroke="currentColor"
-                                                                            stroke-width="1.2"
-                                                                            stroke-linecap="round"
-                                                                        ></path>
-                                                                        <path
-                                                                            d="M16.5 6V4.5"
-                                                                            stroke="currentColor"
-                                                                            stroke-width="1.2"
-                                                                            stroke-linecap="round"
-                                                                        ></path>
-                                                                        <path
-                                                                            d="M4.5 10.5H21"
-                                                                            stroke="currentColor"
-                                                                            stroke-width="1.2"
-                                                                        ></path>
-                                                                        <rect
-                                                                            x="7.5"
-                                                                            y="13.5"
-                                                                            width="3"
-                                                                            height="3"
-                                                                            rx="0.5"
-                                                                            fill="currentColor"
-                                                                        ></rect>
-                                                                        <defs></defs>
-                                                                    </svg>
+                                                                </span>
+                                                                <label
+                                                                    class="company-name"
+                                                                >
+                                                                    <input
+                                                                        type="date"
+                                                                        id="start-date"
+                                                                        placeholder="종료 날짜를 선택하세요"
+                                                                        onchange="updateDateRange()"
+                                                                    />
                                                                 </label>
                                                             </div>
+
+                                                            <!-- 켈린더 -->
+
                                                             <div
                                                                 class="date-button"
                                                             >
                                                                 <label
                                                                     class="fItXBi toggle"
+                                                                    style="
+                                                                        margin-left: 15px;
+                                                                    "
                                                                     ><input
                                                                         type="checkbox"
                                                                         value=""
@@ -688,9 +676,9 @@
                                                                         ></path>
                                                                         <defs></defs>
                                                                     </svg>
-                                                                    최근 1년
-                                                                </label>
-                                                                <label
+                                                                    최근
+                                                                    1년</label
+                                                                ><label
                                                                     class="fItXBi toggle"
                                                                     ><input
                                                                         type="checkbox"
@@ -738,6 +726,7 @@
                                                                 </label>
                                                             </div>
                                                             <button
+                                                                id="Initialization"
                                                                 class="gPdSFi"
                                                             >
                                                                 <svg
@@ -781,6 +770,7 @@
                                                                                 전체
                                                                             </div>
                                                                             <label
+                                                                                id="boost-totalCount"
                                                                                 class="ezikFA"
                                                                                 >0</label
                                                                             >
@@ -799,6 +789,7 @@
                                                                                 완료
                                                                             </div>
                                                                             <label
+                                                                                id="boost-completedCount"
                                                                                 class="ezikFA"
                                                                                 >0</label
                                                                             >
@@ -817,6 +808,7 @@
                                                                                 취소
                                                                             </div>
                                                                             <label
+                                                                                id="boost-cancelCount"
                                                                                 class="ezikFA"
                                                                                 >0</label
                                                                             >
@@ -826,27 +818,44 @@
                                                             </div>
                                                         </div>
                                                         <div
-                                                            class="kjzWjC empty"
+                                                            class="content-inner"
                                                         >
                                                             <div
-                                                                class="empty-image"
+                                                                class="boost-list"
+                                                                style="
+                                                                    display: block;
+                                                                "
+                                                            ></div>
+                                                            <div
+                                                                class="empty-component"
                                                             >
-                                                                <img
-                                                                    name="SlightlySmilingFace"
-                                                                    src="https://cdn-dantats.stunning.kr/static/emoji/SlightlySmilingFace32px.png"
-                                                                    class="hkAQYM"
-                                                                />
+                                                                <div
+                                                                    class="kjzWjC empty"
+                                                                    style="
+                                                                        display: none;
+                                                                    "
+                                                                >
+                                                                    <div
+                                                                        class="empty-image"
+                                                                    >
+                                                                        <img
+                                                                            name="SlightlySmilingFace"
+                                                                            src="https://cdn-dantats.stunning.kr/static/emoji/SlightlySmilingFace32px.png"
+                                                                            class="hkAQYM"
+                                                                        />
+                                                                        <h4>
+                                                                            <span
+                                                                                class="fendym"
+                                                                                ><b
+                                                                                    >후원
+                                                                                    내역이
+                                                                                    없습니다.</b
+                                                                                >
+                                                                            </span>
+                                                                        </h4>
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                            <h4>
-                                                                <span
-                                                                    class="fendym"
-                                                                    ><b
-                                                                        >후원
-                                                                        내역</b
-                                                                    >이
-                                                                    없습니다.
-                                                                </span>
-                                                            </h4>
                                                         </div>
                                                     </main>
                                                 </div>
