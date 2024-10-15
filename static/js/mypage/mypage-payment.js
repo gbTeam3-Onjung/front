@@ -17,26 +17,61 @@ document.addEventListener("click", function () {
 
 // 켈린더 펼치기
 // 캘린더 요소 가져오기
-const calendar = document.querySelector(
-    ".sc-dIouRR.hipszs.date-range-picker-wrapper"
+// const calendar = document.querySelector(
+//     ".sc-dIouRR.hipszs.date-range-picker-wrapper"
+// );
+
+// // date-input 클릭 시 캘린더 표시/숨김
+// dateInput.addEventListener("click", function (event) {
+//     event.stopPropagation(); // 클릭 이벤트 전파 막기
+//     if (getComputedStyle(calendar).display === "none") {
+//         calendar.style.display = "block"; // 캘린더 표시
+//     } else {
+//         calendar.style.display = "none"; // 캘린더 숨기기
+//     }
+// });
+
+// // 문서 전체 클릭 시 캘린더 숨기기
+// document.addEventListener("click", function () {
+//     calendar.style.display = "none"; // 캘린더 숨기기
+// });
+
+// // 캘린더 자체를 클릭했을 때도 이벤트 전파 막기 (캘린더가 바로 숨지 않게)
+// calendar.addEventListener("click", function (event) {
+//     event.stopPropagation();
+// });
+
+const calendar1 = document.querySelector(
+    ".rdrDateRangePickerWrapper.date-range-picker"
+);
+const calendar2 = document.querySelector(
+    ".rdrCalendarWrapper.rdrDateRangeWrapper"
 );
 
 // date-input 클릭 시 캘린더 표시/숨김
 dateInput.addEventListener("click", function (event) {
     event.stopPropagation(); // 클릭 이벤트 전파 막기
-    if (getComputedStyle(calendar).display === "none") {
-        calendar.style.display = "block"; // 캘린더 표시
+    const isHidden = getComputedStyle(calendar1).display === "none";
+
+    if (isHidden) {
+        calendar1.style.display = "block"; // 첫 번째 캘린더 표시
+        calendar2.style.display = "block"; // 두 번째 캘린더 표시
     } else {
-        calendar.style.display = "none"; // 캘린더 숨기기
+        calendar1.style.display = "none"; // 첫 번째 캘린더 숨기기
+        calendar2.style.display = "none"; // 두 번째 캘린더 숨기기
     }
 });
 
 // 문서 전체 클릭 시 캘린더 숨기기
 document.addEventListener("click", function () {
-    calendar.style.display = "none"; // 캘린더 숨기기
+    calendar1.style.display = "none"; // 첫 번째 캘린더 숨기기
+    calendar2.style.display = "none"; // 두 번째 캘린더 숨기기
 });
 
 // 캘린더 자체를 클릭했을 때도 이벤트 전파 막기 (캘린더가 바로 숨지 않게)
-calendar.addEventListener("click", function (event) {
+calendar1.addEventListener("click", function (event) {
+    event.stopPropagation();
+});
+calendar2.addEventListener("click", function (event) {
     event.stopPropagation();
 });
