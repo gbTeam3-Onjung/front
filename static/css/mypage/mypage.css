@@ -1319,7 +1319,73 @@ div > ul {
     width: 100px;
 }
 
+.jBsNEF {
+    border-radius: 80px;
+    font-size: 15px;
+    line-height: 23px;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+    padding: 6px 22px;
+    position: relative;
+}
 
+.jBsNEF {
+    position: relative;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 0px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: rgb(80, 118, 240);
+    color: rgb(255, 255, 255);
+    padding: 8px 17px;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.25px;
+    font-weight: 700;
+    margin-left: 565px;
+    margin-bottom: 15px;
+}
+
+.jBsNEF .visual-correction {
+    padding-bottom: 1px;
+}
+
+.bPfQvA .toolbar-area .toolbar-row .btn-request--case-2 .request-description-tooltip {
+    background: rgb(255, 255, 255);
+    border: 1.5px solid rgb(219, 222, 226);
+    border-radius: 80px;
+    visibility: hidden;
+    min-width: max-content;
+    position: absolute;
+    margin-top: -9px;
+    padding: 8px 16px;
+    top: 49px;
+    left: -43px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 8px;
+    z-index: 2;
+}
+
+.bPfQvA .toolbar-area .toolbar-row .btn-request--case-2 .request-description-tooltip .info {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    color: rgb(111, 119, 133);
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.25px;
+    font-weight: 700;
+}
+
+.bPfQvA .toolbar-area .toolbar-row .btn-request--case-2 .request-description-tooltip .info .icon {
+    color: rgb(191, 198, 210);
+    margin-right: 8px;
+}
 
 
 
