@@ -349,7 +349,7 @@ select#request-type-select.active {
 }
 
 .form-field.required > label::after, .form-field-agreements > label::after {
-    content: "*";
+    content: "•";
     color: #f00;
     margin-left: 2px;
 }
@@ -580,32 +580,6 @@ select#request-type-select.active {
     visibility: hidden;
     width: 5%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media (min-width: 768px) {
     h2 {
