@@ -766,6 +766,121 @@ const inquiryStandbyCount = inquirys.filter(
 document.getElementById("inquiry-standbyCount").textContent =
     inquiryStandbyCount;
 
+/*********************봉사 활동 후기**********************/
+const postscripts = [
+    {
+        id: 1,
+        title: "후기 제목1",
+        content: "후기 내용 요약1",
+        date: "2024.03.01",
+    },
+    {
+        id: 2,
+        title: "후기 제목2",
+        content: "후기 내용 요약2",
+        date: "2024.03.02",
+    },
+    {
+        id: 3,
+        title: "후기 제목3",
+        content: "후기 내용 요약3",
+        date: "2024.03.03",
+    },
+    {
+        id: 4,
+        title: "후기 제목4",
+        content: "후기 내용 요약4",
+        date: "2024.03.04",
+    },
+    {
+        id: 5,
+        title: "후기 제목5",
+        content: "후기 내용 요약5",
+        date: "2024.03.05",
+    },
+];
+
+// 후기 내역 렌더링▼
+const renderPostscripts = () => {
+    // 1. postscripts 배열 확인
+    console.log(postscripts); // postscripts 배열이 제대로 정의되고, 데이터가 있는지 확인
+
+    // 2. HTML 요소 선택 확인
+    const postscriptList = document.querySelector(".postscript-list");
+    const emptyComponent = document.querySelector(
+        "#postscript .empty-component"
+    );
+
+    console.log(postscriptList, emptyComponent); // 요소들이 정상적으로 선택되고 있는지 확인
+
+    // 이후 기존의 코드
+    if (!postscriptList || !emptyComponent) {
+        console.error("HTML 요소가 선택되지 않았습니다.");
+        return;
+    }
+
+    if (postscripts.length === 0) {
+        postscriptList.style.display = "none";
+        emptyComponent.style.display = "block";
+    } else {
+        postscriptList.style.display = "block";
+        emptyComponent.style.display = "none";
+        postscriptList.innerHTML = `
+            <table class="news-center-table" style="margin-top: 0; margin-bottom: 20px;">
+                <colgroup>
+                    <col style="width: 57px;">
+                    <col style="width: 132px;">
+                    <col style="width: 150px;">
+                    <col style="width: 104px;">
+                </colgroup>
+                <thead class="news-center-table-head">
+                    <tr>
+                        <th>문의 번호</th>
+                        <th>상태</th>
+                        <th>문의 내용</th>
+                        <th>작성 날짜</th>
+                    </tr>
+                </thead>
+                <tbody class="news-center-table-body">
+                ${postscripts
+                    .map(
+                        (postscript) => `
+                    <tr class="news-data-rows" data-forloop="${postscript.id}">
+                        <td class="news-center-table-body-number">${postscript.id}</td>
+                        <td class="news-center-table-body-category">${postscript.title}</td>
+                        <td class="news-center-table-body-title"><span>${postscript.content}</span></td>
+                        <td class="news-center-table-body-date">${postscript.date}</td>
+                    </tr>
+                `
+                    )
+                    .join("")}
+                </tbody>
+            </table>
+        `;
+    }
+};
+renderPostscripts(postscripts);
+
+// 전체 항목 숫자 증가
+// const postscriptTotalCount = inquirys.filter(
+//     (postscript) =>
+//         postscript.status === "완료" || postscript.status === "대기중"
+// ).length;
+// document.getElementById("postscript-totalCount").textContent =
+//     postscriptTotalCount;
+
+// // 후기 최신순 숫자 증가
+// const postscripNewCount = inquirys.filter(
+//     (inquiry) => inquiry.status === "완료"
+// ).length;
+// document.getElementById("postscrip-newCount").textContent = postscripNewCount;
+
+// // 후기 오래된 순 숫자 증가
+// const postscripOldCount = inquirys.filter(
+//     (postscrip) => postscrip.status === "대기중"
+// ).length;
+// document.getElementById("postscrip-oldCount").textContent = postscripOldCount;
+
 /*********************공통*********************/
 
 // 모든 .fItXBi.toggle 요소를 선택
