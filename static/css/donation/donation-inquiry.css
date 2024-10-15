@@ -369,7 +369,7 @@ ul {
 }
 .main-info-wrap .main-info > .space {
     flex-shrink: 0;
-    width: calc(8.33333%);
+    width: 40px;
 }
 .main-info-wrap .main-info > .right {
     position: relative;
