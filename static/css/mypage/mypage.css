@@ -1617,19 +1617,7 @@ input, select {
     color: hsla(0, 0%, 100%, .85);
 }
 
-
-
-
-
-.rdrCalendarWrapper {
-    box-sizing: border-box;
-    background: #fff;
-    display: inline-flex;
-    flex-direction: column;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none
-}
+/*******************************************************************************/
 
 .rdrDateDisplay {
     display: flex;
@@ -1701,19 +1689,8 @@ input, select {
     text-align: center
 }
 
-.rdrDays {
-    display: flex;
-    flex-wrap: wrap
-}
-
 .rdrInfiniteMonths {
     overflow: auto
-}
-
-.rdrDateRangeWrapper {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none
 }
 
 .rdrDateInput {
@@ -1733,19 +1710,6 @@ input, select {
     color: red
 }
 
-.rdrDay {
-    box-sizing: inherit;
-    width: 14.28571%;
-    position: relative;
-    font: inherit;
-    cursor: pointer
-}
-
-.rdrDayNumber {
-    display: block;
-    position: relative
-}
-
 .rdrDayNumber span {
     color: #1d2429
 }
@@ -1760,17 +1724,6 @@ input, select {
     }
 }
 
-.rdrEndEdge,.rdrInRange,.rdrSelected,.rdrStartEdge {
-    pointer-events: none
-}
-
-.rdrDateRangePickerWrapper {
-    display: inline-flex;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none
-}
-
 .rdrStaticRanges {
     display: flex;
     flex-direction: column
@@ -1782,11 +1735,6 @@ input, select {
 
 .rdrInputRange {
     display: flex
-}
-
-.rdrCalendarWrapper {
-    color: #000;
-    font-size: 12px
 }
 
 .rdrDateDisplayWrapper {
@@ -1917,19 +1865,6 @@ input, select {
     color: #849095
 }
 
-.rdrDay {
-    background: transparent;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    border: 0;
-    padding: 0;
-    line-height: 3em;
-    height: 3em;
-    text-align: center;
-    color: #1d2429
-}
-
 .rdrDay:focus {
     outline: 0
 }
@@ -1971,15 +1906,6 @@ input, select {
 
 .rdrDay:not(.rdrDayPassive) .rdrEndEdge~.rdrDayNumber span,.rdrDay:not(.rdrDayPassive) .rdrInRange~.rdrDayNumber span,.rdrDay:not(.rdrDayPassive) .rdrSelected~.rdrDayNumber span,.rdrDay:not(.rdrDayPassive) .rdrStartEdge~.rdrDayNumber span {
     color: hsla(0,0%,100%,.85)
-}
-
-.rdrEndEdge,.rdrInRange,.rdrSelected,.rdrStartEdge {
-    background: currentColor;
-    position: absolute;
-    top: 5px;
-    left: 0;
-    right: 0;
-    bottom: 5px
 }
 
 .rdrSelected {
