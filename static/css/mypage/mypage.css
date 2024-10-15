@@ -631,6 +631,17 @@ a, h1, h2, h3, h4, h5, h6 {
     appearance: none;
 }
 
+.fItXBi.active {
+    color: rgb(38, 86, 246);
+}
+
+.fItXBi.active::before {
+    border-color: rgb(38, 86, 246);
+}
+
+.gYyxfE .date-filter .date-button > label.active::before {
+    border-right-width: 1px;
+}
 
 .fItXBi .check {
     margin-right: 10px;

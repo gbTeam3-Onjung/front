@@ -426,6 +426,8 @@ document.getElementById("cancelCount").textContent = cancelCount;
 //     });
 // });
 
+// 위에껀 아래 js문에 하위버전
+
 // 각 탭을 선택하고 클릭 이벤트를 추가합니다.
 document.querySelectorAll(".tab").forEach((tab, index) => {
     tab.addEventListener("click", () => {
@@ -486,7 +488,7 @@ function displayPayments(paymentList) {
                 </colgroup>
                 <thead class="news-center-table-head">
                     <tr>
-                        <th>번호</th>
+                        <th>결제 번호</th>
                         <th>구분</th>
                         <th>금액</th>
                         <th>결제일</th>
@@ -528,3 +530,19 @@ function updateCounts() {
 
 // 페이지 로드 시 전체 개수 업데이트
 updateCounts();
+
+// 모든 .fItXBi.toggle 요소를 선택
+var toggleElements = document.querySelectorAll(".fItXBi.toggle");
+
+// 각 요소에 대해 클릭 이벤트 추가
+toggleElements.forEach(function (element) {
+    element.addEventListener("click", function () {
+        // 모든 요소에서 active 클래스 제거
+        toggleElements.forEach(function (el) {
+            el.classList.remove("active");
+        });
+
+        // 클릭된 요소에만 active 클래스 추가
+        this.classList.add("active");
+    });
+});
