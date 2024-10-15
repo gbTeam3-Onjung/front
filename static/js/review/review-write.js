@@ -119,3 +119,7 @@ document.getElementById("submit-review").addEventListener("click", (e) => {
     alert("후기가 성공적으로 제출되었습니다!");
     // 하고 여기서 목록 페이지로 이동
 });
+const updateCharCount = (input) => {
+    const charCountSpan = document.getElementById("charCount");
+    charCountSpan.textContent = input.value.length;
+};

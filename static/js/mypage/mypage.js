@@ -100,27 +100,11 @@ document
 ////////////////////////////////////////////////////////////////////////
 
 // 결제 관리 - 결제 내역 js
-document.addEventListener("DOMContentLoaded", () => {
-    // 특정 요소를 선택 (여기서는 fIGvfF 클래스와 date-range 클래스를 가진 요소)
-    const dateRangeElements = document.querySelectorAll(".fIGvfF.date-range");
-
-    // 문서 전체에 클릭 이벤트 리스너 추가
-    document.addEventListener("click", (e) => {
-        dateRangeElements.forEach((element) => {
-            // 클릭한 요소가 특정 요소나 그 자식 요소가 아닌 경우 active 클래스 제거
-            if (!element.contains(e.target)) {
-                element.classList.remove("active");
-            }
+document.addEventListener("DOMContentLoaded", function () {
+    const labelElement = document.querySelector(".fIGvfF.date-range");
+    if (labelElement) {
+        labelElement.addEventListener("click", function () {
+            this.classList.toggle("active");
         });
-    });
-
-    // 각 요소에 클릭 이벤트 리스너 추가
-    dateRangeElements.forEach((element) => {
-        // 클릭 시 active 클래스 추가
-        element.addEventListener("click", (e) => {
-            e.stopPropagation(); // 이벤트 전파 방지
-            // 클릭된 요소에 active 클래스 추가
-            element.classList.add("active");
-        });
-    });
+    }
 });
