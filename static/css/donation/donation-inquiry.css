@@ -1,12 +1,53 @@
-@media (max-width: 1920px) {
-    .container-main-body {
-        max-width: 1200px;
-    }
-}
-
 @media (max-width: 1280px) {
     .container-main-body {
         padding: 8px;
+    }
+
+    .main-info-wrap .main-info > .left {
+        max-width: 600px;
+    }
+
+    .sticky-box {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-main-body {
+        flex-direction: column;
+        padding: 8px;
+    }
+
+    .tabs-navigation-wrapper {
+        position: static;
+    }
+
+    .main-info-wrap {
+        margin-left: 0;
+    }
+
+    .content-title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .download-all-btn {
+        align-self: flex-end;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-main-body {
+        padding: 4px;
+    }
+
+    .comment-textarea {
+        width: 100%;
+    }
+
+    .submit-comment-button {
+        width: 100%;
     }
 }
 
