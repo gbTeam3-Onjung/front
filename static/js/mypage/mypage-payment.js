@@ -546,3 +546,17 @@ toggleElements.forEach(function (element) {
         this.classList.add("active");
     });
 });
+
+// 버튼과 date-filter 요소 선택
+var initializationButton = document.getElementById("Initialization");
+var dateFilterElement = document.querySelector(".date-filter");
+
+// 버튼 클릭 이벤트 추가
+initializationButton.addEventListener("click", function () {
+    // date-filter의 자식 요소들 중 active 클래스를 가진 요소를 선택하여 제거
+    var childElements = dateFilterElement.querySelectorAll(".active");
+
+    childElements.forEach(function (element) {
+        element.classList.remove("active");
+    });
+});

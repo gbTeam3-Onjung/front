@@ -667,6 +667,9 @@ a, h1, h2, h3, h4, h5, h6 {
     z-index: 1;
 }
 
+.fItXBi.active .check {
+    display: inline-block;
+}
 .gYyxfE .date-filter .date-button > label:first-child::before {
     border-radius: 4px 0px 0px 4px;
 }
