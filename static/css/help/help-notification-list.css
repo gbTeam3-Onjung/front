@@ -67,6 +67,10 @@ body {
     margin: 0;
 }
 
+body > main {
+    min-height: 600px;
+}
+
 body, html {
     font-family: 'Noto Sans KR', 'Noto Sans Korean', 'AppleSDGothicNeo-Regular', 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif !important;
 }
@@ -84,78 +88,133 @@ a:hover {
     outline: 0;
 }
 
-.header-container {
-    margin: 0 auto;
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    margin: .67em 0;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 26px;
+    letter-spacing: -0.81px;
+    color: rgba(16, 28, 51, 1);
+    font-weight: 600;
+}
+
+input {
+    font-weight: 300;
+    max-width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    transition: border .12s ease-in-out;
+    color: #000;
+    font-size: 14px;
+    line-height: normal;
+    font: inherit;
+    margin: 0;
+}
+
+.app-divider {
+    border-top: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.app {
     max-width: 1160px;
+    margin: 0 auto 60px;
 }
 
-.header {
+.app > .app-inner {
     padding: 0 5%;
-    position: relative;
-    align-items: center;
+}
+
+.sub-nav {
     display: flex;
-    height: 70px;
+    flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 20px;
+    height: 48px;
 }
 
-.help-logo a {
-    display: inline-block;
-    color: rgba(16, 28, 51, 1);
+.sub-nav .breadcrumbs {
+    display: none;
 }
 
-.help-logo img {
-    max-width: 91px;
-    vertical-align: middle;
-    padding: 0 0 5px 0;
+.breadcrumbs {
+    margin: 0 0 15px 0;
+    padding: 0;
 }
 
-.help-logo span {
-    margin: 0 20px;
-    color: rgba(16, 28, 51, 1);
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: -0.5px;
+.breadcrumbs li {
+    color: #9fa4ad;
+    display: inline;
+    font-size: 14px;
+    max-width: 450px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.help-logo span:before {
+.breadcrumbs li a {
+    color: #9fa4ad;
+}
+
+.breadcrumbs li + li::before {
     display: inline-block;
     content: "";
-    width: 1px;
-    height: 15px;
-    background-color: #6f7785;
-    margin-right: 15px;
-    vertical-align: middle;
+    width: 12px;
+    height: 12px;
+    background: url(https://help.loud.kr/hc/theming_assets/01HZKZ88AQV385RE51Q3GX1341) 50% 50% no-repeat;
+    background-size: 12px;
+    margin: 0 4px;
 }
 
-.go-to-write-button-container a.go-to-write-button {
-    display: inline-block;
-    height: 40px;
-    width: 90px;
-    line-height: 40px;
-    font-size: 14px;
-    border-radius: 20px;
-    text-align: center;
-    font-weight: bold;
-    letter-spacing: -0.58px;
-    background: #2656F6;
-    color: #fff;
+.search-container {
+    position: relative;
+}
+
+.search {
+    position: relative;
+}
+
+.search input[type="search"] {
+    border: 1px solid #dbdee2;
+    border-radius: 6px;
+    box-sizing: border-box;
+    color: rgba(16, 28, 51, 1);
+    height: 48px;
+    padding-left: 15px;
+    padding-right: 50px;
+    -webkit-appearance: none;
+    width: 100%;
+}
+
+.search input[type="submit"] {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
     padding: 0;
-    text-decoration: none;
-    transition: all 0.3s;
+    min-width: 24px;
+    width: 24px;
+    height: 24px;
+    font-size: 0;
+    color: #777;
+    background-color: transparent;
+    background-image: url(https://help.loud.kr/hc/theming_assets/01HZKZ89JJZM0SZT8G86D64P3X);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 16px;
     border: 0;
+    border-radius: 4px;
+    font-weight: 400;
+    line-height: 2.72;
+    -webkit-appearance: button;
+    cursor: pointer;
+    
 }
 
 @media (min-width: 768px) {
-    .go-to-write-button-container a.go-to-write-button {
-        width: 140px;
-        padding: 0;
-        display: inline-block;
-    }
-
-    .go-to-write-button-container a.go-to-write-button:hover {
-        background: #7689fd;
-    }
-
     .sub-nav {
         align-items: flex-start;
         flex-direction: row;
@@ -163,5 +222,13 @@ a:hover {
 
     .sub-nav .breadcrumbs {
         display: block;
+    }
+
+    .breadcrumbs {
+        margin: 0;
+    }
+
+    .search-container {
+        width: 25%;
     }
 }
