@@ -86,8 +86,8 @@ document
     .addEventListener("click", () => showTab("volunteer", this));
 
 document
-    .getElementById("Inquiry-link")
-    .addEventListener("click", () => showTab("Inquiry", this));
+    .getElementById("inquiry-link")
+    .addEventListener("click", () => showTab("inquiry", this));
 
 document
     .getElementById("postscript-link")

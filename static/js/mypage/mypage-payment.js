@@ -861,37 +861,10 @@ const renderPostscripts = () => {
 };
 renderPostscripts(postscripts);
 
-// 날짜 문자열을 Date 객체로 변환하는 함수
-function parseDate(dateString) {
-    const [year, month, day] = dateString.split(".");
-    return new Date(year, month - 1, day);
-}
-
-// 오늘 날짜 가져오기
-const today = new Date();
-
 // 전체 항목 숫자 증가
 const postscriptTotalCount = inquirys.length;
 document.getElementById("postscript-totalCount").textContent =
     postscriptTotalCount;
-
-// 후기 최신순 (작성 날짜 기준 내림차순)
-const sortedByNewest = inquirys.slice().sort((a, b) => {
-    const dateA = parseDate(a.date);
-    const dateB = parseDate(b.date);
-    return dateB - dateA;
-});
-document.getElementById("postscrip-newCount").textContent =
-    sortedByNewest.length;
-
-// 후기 오래된 순 (작성 날짜 기준 오름차순)
-const sortedByOldest = inquirys.slice().sort((a, b) => {
-    const dateA = parseDate(a.date);
-    const dateB = parseDate(b.date);
-    return dateA - dateB;
-});
-document.getElementById("postscrip-oldCount").textContent =
-    sortedByOldest.length;
 
 /*********************공통*********************/
 
