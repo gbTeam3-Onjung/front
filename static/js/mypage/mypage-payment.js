@@ -502,6 +502,111 @@ const donaitionCancelCount = donaitions.filter(
 document.getElementById("donaition-cancelCount").textContent =
     donaitionCancelCount;
 
+/*******************충전 하기********************/
+const charges = [
+    {
+        id: 1,
+        status: "충전 완료",
+        chargeprice: "1000",
+        myprice: "1000",
+        date: "2024.03.01",
+    },
+    {
+        id: 2,
+        status: "잔액 부족",
+        chargeprice: "10000",
+        myprice: "1000",
+        date: "2024.03.02",
+    },
+    {
+        id: 3,
+        status: "충전 완료",
+        chargeprice: "5000",
+        myprice: "6000",
+        date: "2024.03.03",
+    },
+    {
+        id: 4,
+        status: "완료",
+        chargeprice: "1000",
+        myprice: "7000",
+        date: "2024.03.04",
+    },
+    {
+        id: 5,
+        status: "잔액 부족",
+        chargeprice: "1000",
+        myprice: "7000",
+        date: "2024.03.05",
+    },
+];
+
+// 충전 내역 렌더링▼
+const renderCharges = () => {
+    // 1. charge 배열 확인
+    console.log(charges); // boost 배열이 제대로 정의되고, 데이터가 있는지 확인
+
+    // 2. HTML 요소 선택 확인
+    const chargeList = document.querySelector(".charge-list");
+    const emptyComponent = document.querySelector("#charge .empty-component");
+
+    console.log(chargeList, emptyComponent); // 요소들이 정상적으로 선택되고 있는지 확인
+
+    // 이후 기존의 코드
+    if (charges.length === 0) {
+        chargeList.style.display = "none";
+        emptyComponent.style.display = "block";
+    } else {
+        chargeList.style.display = "block";
+        emptyComponent.style.display = "none";
+        chargeList.innerHTML = `
+            <table class="news-center-table" style="margin-top: 0; margin-bottom: 20px;">
+                <colgroup>
+                    <col style="width: 57px;">
+                    <col style="width: 132px;">
+                    <col style="width: 150px;">
+                    <col style="width: 150px;">
+                    <col style="width: 104px;">
+                </colgroup>
+                <thead class="news-center-table-head">
+                    <tr>
+                        <th>기부 번호</th>
+                        <th>구분</th>
+                        <th>신청 금액</th>
+                        <th>보유 금액</th>
+                        <th>결제 일</th>
+                    </tr>
+                </thead>
+                <tbody class="news-center-table-body">
+                ${charges
+                    .map(
+                        (charge) => `
+                    <tr class="news-data-rows" data-forloop="${charge.id}">
+                        <td class="news-center-table-body-number">${
+                            charge.id
+                        }</td>
+                        <td class="news-center-table-body-category">${
+                            charge.status
+                        }</td>
+                        <td class="news-center-table-body-title">${
+                            charge.chargeprice + "원"
+                        }</td>
+                        <td class="news-center-table-body-title">${
+                            charge.myprice + "원"
+                        }<td class="news-center-table-body-date">${
+                            charge.date
+                        }</td>
+                    </tr>
+                `
+                    )
+                    .join("")}
+                </tbody>
+            </table>
+        `;
+    }
+};
+renderCharges(charges);
+
 /*********************봉사 활동**********************/
 const volunteers = [
     {

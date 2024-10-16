@@ -12,12 +12,7 @@ html body #root {
 header {
     display: block;
     unicode-bidi: isolate;
-    /* border: solid 0.5px #e9ebed; */
-}
-
-.th-id{
-    border: solid 0.5px #e9ebed;
-    height: 29px;
+    
 }
 
 main {
