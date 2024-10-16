@@ -253,10 +253,6 @@ input, select {
     color: rgb(111, 119, 133);
 }
 
-.ijBQbT .focus{
-    border:1px solid rgb(38, 86, 246)
-}
-
 .hwDrMh {
     width: 100%;
     height: 40px;
@@ -318,6 +314,48 @@ body,html {
     box-sizing: border-box;
     margin-left: 45%;
 }
+
+.ijBQbT .error-message {
+    position: absolute;
+    bottom: -22px;
+    left: 0px;
+    color: rgb(242, 23, 36);
+    font-size: 12px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 310px;
+}
+
+.ijBQbT img {
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+}
+
+/**********************************************************/
+.error-image {
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+    margin-bottom: 2px;
+    color: rgb(242, 23, 36);;
+}
+
+.ijBQbT.error {
+    border: 1px solid rgb(242, 23, 36);
+}
+
+.ijBQbT.focus {
+    border: 1px solid rgb(38, 86, 246);
+}
+
+
+.ijBQbT.focus.error {
+    border: 1px solid rgb(242, 23, 36);
+}
+
+
 
 
 
