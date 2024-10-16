@@ -101,8 +101,7 @@ const renderPayments = () => {
     // 2. HTML 요소 선택 확인
     const paymentList = document.querySelector(".payment-list");
     const emptyComponent = document.querySelector("#payment .empty-component");
-
-    console.log(paymentList, emptyComponent); // 요소들이 정상적으로 선택되고 있는지 확인
+    console.log(paymentList); // 요소들이 정상적으로 선택되고 있는지 확인
 
     // 이후 기존의 코드
     if (payments.length === 0) {
@@ -114,20 +113,20 @@ const renderPayments = () => {
         paymentList.innerHTML = `
             <table class="news-center-table" style="margin-top: 0; margin-bottom: 20px;">
                 <colgroup>
-                    <col style="width: 57px;">
-                    <col style="width: 132px;">
-                    <col style="width: 150px;">
-                    <col style="width: 104px;">
+                <col style="width: 57px;">
+                <col style="width: 132px;">
+                <col style="width: 150px;">
+                <col style="width: 104px;">
                 </colgroup>
                 <thead class="news-center-table-head">
-                    <tr>
-                        <th>결제 번호</th>
-                        <th>구분</th>
-                        <th>금액</th>
-                        <th>결제 일</th>
+                <tr>
+                <th>결제 번호</th>
+                <th>구분</th>
+                <th>금액</th>
+                <th>결제 일</th>
                     </tr>
-                </thead>
-                <tbody class="news-center-table-body">
+                    </thead>
+                    <tbody class="news-center-table-body">
                 ${payments
                     .map(
                         (payment) => `
@@ -153,7 +152,7 @@ const renderPayments = () => {
         `;
     }
 };
-renderPayments();
+renderPayments(payments);
 
 // // 전체 항목 숫자 증가
 const paymentTotalCount = payments.filter(
@@ -349,7 +348,7 @@ const boostCancelCount = boosts.filter(
 document.getElementById("boost-cancelCount").textContent = boostCancelCount;
 
 /*********************기부**********************/
-const donations = [
+const donaitions = [
     {
         id: 1,
         status: "완료",
@@ -419,24 +418,26 @@ const donations = [
 ];
 
 // 기부 내역 렌더링▼
-const renderDonations = () => {
+const renderDonaitions = () => {
     // 1. boost 배열 확인
-    console.log(donations); // boost 배열이 제대로 정의되고, 데이터가 있는지 확인
+    console.log(donaitions); // boost 배열이 제대로 정의되고, 데이터가 있는지 확인
 
     // 2. HTML 요소 선택 확인
-    const donationList = document.querySelector(".donation-list");
-    const emptyComponent = document.querySelector("#donation .empty-component");
+    const donaitionList = document.querySelector(".donaition-list");
+    const emptyComponent = document.querySelector(
+        "#donaition .empty-component"
+    );
 
-    console.log(donationList, emptyComponent); // 요소들이 정상적으로 선택되고 있는지 확인
+    console.log(donaitionList, emptyComponent); // 요소들이 정상적으로 선택되고 있는지 확인
 
     // 이후 기존의 코드
-    if (donations.length === 0) {
-        donationList.style.display = "none";
+    if (donaitions.length === 0) {
+        donaitionList.style.display = "none";
         emptyComponent.style.display = "block";
     } else {
-        donationList.style.display = "block";
+        donaitionList.style.display = "block";
         emptyComponent.style.display = "none";
-        donationList.innerHTML = `
+        donaitionList.innerHTML = `
             <table class="news-center-table" style="margin-top: 0; margin-bottom: 20px;">
                 <colgroup>
                     <col style="width: 57px;">
@@ -453,21 +454,21 @@ const renderDonations = () => {
                     </tr>
                 </thead>
                 <tbody class="news-center-table-body">
-                ${donations
+                ${donaitions
                     .map(
-                        (donation) => `
-                    <tr class="news-data-rows" data-forloop="${donation.id}">
+                        (donaition) => `
+                    <tr class="news-data-rows" data-forloop="${donaition.id}">
                         <td class="news-center-table-body-number">${
-                            donation.id
+                            donaition.id
                         }</td>
                         <td class="news-center-table-body-category">${
-                            "기부 " + donation.status
+                            "기부 " + donaition.status
                         }</td>
                         <td class="news-center-table-body-title"><span>${
-                            donation.price + "원"
+                            donaition.price + "원"
                         }</span></td>
                         <td class="news-center-table-body-date">${
-                            donation.date
+                            donaition.date
                         }</td>
                     </tr>
                 `
@@ -478,27 +479,217 @@ const renderDonations = () => {
         `;
     }
 };
-renderDonations(donations);
+renderDonaitions(donaitions);
 
 // 전체 항목 숫자 증가
-const donationTotalCount = donations.filter(
-    (donation) => donation.status === "완료" || donation.status === "취소"
+const donaitionTotalCount = donaitions.filter(
+    (donaition) => donaition.status === "완료" || donaition.status === "취소"
 ).length;
-document.getElementById("donation-totalCount").textContent = donationTotalCount;
+document.getElementById("donaition-totalCount").textContent =
+    donaitionTotalCount;
 
 // 기부 완료 숫자 증가
-const donationCompletedCount = donations.filter(
-    (donation) => donation.status === "완료"
+const donaitionCompletedCount = donaitions.filter(
+    (donaition) => donaition.status === "완료"
 ).length;
-document.getElementById("donation-completedCount").textContent =
-    donationCompletedCount;
+document.getElementById("donaition-completedCount").textContent =
+    donaitionCompletedCount;
 
 // 기부 취소 숫자 감소
-const donationCancelCount = donations.filter(
-    (donation) => donation.status === "취소"
+const donaitionCancelCount = donaitions.filter(
+    (donaition) => donaition.status === "취소"
 ).length;
-document.getElementById("donation-cancelCount").textContent =
-    donationCancelCount;
+document.getElementById("donaition-cancelCount").textContent =
+    donaitionCancelCount;
+
+/*******************충전 하기********************/
+const charges = [
+    {
+        id: 1,
+        status: "충전 완료",
+        chargeprice: "1000",
+        myprice: "1000",
+        date: "2024.03.01",
+    },
+    {
+        id: 2,
+        status: "잔액 부족",
+        chargeprice: "10000",
+        myprice: "1000",
+        date: "2024.03.02",
+    },
+    {
+        id: 3,
+        status: "충전 완료",
+        chargeprice: "5000",
+        myprice: "6000",
+        date: "2024.03.03",
+    },
+    {
+        id: 4,
+        status: "완료",
+        chargeprice: "1000",
+        myprice: "7000",
+        date: "2024.03.04",
+    },
+    {
+        id: 5,
+        status: "잔액 부족",
+        chargeprice: "1000",
+        myprice: "7000",
+        date: "2024.03.05",
+    },
+];
+
+// 충전 내역 렌더링▼
+const renderCharges = () => {
+    // 1. charge 배열 확인
+    console.log(charges); // boost 배열이 제대로 정의되고, 데이터가 있는지 확인
+
+    // 2. HTML 요소 선택 확인
+    const chargeList = document.querySelector(".charge-list");
+    const emptyComponent = document.querySelector("#charge .empty-component");
+
+    console.log(chargeList, emptyComponent); // 요소들이 정상적으로 선택되고 있는지 확인
+
+    // 이후 기존의 코드
+    if (charges.length === 0) {
+        chargeList.style.display = "none";
+        emptyComponent.style.display = "block";
+    } else {
+        chargeList.style.display = "block";
+        emptyComponent.style.display = "none";
+        chargeList.innerHTML = `
+            <table class="news-center-table" style="margin-top: 0; margin-bottom: 20px;">
+                <colgroup>
+                    <col style="width: 57px;">
+                    <col style="width: 132px;">
+                    <col style="width: 150px;">
+                    <col style="width: 150px;">
+                    <col style="width: 104px;">
+                </colgroup>
+                <thead class="news-center-table-head">
+                    <tr>
+                        <th>기부 번호</th>
+                        <th>구분</th>
+                        <th>신청 금액</th>
+                        <th>보유 금액</th>
+                        <th>결제 일</th>
+                    </tr>
+                </thead>
+                <tbody class="news-center-table-body">
+                ${charges
+                    .map(
+                        (charge) => `
+                    <tr class="news-data-rows" data-forloop="${charge.id}">
+                        <td class="news-center-table-body-number">${
+                            charge.id
+                        }</td>
+                        <td class="news-center-table-body-category">${
+                            charge.status
+                        }</td>
+                        <td class="news-center-table-body-title">${
+                            charge.chargeprice + "원"
+                        }</td>
+                        <td class="news-center-table-body-title">${
+                            charge.myprice + "원"
+                        }<td class="news-center-table-body-date">${
+                            charge.date
+                        }</td>
+                    </tr>
+                `
+                    )
+                    .join("")}
+                </tbody>
+            </table>
+        `;
+    }
+};
+renderCharges(charges);
+
+/*********************내 알림**********************/
+const notices = [
+    {
+        id: 1,
+        title: "알림 제목1",
+        content: "알림 내용 요약1",
+        date: "2024.03.01",
+    },
+    {
+        id: 2,
+        title: "알림 제목2",
+        content: "알림 내용 요약2",
+        date: "2024.03.02",
+    },
+    {
+        id: 3,
+        title: "알림 제목3",
+        content: "알림 내용 요약3",
+        date: "2024.03.03",
+    },
+    {
+        id: 4,
+        title: "알림 제목4",
+        content: "알림 내용 요약4",
+        date: "2024.03.04",
+    },
+    {
+        id: 5,
+        title: "알림 제목5",
+        content: "알림 내용 요약5",
+        date: "2024.03.05",
+    },
+];
+
+// 알림 렌더링▼
+const renderNotices = () => {
+    // 1. notices 배열 확인
+    console.log(notices); // notices 배열이 제대로 정의되고, 데이터가 있는지 확인
+
+    // 2. HTML 요소 선택 확인
+    const noticeList = document.querySelector(".notice-list");
+    const emptyComponent = document.querySelector("#notice .empty-component");
+
+    console.log(noticeList, emptyComponent); // 요소들이 정상적으로 선택되고 있는지 확인
+
+    // 이후 기존의 코드
+    if (!noticeList || !emptyComponent) {
+        console.error("HTML 요소가 선택되지 않았습니다.");
+        return;
+    }
+
+    if (notices.length === 0) {
+        noticeList.style.display = "none";
+        emptyComponent.style.display = "block";
+    } else {
+        noticeList.style.display = "block";
+        emptyComponent.style.display = "none";
+        noticeList.innerHTML = `
+                ${notices
+                    .map(
+                        (notice) => `
+                    <div class="noti-content">
+                        <div class="kzXcJa">
+                            <div class="noti-card-text" data-forloop="${notice.id}">
+                                <div class="noti-card-title">${notice.title}</div>
+                                <div class="noti-card-desc">${notice.content}</div>
+                                <div class="noti-card-desc">${notice.date}</div>
+                            </div>
+                        </div>    
+                    </div> 
+                `
+                    )
+                    .join("")}
+                </tbody>
+            </table>
+        `;
+    }
+};
+renderNotices(notices);
+
+// // 전체 항목 숫자 증가
+const noticeTotalCount = notices.length;
+document.getElementById("notice-totalCount").textContent = noticeTotalCount;
 
 /*********************봉사 활동**********************/
 const volunteers = [
@@ -797,137 +988,171 @@ const postscripts = [
     },
 ];
 
-// 기부 내역 렌더링▼
-// const renderPostscripts = () => {
-//     // 1. postscripts 배열 확인
-//     console.log(postscripts); // postscripts 배열이 제대로 정의되고, 데이터가 있는지 확인
+// 후기 내역 렌더링▼
+const renderPostscripts = () => {
+    // 1. postscripts 배열 확인
+    console.log(postscripts); // postscripts 배열이 제대로 정의되고, 데이터가 있는지 확인
 
-//     // 2. HTML 요소 선택 확인
-//     const postscriptList = document.querySelector(".postscript-list");
-//     const emptyComponent = document.querySelector(
-//         "#postscript .empty-component"
-//     );
+    // 2. HTML 요소 선택 확인
+    const postscriptList = document.querySelector(".postscript-list");
+    const emptyComponent = document.querySelector(
+        "#postscript .empty-component"
+    );
 
-//     console.log(postscriptList, emptyComponent); // 요소들이 정상적으로 선택되고 있는지 확인
+    console.log(postscriptList, emptyComponent); // 요소들이 정상적으로 선택되고 있는지 확인
 
-//     // 이후 기존의 코드
-//     if (!postscriptList || !emptyComponent) {
-//         console.error("HTML 요소가 선택되지 않았습니다.");
-//         return;
-//     }
+    // 이후 기존의 코드
+    if (!postscriptList || !emptyComponent) {
+        console.error("HTML 요소가 선택되지 않았습니다.");
+        return;
+    }
 
-//     if (postscripts.length === 0) {
-//         postscriptList.style.display = "none";
-//         emptyComponent.style.display = "block";
-//     } else {
-//         postscriptList.style.display = "block";
-//         emptyComponent.style.display = "none";
-//         postscriptList.innerHTML = `
-//             <table class="news-center-table" style="margin-top: 0; margin-bottom: 20px;">
-//                 <colgroup>
-//                     <col style="width: 57px;">
-//                     <col style="width: 132px;">
-//                     <col style="width: 150px;">
-//                     <col style="width: 104px;">
-//                 </colgroup>
-//                 <thead class="news-center-table-head">
-//                     <tr>
-//                         <th>문의 번호</th>
-//                         <th>상태</th>
-//                         <th>문의 내용</th>
-//                         <th>작성 날짜</th>
-//                     </tr>
-//                 </thead>
-//                 <tbody class="news-center-table-body">
-//                 ${postscripts
-//                     .map(
-//                         (postscript) => `
-//                     <tr class="news-data-rows" data-forloop="${postscript.id}">
-//                         <td class="news-center-table-body-number">${postscript.id}</td>
-//                         <td class="news-center-table-body-category">${postscript.title}</td>
-//                         <td class="news-center-table-body-title"><span>${postscript.content}</span></td>
-//                         <td class="news-center-table-body-date">${postscript.date}</td>
-//                     </tr>
-//                 `
-//                     )
-//                     .join("")}
-//                 </tbody>
-//             </table>
-//         `;
-//     }
-// };
-// renderPostscripts(postscripts);
+    if (postscripts.length === 0) {
+        postscriptList.style.display = "none";
+        emptyComponent.style.display = "block";
+    } else {
+        postscriptList.style.display = "block";
+        emptyComponent.style.display = "none";
+        postscriptList.innerHTML = `
+            <table class="news-center-table" style="margin-top: 0; margin-bottom: 20px;">
+                <colgroup>
+                    <col style="width: 57px;">
+                    <col style="width: 132px;">
+                    <col style="width: 150px;">
+                    <col style="width: 104px;">
+                </colgroup>
+                <thead class="news-center-table-head">
+                    <tr>
+                        <th>문의 번호</th>
+                        <th>상태</th>
+                        <th>문의 내용</th>
+                        <th>작성 날짜</th>
+                    </tr>
+                </thead>
+                <tbody class="news-center-table-body">
+                ${postscripts
+                    .map(
+                        (postscript) => `
+                    <tr class="news-data-rows" data-forloop="${postscript.id}">
+                        <td class="news-center-table-body-number">${postscript.id}</td>
+                        <td class="news-center-table-body-category">${postscript.title}</td>
+                        <td class="news-center-table-body-title"><span>${postscript.content}</span></td>
+                        <td class="news-center-table-body-date">${postscript.date}</td>
+                    </tr>
+                `
+                    )
+                    .join("")}
+                </tbody>
+            </table>
+        `;
+    }
+};
+renderPostscripts(postscripts);
+
+// 전체 항목 숫자 증가
+const postscriptTotalCount = postscripts.length;
+document.getElementById("postscript-totalCount").textContent =
+    postscriptTotalCount;
+
+/*********************기부 감사 인사**********************/
+const gratitudes = [
+    {
+        id: 1,
+        title: "감사 인사 제목1",
+        content: "감사 인사 제목 내용 요약1",
+        date: "2024.03.01",
+    },
+    {
+        id: 2,
+        title: "감사 인사 제목2",
+        content: "감사 인사 제목 내용 요약2",
+        date: "2024.03.02",
+    },
+    {
+        id: 3,
+        title: "감사 인사 제목3",
+        content: "감사 인사 제목 내용 요약3",
+        date: "2024.03.03",
+    },
+    {
+        id: 4,
+        title: "감사 인사 제목4",
+        content: "감사 인사 제목 내용 요약4",
+        date: "2024.03.04",
+    },
+    {
+        id: 5,
+        title: "감사 인사 제목5",
+        content: "감사 인사 제목 내용 요약5",
+        date: "2024.03.05",
+    },
+];
+
+// 후기 내역 렌더링▼
+const renderGratitudes = () => {
+    // 1. gratitudes 배열 확인
+    console.log(gratitudes); // gratitudes 배열이 제대로 정의되고, 데이터가 있는지 확인
+
+    // 2. HTML 요소 선택 확인
+    const gratitudeList = document.querySelector(".gratitude-list");
+    const emptyComponent = document.querySelector(
+        "#gratitude .empty-component"
+    );
+
+    console.log(gratitudeList, emptyComponent); // 요소들이 정상적으로 선택되고 있는지 확인
+
+    // 이후 기존의 코드
+    if (!gratitudeList || !emptyComponent) {
+        console.error("HTML 요소가 선택되지 않았습니다.");
+        return;
+    }
+
+    if (gratitudes.length === 0) {
+        gratitudeList.style.display = "none";
+        emptyComponent.style.display = "block";
+    } else {
+        gratitudeList.style.display = "block";
+        emptyComponent.style.display = "none";
+        gratitudeList.innerHTML = `
+            <table class="news-center-table" style="margin-top: 0; margin-bottom: 20px;">
+                <colgroup>
+                    <col style="width: 57px;">
+                    <col style="width: 132px;">
+                    <col style="width: 150px;">
+                    <col style="width: 104px;">
+                </colgroup>
+                <thead class="news-center-table-head">
+                    <tr>
+                        <th>문의 번호</th>
+                        <th>상태</th>
+                        <th>문의 내용</th>
+                        <th>작성 날짜</th>
+                    </tr>
+                </thead>
+                <tbody class="news-center-table-body">
+                ${gratitudes
+                    .map(
+                        (gratitude) => `
+                    <tr class="news-data-rows" data-forloop="${gratitude.id}">
+                        <td class="news-center-table-body-number">${gratitude.id}</td>
+                        <td class="news-center-table-body-category">${gratitude.title}</td>
+                        <td class="news-center-table-body-title"><span>${gratitude.content}</span></td>
+                        <td class="news-center-table-body-date">${gratitude.date}</td>
+                    </tr>
+                `
+                    )
+                    .join("")}
+                </tbody>
+            </table>
+        `;
+    }
+};
+renderGratitudes(gratitudes);
 
 // // 전체 항목 숫자 증가
-// const postscriptTotalCount = postscripts.length;
-// document.getElementById("postscript-totalCount").textContent =
-//     postscriptTotalCount;
-
-//     // 후기 내역 렌더링▼
-// const renderPostscripts = () => {
-//     // 1. postscripts 배열 확인
-//     console.log(postscripts); // postscripts 배열이 제대로 정의되고, 데이터가 있는지 확인
-
-//     // 2. HTML 요소 선택 확인
-//     const postscriptList = document.querySelector(".postscript-list");
-//     const emptyComponent = document.querySelector(
-//         "#postscript .empty-component"
-//     );
-
-//     console.log(postscriptList, emptyComponent); // 요소들이 정상적으로 선택되고 있는지 확인
-
-//     // 이후 기존의 코드
-//     if (!postscriptList || !emptyComponent) {
-//         console.error("HTML 요소가 선택되지 않았습니다.");
-//         return;
-//     }
-
-//     if (postscripts.length === 0) {
-//         postscriptList.style.display = "none";
-//         emptyComponent.style.display = "block";
-//     } else {
-//         postscriptList.style.display = "block";
-//         emptyComponent.style.display = "none";
-//         postscriptList.innerHTML = `
-//             <table class="news-center-table" style="margin-top: 0; margin-bottom: 20px;">
-//                 <colgroup>
-//                     <col style="width: 57px;">
-//                     <col style="width: 132px;">
-//                     <col style="width: 150px;">
-//                     <col style="width: 104px;">
-//                 </colgroup>
-//                 <thead class="news-center-table-head">
-//                     <tr>
-//                         <th>문의 번호</th>
-//                         <th>상태</th>
-//                         <th>문의 내용</th>
-//                         <th>작성 날짜</th>
-//                     </tr>
-//                 </thead>
-//                 <tbody class="news-center-table-body">
-//                 ${postscripts
-//                     .map(
-//                         (postscript) => `
-//                     <tr class="news-data-rows" data-forloop="${postscript.id}">
-//                         <td class="news-center-table-body-number">${postscript.id}</td>
-//                         <td class="news-center-table-body-category">${postscript.title}</td>
-//                         <td class="news-center-table-body-title"><span>${postscript.content}</span></td>
-//                         <td class="news-center-table-body-date">${postscript.date}</td>
-//                     </tr>
-//                 `
-//                     )
-//                     .join("")}
-//                 </tbody>
-//             </table>
-//         `;
-//     }
-// };
-// renderPostscripts(postscripts);
-
-// // 전체 항목 숫자 증가
-// const postscriptTotalCount = postscripts.length;
-// document.getElementById("postscript-totalCount").textContent =
-//     postscriptTotalCount;
+const gratitudeTotalCount = gratitudes.length;
+document.getElementById("gratitude-totalCount").textContent =
+    gratitudeTotalCount;
 
 /*********************공통*********************/
 
@@ -961,75 +1186,71 @@ tabs.forEach((tab) => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const gNTKJgElement = document.querySelector(".gNTKJg");
-    const dateButtons = document.querySelectorAll(
-        ".date-button .fItXBi.toggle"
-    );
-    const lnbItems = gNTKJgElement
-        ? gNTKJgElement.querySelectorAll(".lnb-item")
-        : [];
-    const tabsContainers = document.querySelectorAll(".bqkLME.tabs");
+const gNTKJgElement = document.querySelector(".gNTKJg");
+const dateButtons = document.querySelectorAll(".date-button .fItXBi.toggle");
+const lnbItems = gNTKJgElement
+    ? gNTKJgElement.querySelectorAll(".lnb-item")
+    : [];
+const tabsContainers = document.querySelectorAll(".bqkLME.tabs");
 
-    // 초기화 버튼에 이벤트 리스너 등록
-    document.body.addEventListener("click", function (event) {
-        if (event.target && event.target.id === "Initialization") {
-            resetToggleActiveClasses();
-        }
+// 초기화 버튼에 이벤트 리스너 등록
+document.body.addEventListener("click", function (event) {
+    if (event.target && event.target.id === "Initialization") {
+        resetToggleActiveClasses();
+    }
+});
+
+// 초기화 버튼 클릭 시 모든 .toggle의 active 클래스만 제거 (lnb-item의 active와 탭의 active는 유지)
+function resetToggleActiveClasses() {
+    dateButtons.forEach((toggleElement) =>
+        toggleElement.classList.remove("active")
+    );
+}
+
+// 모든 lnb-item이 active 상태로 변경될 때 해당 탭 컨테이너의 첫 번째 탭에 active 추가
+function activateFirstTab(lnbItem) {
+    // 모든 date-button의 active 상태 제거
+    dateButtons.forEach((toggleElement) => {
+        toggleElement.classList.remove("active");
     });
 
-    // 초기화 버튼 클릭 시 모든 .toggle의 active 클래스만 제거 (lnb-item의 active와 탭의 active는 유지)
-    function resetToggleActiveClasses() {
-        dateButtons.forEach((toggleElement) =>
-            toggleElement.classList.remove("active")
-        );
-    }
-
-    // 모든 lnb-item이 active 상태로 변경될 때 해당 탭 컨테이너의 첫 번째 탭에 active 추가
-    function activateFirstTab(lnbItem) {
-        // 모든 date-button의 active 상태 제거
-        dateButtons.forEach((toggleElement) => {
-            toggleElement.classList.remove("active");
+    // lnb-item과 관련된 tabsContainer의 첫 번째 탭에 active 추가
+    if (tabsContainers.length > 0) {
+        tabsContainers.forEach((tabsContainer) => {
+            if (lnbItem.classList.contains("active")) {
+                const tabs = tabsContainer.querySelectorAll(".tab");
+                tabs.forEach((tab) => tab.classList.remove("active"));
+                const firstTab = tabs[0];
+                if (firstTab) {
+                    firstTab.classList.add("active");
+                }
+            }
         });
+    }
+}
 
-        // lnb-item과 관련된 tabsContainer의 첫 번째 탭에 active 추가
-        if (tabsContainers.length > 0) {
-            tabsContainers.forEach((tabsContainer) => {
+lnbItems.forEach((lnbItem) => {
+    lnbItem.addEventListener("click", () => {
+        activateFirstTab(lnbItem);
+    });
+
+    const observer = new MutationObserver((mutationsList) => {
+        mutationsList.forEach((mutation) => {
+            if (
+                mutation.type === "attributes" &&
+                mutation.attributeName === "class"
+            ) {
+                // lnb-item이 active 상태로 변경되었을 때 실행
                 if (lnbItem.classList.contains("active")) {
-                    const tabs = tabsContainer.querySelectorAll(".tab");
-                    tabs.forEach((tab) => tab.classList.remove("active"));
-                    const firstTab = tabs[0];
-                    if (firstTab) {
-                        firstTab.classList.add("active");
-                    }
+                    activateFirstTab(lnbItem);
                 }
-            });
-        }
-    }
-
-    lnbItems.forEach((lnbItem) => {
-        lnbItem.addEventListener("click", () => {
-            activateFirstTab(lnbItem);
+            }
         });
+    });
 
-        const observer = new MutationObserver((mutationsList) => {
-            mutationsList.forEach((mutation) => {
-                if (
-                    mutation.type === "attributes" &&
-                    mutation.attributeName === "class"
-                ) {
-                    // lnb-item이 active 상태로 변경되었을 때 실행
-                    if (lnbItem.classList.contains("active")) {
-                        activateFirstTab(lnbItem);
-                    }
-                }
-            });
-        });
-
-        // 모든 lnb-item의 class 속성을 감시하도록 설정합니다.
-        observer.observe(lnbItem, {
-            attributes: true,
-            attributeFilter: ["class"],
-        });
+    // 모든 lnb-item의 class 속성을 감시하도록 설정합니다.
+    observer.observe(lnbItem, {
+        attributes: true,
+        attributeFilter: ["class"],
     });
 });

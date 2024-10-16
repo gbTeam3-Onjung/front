@@ -163,7 +163,7 @@
                                                                 <a
                                                                     href="#"
                                                                     class="hLIslS"
-                                                                    onclick="showTab('donation', this)"
+                                                                    onclick="showTab('donaition', this)"
                                                                     >기부
                                                                     내역</a
                                                                 >
@@ -862,7 +862,7 @@
                                                 </div>
                                                 <!-- 기부 내역 -->
                                                 <div
-                                                    id="donation"
+                                                    id="donaition"
                                                     class="profile-contents-box-wrap tab-content"
                                                 >
                                                     <main class="gYyxfE">
@@ -1044,7 +1044,7 @@
                                                                                 전체
                                                                             </div>
                                                                             <label
-                                                                                id="donation-totalCount"
+                                                                                id="donaition-totalCount"
                                                                                 class="ezikFA"
                                                                                 >0</label
                                                                             >
@@ -1063,7 +1063,7 @@
                                                                                 완료
                                                                             </div>
                                                                             <label
-                                                                                id="donation-completedCount"
+                                                                                id="donaition-completedCount"
                                                                                 class="ezikFA"
                                                                                 >0</label
                                                                             >
@@ -1082,7 +1082,7 @@
                                                                                 취소
                                                                             </div>
                                                                             <label
-                                                                                id="donation-cancelCount"
+                                                                                id="donaition-cancelCount"
                                                                                 class="ezikFA"
                                                                                 >0</label
                                                                             >
@@ -1095,8 +1095,8 @@
                                                             class="content-inner"
                                                         >
                                                             <div
-                                                                id="donation-list"
-                                                                class="donation-list"
+                                                                id="donaition-list"
+                                                                class="donaition-list"
                                                                 style="
                                                                     display: block;
                                                                 "
@@ -1257,62 +1257,46 @@
                                                             </div>
                                                         </section>
                                                     </section>
-                                                    <section class="ikXylf">
-                                                        <h3>
-                                                            충전 내역 상세정보
-                                                        </h3>
-                                                        <table
+                                                    <div class="content-inner">
+                                                        <div
+                                                            id="charge-list"
+                                                            class="charge-list"
                                                             style="
-                                                                position: relative;
+                                                                display: block;
                                                             "
+                                                        ></div>
+                                                        <div
+                                                            class="empty-component"
                                                         >
-                                                            <thead>
-                                                                <tr
-                                                                    class="header"
+                                                            <div
+                                                                class="kjzWjC empty"
+                                                                style="
+                                                                    display: none;
+                                                                "
+                                                            >
+                                                                <div
+                                                                    class="empty-image"
                                                                 >
-                                                                    <th
-                                                                        style="
-                                                                            width: 505px;
-                                                                        "
-                                                                    >
-                                                                        날짜
-                                                                    </th>
-                                                                    <th>
-                                                                        항목
-                                                                    </th>
-                                                                    <th>
-                                                                        내용
-                                                                    </th>
-                                                                    <th>
-                                                                        보유
-                                                                        금액
-                                                                    </th>
-                                                                    <th>
-                                                                        충전 후
-                                                                        잔액
-                                                                    </th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td
-                                                                        class="hDwKyj"
-                                                                        colspan="5"
-                                                                        style="
-                                                                            text-align: center;
-                                                                            width: 973px;
-                                                                        "
-                                                                    >
-                                                                        <strong
-                                                                            >충전
-                                                                            내역이
-                                                                            없습니다.</strong
-                                                                        >
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </section>
+                                                                    <img
+                                                                        name="SlightlySmilingFace"
+                                                                        src="https://cdn-dantats.stunning.kr/static/emoji/SlightlySmilingFace32px.png"
+                                                                        class="hkAQYM"
+                                                                    />
+                                                                    <h4>
+                                                                        <span
+                                                                            class="fendym"
+                                                                            ><b
+                                                                                >충전
+                                                                                내역이
+                                                                                없습니다.</b
+                                                                            >
+                                                                        </span>
+                                                                    </h4>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
                                                     <section class="ejrtXD">
                                                         <ul>
                                                             <li>
@@ -1372,6 +1356,7 @@
                                                                     class="tab-item"
                                                                 >
                                                                     전체<label
+                                                                        id="notice-totalCount"
                                                                         class="gQDBHp"
                                                                         >0</label
                                                                     >
@@ -1381,52 +1366,70 @@
                                                                 <div
                                                                     class="tab-item"
                                                                 >
-                                                                    최신순<label
-                                                                        class="gQDBHp"
-                                                                        >0</label
-                                                                    >
+                                                                    최신순
                                                                 </div>
                                                             </div>
                                                             <div class="tab">
                                                                 <div
                                                                     class="tab-item"
                                                                 >
-                                                                    오래된
-                                                                    순<label
-                                                                        class="gQDBHp"
-                                                                        >0</label
-                                                                    >
+                                                                    오래된 순
                                                                 </div>
                                                             </div>
                                                         </div>
-
                                                         <div
                                                             class="kjzWjC empty"
                                                         >
                                                             <div
-                                                                class="empty-image"
+                                                                class="content-inner"
+                                                                style="
+                                                                    margin: 0px;
+                                                                "
                                                             >
-                                                                <img
-                                                                    name="SlightlySmilingFace"
-                                                                    src="https://cdn-dantats.stunning.kr/static/emoji/SlightlySmilingFace32px.png"
-                                                                    class="hkAQYM"
-                                                                />
-                                                            </div>
-                                                            <h4>
-                                                                <span
-                                                                    class="fendym"
-                                                                    ><b
-                                                                        >아직까지
-                                                                        새로운
-                                                                        알림이
-                                                                        없습니다.
-                                                                        새소식이
-                                                                        있을 때
-                                                                        바로
-                                                                        알려드릴게요.</b
+                                                                <div
+                                                                    id="notice-list"
+                                                                    class="notice-list"
+                                                                    style="
+                                                                        display: block;
+                                                                    "
+                                                                ></div>
+                                                                <div
+                                                                    class="empty-component"
+                                                                >
+                                                                    <div
+                                                                        class="kjzWjC empty"
+                                                                        style="
+                                                                            display: none;
+                                                                        "
                                                                     >
-                                                                </span>
-                                                            </h4>
+                                                                        <div
+                                                                            class="empty-image"
+                                                                        >
+                                                                            <img
+                                                                                name="SlightlySmilingFace"
+                                                                                src="https://cdn-dantats.stunning.kr/static/emoji/SlightlySmilingFace32px.png"
+                                                                                class="hkAQYM"
+                                                                            />
+                                                                        </div>
+                                                                        <h4>
+                                                                            <span
+                                                                                class="fendym"
+                                                                                ><b
+                                                                                    >아직까지
+                                                                                    새로운
+                                                                                    알림이
+                                                                                    없습니다.
+                                                                                    새소식이
+                                                                                    있을
+                                                                                    때
+                                                                                    바로
+                                                                                    알려드릴게요.</b
+                                                                                >
+                                                                            </span>
+                                                                        </h4>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </main>
                                                 </div>
@@ -1939,6 +1942,9 @@
                                                                     <a
                                                                         class="jBsNEF btn-request btn-request--case-2"
                                                                         href="#"
+                                                                        style="
+                                                                            margin-left: 535px !important;
+                                                                        "
                                                                         ><span
                                                                             class="visual-correction"
                                                                             >문의
@@ -2218,7 +2224,7 @@
                                                                         class="jBsNEF btn-request btn-request--case-2"
                                                                         href="#"
                                                                         style="
-                                                                            margin-left: 595px;
+                                                                            /* margin-left: 400px; */
                                                                         "
                                                                         ><span
                                                                             class="visual-correction"
@@ -2280,7 +2286,7 @@
 
                                                 <!-- 기부 감사 인사 -->
                                                 <div
-                                                    id="postscript"
+                                                    id="gratitude"
                                                     class="profile-contents-box-wrap tab-content"
                                                 >
                                                     <main class="gYyxfE">
@@ -2289,15 +2295,17 @@
                                                                 <div
                                                                     class="header-title"
                                                                 >
-                                                                    봉사 활동
-                                                                    후기 내역
+                                                                    기부 감사
+                                                                    인사 내역
                                                                 </div>
                                                                 <div
                                                                     class="header-desc"
                                                                 >
                                                                     <span
                                                                         class="fendym"
-                                                                        >후기
+                                                                        >기부
+                                                                        감사
+                                                                        인사
                                                                         내역을
                                                                         확인하실
                                                                         수
@@ -2310,10 +2318,13 @@
                                                             class="date-filter"
                                                         >
                                                             <div class="title">
-                                                                후기 작성 일시
+                                                                인사 작성 일시
                                                             </div>
                                                             <div
-                                                                class="option date-container"
+                                                                class="date-input"
+                                                                style="
+                                                                    display: flex;
+                                                                "
                                                             >
                                                                 <span
                                                                     class="date-span"
@@ -2346,17 +2357,11 @@
                                                                     />
                                                                 </label>
                                                             </div>
-
-                                                            <!-- 켈린더 -->
-
                                                             <div
                                                                 class="date-button"
                                                             >
                                                                 <label
                                                                     class="fItXBi toggle"
-                                                                    style="
-                                                                        margin-left: 15px;
-                                                                    "
                                                                     ><input
                                                                         type="checkbox"
                                                                         value=""
@@ -2419,7 +2424,6 @@
                                                                 </label>
                                                             </div>
                                                             <button
-                                                                id="Initialization"
                                                                 class="gPdSFi"
                                                             >
                                                                 <svg
@@ -2452,7 +2456,7 @@
                                                                     class="bqkLME tabs"
                                                                 >
                                                                     <div
-                                                                        class="tab active"
+                                                                        class="active tab"
                                                                     >
                                                                         <div
                                                                             class="item-wrap"
@@ -2463,7 +2467,7 @@
                                                                                 전체
                                                                             </div>
                                                                             <label
-                                                                                id="postscript-totalCount"
+                                                                                id="gratitude-totalCount"
                                                                                 class="ezikFA"
                                                                                 >0</label
                                                                             >
@@ -2500,9 +2504,6 @@
                                                                     <a
                                                                         class="jBsNEF btn-request btn-request--case-2"
                                                                         href="#"
-                                                                        style="
-                                                                            margin-left: 595px;
-                                                                        "
                                                                         ><span
                                                                             class="visual-correction"
                                                                             >후기
@@ -2519,8 +2520,8 @@
                                                             class="content-inner"
                                                         >
                                                             <div
-                                                                id="postscript-list"
-                                                                class="postscript-list"
+                                                                id="gratitude-list"
+                                                                class="gratitude-list"
                                                                 style="
                                                                     display: block;
                                                                 "
