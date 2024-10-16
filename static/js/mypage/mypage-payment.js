@@ -862,9 +862,109 @@ const renderPostscripts = () => {
 renderPostscripts(postscripts);
 
 // 전체 항목 숫자 증가
-const postscriptTotalCount = inquirys.length;
+const postscriptTotalCount = postscripts.length;
 document.getElementById("postscript-totalCount").textContent =
     postscriptTotalCount;
+
+/*********************기부 감사 인사**********************/
+const gratitudes = [
+    {
+        id: 1,
+        title: "후기 제목1",
+        content: "후기 내용 요약1",
+        date: "2024.03.01",
+    },
+    {
+        id: 2,
+        title: "후기 제목2",
+        content: "후기 내용 요약2",
+        date: "2024.03.02",
+    },
+    {
+        id: 3,
+        title: "후기 제목3",
+        content: "후기 내용 요약3",
+        date: "2024.03.03",
+    },
+    {
+        id: 4,
+        title: "후기 제목4",
+        content: "후기 내용 요약4",
+        date: "2024.03.04",
+    },
+    {
+        id: 5,
+        title: "후기 제목5",
+        content: "후기 내용 요약5",
+        date: "2024.03.05",
+    },
+];
+
+// 후기 내역 렌더링▼
+const renderGratitudes = () => {
+    // 1. gratitudes 배열 확인
+    console.log(gratitudes); // gratitudes 배열이 제대로 정의되고, 데이터가 있는지 확인
+
+    // 2. HTML 요소 선택 확인
+    const gratitudeList = document.querySelector(".gratitude-list");
+    const emptyComponent = document.querySelector(
+        "#gratitude .empty-component"
+    );
+
+    console.log(gratitudeList, emptyComponent); // 요소들이 정상적으로 선택되고 있는지 확인
+
+    // 이후 기존의 코드
+    if (!gratitudeList || !emptyComponent) {
+        console.error("HTML 요소가 선택되지 않았습니다.");
+        return;
+    }
+
+    if (postscripts.length === 0) {
+        gratitudeList.style.display = "none";
+        emptyComponent.style.display = "block";
+    } else {
+        gratitudeList.style.display = "block";
+        emptyComponent.style.display = "none";
+        gratitudeList.innerHTML = `
+            <table class="news-center-table" style="margin-top: 0; margin-bottom: 20px;">
+                <colgroup>
+                    <col style="width: 57px;">
+                    <col style="width: 132px;">
+                    <col style="width: 150px;">
+                    <col style="width: 104px;">
+                </colgroup>
+                <thead class="news-center-table-head">
+                    <tr>
+                        <th>문의 번호</th>
+                        <th>상태</th>
+                        <th>문의 내용</th>
+                        <th>작성 날짜</th>
+                    </tr>
+                </thead>
+                <tbody class="news-center-table-body">
+                ${gratitudes
+                    .map(
+                        (gratitude) => `
+                    <tr class="news-data-rows" data-forloop="${gratitude.id}">
+                        <td class="news-center-table-body-number">${gratitude.id}</td>
+                        <td class="news-center-table-body-category">${gratitude.title}</td>
+                        <td class="news-center-table-body-title"><span>${gratitude.content}</span></td>
+                        <td class="news-center-table-body-date">${gratitude.date}</td>
+                    </tr>
+                `
+                    )
+                    .join("")}
+                </tbody>
+            </table>
+        `;
+    }
+};
+renderGratitudes(gratitudes);
+
+// 전체 항목 숫자 증가
+const gratitudeTotalCount = inquirys.length;
+document.getElementById("gratitude-totalCount").textContent =
+    gratitudeTotalCount;
 
 /*********************공통*********************/
 
