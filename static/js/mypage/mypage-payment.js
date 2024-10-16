@@ -961,9 +961,9 @@ const renderGratitudes = () => {
 renderGratitudes(gratitudes);
 
 // // 전체 항목 숫자 증가
-// const gratitudeTotalCount = t.length;
-// document.getElementById("gratitude-totalCount").textContent =
-//     gratitudeTotalCount;
+const gratitudeTotalCount = gratitudes.length;
+document.getElementById("gratitude-totalCount").textContent =
+    gratitudeTotalCount;
 
 /*********************공통*********************/
 
