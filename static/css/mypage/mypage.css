@@ -542,8 +542,8 @@ a, h1, h2, h3, h4, h5, h6 {
 }
 
 .gYyxfE .date-filter > .date-input {
-    background-color: white;
-    margin-right: 32px;
+    /* background-color: white; */
+    margin-right: 15px;
 }
 
 .fIGvfF {

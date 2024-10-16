@@ -2316,57 +2316,39 @@
                                                             </div>
                                                             <div
                                                                 class="date-input"
+                                                                style="
+                                                                    display: flex;
+                                                                "
                                                             >
+                                                                <span
+                                                                    class="date-span"
+                                                                    >날짜지정</span
+                                                                >
                                                                 <label
-                                                                    class="fIGvfF date-range"
+                                                                    class="company-name"
                                                                 >
                                                                     <input
-                                                                        readonly=""
-                                                                        placeholder="내용 입력"
-                                                                        class="date-range-input"
-                                                                        value=""
+                                                                        type="date"
+                                                                        id="end-date"
+                                                                        placeholder="시작 날짜를 선택하세요"
+                                                                        onchange="updateDateRange()"
                                                                     />
-                                                                    <svg
-                                                                        class="cAfwXx date-range-icon"
-                                                                        viewBox="0 0 24 24"
+                                                                </label>
+                                                                <span
+                                                                    class="then"
+                                                                    ><strong
+                                                                        >-</strong
                                                                     >
-                                                                        <rect
-                                                                            x="3.6"
-                                                                            y="6.6"
-                                                                            width="16.8"
-                                                                            height="13.8"
-                                                                            rx="1.4"
-                                                                            fill="none"
-                                                                            stroke="currentColor"
-                                                                            stroke-width="1.2"
-                                                                        ></rect>
-                                                                        <path
-                                                                            d="M7.5 6V4.5"
-                                                                            stroke="currentColor"
-                                                                            stroke-width="1.2"
-                                                                            stroke-linecap="round"
-                                                                        ></path>
-                                                                        <path
-                                                                            d="M16.5 6V4.5"
-                                                                            stroke="currentColor"
-                                                                            stroke-width="1.2"
-                                                                            stroke-linecap="round"
-                                                                        ></path>
-                                                                        <path
-                                                                            d="M4.5 10.5H21"
-                                                                            stroke="currentColor"
-                                                                            stroke-width="1.2"
-                                                                        ></path>
-                                                                        <rect
-                                                                            x="7.5"
-                                                                            y="13.5"
-                                                                            width="3"
-                                                                            height="3"
-                                                                            rx="0.5"
-                                                                            fill="currentColor"
-                                                                        ></rect>
-                                                                        <defs></defs>
-                                                                    </svg>
+                                                                </span>
+                                                                <label
+                                                                    class="company-name"
+                                                                >
+                                                                    <input
+                                                                        type="date"
+                                                                        id="start-date"
+                                                                        placeholder="종료 날짜를 선택하세요"
+                                                                        onchange="updateDateRange()"
+                                                                    />
                                                                 </label>
                                                             </div>
                                                             <div
@@ -2516,49 +2498,49 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <!-- <div
+                                                        <div
                                                             class="content-inner"
-                                                        > -->
-                                                        <div
-                                                            id="gratitude-list"
-                                                            class="gratitude-list"
-                                                            style="
-                                                                display: block;
-                                                            "
-                                                        ></div>
-                                                        <div
-                                                            class="empty-component"
                                                         >
                                                             <div
-                                                                class="kjzWjC empty"
+                                                                id="gratitude-list"
+                                                                class="gratitude-list"
                                                                 style="
-                                                                    display: none;
+                                                                    display: block;
                                                                 "
+                                                            ></div>
+                                                            <div
+                                                                class="empty-component"
                                                             >
                                                                 <div
-                                                                    class="empty-image"
+                                                                    class="kjzWjC empty"
+                                                                    style="
+                                                                        display: none;
+                                                                    "
                                                                 >
-                                                                    <img
-                                                                        name="SlightlySmilingFace"
-                                                                        src="https://cdn-dantats.stunning.kr/static/emoji/SlightlySmilingFace32px.png"
-                                                                        class="hkAQYM"
-                                                                    />
-                                                                    <h4>
-                                                                        <span
-                                                                            class="fendym"
-                                                                            ><b
-                                                                                >봉사
-                                                                                활동
-                                                                                후기
-                                                                                내역이
-                                                                                없습니다.</b
-                                                                            >
-                                                                        </span>
-                                                                    </h4>
+                                                                    <div
+                                                                        class="empty-image"
+                                                                    >
+                                                                        <img
+                                                                            name="SlightlySmilingFace"
+                                                                            src="https://cdn-dantats.stunning.kr/static/emoji/SlightlySmilingFace32px.png"
+                                                                            class="hkAQYM"
+                                                                        />
+                                                                        <h4>
+                                                                            <span
+                                                                                class="fendym"
+                                                                                ><b
+                                                                                    >봉사
+                                                                                    활동
+                                                                                    후기
+                                                                                    내역이
+                                                                                    없습니다.</b
+                                                                                >
+                                                                            </span>
+                                                                        </h4>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <!-- </div> -->
                                                     </main>
                                                 </div>
                                             </div>
