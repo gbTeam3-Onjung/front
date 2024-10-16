@@ -861,25 +861,41 @@ const renderPostscripts = () => {
 };
 renderPostscripts(postscripts);
 
+// 날짜 문자열을 Date 객체로 변환하는 함수
+function parseDate(dateString) {
+    const [year, month, day] = dateString.split(".");
+    return new Date(year, month - 1, day);
+}
+
+// 오늘 날짜 가져오기
+const today = new Date();
+
 // 전체 항목 숫자 증가
-// const postscriptTotalCount = inquirys.filter(
-//     (postscript) =>
-//         postscript.status === "완료" || postscript.status === "대기중"
-// ).length;
-// document.getElementById("postscript-totalCount").textContent =
-//     postscriptTotalCount;
+const postscriptTotalCount = inquirys.length;
+document.getElementById("postscript-totalCount").textContent =
+    postscriptTotalCount;
 
-// // 후기 최신순 숫자 증가
-// const postscripNewCount = inquirys.filter(
-//     (inquiry) => inquiry.status === "완료"
-// ).length;
-// document.getElementById("postscrip-newCount").textContent = postscripNewCount;
+// 후기 최신순 (오늘 날짜와의 차이 기준 오름차순)
+const sortedByNewest = inquirys.slice().sort((a, b) => {
+    const dateA = parseDate(a.date);
+    const dateB = parseDate(b.date);
+    const diffA = Math.abs(today - dateA);
+    const diffB = Math.abs(today - dateB);
+    return diffA - diffB;
+});
+document.getElementById("postscrip-newCount").textContent =
+    sortedByNewest.length;
 
-// // 후기 오래된 순 숫자 증가
-// const postscripOldCount = inquirys.filter(
-//     (postscrip) => postscrip.status === "대기중"
-// ).length;
-// document.getElementById("postscrip-oldCount").textContent = postscripOldCount;
+// 후기 오래된 순 (오늘 날짜와의 차이 기준 내림차순)
+const sortedByOldest = inquirys.slice().sort((a, b) => {
+    const dateA = parseDate(a.date);
+    const dateB = parseDate(b.date);
+    const diffA = Math.abs(today - dateA);
+    const diffB = Math.abs(today - dateB);
+    return diffB - diffA;
+});
+document.getElementById("postscrip-oldCount").textContent =
+    sortedByOldest.length;
 
 /*********************공통*********************/
 
