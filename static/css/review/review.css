@@ -1,7 +1,7 @@
 @media (max-width: 430px) and (min-height: 932px) {
     main {
-        overflow-x: hidden;
         width: 429px !important;
+        overflow-x: hidden;
     }
     .customer-review {
         width: 430px !important;
@@ -14,10 +14,6 @@
         box-sizing: border-box;
     }
 
-    .review-list-wrap {
-        width: 105%;
-    }
-
     .review-list-wrap .review-list {
         width: 100%;
         padding: 8px 0;
@@ -27,7 +23,7 @@
 
     .tab-wrap {
         width: 100%;
-        margin-top: 8px;
+        margin-top: 230px;
         padding: 0;
     }
 
@@ -44,10 +40,23 @@
     }
 
     .review-score-wrapper {
-        display: flex;
+        width: 100%;
+        padding: 16px;
+        overflow: auto;
+        scrollbar-width: none;
+        width: 450px !important;
+    }
+    .review-score-card {
         flex-direction: column;
-        align-items: flex-start;
-        width: 430px !important;
+        -webkit-box-align: center;
+        align-items: center;
+        white-space: nowrap;
+        text-align: center;
+    }
+    .review-score-img {
+        width: 40px !important;
+        height: 40px !important;
+        margin-bottom: 8px;
     }
 
     .review-score-container {
@@ -55,13 +64,6 @@
         align-items: center;
     }
 
-    .review-card-divider .review-part {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-        padding: 12px 0;
-    }
     .review-card-divider .review-part .review-thumbnail {
         width: 100%;
         max-width: 360px;
@@ -73,6 +75,14 @@
     }
 
     .review-card-divider .review-part .review-content {
+        width: 100%;
+        margin-left: 10px;
+    }
+
+    .review-part .review-thumbnail {
+        display: none;
+    }
+    .review-content {
         width: 100%;
     }
 
@@ -90,9 +100,8 @@
     }
 
     .review-user-info {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        position: relative;
+        margin-bottom: 0px;
     }
 
     .review-user-info .review-user {
@@ -104,23 +113,130 @@
         font-size: 10px;
         color: rgb(142, 148, 160);
     }
+    .review-user-info .review-score > span {
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: -0.25px;
+        font-weight: 500;
+    }
 
+    .review-user-info .review-user {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+    }
     .review-comment-container .review-comment-area .review-comment {
         font-size: 14px;
         line-height: 22px;
         word-break: break-word;
     }
-
+    .review-comment-container {
+        display: flex;
+        flex-direction: row;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        margin-bottom: 16px;
+    }
+    .review-comment {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: unset;
+        height: fit-content;
+    }
+    .review-thumbnail-m {
+        width: 80px;
+        height: 80px;
+        margin-left: 8px;
+    }
+    .review-thumbnail-m > .cover {
+        width: 80px;
+        height: 80px;
+    }
     .page-container {
         display: none !important;
     }
+
+    .review-score-container .review-score-count .review-score-rate {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        margin-bottom: 5px;
+        font-size: 18px !important;
+        line-height: 26px !important;
+    }
+    .review-score-count {
+        display: flex;
+        flex-direction: column-reverse;
+        -webkit-box-align: center;
+        align-items: center;
+        margin-left: 0px !important;
+    }
+    .review-score-container {
+        flex-direction: column !important;
+        -webkit-box-align: center !important;
+        align-items: center;
+        text-align: center;
+    }
     .review-thumbnail-head-container {
-        width: 0px !important;
-        height: 0px !important;
+        width: 100% !important;
+        margin-left: 0px;
+        border-left: 0px;
+        padding: 16px 0px;
+        border-bottom: 8px solid rgb(245, 246, 247);
+        top: 1px !important;
+        padding-left: 3px !important;
     }
-    .avatar-container .review-user-info .review-user .review-user-date::before {
-        display: none;
+    .review-thumbnail-head {
+        padding: 0px 16px 16px;
+        margin-bottom: 0px !important;
     }
+    .review-thumbnail-head > h3 {
+        font-size: 15px !important;
+        line-height: 23px !important;
+        letter-spacing: -0.5px !important;
+    }
+    .right-bar-container {
+        display: flex;
+        flex-flow: nowrap !important;
+        overflow: scroll !important;
+    }
+    .right-bar-img-wrap {
+        padding-left: 16px;
+    }
+    .review-card-divider {
+        padding: 20px 16px;
+    }
+    .card-image img {
+        display: block !important;
+    }
+    .right-bar-container > div {
+        width: calc(33.3333% - 6px);
+        flex-shrink: 0;
+        margin-bottom: 12px;
+        width: 24% !important;
+    }
+}
+.FYvcO .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.FYvcO {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+}
+.card-image {
+    overflow: hidden;
+    width: 100%;
+}
+p {
+    font-family: inherit;
+    margin-bottom: 0;
 }
 
 body,
@@ -218,13 +334,7 @@ img {
     letter-spacing: -0.25px;
     font-weight: 500;
 }
-.review-score-container .review-score-count .review-score-rate {
-    color: rgb(16, 28, 51);
-    font-size: 28px;
-    line-height: 40px;
-    letter-spacing: -0.5px;
-    font-weight: 700;
-}
+
 .review-rate-text {
     user-select: none;
     display: inline-block;
@@ -305,13 +415,7 @@ img {
     letter-spacing: -0.25px;
     font-weight: 500;
 }
-.review-score-container .review-score-count .review-score-rate {
-    color: rgb(16, 28, 51);
-    font-size: 28px;
-    line-height: 40px;
-    letter-spacing: -0.5px;
-    font-weight: 700;
-}
+
 .review-score-container .review-score-count .review-score-rate > span > span {
     color: rgb(170, 177, 188);
 }
@@ -753,10 +857,7 @@ h6 {
     width: 12px;
     height: 12px;
 }
-.right-bar-container {
-    display: flex;
-    flex-flow: wrap;
-}
+
 .right-bar-container > div {
     width: calc(33.3333% - 6px);
     flex-shrink: 0;

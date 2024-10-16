@@ -417,13 +417,9 @@ monthElements.forEach((monthElement, index) => {
 
         // 모든 월에서 active 클래스 제거 후, 클릭한 월에 추가
         monthElements.forEach((el) =>
-            el.classList.remove(
-                "react-datepicker-month-text--keyboard-selected"
-            )
+            el.classList.remove("react-datepicker-month-text-keyboard-selected")
         );
-        monthElement.classList.add(
-            "react-datepicker-month-text--keyboard-selected"
-        );
+        monthElement.classList.add("datepicker-month-text-keyboard-selected");
 
         tabLoop.classList.remove("active");
     });
