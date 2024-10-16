@@ -70,8 +70,8 @@ document
     .addEventListener("click", () => showTab("boost", this));
 
 document
-    .getElementById("donaition-link")
-    .addEventListener("click", () => showTab("donaition", this));
+    .getElementById("donation-link")
+    .addEventListener("click", () => showTab("donation", this));
 
 document
     .getElementById("charge-link")
@@ -86,8 +86,8 @@ document
     .addEventListener("click", () => showTab("volunteer", this));
 
 document
-    .getElementById("Inquiry-link")
-    .addEventListener("click", () => showTab("Inquiry", this));
+    .getElementById("inquiry-link")
+    .addEventListener("click", () => showTab("inquiry", this));
 
 document
     .getElementById("postscript-link")

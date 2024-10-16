@@ -109,9 +109,20 @@ const showVolunteerPosts = () => {
                     <div class="review-comment-container">
                         <div class="review-comment-area">
                             <div class="review-comment">
-                                봉사활동 후기 내용입니다.
+                                봉사활동 후기 내용입니다. 봉사활동 후기 내용입니다. 봉사활동 후기 내용입니다. 봉사활동 후기 내용입니다. 봉사활동 후기 내용입니다. 봉사활동 후기 내용입니다..
                             </div>
                         </div>
+                        <a class=" hLIslS review-thumbnail-m" href="/contest/view/153179"><div class="sc-eXBvqI FYvcO cover ">
+                        <div class="sc-evrZIY jslVlk aspect-ratio-card-wrapper card-image ">
+                        <div><div class="observer ">
+                        </div>
+                        <img src=
+                       https://cdn-dantats.stunning.kr/prod/portfolios/37db3714-d292-481e-a288-d29b7c2a6279/covers/eavxYqGTx3xsnczv.%EC%88%A8_1.%EC%84%AC%EB%84%A4%EC%9D%BC.jpg.small?s=1000x1000&e=195x249&t=crop&q=100&f=webp
+                        alt="한의원의 신탄진 고든 한의원 이미지" class="sc-llJcti hkAQYM" style="display:none">
+                        </div>
+                        </div>
+                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -152,15 +163,3 @@ for (let i = 0; i < 9; i++) {
     `;
     rightBarContainer.appendChild(rightBarImgWrap);
 }
-
-window.addEventListener("scroll", () => {
-    const element = document.querySelector(".review-thumbnail-head-container");
-    const scrollPosition = window.scrollY;
-
-    if (scrollPosition > 200) {
-        // 필요한 위치에 따라 값 조정해야함
-        element.classList.add("sticky");
-    } else {
-        element.classList.remove("sticky");
-    }
-});
