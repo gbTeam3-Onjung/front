@@ -869,32 +869,32 @@ document.getElementById("postscript-totalCount").textContent =
 const gratitudes = [
     {
         id: 1,
-        title: "후기 제목1",
-        content: "후기 내용 요약1",
+        title: "감사 인사 제목1",
+        content: "감사 인사 제목 내용 요약1",
         date: "2024.03.01",
     },
     {
         id: 2,
-        title: "후기 제목2",
-        content: "후기 내용 요약2",
+        title: "감사 인사 제목2",
+        content: "감사 인사 제목 내용 요약2",
         date: "2024.03.02",
     },
     {
         id: 3,
-        title: "후기 제목3",
-        content: "후기 내용 요약3",
+        title: "감사 인사 제목3",
+        content: "감사 인사 제목 내용 요약3",
         date: "2024.03.03",
     },
     {
         id: 4,
-        title: "후기 제목4",
-        content: "후기 내용 요약4",
+        title: "감사 인사 제목4",
+        content: "감사 인사 제목 내용 요약4",
         date: "2024.03.04",
     },
     {
         id: 5,
-        title: "후기 제목5",
-        content: "후기 내용 요약5",
+        title: "감사 인사 제목5",
+        content: "감사 인사 제목 내용 요약5",
         date: "2024.03.05",
     },
 ];
