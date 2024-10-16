@@ -761,3 +761,22 @@ img {
 .cqiqxf .main-slider .slick-slider > .slick-arrow.slick-next {
     right: calc(50% - 475px);
 }
+
+.fkweeb {
+    margin: 0 auto;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.slick-list {
+    display: flex;
+    justify-content: center; /* 중앙 정렬 */
+    padding: 0 50px;
+}
+
+.slick-track {
+    display: flex;
+    justify-content: center; /* 중앙 정렬 */
+    transform: translate3d(0px, 0px, 0px); /* 초기 위치 */
+    transition: transform 0.5s ease-in-out;
+}
