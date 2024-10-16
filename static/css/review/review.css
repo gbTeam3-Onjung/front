@@ -12,9 +12,21 @@
     }
     .review-list-wrap .review-list {
         width: 100% !important;
+        margin-top: 90px;
     }
 }
 
+@media (max-width: 932px) and (max-height: 430px) {
+    .review-list-wrap .review-list {
+        margin-left: 10px;
+    }
+    .review-score-wrapper {
+        margin-left: 10px;
+    }
+    .customer-review {
+        margin-left: 10px;
+    }
+}
 body,
 html {
     background-color: #fff;
