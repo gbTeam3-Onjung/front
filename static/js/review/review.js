@@ -109,7 +109,7 @@ const showVolunteerPosts = () => {
                     <div class="review-comment-container">
                         <div class="review-comment-area">
                             <div class="review-comment">
-                                봉사활동 후기 내용입니다.
+                                봉사활동 후기 내용입니다. 봉사활동 후기 내용입니다.
                             </div>
                         </div>
                     </div>

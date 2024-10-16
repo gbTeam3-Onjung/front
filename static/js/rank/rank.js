@@ -302,19 +302,7 @@ let cardHTML = `
                                 </p>
                             </div>
                         </div>
-                        <div class="info-meta-container expert-card-info-meta-item">
-                            <span class="expert-card-info-meta-item-title">마켓</span>
-                            <div class="expert-card-info-meta-item-spacer"></div>
-                            <div class="expert-card-info-meta-item-value">
-                                <p class="info-meta-default" title=" 회+">
-                                    <span class="number-text-number-container">
-                                        <span class="number number-text-number">90</span>
-                                      
-                                    </span>
-                                    <span class="number-text-suffix">회+</span>
-                                </p>
-                            </div>
-                        </div>
+                     
                         <div class="info-meta-container expert-card-info-meta-item">
                             <span class="expert-card-info-meta-item-title">리뷰</span>
                             <div class="expert-card-info-meta-item-spacer"></div>
@@ -405,9 +393,7 @@ const tabLoop = document.querySelector(".react-datepicker-tab-loop");
 const dateDisplay = document.querySelector(
     ".react-datepicker-input-container input"
 );
-const monthElements = document.querySelectorAll(
-    ".react-datepicker-month-text"
-);
+const monthElements = document.querySelectorAll(".react-datepicker-month-text");
 const currentYear = 2024;
 
 // inputContainer를 클릭했을 때 tabLoop의 가시성을 토글
