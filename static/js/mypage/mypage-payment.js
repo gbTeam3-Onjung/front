@@ -875,24 +875,20 @@ const postscriptTotalCount = inquirys.length;
 document.getElementById("postscript-totalCount").textContent =
     postscriptTotalCount;
 
-// 후기 최신순 (오늘 날짜와의 차이 기준 오름차순)
+// 후기 최신순 (작성 날짜 기준 내림차순)
 const sortedByNewest = inquirys.slice().sort((a, b) => {
     const dateA = parseDate(a.date);
     const dateB = parseDate(b.date);
-    const diffA = Math.abs(today - dateA);
-    const diffB = Math.abs(today - dateB);
-    return diffA - diffB;
+    return dateB - dateA;
 });
 document.getElementById("postscrip-newCount").textContent =
     sortedByNewest.length;
 
-// 후기 오래된 순 (오늘 날짜와의 차이 기준 내림차순)
+// 후기 오래된 순 (작성 날짜 기준 오름차순)
 const sortedByOldest = inquirys.slice().sort((a, b) => {
     const dateA = parseDate(a.date);
     const dateB = parseDate(b.date);
-    const diffA = Math.abs(today - dateA);
-    const diffB = Math.abs(today - dateB);
-    return diffB - diffA;
+    return dateA - dateB;
 });
 document.getElementById("postscrip-oldCount").textContent =
     sortedByOldest.length;
