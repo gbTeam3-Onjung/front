@@ -607,6 +607,90 @@ const renderCharges = () => {
 };
 renderCharges(charges);
 
+/*********************내 알림**********************/
+const notices = [
+    {
+        id: 1,
+        title: "알림 제목1",
+        content: "알림 내용 요약1",
+        date: "2024.03.01",
+    },
+    {
+        id: 2,
+        title: "알림 제목2",
+        content: "알림 내용 요약2",
+        date: "2024.03.02",
+    },
+    {
+        id: 3,
+        title: "알림 제목3",
+        content: "알림 내용 요약3",
+        date: "2024.03.03",
+    },
+    {
+        id: 4,
+        title: "알림 제목4",
+        content: "알림 내용 요약4",
+        date: "2024.03.04",
+    },
+    {
+        id: 5,
+        title: "알림 제목5",
+        content: "알림 내용 요약5",
+        date: "2024.03.05",
+    },
+];
+
+// 알림 렌더링▼
+const renderNotices = () => {
+    // 1. notices 배열 확인
+    console.log(notices); // notices 배열이 제대로 정의되고, 데이터가 있는지 확인
+
+    // 2. HTML 요소 선택 확인
+    const noticeList = document.querySelector(".notice-list");
+    const emptyComponent = document.querySelector("#notice .empty-component");
+
+    console.log(noticeList, emptyComponent); // 요소들이 정상적으로 선택되고 있는지 확인
+
+    // 이후 기존의 코드
+    if (!noticeList || !emptyComponent) {
+        console.error("HTML 요소가 선택되지 않았습니다.");
+        return;
+    }
+
+    if (notices.length === 0) {
+        noticeList.style.display = "none";
+        emptyComponent.style.display = "block";
+    } else {
+        noticeList.style.display = "block";
+        emptyComponent.style.display = "none";
+        noticeList.innerHTML = `
+                ${notices
+                    .map(
+                        (notice) => `
+                    <div class="noti-content">
+                        <div class="kzXcJa">
+                            <div class="noti-card-text" data-forloop="${notice.id}">
+                                <div class="noti-card-title">${notice.title}</div>
+                                <div class="noti-card-desc">${notice.content}</div>
+                                <div class="noti-card-desc">${notice.date}</div>
+                            </div>
+                        </div>    
+                    </div> 
+                `
+                    )
+                    .join("")}
+                </tbody>
+            </table>
+        `;
+    }
+};
+renderNotices(notices);
+
+// // 전체 항목 숫자 증가
+const noticeTotalCount = notices.length;
+document.getElementById("notice-totalCount").textContent = noticeTotalCount;
+
 /*********************봉사 활동**********************/
 const volunteers = [
     {

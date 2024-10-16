@@ -838,8 +838,9 @@ a, h1, h2, h3, h4, h5, h6 {
     font-size: 15px;
     line-height: 23px;
     letter-spacing: -0.5px;
-    margin-top: 124px;
-    text-align: center;
+    /* margin-top: 124px; */
+    text-align: left;
+
 }
 
 
@@ -1390,6 +1391,33 @@ div > ul {
 .bPfQvA .toolbar-area .toolbar-row .btn-request--case-2 .request-description-tooltip .info .icon {
     color: rgb(191, 198, 210);
     margin-right: 8px;
+}
+
+.kzXcJa {
+    padding-top: 24px;
+    padding-bottom: 9.5px;
+    border-bottom: 1px solid rgb(233, 235, 237);
+}
+
+.kzXcJa .noti-card-text {
+    margin-bottom: 24px;
+}
+
+.kzXcJa .noti-card-text .noti-card-title {
+    margin-bottom: 8px;
+    color: rgb(64, 74, 92);
+    font-size: 15px;
+    line-height: 23px;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+}
+
+.kzXcJa .noti-card-text .noti-card-desc {
+    color: rgb(111, 119, 133);
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.25px;
+    font-weight: 500;
 }
 
 
