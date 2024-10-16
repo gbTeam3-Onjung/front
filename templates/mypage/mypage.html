@@ -163,7 +163,7 @@
                                                                 <a
                                                                     href="#"
                                                                     class="hLIslS"
-                                                                    onclick="showTab('donaition', this)"
+                                                                    onclick="showTab('donation', this)"
                                                                     >기부
                                                                     내역</a
                                                                 >
@@ -862,7 +862,7 @@
                                                 </div>
                                                 <!-- 기부 내역 -->
                                                 <div
-                                                    id="donaition"
+                                                    id="donation"
                                                     class="profile-contents-box-wrap tab-content"
                                                 >
                                                     <main class="gYyxfE">
@@ -1044,7 +1044,7 @@
                                                                                 전체
                                                                             </div>
                                                                             <label
-                                                                                id="donaition-totalCount"
+                                                                                id="donation-totalCount"
                                                                                 class="ezikFA"
                                                                                 >0</label
                                                                             >
@@ -1063,7 +1063,7 @@
                                                                                 완료
                                                                             </div>
                                                                             <label
-                                                                                id="donaition-completedCount"
+                                                                                id="donation-completedCount"
                                                                                 class="ezikFA"
                                                                                 >0</label
                                                                             >
@@ -1082,7 +1082,7 @@
                                                                                 취소
                                                                             </div>
                                                                             <label
-                                                                                id="donaition-cancelCount"
+                                                                                id="donation-cancelCount"
                                                                                 class="ezikFA"
                                                                                 >0</label
                                                                             >
@@ -1095,8 +1095,8 @@
                                                             class="content-inner"
                                                         >
                                                             <div
-                                                                id="donaition-list"
-                                                                class="donaition-list"
+                                                                id="donation-list"
+                                                                class="donation-list"
                                                                 style="
                                                                     display: block;
                                                                 "
@@ -2198,11 +2198,6 @@
                                                                                 최신
                                                                                 순
                                                                             </div>
-                                                                            <label
-                                                                                id="postscript-newCount"
-                                                                                class="ezikFA"
-                                                                                >0</label
-                                                                            >
                                                                         </div>
                                                                     </div>
                                                                     <div
@@ -2217,16 +2212,14 @@
                                                                                 오래된
                                                                                 순
                                                                             </div>
-                                                                            <label
-                                                                                id="postscript-oldCount"
-                                                                                class="ezikFA"
-                                                                                >0</label
-                                                                            >
                                                                         </div>
                                                                     </div>
                                                                     <a
                                                                         class="jBsNEF btn-request btn-request--case-2"
                                                                         href="#"
+                                                                        style="
+                                                                            margin-left: 595px;
+                                                                        "
                                                                         ><span
                                                                             class="visual-correction"
                                                                             >후기
@@ -2287,32 +2280,24 @@
 
                                                 <!-- 기부 감사 인사 -->
                                                 <div
-                                                    id="gratitude"
+                                                    id="postscript"
                                                     class="profile-contents-box-wrap tab-content"
                                                 >
-                                                    <main
-                                                        class="sc-czGAKf gYyxfE"
-                                                    >
-                                                        <header
-                                                            class="sc-fbHdRr duyEZE"
-                                                        >
-                                                            <div
-                                                                class="sc-bjjCGC kBJTCS"
-                                                            >
+                                                    <main class="gYyxfE">
+                                                        <header class="duyEZE">
+                                                            <div class="kBJTCS">
                                                                 <div
                                                                     class="header-title"
                                                                 >
-                                                                    기부 감사
-                                                                    인사 내역
+                                                                    봉사 활동
+                                                                    후기 내역
                                                                 </div>
                                                                 <div
                                                                     class="header-desc"
                                                                 >
                                                                     <span
-                                                                        class="sc-ezWOiH fendym"
-                                                                        >기부
-                                                                        감사
-                                                                        인사
+                                                                        class="fendym"
+                                                                        >후기
                                                                         내역을
                                                                         확인하실
                                                                         수
@@ -2325,73 +2310,58 @@
                                                             class="date-filter"
                                                         >
                                                             <div class="title">
-                                                                인사 작성 일시
+                                                                후기 작성 일시
                                                             </div>
                                                             <div
-                                                                class="date-input"
+                                                                class="option date-container"
                                                             >
+                                                                <span
+                                                                    class="date-span"
+                                                                    >날짜지정</span
+                                                                >
                                                                 <label
-                                                                    class="sc-idiyUo fIGvfF date-range"
+                                                                    class="company-name"
                                                                 >
                                                                     <input
-                                                                        readonly=""
-                                                                        placeholder="내용 입력"
-                                                                        class="date-range-input"
-                                                                        value=""
+                                                                        type="date"
+                                                                        id="end-date"
+                                                                        placeholder="시작 날짜를 선택하세요"
+                                                                        onchange="updateDateRange()"
                                                                     />
-                                                                    <svg
-                                                                        class="sc-gKXOVf cAfwXx date-range-icon"
-                                                                        viewBox="0 0 24 24"
+                                                                </label>
+                                                                <span
+                                                                    class="then"
+                                                                    ><strong
+                                                                        >-</strong
                                                                     >
-                                                                        <rect
-                                                                            x="3.6"
-                                                                            y="6.6"
-                                                                            width="16.8"
-                                                                            height="13.8"
-                                                                            rx="1.4"
-                                                                            fill="none"
-                                                                            stroke="currentColor"
-                                                                            stroke-width="1.2"
-                                                                        ></rect>
-                                                                        <path
-                                                                            d="M7.5 6V4.5"
-                                                                            stroke="currentColor"
-                                                                            stroke-width="1.2"
-                                                                            stroke-linecap="round"
-                                                                        ></path>
-                                                                        <path
-                                                                            d="M16.5 6V4.5"
-                                                                            stroke="currentColor"
-                                                                            stroke-width="1.2"
-                                                                            stroke-linecap="round"
-                                                                        ></path>
-                                                                        <path
-                                                                            d="M4.5 10.5H21"
-                                                                            stroke="currentColor"
-                                                                            stroke-width="1.2"
-                                                                        ></path>
-                                                                        <rect
-                                                                            x="7.5"
-                                                                            y="13.5"
-                                                                            width="3"
-                                                                            height="3"
-                                                                            rx="0.5"
-                                                                            fill="currentColor"
-                                                                        ></rect>
-                                                                        <defs></defs>
-                                                                    </svg>
+                                                                </span>
+                                                                <label
+                                                                    class="company-name"
+                                                                >
+                                                                    <input
+                                                                        type="date"
+                                                                        id="start-date"
+                                                                        placeholder="종료 날짜를 선택하세요"
+                                                                        onchange="updateDateRange()"
+                                                                    />
                                                                 </label>
                                                             </div>
+
+                                                            <!-- 켈린더 -->
+
                                                             <div
                                                                 class="date-button"
                                                             >
                                                                 <label
-                                                                    class="sc-himrzO fItXBi toggle"
+                                                                    class="fItXBi toggle"
+                                                                    style="
+                                                                        margin-left: 15px;
+                                                                    "
                                                                     ><input
                                                                         type="checkbox"
                                                                         value=""
                                                                     /><svg
-                                                                        class="sc-gKXOVf iFpvod check"
+                                                                        class="iFpvod check"
                                                                         viewBox="0 0 12 12"
                                                                     >
                                                                         <path
@@ -2402,12 +2372,12 @@
                                                                     최근
                                                                     1년</label
                                                                 ><label
-                                                                    class="sc-himrzO fItXBi toggle"
+                                                                    class="fItXBi toggle"
                                                                     ><input
                                                                         type="checkbox"
                                                                         value=""
                                                                     /><svg
-                                                                        class="sc-gKXOVf iFpvod check"
+                                                                        class="iFpvod check"
                                                                         viewBox="0 0 12 12"
                                                                     >
                                                                         <path
@@ -2417,12 +2387,12 @@
                                                                     </svg>
                                                                     1개월</label
                                                                 ><label
-                                                                    class="sc-himrzO fItXBi toggle"
+                                                                    class="fItXBi toggle"
                                                                     ><input
                                                                         type="checkbox"
                                                                         value=""
                                                                     /><svg
-                                                                        class="sc-gKXOVf iFpvod check"
+                                                                        class="iFpvod check"
                                                                         viewBox="0 0 12 12"
                                                                     >
                                                                         <path
@@ -2432,12 +2402,12 @@
                                                                     </svg>
                                                                     3개월</label
                                                                 ><label
-                                                                    class="sc-himrzO fItXBi toggle"
+                                                                    class="fItXBi toggle"
                                                                     ><input
                                                                         type="checkbox"
                                                                         value=""
                                                                     /><svg
-                                                                        class="sc-gKXOVf iFpvod check"
+                                                                        class="iFpvod check"
                                                                         viewBox="0 0 12 12"
                                                                     >
                                                                         <path
@@ -2449,11 +2419,12 @@
                                                                 </label>
                                                             </div>
                                                             <button
-                                                                class="sc-kDDrLX gPdSFi"
+                                                                id="Initialization"
+                                                                class="gPdSFi"
                                                             >
                                                                 <svg
                                                                     viewBox="0 0 12 12"
-                                                                    class="sc-gKXOVf cXztLC"
+                                                                    class="cXztLC"
                                                                 >
                                                                     <path
                                                                         d="M5.792 9.584C3.698 9.584 2 7.886 2 5.792C2 3.698 3.698 2 5.792 2C7.887 2 9.584 3.698 9.584 5.792"
@@ -2473,17 +2444,15 @@
                                                                 >
                                                             </button>
                                                         </div>
-                                                        <div
-                                                            class="sc-jIsiFf cKhWaV"
-                                                        >
+                                                        <div class="cKhWaV">
                                                             <div
                                                                 class="tab-wrap"
                                                             >
                                                                 <div
-                                                                    class="sc-BeQoi bqkLME tabs"
+                                                                    class="bqkLME tabs"
                                                                 >
                                                                     <div
-                                                                        class="active tab"
+                                                                        class="tab active"
                                                                     >
                                                                         <div
                                                                             class="item-wrap"
@@ -2494,7 +2463,8 @@
                                                                                 전체
                                                                             </div>
                                                                             <label
-                                                                                class="sc-iBkjds ezikFA"
+                                                                                id="postscript-totalCount"
+                                                                                class="ezikFA"
                                                                                 >0</label
                                                                             >
                                                                         </div>
@@ -2511,10 +2481,6 @@
                                                                                 최신
                                                                                 순
                                                                             </div>
-                                                                            <label
-                                                                                class="sc-iBkjds ezikFA"
-                                                                                >0</label
-                                                                            >
                                                                         </div>
                                                                     </div>
                                                                     <div
@@ -2526,42 +2492,71 @@
                                                                             <div
                                                                                 class="item-name"
                                                                             >
-                                                                                작성
+                                                                                오래된
                                                                                 순
                                                                             </div>
-                                                                            <label
-                                                                                class="sc-iBkjds ezikFA"
-                                                                                >0</label
-                                                                            >
                                                                         </div>
                                                                     </div>
+                                                                    <a
+                                                                        class="jBsNEF btn-request btn-request--case-2"
+                                                                        href="#"
+                                                                        style="
+                                                                            margin-left: 595px;
+                                                                        "
+                                                                        ><span
+                                                                            class="visual-correction"
+                                                                            >후기
+                                                                            작성하기
+                                                                            <div
+                                                                                class="request-description-tooltip"
+                                                                            ></div>
+                                                                        </span>
+                                                                    </a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div
-                                                            class="kjzWjC empty"
+                                                            class="content-inner"
                                                         >
                                                             <div
-                                                                class="empty-image"
+                                                                id="postscript-list"
+                                                                class="postscript-list"
+                                                                style="
+                                                                    display: block;
+                                                                "
+                                                            ></div>
+                                                            <div
+                                                                class="empty-component"
                                                             >
-                                                                <img
-                                                                    name="SlightlySmilingFace"
-                                                                    src="https://cdn-dantats.stunning.kr/static/emoji/SlightlySmilingFace32px.png"
-                                                                    class="sc-llJcti hkAQYM"
-                                                                />
+                                                                <div
+                                                                    class="kjzWjC empty"
+                                                                    style="
+                                                                        display: none;
+                                                                    "
+                                                                >
+                                                                    <div
+                                                                        class="empty-image"
+                                                                    >
+                                                                        <img
+                                                                            name="SlightlySmilingFace"
+                                                                            src="https://cdn-dantats.stunning.kr/static/emoji/SlightlySmilingFace32px.png"
+                                                                            class="hkAQYM"
+                                                                        />
+                                                                        <h4>
+                                                                            <span
+                                                                                class="fendym"
+                                                                                ><b
+                                                                                    >봉사
+                                                                                    활동
+                                                                                    후기
+                                                                                    내역이
+                                                                                    없습니다.</b
+                                                                                >
+                                                                            </span>
+                                                                        </h4>
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                            <h4>
-                                                                <span
-                                                                    class="sc-ezWOiH fendym"
-                                                                    ><b
-                                                                        >기부
-                                                                        감사
-                                                                        인사
-                                                                        내역</b
-                                                                    >이
-                                                                    없습니다.
-                                                                </span>
-                                                            </h4>
                                                         </div>
                                                     </main>
                                                 </div>
