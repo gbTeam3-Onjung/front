@@ -4,7 +4,7 @@ const lastBanner = document.createElement("div"); // 마지막 배너를 위한 
 const banner = document.querySelector(".slick-track"); // 배너 컨테이너 선택
 
 let autoSlideInterval = null; // 자동 슬라이드 인터벌을 저장할 변수
-let count = 0; // 현재 배너 위치를 나타내는 카운터를 0으로 초기화
+let count = 9; // 현재 배너 위치를 나타내는 카운터를 0으로 초기화
 let arrowCheck = true; // 화살표 버튼의 중복 클릭을 방지하기 위한 플래그
 
 firstBanner.innerHTML = `
@@ -92,8 +92,7 @@ lastBanner.innerHTML = `
     </div>
 </div>`; // 마지막 배너의 HTML 설정
 banner.prepend(lastBanner); // 마지막 배너를 배너 컨테이너 맨 앞에 추가
-
-banner.style.transform = `translate3d(0px,0px,0px)`; // 초기 배너 위치를 조정하여 첫 번째 배너가 보이도록 설정
+banner.style.transform = `translate3d(-5310px, 0px, 0px)`; // 초기 위치
 
 // 자동 슬라이드를 실행하는 함수
 const autoSlide = () => {
@@ -107,7 +106,7 @@ const autoSlide = () => {
         // 마지막 배너 위치를 넘었을 경우
         setTimeout(() => {
             banner.style.transition = `transform 0s`; // 애니메이션 없이 배너 위치 초기화
-            banner.style.transform = `translate3d(0px, 0, 0)`; // 처음 위치로 초기화
+            banner.style.transform = `translate3d(-${1062 * 9}px, 0, 0)`; // 처음 위치로 초기화
             count = 0; // 카운터를 첫 번째 배너로 초기화
             console.log(`현재 배너 인덱스: ${count}`); // 첫 번째 배너로 초기화 후 인덱스 출력
         }, 500);
@@ -155,7 +154,9 @@ arrows.forEach((arrow) => {
             if (count === 10) {
                 setTimeout(() => {
                     banner.style.transition = `transform 0s`;
-                    banner.style.transform = `translate3d(0px, 0, 0)`; // 처음 위치로 초기화
+                    banner.style.transform = `translate3d(-${
+                        1062 * 9
+                    }px, 0, 0)`; // 처음 위치로 초기화
                     count = 0; // 카운터를 첫 번째 배너로 초기화
                     console.log(`현재 배너 인덱스: ${count}`); // 첫 번째 배너로 초기화 후 인덱스 출력
                 }, 500);
