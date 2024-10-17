@@ -88,17 +88,18 @@
                                                 >
                                                     <input
                                                         id="inputField"
-                                                        class="nickName"
+                                                        class="nickName content-textarea1"
                                                         maxlength="10"
                                                         value="동양적인퍼플"
-                                                        oninput="validateInput()"
                                                     />
                                                     <div class="max-length36">
-                                                        <span>0</span>/10
+                                                        <span
+                                                            id="word-length1"
+                                                        ></span>
                                                     </div>
                                                 </label>
                                                 <div
-                                                    id="nickNameCheck"
+                                                    id="nickNameCheck1"
                                                     style="display: none"
                                                 >
                                                     <img
@@ -116,6 +117,30 @@
                                                             );
                                                         "
                                                         >필수항목입니다.</span
+                                                    >
+                                                </div>
+                                                <div
+                                                    id="nickNameCheck2"
+                                                    style="display: none"
+                                                >
+                                                    <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHUSURBVHgBtVVdTsJAEJ5ZVtQHtX0RH2siiY96ArmB3kA9AXgC4AbcAI6gN9ATwKOJJPQRfKEqiT9sO84UIREKLFq+pEm73Z2/ne8bhAUgx3MGWV0EhAIBerzijX5AgAitCOAui+Z2u+v782xg0uL7wbFnyNQJoAAWUISNjBpWkxyp6YVBLl8cRqZpa1wQIV0NSTdfckel6X+/MnjbPyoTQgX+ASSo7Dy3qzMOJPIIqAYpgLO/2eu1axMHUnMpC385kA6CDTSncifxHQyjsGJjPERzGKI+hOVwDOm6vGAcPZnO8jPo7/aeYuOvuXxn0rKLAvo0rvoicwFrgtrSJcU1Ooc1QRGcKSI4gTVB2K9S7JwkF56Cv4DIOigt3WHTEbJnsJ+vR8IdtHYQaATymXmezW7RHFgBzOKWihAerE+wTI8ytoPIOfZZ8zObum+xP2DixETLZHXHlvnKDfyAU7mH5XD0lj6Rx6rzEBsua1Esdn2Wi0yaYselDJU5dcdi53YffZ4DVUgJYsv9mW4THoh+p+FEbIxngWBmJsvY46lUXrlcXJZp44kOBHInCsIKEl2CBaRJDJprN2Ho46KDsSOWc1HcWBQnWaEvBBUORR+mJp04z8Y3CPfJeR0EPhwAAAAASUVORK5CYII="
+                                                        class="error-image"
+                                                    />
+                                                    <span
+                                                        id="error-message"
+                                                        class="error-message"
+                                                        style="
+                                                            color: rgb(
+                                                                242,
+                                                                23,
+                                                                36
+                                                            );
+                                                        "
+                                                        >특수문자는 _ 이외 사용
+                                                        불가합니다. (한글, 영문,
+                                                        숫자, 공백 사용
+                                                        가능)</span
                                                     >
                                                 </div>
                                                 <div
@@ -135,36 +160,18 @@
                                                 >
                                                     <input
                                                         id="inputField"
-                                                        class="oneLine"
+                                                        class="oneLine content-textarea2"
                                                         maxlength="20"
                                                         placeholder="예시) 봉사심이 투철한 퍼플입니다."
                                                         value=""
                                                     />
                                                     <div class="max-length20">
-                                                        <span>0</span>/20
+                                                        <span
+                                                            id="word-length2"
+                                                        ></span>
                                                     </div>
                                                 </label>
-                                                <div
-                                                    id="nickNameCheck"
-                                                    style="display: none"
-                                                >
-                                                    <img
-                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHUSURBVHgBtVVdTsJAEJ5ZVtQHtX0RH2siiY96ArmB3kA9AXgC4AbcAI6gN9ATwKOJJPQRfKEqiT9sO84UIREKLFq+pEm73Z2/ne8bhAUgx3MGWV0EhAIBerzijX5AgAitCOAui+Z2u+v782xg0uL7wbFnyNQJoAAWUISNjBpWkxyp6YVBLl8cRqZpa1wQIV0NSTdfckel6X+/MnjbPyoTQgX+ASSo7Dy3qzMOJPIIqAYpgLO/2eu1axMHUnMpC385kA6CDTSncifxHQyjsGJjPERzGKI+hOVwDOm6vGAcPZnO8jPo7/aeYuOvuXxn0rKLAvo0rvoicwFrgtrSJcU1Ooc1QRGcKSI4gTVB2K9S7JwkF56Cv4DIOigt3WHTEbJnsJ+vR8IdtHYQaATymXmezW7RHFgBzOKWihAerE+wTI8ytoPIOfZZ8zObum+xP2DixETLZHXHlvnKDfyAU7mH5XD0lj6Rx6rzEBsua1Esdn2Wi0yaYselDJU5dcdi53YffZ4DVUgJYsv9mW4THoh+p+FEbIxngWBmJsvY46lUXrlcXJZp44kOBHInCsIKEl2CBaRJDJprN2Ho46KDsSOWc1HcWBQnWaEvBBUORR+mJp04z8Y3CPfJeR0EPhwAAAAASUVORK5CYII="
-                                                        class="error-image"
-                                                    />
-                                                    <span
-                                                        id="error-message"
-                                                        class="error-message"
-                                                        style="
-                                                            color: rgb(
-                                                                242,
-                                                                23,
-                                                                36
-                                                            );
-                                                        "
-                                                        >필수항목입니다.</span
-                                                    >
-                                                </div>
+
                                                 <div
                                                     width="100%"
                                                     height="40px"
