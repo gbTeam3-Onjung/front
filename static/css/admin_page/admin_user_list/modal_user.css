@@ -103,7 +103,7 @@
 
 .SupporterProfileInfo_container .SupporterProfileInfo_avatar {
     position: absolute;
-    top: auto;
+    top: 34px;
     left: 240px;
 }
 
@@ -129,6 +129,7 @@
     flex-basis: 370px;
     flex-shrink: 0;
     max-width: 370px;
+    margin-left: 16px;
 }
 
 .SupporterProfileInfo_infoBox .SupporterProfileInfo_nickname {
@@ -140,7 +141,27 @@
     vertical-align: middle;
 }
 
+.SupporterProfileInfo_infoBox .SupporterProfileInfo_accntTypeEmail {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+    word-spacing: -1.5px;
+    color: #adb5bd;
+}
+
 .SupporterProfileInfo_infoBox .SupporterProfileInfo_accntTypeName {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+    word-spacing: -1.5px;
+    color: #adb5bd;
+}
+
+.SupporterProfileInfo_infoBox .SupporterProfileInfo_accntTypePhone {
     font-size: 12px;
     font-weight: 400;
     line-height: 1.5;

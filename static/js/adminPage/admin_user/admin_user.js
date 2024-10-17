@@ -136,14 +136,32 @@ document.addEventListener("DOMContentLoaded", function () {
                     ? nameA.localeCompare(nameB, "ko-KR", { numeric: true })
                     : nameB.localeCompare(nameA, "ko-KR", { numeric: true });
             });
-        } else if (criteria === "활동 회원 순") {
+        } else if (criteria === "일반 회원") {
+            users.forEach((user) => {
+                const type = user.querySelector(
+                    ".UserItem_type > span"
+                ).textContent;
+                if (!type.includes("일반")) {
+                    user.style.display = "none";
+                }
+            });
+        } else if (criteria === "봉사단체 회원") {
+            users.forEach((user) => {
+                const type = user.querySelector(
+                    ".UserItem_type > span"
+                ).textContent;
+                if (!type.includes("봉사단체")) {
+                    user.style.display = "none";
+                }
+            });
+        } else if (criteria === "활동 회원") {
             users.forEach((user) => {
                 const status = user.querySelector(".User_status").textContent;
                 if (!status.includes("활동")) {
                     user.style.display = "none";
                 }
             });
-        } else if (criteria === "탈퇴 회원 순") {
+        } else if (criteria === "탈퇴 회원") {
             users.forEach((user) => {
                 const status = user.querySelector(".User_status").textContent;
                 if (!status.includes("탈퇴")) {

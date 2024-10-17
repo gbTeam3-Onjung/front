@@ -179,7 +179,7 @@ hr {
     white-space: nowrap;
 }
 
-.UserItem_container .UserItem_content .UserItem_info .UserItem_innerWrapper .UserItem_email {
+.UserItem_container .UserItem_content .UserItem_info .UserItem_innerWrapper .UserItem_type {
     height: 18px;
     color: #212529;
     font-size: 12px;

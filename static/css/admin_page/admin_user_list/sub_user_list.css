@@ -109,7 +109,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 }
 
 ol, ul, dl {
-    margin: 0 0 1rem;
+    margin: 0 0 4px;
 }
 
 ol, ul {
