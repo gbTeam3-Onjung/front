@@ -7,277 +7,243 @@
         <link rel="stylesheet" href="/static/css/main/basic-header.css" />
     </head>
     <body>
-        <div id="root">
-            <div
-                style="
-                    position: fixed;
-                    z-index: 9999;
-                    inset: 16px;
-                    /* pointer-events: none;  이 요소가 클릭 등의 상호작용을 차단하는 역할을 합니다. 주석 처리함 */
-                "
-            ></div>
-            <div class="wrap">
-                <header id="gnb" class="sc-kywvva iwmrny">
-                    <div class="sc-ewdcjz ipkyrr">
-                        <div class="toolbar">
-                            <div class="sc-dsutwq bpfqva">
-                                <div class="toolbar-area">
-                                    <div class="toolbar-row">
-                                        <div class="toolbar-logo-wrap">
-                                            <a
-                                                class="sc-csojp hlisis logo-wrap"
-                                            >
-                                                <img
-                                                    alt="main-log"
-                                                    class="sc-iijcti hkaqym main-logo"
-                                                    id="imge-logo-missbarrytremblay"
-                                                    src="https://cdn-dantats.stunning.kr/static/common/logo/bi-loud.png.small?q=80&f=webp&t=crop&s=328x80"
-                                                />
+        <header id="gnb" class="sc-kywvva iwmrny">
+            <div class="sc-ewdcjz ipkyrr">
+                <div class="toolbar">
+                    <div class="sc-dsutwq bpfqva">
+                        <div class="toolbar-area">
+                            <div class="toolbar-row">
+                                <div class="toolbar-logo-wrap">
+                                    <a class="sc-csojp hlisis logo-wrap">
+                                        <img
+                                            alt="main-log"
+                                            class="sc-iijcti hkaqym main-logo"
+                                            id="imge-logo-missbarrytremblay"
+                                            src="https://cdn-dantats.stunning.kr/static/common/logo/bi-loud.png.small?q=80&f=webp&t=crop&s=328x80"
+                                        />
+                                    </a>
+                                </div>
+                                <div class="sc-djugqo gypsfx search-bar">
+                                    <label class="sc-ikzpkk fszqro">
+                                        <input
+                                            width="100%"
+                                            placeholder="어떤 디자인이 필요하세요?"
+                                            maxlength="-1"
+                                        />
+                                    </label>
+                                    <svg
+                                        color="#101C33"
+                                        viewBox="0 0 12 12"
+                                        class="sc-gkxovf ibwzdo"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M5.16483 8.33C3.41907 8.33 1.99996 6.91 1.99996 5.165C1.99996 3.41917 3.41907 1.99917 5.16483 1.99917C6.91059 1.99917 8.32969 3.41917 8.32969 5.165C8.32969 6.91 6.91059 8.33 5.16483 8.33ZM10.8538 10.1483L8.42886 7.7225C8.98467 7.015 9.32965 6.13417 9.32965 5.165C9.32965 2.86417 7.46473 1 5.16483 1C2.86492 1 1 2.86417 1 5.165C1 7.465 2.86492 9.32917 5.16483 9.32917C6.13395 9.32917 7.01558 8.98417 7.72222 8.42917L10.1471 10.8533C10.2454 10.9517 10.3729 11 10.5004 11C10.6288 11 10.7563 10.9517 10.8538 10.8533C11.0487 10.6592 11.0487 10.3417 10.8538 10.1483Z"
+                                        ></path>
+                                    </svg>
+                                </div>
+                                <div class="util">
+                                    <ul class="util-btns group">
+                                        <li class="btn-agency">
+                                            <a href="" class="sc-ccsojp hlisis"
+                                                >공모전 대행
+                                                <div class="label hot">HOT</div>
                                             </a>
-                                        </div>
-                                        <div
-                                            class="sc-djugqo gypsfx search-bar"
-                                        >
-                                            <label class="sc-ikzpkk fszqro">
-                                                <input
-                                                    width="100%"
-                                                    placeholder="어떤 디자인이 필요하세요?"
-                                                    maxlength="-1"
-                                                />
-                                            </label>
-                                            <svg
-                                                color="#101C33"
-                                                viewBox="0 0 12 12"
-                                                class="sc-gkxovf ibwzdo"
-                                            >
-                                                <path
-                                                    fill-rule="evenodd"
-                                                    clip-rule="evenodd"
-                                                    d="M5.16483 8.33C3.41907 8.33 1.99996 6.91 1.99996 5.165C1.99996 3.41917 3.41907 1.99917 5.16483 1.99917C6.91059 1.99917 8.32969 3.41917 8.32969 5.165C8.32969 6.91 6.91059 8.33 5.16483 8.33ZM10.8538 10.1483L8.42886 7.7225C8.98467 7.015 9.32965 6.13417 9.32965 5.165C9.32965 2.86417 7.46473 1 5.16483 1C2.86492 1 1 2.86417 1 5.165C1 7.465 2.86492 9.32917 5.16483 9.32917C6.13395 9.32917 7.01558 8.98417 7.72222 8.42917L10.1471 10.8533C10.2454 10.9517 10.3729 11 10.5004 11C10.6288 11 10.7563 10.9517 10.8538 10.8533C11.0487 10.6592 11.0487 10.3417 10.8538 10.1483Z"
-                                                ></path>
-                                            </svg>
-                                        </div>
-                                        <div class="util">
-                                            <ul class="util-btns group">
-                                                <li class="btn-agency">
-                                                    <a
-                                                        href=""
-                                                        class="sc-ccsojp hlisis"
-                                                        >공모전 대행
-                                                        <div class="label hot">
-                                                            HOT
-                                                        </div>
-                                                    </a>
-                                                    <span class="agency-hover">
-                                                        <span class="info">
-                                                            <svg
-                                                                viewBox="0 0 12 12"
-                                                                class="sc-gkxovf ifpvod icon"
-                                                            >
-                                                                <path
-                                                                    fill-rule="evenodd"
-                                                                    clip-rule="evenodd"
-                                                                    d="M4.93338 8.99995C4.70438 8.99995 4.48738 8.90895 4.33538 8.74795L2.20238 6.49895C1.90838 6.18895 1.93838 5.71495 2.26838 5.43995C2.59738 5.16395 3.10438 5.19195 3.39738 5.50295L4.93338 7.12195L8.60238 3.25295C8.89538 2.94195 9.40038 2.91395 9.73138 3.18995C10.0614 3.46595 10.0914 3.93895 9.79738 4.24895L5.53138 8.74795C5.37938 8.90895 5.16238 8.99995 4.93338 8.99995Z"
-                                                                ></path>
-                                                            </svg>
-                                                            <span
-                                                                class="sc-ezwoih fendym"
-                                                            >
-                                                                <span
-                                                                    class="text"
-                                                                >
-                                                                    "간단한
-                                                                    문의로 온정
-                                                                    관리자에게
-                                                                    "<span
-                                                                        class="blue"
-                                                                        >무료
-                                                                        컨설팅
-                                                                        받기!</span
-                                                                    >
-                                                                </span>
-                                                            </span>
-                                                        </span>
-                                                    </span>
-                                                </li>
-                                                <li class="btn-agency">
-                                                    <a
-                                                        href=""
-                                                        class="sc-ccsojp hlisis"
-                                                        >공모전 소식</a
+                                            <span class="agency-hover">
+                                                <span class="info">
+                                                    <svg
+                                                        viewBox="0 0 12 12"
+                                                        class="sc-gkxovf ifpvod icon"
                                                     >
-                                                </li>
-                                                <li class="btn-agency">
-                                                    <a
-                                                        href=""
-                                                        class="sc-ccsojp hlisis"
-                                                        >이벤트</a
-                                                    >
-                                                </li>
-                                                <li class="btn-login">
-                                                    <div
-                                                        color="#DBDEE2"
-                                                        class="sc-gsntzi dchguz"
-                                                    ></div>
-                                                    <a
-                                                        href=""
-                                                        class="sc-ccsojp hlisis"
-                                                        >로그인/회원가입</a
-                                                    >
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="toolbar-row gnb-wrap">
-                                        <nav class="sc-jvlauc cgvbnx">
-                                            <ul>
-                                                <li
-                                                    class="sc-jhzxdd ibzkmy toolbar-nav-item undefined"
-                                                >
-                                                    <a
-                                                        class="sc-ccsojp jgkeau toolbar-nav-item-link"
-                                                        href=""
-                                                        ><p>카테고리</p></a
-                                                    >
-                                                </li>
-                                                <li
-                                                    class="sc-jhzxdd ibzkmy toolbar-nav-item undefined"
-                                                >
-                                                    <a
-                                                        class="sc-ccsojp jgkeau toolbar-nav-item-link"
-                                                        href=""
-                                                    >
-                                                        <p>
-                                                            콘테스트<sup
-                                                                class="toolbar-nav-item-sup"
-                                                                >BEST</sup
-                                                            >
-                                                        </p>
-                                                    </a>
-                                                </li>
-                                                <li
-                                                    class="sc-jhzxdd ibzkmy toolbar-nav-item undefined"
-                                                >
-                                                    <a
-                                                        class="sc-ccsojp jgkeau toolbar-nav-item-link"
-                                                        href=""
-                                                    >
-                                                        <p>디자이너 찾기</p>
-                                                    </a>
-                                                </li>
-                                                <li
-                                                    class="sc-jhzxdd ibzkmy toolbar-nav-item undefined"
-                                                >
-                                                    <a
-                                                        class="sc-ccsojp jgkeau toolbar-nav-item-link"
-                                                        href=""
-                                                    >
-                                                        <p>포트폴리오</p>
-                                                    </a>
-                                                </li>
-                                                <li
-                                                    class="sc-jhzxdd ibzkmy toolbar-nav-item undefined"
-                                                >
-                                                    <a
-                                                        class="sc-ccsojp jgkeau toolbar-nav-item-link"
-                                                        href=""
-                                                    >
-                                                        <p>
-                                                            고객후기<sup
-                                                                class="toolbar-nav-item-sup"
-                                                            >
-                                                                <svg
-                                                                    viewBox="0 0 12 12"
-                                                                    class="sc-gkxovf ifpvod"
-                                                                >
-                                                                    <path
-                                                                        fill-rule="evenodd"
-                                                                        clip-rule="evenodd"
-                                                                        d="M10.9643 4.74338C10.8835 4.50089 10.6777 4.32673 10.4285 4.2884L7.79006 3.88509L6.60669 1.35936C6.38168 0.880213 5.61832 0.880213 5.39331 1.35936L4.20994 3.88509L1.57152 4.2884C1.32235 4.32673 1.11651 4.50089 1.03567 4.74338C0.954003 4.99004 1.01484 5.25836 1.19484 5.44252L3.11741 7.41577L2.66156 10.2073C2.61989 10.469 2.72656 10.7256 2.9424 10.8773C3.0574 10.9589 3.19074 10.9998 3.32408 10.9998C3.43492 10.9998 3.54492 10.9723 3.64576 10.9165L6 9.61401L8.35424 10.9165C8.57675 11.0398 8.84759 11.0264 9.0576 10.8773C9.27344 10.7256 9.38011 10.469 9.33761 10.2065L8.88259 7.41577L10.8052 5.44252C10.9852 5.25836 11.046 4.99004 10.9643 4.74338Z"
-                                                                    ></path>
-                                                                </svg>
-                                                                4.9점
-                                                            </sup>
-                                                        </p>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <div
-                                                        color="#DBDEE2"
-                                                        class="sc-gsntzi bizdcy"
-                                                    ></div>
-                                                </li>
-                                                <li
-                                                    class="sc-jhzxdd hrbuoa toolbar-nav-item undefined"
-                                                >
-                                                    <a
-                                                        class="sc-ccsojp jgkeau toolbar-nav-item-link"
-                                                        href=""
-                                                    >
-                                                        <p>
-                                                            클래스<sup
-                                                                class="toolbar-nav-item-sup"
-                                                                >NEW</sup
-                                                            >
-                                                        </p>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </nav>
-                                        <div class="contest-btn-wrap">
-                                            <div class="contest-btn-desc">
-                                                <a
-                                                    href=""
-                                                    class="sc-ccsojp hlisis underline"
-                                                >
+                                                        <path
+                                                            fill-rule="evenodd"
+                                                            clip-rule="evenodd"
+                                                            d="M4.93338 8.99995C4.70438 8.99995 4.48738 8.90895 4.33538 8.74795L2.20238 6.49895C1.90838 6.18895 1.93838 5.71495 2.26838 5.43995C2.59738 5.16395 3.10438 5.19195 3.39738 5.50295L4.93338 7.12195L8.60238 3.25295C8.89538 2.94195 9.40038 2.91395 9.73138 3.18995C10.0614 3.46595 10.0914 3.93895 9.79738 4.24895L5.53138 8.74795C5.37938 8.90895 5.16238 8.99995 4.93338 8.99995Z"
+                                                        ></path>
+                                                    </svg>
                                                     <span
                                                         class="sc-ezwoih fendym"
-                                                        >콘텐츠가
-                                                        궁금하신가요?</span
                                                     >
-                                                </a>
-                                            </div>
-                                            <a
-                                                class="sc-ccsojp jbsnef btn-request btn-request-case-2"
-                                                href=""
-                                            >
-                                                <span class="visual-correction"
-                                                    >디자인 의뢰하기
-                                                    <div
-                                                        class="request-description-tooltip"
-                                                    >
-                                                        <span class="info">
-                                                            <svg
-                                                                viewBox="0 0 12 12"
-                                                                class="sc-gkxovf ifpvod icon"
-                                                            >
-                                                                <path
-                                                                    fill-rule="evenodd"
-                                                                    clip-rule="evenodd"
-                                                                    d="M4.93338 8.99995C4.70438 8.99995 4.48738 8.90895 4.33538 8.74795L2.20238 6.49895C1.90838 6.18895 1.93838 5.71495 2.26838 5.43995C2.59738 5.16395 3.10438 5.19195 3.39738 5.50295L4.93338 7.12195L8.60238 3.25295C8.89538 2.94195 9.40038 2.91395 9.73138 3.18995C10.0614 3.46595 10.0914 3.93895 9.79738 4.24895L5.53138 8.74795C5.37938 8.90895 5.16238 8.99995 4.93338 8.99995Z"
-                                                                ></path>
-                                                            </svg>
-                                                            <span
-                                                                class="sc-ezwoih fendym"
-                                                                ><span
-                                                                    class="blue500 web-inspector-hide-short-cut"
-                                                                    >콘테스트</span
-                                                                >로 디자인을
-                                                                고민을
-                                                                해결하세요</span
+                                                        <span class="text">
+                                                            "간단한 문의로 온정
+                                                            관리자에게 "<span
+                                                                class="blue"
+                                                                >무료 컨설팅
+                                                                받기!</span
                                                             >
                                                         </span>
-                                                    </div>
+                                                    </span>
                                                 </span>
+                                            </span>
+                                        </li>
+                                        <li class="btn-agency">
+                                            <a href="" class="sc-ccsojp hlisis"
+                                                >공모전 소식</a
+                                            >
+                                        </li>
+                                        <li class="btn-agency">
+                                            <a href="" class="sc-ccsojp hlisis"
+                                                >이벤트</a
+                                            >
+                                        </li>
+                                        <li class="btn-login">
+                                            <div
+                                                color="#DBDEE2"
+                                                class="sc-gsntzi dchguz"
+                                            ></div>
+                                            <a href="" class="sc-ccsojp hlisis"
+                                                >로그인/회원가입</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="toolbar-row gnb-wrap">
+                                <nav class="sc-jvlauc cgvbnx">
+                                    <ul>
+                                        <li
+                                            class="sc-jhzxdd ibzkmy toolbar-nav-item undefined"
+                                        >
+                                            <a
+                                                class="sc-ccsojp jgkeau toolbar-nav-item-link"
+                                                href=""
+                                                ><p>카테고리</p></a
+                                            >
+                                        </li>
+                                        <li
+                                            class="sc-jhzxdd ibzkmy toolbar-nav-item undefined"
+                                        >
+                                            <a
+                                                class="sc-ccsojp jgkeau toolbar-nav-item-link"
+                                                href=""
+                                            >
+                                                <p>
+                                                    콘테스트<sup
+                                                        class="toolbar-nav-item-sup"
+                                                        >BEST</sup
+                                                    >
+                                                </p>
                                             </a>
-                                        </div>
+                                        </li>
+                                        <li
+                                            class="sc-jhzxdd ibzkmy toolbar-nav-item undefined"
+                                        >
+                                            <a
+                                                class="sc-ccsojp jgkeau toolbar-nav-item-link"
+                                                href=""
+                                            >
+                                                <p>디자이너 찾기</p>
+                                            </a>
+                                        </li>
+                                        <li
+                                            class="sc-jhzxdd ibzkmy toolbar-nav-item undefined"
+                                        >
+                                            <a
+                                                class="sc-ccsojp jgkeau toolbar-nav-item-link"
+                                                href=""
+                                            >
+                                                <p>포트폴리오</p>
+                                            </a>
+                                        </li>
+                                        <li
+                                            class="sc-jhzxdd ibzkmy toolbar-nav-item undefined"
+                                        >
+                                            <a
+                                                class="sc-ccsojp jgkeau toolbar-nav-item-link"
+                                                href=""
+                                            >
+                                                <p>
+                                                    고객후기<sup
+                                                        class="toolbar-nav-item-sup"
+                                                    >
+                                                        <svg
+                                                            viewBox="0 0 12 12"
+                                                            class="sc-gkxovf ifpvod"
+                                                        >
+                                                            <path
+                                                                fill-rule="evenodd"
+                                                                clip-rule="evenodd"
+                                                                d="M10.9643 4.74338C10.8835 4.50089 10.6777 4.32673 10.4285 4.2884L7.79006 3.88509L6.60669 1.35936C6.38168 0.880213 5.61832 0.880213 5.39331 1.35936L4.20994 3.88509L1.57152 4.2884C1.32235 4.32673 1.11651 4.50089 1.03567 4.74338C0.954003 4.99004 1.01484 5.25836 1.19484 5.44252L3.11741 7.41577L2.66156 10.2073C2.61989 10.469 2.72656 10.7256 2.9424 10.8773C3.0574 10.9589 3.19074 10.9998 3.32408 10.9998C3.43492 10.9998 3.54492 10.9723 3.64576 10.9165L6 9.61401L8.35424 10.9165C8.57675 11.0398 8.84759 11.0264 9.0576 10.8773C9.27344 10.7256 9.38011 10.469 9.33761 10.2065L8.88259 7.41577L10.8052 5.44252C10.9852 5.25836 11.046 4.99004 10.9643 4.74338Z"
+                                                            ></path>
+                                                        </svg>
+                                                        4.9점
+                                                    </sup>
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div
+                                                color="#DBDEE2"
+                                                class="sc-gsntzi bizdcy"
+                                            ></div>
+                                        </li>
+                                        <li
+                                            class="sc-jhzxdd hrbuoa toolbar-nav-item undefined"
+                                        >
+                                            <a
+                                                class="sc-ccsojp jgkeau toolbar-nav-item-link"
+                                                href=""
+                                            >
+                                                <p>
+                                                    클래스<sup
+                                                        class="toolbar-nav-item-sup"
+                                                        >NEW</sup
+                                                    >
+                                                </p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <div class="contest-btn-wrap">
+                                    <div class="contest-btn-desc">
+                                        <a
+                                            href=""
+                                            class="sc-ccsojp hlisis underline"
+                                        >
+                                            <span class="sc-ezwoih fendym"
+                                                >콘텐츠가 궁금하신가요?</span
+                                            >
+                                        </a>
                                     </div>
+                                    <a
+                                        class="sc-ccsojp jbsnef btn-request btn-request-case-2"
+                                        href=""
+                                    >
+                                        <span class="visual-correction"
+                                            >디자인 의뢰하기
+                                            <div
+                                                class="request-description-tooltip"
+                                            >
+                                                <span class="info">
+                                                    <svg
+                                                        viewBox="0 0 12 12"
+                                                        class="sc-gkxovf ifpvod icon"
+                                                    >
+                                                        <path
+                                                            fill-rule="evenodd"
+                                                            clip-rule="evenodd"
+                                                            d="M4.93338 8.99995C4.70438 8.99995 4.48738 8.90895 4.33538 8.74795L2.20238 6.49895C1.90838 6.18895 1.93838 5.71495 2.26838 5.43995C2.59738 5.16395 3.10438 5.19195 3.39738 5.50295L4.93338 7.12195L8.60238 3.25295C8.89538 2.94195 9.40038 2.91395 9.73138 3.18995C10.0614 3.46595 10.0914 3.93895 9.79738 4.24895L5.53138 8.74795C5.37938 8.90895 5.16238 8.99995 4.93338 8.99995Z"
+                                                        ></path>
+                                                    </svg>
+                                                    <span
+                                                        class="sc-ezwoih fendym"
+                                                        ><span
+                                                            class="blue500 web-inspector-hide-short-cut"
+                                                            >콘테스트</span
+                                                        >로 디자인을 고민을
+                                                        해결하세요</span
+                                                    >
+                                                </span>
+                                            </div>
+                                        </span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </header>
+                </div>
             </div>
-        </div>
+        </header>
     </body>
 </html>
