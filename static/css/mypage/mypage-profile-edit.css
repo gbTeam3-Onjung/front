@@ -313,6 +313,7 @@ body,html {
     height: 52px;
     box-sizing: border-box;
     margin-left: 45%;
+    border: 0.5px;
 }
 
 .ijBQbT .error-message {
@@ -358,6 +359,9 @@ body,html {
 .ijBQbT.focus.error {
     border: 1px solid rgb(242, 23, 36);
 }
+
+
+
 
 
 
