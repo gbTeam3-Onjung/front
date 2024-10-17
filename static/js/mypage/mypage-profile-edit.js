@@ -40,6 +40,7 @@
 // });
 
 /*************************************************************/
+// 닉네임 입력칸 이벤트
 const input = document.getElementById("inputField");
 const errorMessage = document.getElementById("error-message");
 const label = input.parentElement;

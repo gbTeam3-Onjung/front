@@ -64,6 +64,30 @@
                                             <div>
                                                 <div
                                                     class="edit-content__input-label"
+                                                    style="margin-bottom: 50px"
+                                                >
+                                                    <strong
+                                                        ><h2>
+                                                            닉네임&nbsp;<span
+                                                                class="star"
+                                                                >*</span
+                                                            >, 이름<span
+                                                                class="star"
+                                                                >*</span
+                                                            >, &nbsp;
+                                                            전화번호<span
+                                                                class="star"
+                                                                >*</span
+                                                            >&nbsp;는&nbsp;
+                                                            필수&nbsp;
+                                                            입력&nbsp;
+                                                            항목입니다.
+                                                        </h2></strong
+                                                    >
+                                                </div>
+
+                                                <div
+                                                    class="edit-content__input-label"
                                                 >
                                                     <span>닉네임</span
                                                     ><span class="star">*</span>
@@ -78,8 +102,8 @@
                                                         value="동양적인퍼플3324"
                                                         oninput="validateInput()"
                                                     />
-                                                    <div class="max-length">
-                                                        <span>10</span>/36
+                                                    <div class="max-length36">
+                                                        <span>0</span>/10
                                                     </div>
                                                 </label>
                                                 <span
@@ -92,7 +116,6 @@
                                                     >필수항목입니다.</span
                                                 >
                                                 <!-- 오류 메시지 내용을 추가 -->
-
                                                 <span
                                                     id="error-message"
                                                     class="error-message"
@@ -117,7 +140,7 @@
                                                         placeholder="예시) 호기심이 많고 도전을 즐기는 디자이너 스터닝입니다."
                                                         value=""
                                                     />
-                                                    <div class="max-length">
+                                                    <div class="max-length20">
                                                         <span>0</span>/20
                                                     </div>
                                                 </label>
@@ -126,6 +149,51 @@
                                                     height="40px"
                                                     class="hZUXyV"
                                                 ></div>
+                                            </div>
+                                            <div class="height128">
+                                                <div
+                                                    class="edit-content__input-label"
+                                                >
+                                                    <span>이름</span>
+                                                    <span class="star">*</span>
+                                                </div>
+                                                <label
+                                                    id="inputLabel"
+                                                    class="ijBQbT"
+                                                >
+                                                    <input
+                                                        id="inputField"
+                                                        maxlength="36"
+                                                        value="한민규"
+                                                        oninput="validateInput()"
+                                                    />
+                                                    <div class="max-length5">
+                                                        <span>0</span>/5
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <div
+                                                    class="edit-content__input-label"
+                                                >
+                                                    <span>전화번호</span>
+                                                    <span class="star">*</span>
+                                                </div>
+                                                <label
+                                                    id="inputLabel"
+                                                    class="ijBQbT"
+                                                >
+                                                    <input
+                                                        id="inputField"
+                                                        maxlength="36"
+                                                        value=""
+                                                        oninput="validateInput()"
+                                                        placeholder="- 는 빼고 작성해주세요"
+                                                    />
+                                                    <div class="max-length11">
+                                                        <span>0</span>/11
+                                                    </div>
+                                                </label>
                                             </div>
                                         </div>
                                     </div>
