@@ -12,6 +12,7 @@ html body #root {
 header {
     display: block;
     unicode-bidi: isolate;
+    
 }
 
 main {
@@ -287,6 +288,9 @@ html body #root #app .wrap {
     /* background-color: #f5f5f5; */
 }
 
+.jNNRuG:hover {
+    background-color: rgb(56, 122, 252);
+}
 
 /************************************************************************/
 
@@ -542,8 +546,8 @@ a, h1, h2, h3, h4, h5, h6 {
 }
 
 .gYyxfE .date-filter > .date-input {
-    background-color: white;
-    margin-right: 32px;
+    /* background-color: white; */
+    margin-right: 15px;
 }
 
 .fIGvfF {
@@ -834,8 +838,9 @@ a, h1, h2, h3, h4, h5, h6 {
     font-size: 15px;
     line-height: 23px;
     letter-spacing: -0.5px;
-    margin-top: 124px;
-    text-align: center;
+    /* margin-top: 124px; */
+    text-align: left;
+
 }
 
 
@@ -1200,7 +1205,7 @@ input, select {
 
 .payment-list,
 .boost-list,
-.donation-list,
+.donaition-list,
 .volunteer-list,
 .inquiry-list,
 .postscript-list,
@@ -1356,6 +1361,7 @@ div > ul {
     padding-bottom: 1px;
 }
 
+
 .bPfQvA .toolbar-area .toolbar-row .btn-request--case-2 .request-description-tooltip {
     background: rgb(255, 255, 255);
     border: 1.5px solid rgb(219, 222, 226);
@@ -1387,6 +1393,32 @@ div > ul {
     margin-right: 8px;
 }
 
+.kzXcJa {
+    padding-top: 24px;
+    padding-bottom: 9.5px;
+    border-bottom: 1px solid rgb(233, 235, 237);
+}
+
+.kzXcJa .noti-card-text {
+    margin-bottom: 24px;
+}
+
+.kzXcJa .noti-card-text .noti-card-title {
+    margin-bottom: 8px;
+    color: rgb(64, 74, 92);
+    font-size: 15px;
+    line-height: 23px;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+}
+
+.kzXcJa .noti-card-text .noti-card-desc {
+    color: rgb(111, 119, 133);
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.25px;
+    font-weight: 500;
+}
 
 
 
