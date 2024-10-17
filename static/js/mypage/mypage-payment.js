@@ -1281,19 +1281,17 @@ const applicationTotalCount = applications.filter(
 document.getElementById("application-totalCount").textContent =
     applicationTotalCount;
 
-// 기부 완료 숫자 증가
-const applicationCompletedCount = donaitions.filter(
-    (donaition) => donaition.status === "완료"
+// 봉사 신청 대기 증가
+const applicationStanby = applications.filter(
+    (application) => application.status === "완료"
 ).length;
-document.getElementById("donaition-completedCount").textContent =
-    donaitionCompletedCount;
+document.getElementById("application-stanby").textContent = applicationStanby;
 
-// 기부 취소 숫자 감소
-const donaitionCancelCount = donaitions.filter(
-    (donaition) => donaition.status === "취소"
+// 봉사 승인 숫자 증가
+const donaitionApproval = applications.filter(
+    (application) => application.status === "취소"
 ).length;
-document.getElementById("donaition-cancelCount").textContent =
-    donaitionCancelCount;
+document.getElementById("application-approval").textContent = donaitionApproval;
 
 /*********************공통*********************/
 
