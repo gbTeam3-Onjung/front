@@ -3,133 +3,110 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>배너 테스트</title>
-        <link rel="stylesheet" href="/static/css/main/main.css" />
-        <link rel="stylesheet" href="/static/css/main/basic-header.css" />
+        <link rel="stylesheet" href="/static/css/main/banner-test.css" />
+        <title>슬라이드 배너</title>
     </head>
     <body>
-        <div id="root">
-            <div id="app" class="bfedap app">
-                <div class="wrap">
-                    <div class="eucbbu content">
-                        <div class="giosf">
-                            <div class="page-content">
-                                <section class="cqiqxf">
-                                    <div
-                                        class="fkweeb main-slider"
-                                        width="100%"
-                                        overflow="hidden"
-                                    >
-                                        <div
-                                            class="slick-slider slick-initialized"
-                                            dir="ltr"
-                                        >
-                                            <div
-                                                data-role="none"
-                                                class="slick-arrow slick-prev"
-                                                style="display: block"
-                                            >
-                                                <svg
-                                                    color="#000000"
-                                                    viewBox="0 0 24 24"
-                                                    class="cafwxx"
-                                                >
-                                                    <path
-                                                        fill-rule="evenodd"
-                                                        clip-rule="evenodd"
-                                                        d="M7.97113 22.0001C8.19513 22.0001 8.41713 21.9061 8.58713 21.7191L16.7471 12.7161C17.0841 12.3451 17.0841 11.7451 16.7471 11.3741L8.48613 2.28013C8.14713 1.90813 7.59713 1.90613 7.25613 2.27713C6.91613 2.64813 6.91413 3.25113 7.25313 3.62413L14.9051 12.0471L7.35413 20.3771C7.01513 20.7501 7.01713 21.3531 7.35813 21.7241C7.52813 21.9081 7.74913 22.0001 7.97113 22.0001Z"
-                                                    ></path>
-                                                </svg>
-                                            </div>
-                                            <div
-                                                class="slick-list"
-                                                style="padding: 0px 50px"
-                                            >
-                                                <div
-                                                    class="slick-track"
-                                                    style="
-                                                        width: 38313px;
-                                                        opacity: 1;
-                                                        transform: translate3d(
-                                                            -9379.5px,
-                                                            0px,
-                                                            0px
-                                                        );
-                                                        transition: -webkit-transform
-                                                            500ms;
-                                                    "
-                                                >
-                                                    <div dita-index="-7">
-                                                        <img
-                                                            src="/static/images/banner1.jpg"
-                                                            alt=""
-                                                        />
-                                                    </div>
-                                                    <div dita-index="-6">
-                                                        <img
-                                                            src="/static/images/banner2.jpg"
-                                                            alt=""
-                                                        />
-                                                    </div>
-                                                    <div dita-index="-5">
-                                                        <img
-                                                            src="/static/images/banner3.jpg"
-                                                            alt=""
-                                                        />
-                                                    </div>
-                                                    <div dita-index="-4">
-                                                        <img
-                                                            src="/static/images/banner4.jpg"
-                                                            alt=""
-                                                        />
-                                                    </div>
-                                                    <div dita-index="-3">
-                                                        <img
-                                                            src="/static/images/banner5.jpg"
-                                                            alt=""
-                                                        />
-                                                    </div>
-                                                    <div dita-index="-2">
-                                                        <img
-                                                            src="/static/images/banner6.jpg"
-                                                            alt=""
-                                                        />
-                                                    </div>
-                                                    <div dita-index="-1">
-                                                        <img
-                                                            src="/static/images/banner7.jpg"
-                                                            alt=""
-                                                        />
-                                                    </div>
-                                                </div>
-                                                <div></div>
-                                            </div>
-                                            <div
-                                                data-role="none"
-                                                class="slick-arrow slick-next"
-                                                style="display: block"
-                                            >
-                                                <svg
-                                                    color="#000000"
-                                                    viewBox="0 0 24 24"
-                                                    class="cafwxx"
-                                                >
-                                                    <path
-                                                        fill-rule="evenodd"
-                                                        clip-rule="evenodd"
-                                                        d="M7.97113 22.0001C8.19513 22.0001 8.41713 21.9061 8.58713 21.7191L16.7471 12.7161C17.0841 12.3451 17.0841 11.7451 16.7471 11.3741L8.48613 2.28013C8.14713 1.90813 7.59713 1.90613 7.25613 2.27713C6.91613 2.64813 6.91413 3.25113 7.25313 3.62413L14.9051 12.0471L7.35413 20.3771C7.01513 20.7501 7.01713 21.3531 7.35813 21.7241C7.52813 21.9081 7.74913 22.0001 7.97113 22.0001Z"
-                                                    ></path>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <section class="container">
+            <div class="arrow left">&lt;</div>
+            <div class="banner">
+                <div><img src="/static/images/banner1.jpg" /></div>
+                <div><img src="/static/images/banner2.jpg" /></div>
+                <div><img src="/static/images/banner3.jpg" /></div>
+                <div><img src="/static/images/banner4.jpg" /></div>
+                <div><img src="/static/images/banner5.jpg" /></div>
+                <div><img src="/static/images/banner6.jpg" /></div>
+                <div><img src="/static/images/banner7.jpg" /></div>
             </div>
-        </div>
-        <script src="/static/js/main/main.js"></script>
+            <div class="arrow right">&gt;</div>
+        </section>
     </body>
+    <script>
+        const arrows = document.querySelectorAll("div.arrow"); // 좌우 화살표 버튼을 선택
+        const firstBanner = document.createElement("div"); // 첫 번째 배너를 위한 div 생성
+        const lastBanner = document.createElement("div"); // 마지막 배너를 위한 div 생성
+        const banner = document.querySelector("div.banner"); // 배너 컨테이너 선택
+
+        let autoSlideInterval = null; // 자동 슬라이드 인터벌을 저장할 변수
+        let count = 1; // 현재 배너 위치를 나타내는 카운터
+        let arrowCheck = true; // 화살표 버튼의 중복 클릭을 방지하기 위한 플래그
+
+        firstBanner.innerHTML = `<img src="/static/images/banner1.jpg">`; // 첫 번째 배너의 HTML 설정
+        banner.appendChild(firstBanner); // 첫 번째 배너를 배너 컨테이너 끝에 추가
+
+        lastBanner.innerHTML = `<img src="/static/images/banner7.jpg">`; // 마지막 배너의 HTML 설정
+        banner.prepend(lastBanner); // 마지막 배너를 배너 컨테이너 맨 앞에 추가
+
+        banner.style.transform = `translate(-300px)`; // 초기 배너 위치 설정
+
+        // 자동 슬라이드를 실행하는 함수
+        const autoSlide = () => {
+            count++; // 배너 위치를 한 칸 앞으로 이동
+            banner.style.transition = `transform 0.5s`; // 배너 이동 애니메이션 설정
+            banner.style.transform = `translate(-${300 * count}px)`; // 배너 이동
+
+            if (count == 8) {
+                // 마지막 배너 위치를 넘었을 경우
+                setTimeout(() => {
+                    banner.style.transition = `transform 0s`; // 애니메이션 없이 배너 위치 초기화
+                    banner.style.transform = `translate(-300px)`;
+                }, 500);
+                count = 1; // 카운터를 첫 번째 배너로 초기화
+            }
+        };
+
+        // 1초 간격으로 자동 슬라이드 실행
+        autoSlideInterval = setInterval(autoSlide, 1000);
+
+        // 좌우 화살표 클릭 이벤트 처리
+        arrows.forEach((arrow) => {
+            arrow.addEventListener("click", (e) => {
+                if (!arrowCheck) {
+                    return; // 중복 클릭 방지
+                }
+                arrowCheck = false; // 중복 클릭 방지를 위해 플래그 설정
+                clearInterval(autoSlideInterval); // 자동 슬라이드 멈춤
+
+                let arrowType = e.target.classList[1]; // 클릭된 화살표의 방향 확인
+
+                if (arrowType === "left") {
+                    // 왼쪽 화살표 클릭 시
+                    count--; // 배너 위치를 한 칸 뒤로 이동
+                    banner.style.transition = `transform 0.5s`;
+                    banner.style.transform = `translate(-${300 * count}px)`;
+
+                    if (count == 0) {
+                        // 첫 번째 배너 위치를 넘었을 경우
+                        setTimeout(() => {
+                            banner.style.transition = `transform 0s`;
+                            banner.style.transform = `translate(-2100px)`; // 마지막 배너로 이동
+                        }, 500);
+
+                        count = 7; // 카운터를 마지막 배너로 초기화
+                    }
+                } else {
+                    // 오른쪽 화살표 클릭 시
+                    count++; // 배너 위치를 한 칸 앞으로 이동
+                    banner.style.transition = `transform 0.5s`;
+                    banner.style.transform = `translate(-${300 * count}px)`;
+
+                    if (count == 8) {
+                        // 마지막 배너 위치를 넘었을 경우
+                        setTimeout(() => {
+                            banner.style.transition = `transform 0s`;
+                            banner.style.transform = `translate(-300px)`; // 첫 번째 배너로 이동
+                        }, 500);
+
+                        count = 1; // 카운터를 첫 번째 배너로 초기화
+                    }
+                }
+
+                autoSlideInterval = setInterval(autoSlide, 1000); // 자동 슬라이드 재개
+
+                setTimeout(() => {
+                    arrowCheck = true; // 클릭 가능 상태로 플래그 재설정
+                }, 500);
+            });
+        });
+    </script>
 </html>
