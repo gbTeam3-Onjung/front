@@ -89,7 +89,7 @@ html body #root #app .wrap {
     border: 1px solid rgb(241, 241, 241);
     background-color: rgb(255, 255, 255);
     margin-bottom: 16px;
-    padding: 40px 48px 72px;
+    padding: 40px 40px 72px;
 }
 
 .cRFSjf .edit-content__content-title {
@@ -333,6 +333,10 @@ body,html {
     margin-right: 4px;
 }
 
+.height128{
+    height: 128px !important;
+}
+
 /**********************************************************/
 .error-image {
     width: 12px;
@@ -354,6 +358,7 @@ body,html {
 .ijBQbT.focus.error {
     border: 1px solid rgb(242, 23, 36);
 }
+
 
 
 
