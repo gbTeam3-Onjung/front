@@ -704,69 +704,27 @@ document.getElementById("notice-totalCount").textContent = noticeTotalCount;
 const volunteers = [
     {
         id: 1,
-        status: "완료",
+        title: "연탄 나르기 봉사",
         time: "4",
         date: "2024.03.01",
     },
     {
         id: 2,
-        status: "완료",
+        title: "장애인 복지관 돕기",
         time: "3",
         date: "2024.03.02",
     },
     {
         id: 3,
-        status: "완료",
+        title: "예슬이 짐 옮기기 도와주기",
         time: "2",
         date: "2024.03.03",
     },
     {
         id: 4,
-        status: "완료",
+        title: "저소득층 급식 봉사",
         time: "1",
         date: "2024.03.04",
-    },
-    {
-        id: 5,
-        status: "취소",
-        time: "4",
-        date: "2024.03.05",
-    },
-    {
-        id: 6,
-        status: "취소",
-        time: "3",
-        date: "2024.03.01",
-    },
-    {
-        id: 7,
-        status: "취소",
-        time: "4",
-        date: "2024.03.02",
-    },
-    {
-        id: 8,
-        status: "취소",
-        time: "5",
-        date: "2024.03.03",
-    },
-    {
-        id: 9,
-        status: "취소",
-        time: "7",
-        date: "2024.03.04",
-    },
-    {
-        id: 10,
-        status: "취소",
-        time: "2",
-        date: "2024.03.05",
-    },
-    {
-        id: 11,
-        status: "취소",
-        time: "4",
-        date: "2024.03.11",
     },
 ];
 
@@ -793,16 +751,16 @@ const renderVolunteers = () => {
         volunteerList.innerHTML = `
             <table class="news-center-table" style="margin-top: 0; margin-bottom: 20px;">
                 <colgroup>
-                    <col style="width: 57px;">
-                    <col style="width: 132px;">
-                    <col style="width: 150px;">
+                    <col style="width: 60px;">
+                    <col style="width: 60px;">
+                    <col style="width: 200px;">
                     <col style="width: 104px;">
                 </colgroup>
                 <thead class="news-center-table-head">
                     <tr>
                         <th>봉사 활동 번호</th>
-                        <th>구분</th>
                         <th>봉사 시간</th>
+                        <th>봉사 게시글 제목</th>
                         <th>날짜</th>
                     </tr>
                 </thead>
@@ -815,10 +773,10 @@ const renderVolunteers = () => {
                             volunteer.id
                         }</td>
                         <td class="news-center-table-body-category">${
-                            "봉사 " + volunteer.status
+                            volunteer.time + "시간"
                         }</td>
                         <td class="news-center-table-body-title"><span>${
-                            volunteer.time + "시간"
+                            volunteer.title
                         }</span></td>
                         <td class="news-center-table-body-date">${
                             volunteer.date
@@ -836,24 +794,10 @@ renderVolunteers(volunteers);
 
 // 전체 항목 숫자 증가
 const volunteerTotalCount = volunteers.filter(
-    (volunteer) => volunteer.status === "완료" || volunteer.status === "취소"
+    (volunteer) => volunteer.id
 ).length;
 document.getElementById("volunteer-totalCount").textContent =
     volunteerTotalCount;
-
-// 봉사 완료 숫자 증가
-const volunteerCompletedCount = volunteers.filter(
-    (volunteer) => volunteer.status === "완료"
-).length;
-document.getElementById("volunteer-completedCount").textContent =
-    volunteerCompletedCount;
-
-// 봉사 취소 숫자 감소
-const volunteerCancelCount = volunteers.filter(
-    (volunteer) => volunteer.status === "취소"
-).length;
-document.getElementById("volunteer-cancelCount").textContent =
-    volunteerCancelCount;
 
 /*********************내 문의**********************/
 const inquirys = [
@@ -1254,7 +1198,7 @@ const renderApplications = () => {
                             application.status
                         }</td>
                         <td class="news-center-table-body-category">${
-                            application.nickName + application.name
+                            application.nickName + "/" + application.name
                         }</td>
                         <td class="news-center-table-body-title"><span>${
                             application.phonNumber
@@ -1271,29 +1215,27 @@ const renderApplications = () => {
         `;
     }
 };
-renderDonaitions(applications);
+renderApplications(applications);
 
 // 전체 항목 숫자 증가
 const applicationTotalCount = applications.filter(
     (application) =>
-        application.status === "완료" || application.status === "취소"
+        application.status === "대기" || application.status === "승인"
 ).length;
 document.getElementById("application-totalCount").textContent =
     applicationTotalCount;
 
-// 기부 완료 숫자 증가
-const applicationCompletedCount = donaitions.filter(
-    (donaition) => donaition.status === "완료"
+// 봉사 신청 대기 증가
+const applicationStanby = applications.filter(
+    (application) => application.status === "대기"
 ).length;
-document.getElementById("donaition-completedCount").textContent =
-    donaitionCompletedCount;
+document.getElementById("application-stanby").textContent = applicationStanby;
 
-// 기부 취소 숫자 감소
-const donaitionCancelCount = donaitions.filter(
-    (donaition) => donaition.status === "취소"
+// 봉사 승인 숫자 증가
+const donaitionApproval = applications.filter(
+    (application) => application.status === "승인"
 ).length;
-document.getElementById("donaition-cancelCount").textContent =
-    donaitionCancelCount;
+document.getElementById("application-approval").textContent = donaitionApproval;
 
 /*********************공통*********************/
 

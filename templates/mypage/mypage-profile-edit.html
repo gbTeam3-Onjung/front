@@ -31,7 +31,7 @@
                             <div class="cRFSjf">
                                 <div class="ekUKKX profile-info">
                                     <div class="edit-content__content-title">
-                                        프로필 정보
+                                        프로필 수정
                                     </div>
                                     <div class="profile-info--wrapper">
                                         <div
@@ -66,61 +66,58 @@
                                                     class="edit-content__input-label"
                                                     style="margin-bottom: 50px"
                                                 >
-                                                    <strong
-                                                        ><h2>
-                                                            닉네임&nbsp;<span
-                                                                class="star"
-                                                                >*</span
-                                                            >, 이름<span
-                                                                class="star"
-                                                                >*</span
-                                                            >, &nbsp;
-                                                            전화번호<span
-                                                                class="star"
-                                                                >*</span
-                                                            >&nbsp;는&nbsp;
-                                                            필수&nbsp;
-                                                            입력&nbsp;
-                                                            항목입니다.
-                                                        </h2></strong
-                                                    >
+                                                    <h1>
+                                                        <span class="bluestar"
+                                                            >*</span
+                                                        >&nbsp; 닉네임은&nbsp;
+                                                        필수&nbsp; 입력&nbsp;
+                                                        항목입니다.<br />
+                                                    </h1>
                                                 </div>
-
                                                 <div
                                                     class="edit-content__input-label"
                                                 >
                                                     <span>닉네임</span
-                                                    ><span class="star">*</span>
+                                                    ><span class="bluestar"
+                                                        >*</span
+                                                    >
                                                 </div>
                                                 <label
                                                     id="inputLabel"
-                                                    class="ijBQbT"
+                                                    class="ijBQbT nickName"
                                                 >
                                                     <input
                                                         id="inputField"
-                                                        maxlength="36"
-                                                        value="동양적인퍼플3324"
+                                                        class="nickName"
+                                                        maxlength="10"
+                                                        value="동양적인퍼플"
                                                         oninput="validateInput()"
                                                     />
                                                     <div class="max-length36">
                                                         <span>0</span>/10
                                                     </div>
                                                 </label>
-                                                <span
-                                                    id="error-message"
-                                                    class="error-message"
-                                                    style="
-                                                        display: none;
-                                                        color: rgb(242, 23, 36);
-                                                    "
-                                                    >필수항목입니다.</span
-                                                >
-                                                <!-- 오류 메시지 내용을 추가 -->
-                                                <span
-                                                    id="error-message"
-                                                    class="error-message"
+                                                <div
+                                                    id="nickNameCheck"
                                                     style="display: none"
-                                                ></span>
+                                                >
+                                                    <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHUSURBVHgBtVVdTsJAEJ5ZVtQHtX0RH2siiY96ArmB3kA9AXgC4AbcAI6gN9ATwKOJJPQRfKEqiT9sO84UIREKLFq+pEm73Z2/ne8bhAUgx3MGWV0EhAIBerzijX5AgAitCOAui+Z2u+v782xg0uL7wbFnyNQJoAAWUISNjBpWkxyp6YVBLl8cRqZpa1wQIV0NSTdfckel6X+/MnjbPyoTQgX+ASSo7Dy3qzMOJPIIqAYpgLO/2eu1axMHUnMpC385kA6CDTSncifxHQyjsGJjPERzGKI+hOVwDOm6vGAcPZnO8jPo7/aeYuOvuXxn0rKLAvo0rvoicwFrgtrSJcU1Ooc1QRGcKSI4gTVB2K9S7JwkF56Cv4DIOigt3WHTEbJnsJ+vR8IdtHYQaATymXmezW7RHFgBzOKWihAerE+wTI8ytoPIOfZZ8zObum+xP2DixETLZHXHlvnKDfyAU7mH5XD0lj6Rx6rzEBsua1Esdn2Wi0yaYselDJU5dcdi53YffZ4DVUgJYsv9mW4THoh+p+FEbIxngWBmJsvY46lUXrlcXJZp44kOBHInCsIKEl2CBaRJDJprN2Ho46KDsSOWc1HcWBQnWaEvBBUORR+mJp04z8Y3CPfJeR0EPhwAAAAASUVORK5CYII="
+                                                        class="error-image"
+                                                    />
+                                                    <span
+                                                        id="error-message"
+                                                        class="error-message"
+                                                        style="
+                                                            color: rgb(
+                                                                242,
+                                                                23,
+                                                                36
+                                                            );
+                                                        "
+                                                        >필수항목입니다.</span
+                                                    >
+                                                </div>
                                                 <div
                                                     width="100%"
                                                     height="40px"
@@ -133,17 +130,41 @@
                                                 >
                                                     한줄 프로필
                                                 </div>
-                                                <label class="ijBQbT geHalw">
+                                                <label
+                                                    class="ijBQbT geHalw oneLine"
+                                                >
                                                     <input
-                                                        maxlength="20"
                                                         id="inputField"
-                                                        placeholder="예시) 호기심이 많고 도전을 즐기는 디자이너 스터닝입니다."
+                                                        class="oneLine"
+                                                        maxlength="20"
+                                                        placeholder="예시) 봉사심이 투철한 퍼플입니다."
                                                         value=""
                                                     />
                                                     <div class="max-length20">
                                                         <span>0</span>/20
                                                     </div>
                                                 </label>
+                                                <div
+                                                    id="nickNameCheck"
+                                                    style="display: none"
+                                                >
+                                                    <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHUSURBVHgBtVVdTsJAEJ5ZVtQHtX0RH2siiY96ArmB3kA9AXgC4AbcAI6gN9ATwKOJJPQRfKEqiT9sO84UIREKLFq+pEm73Z2/ne8bhAUgx3MGWV0EhAIBerzijX5AgAitCOAui+Z2u+v782xg0uL7wbFnyNQJoAAWUISNjBpWkxyp6YVBLl8cRqZpa1wQIV0NSTdfckel6X+/MnjbPyoTQgX+ASSo7Dy3qzMOJPIIqAYpgLO/2eu1axMHUnMpC385kA6CDTSncifxHQyjsGJjPERzGKI+hOVwDOm6vGAcPZnO8jPo7/aeYuOvuXxn0rKLAvo0rvoicwFrgtrSJcU1Ooc1QRGcKSI4gTVB2K9S7JwkF56Cv4DIOigt3WHTEbJnsJ+vR8IdtHYQaATymXmezW7RHFgBzOKWihAerE+wTI8ytoPIOfZZ8zObum+xP2DixETLZHXHlvnKDfyAU7mH5XD0lj6Rx6rzEBsua1Esdn2Wi0yaYselDJU5dcdi53YffZ4DVUgJYsv9mW4THoh+p+FEbIxngWBmJsvY46lUXrlcXJZp44kOBHInCsIKEl2CBaRJDJprN2Ho46KDsSOWc1HcWBQnWaEvBBUORR+mJp04z8Y3CPfJeR0EPhwAAAAASUVORK5CYII="
+                                                        class="error-image"
+                                                    />
+                                                    <span
+                                                        id="error-message"
+                                                        class="error-message"
+                                                        style="
+                                                            color: rgb(
+                                                                242,
+                                                                23,
+                                                                36
+                                                            );
+                                                        "
+                                                        >필수항목입니다.</span
+                                                    >
+                                                </div>
                                                 <div
                                                     width="100%"
                                                     height="40px"
@@ -155,21 +176,22 @@
                                                     class="edit-content__input-label"
                                                 >
                                                     <span>이름</span>
-                                                    <span class="star">*</span>
+                                                    <span class="orangestar"
+                                                        >*</span
+                                                    >
                                                 </div>
                                                 <label
                                                     id="inputLabel"
-                                                    class="ijBQbT"
+                                                    class="ijBQbT name"
                                                 >
                                                     <input
                                                         id="inputField"
-                                                        maxlength="36"
+                                                        class="name"
+                                                        maxlength="5"
                                                         value="한민규"
                                                         oninput="validateInput()"
+                                                        readonly
                                                     />
-                                                    <div class="max-length5">
-                                                        <span>0</span>/5
-                                                    </div>
                                                 </label>
                                             </div>
                                             <div>
@@ -177,23 +199,38 @@
                                                     class="edit-content__input-label"
                                                 >
                                                     <span>전화번호</span>
-                                                    <span class="star">*</span>
+                                                    <span class="orangestar"
+                                                        >*</span
+                                                    >
                                                 </div>
                                                 <label
                                                     id="inputLabel"
-                                                    class="ijBQbT"
+                                                    class="ijBQbT phoneNumber"
                                                 >
                                                     <input
                                                         id="inputField"
-                                                        maxlength="36"
-                                                        value=""
+                                                        class="phoneNumber"
+                                                        maxlength="11"
+                                                        value="01019181716"
                                                         oninput="validateInput()"
-                                                        placeholder="- 는 빼고 작성해주세요"
+                                                        readonly
                                                     />
-                                                    <div class="max-length11">
-                                                        <span>0</span>/11
-                                                    </div>
                                                 </label>
+                                            </div>
+                                            <div
+                                                class="edit-content__input-label"
+                                                style="
+                                                    margin-bottom: 20px;
+                                                    margin-top: 20px;
+                                                "
+                                            >
+                                                <h2 style="margin-top: 15px">
+                                                    <span class="orangestar"
+                                                        >*</span
+                                                    >&nbsp; 이름,&nbsp;
+                                                    전화번호&nbsp;변경은
+                                                    고객센터로 문의해주세요.
+                                                </h2>
                                             </div>
                                         </div>
                                     </div>
