@@ -94,7 +94,7 @@
                                                 </div>
                                                 <label
                                                     id="inputLabel"
-                                                    class="ijBQbT"
+                                                    class="ijBQbT nickName"
                                                 >
                                                     <input
                                                         id="inputField"
@@ -107,7 +107,10 @@
                                                         <span>0</span>/10
                                                     </div>
                                                 </label>
-                                                <div style="display: none">
+                                                <div
+                                                    id="nickNameCheck"
+                                                    style="display: none"
+                                                >
                                                     <img
                                                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHUSURBVHgBtVVdTsJAEJ5ZVtQHtX0RH2siiY96ArmB3kA9AXgC4AbcAI6gN9ATwKOJJPQRfKEqiT9sO84UIREKLFq+pEm73Z2/ne8bhAUgx3MGWV0EhAIBerzijX5AgAitCOAui+Z2u+v782xg0uL7wbFnyNQJoAAWUISNjBpWkxyp6YVBLl8cRqZpa1wQIV0NSTdfckel6X+/MnjbPyoTQgX+ASSo7Dy3qzMOJPIIqAYpgLO/2eu1axMHUnMpC385kA6CDTSncifxHQyjsGJjPERzGKI+hOVwDOm6vGAcPZnO8jPo7/aeYuOvuXxn0rKLAvo0rvoicwFrgtrSJcU1Ooc1QRGcKSI4gTVB2K9S7JwkF56Cv4DIOigt3WHTEbJnsJ+vR8IdtHYQaATymXmezW7RHFgBzOKWihAerE+wTI8ytoPIOfZZ8zObum+xP2DixETLZHXHlvnKDfyAU7mH5XD0lj6Rx6rzEBsua1Esdn2Wi0yaYselDJU5dcdi53YffZ4DVUgJYsv9mW4THoh+p+FEbIxngWBmJsvY46lUXrlcXJZp44kOBHInCsIKEl2CBaRJDJprN2Ho46KDsSOWc1HcWBQnWaEvBBUORR+mJp04z8Y3CPfJeR0EPhwAAAAASUVORK5CYII="
                                                         class="error-image"
@@ -137,10 +140,12 @@
                                                 >
                                                     한줄 프로필
                                                 </div>
-                                                <label class="ijBQbT geHalw">
+                                                <label
+                                                    class="ijBQbT geHalw oneLine"
+                                                >
                                                     <input
                                                         id="inputField"
-                                                        class="oneline"
+                                                        class="oneLine"
                                                         maxlength="20"
                                                         placeholder="예시) 봉사심이 투철한 퍼플입니다."
                                                         value=""
@@ -149,6 +154,27 @@
                                                         <span>0</span>/20
                                                     </div>
                                                 </label>
+                                                <div
+                                                    id="nickNameCheck"
+                                                    style="display: none"
+                                                >
+                                                    <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHUSURBVHgBtVVdTsJAEJ5ZVtQHtX0RH2siiY96ArmB3kA9AXgC4AbcAI6gN9ATwKOJJPQRfKEqiT9sO84UIREKLFq+pEm73Z2/ne8bhAUgx3MGWV0EhAIBerzijX5AgAitCOAui+Z2u+v782xg0uL7wbFnyNQJoAAWUISNjBpWkxyp6YVBLl8cRqZpa1wQIV0NSTdfckel6X+/MnjbPyoTQgX+ASSo7Dy3qzMOJPIIqAYpgLO/2eu1axMHUnMpC385kA6CDTSncifxHQyjsGJjPERzGKI+hOVwDOm6vGAcPZnO8jPo7/aeYuOvuXxn0rKLAvo0rvoicwFrgtrSJcU1Ooc1QRGcKSI4gTVB2K9S7JwkF56Cv4DIOigt3WHTEbJnsJ+vR8IdtHYQaATymXmezW7RHFgBzOKWihAerE+wTI8ytoPIOfZZ8zObum+xP2DixETLZHXHlvnKDfyAU7mH5XD0lj6Rx6rzEBsua1Esdn2Wi0yaYselDJU5dcdi53YffZ4DVUgJYsv9mW4THoh+p+FEbIxngWBmJsvY46lUXrlcXJZp44kOBHInCsIKEl2CBaRJDJprN2Ho46KDsSOWc1HcWBQnWaEvBBUORR+mJp04z8Y3CPfJeR0EPhwAAAAASUVORK5CYII="
+                                                        class="error-image"
+                                                    />
+                                                    <span
+                                                        id="error-message"
+                                                        class="error-message"
+                                                        style="
+                                                            color: rgb(
+                                                                242,
+                                                                23,
+                                                                36
+                                                            );
+                                                        "
+                                                        >필수항목입니다.</span
+                                                    >
+                                                </div>
                                                 <div
                                                     width="100%"
                                                     height="40px"
@@ -164,7 +190,7 @@
                                                 </div>
                                                 <label
                                                     id="inputLabel"
-                                                    class="ijBQbT"
+                                                    class="ijBQbT name"
                                                 >
                                                     <input
                                                         id="inputField"
@@ -177,6 +203,27 @@
                                                         <span>0</span>/5
                                                     </div>
                                                 </label>
+                                                <div
+                                                    id="nickNameCheck"
+                                                    style="display: none"
+                                                >
+                                                    <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHUSURBVHgBtVVdTsJAEJ5ZVtQHtX0RH2siiY96ArmB3kA9AXgC4AbcAI6gN9ATwKOJJPQRfKEqiT9sO84UIREKLFq+pEm73Z2/ne8bhAUgx3MGWV0EhAIBerzijX5AgAitCOAui+Z2u+v782xg0uL7wbFnyNQJoAAWUISNjBpWkxyp6YVBLl8cRqZpa1wQIV0NSTdfckel6X+/MnjbPyoTQgX+ASSo7Dy3qzMOJPIIqAYpgLO/2eu1axMHUnMpC385kA6CDTSncifxHQyjsGJjPERzGKI+hOVwDOm6vGAcPZnO8jPo7/aeYuOvuXxn0rKLAvo0rvoicwFrgtrSJcU1Ooc1QRGcKSI4gTVB2K9S7JwkF56Cv4DIOigt3WHTEbJnsJ+vR8IdtHYQaATymXmezW7RHFgBzOKWihAerE+wTI8ytoPIOfZZ8zObum+xP2DixETLZHXHlvnKDfyAU7mH5XD0lj6Rx6rzEBsua1Esdn2Wi0yaYselDJU5dcdi53YffZ4DVUgJYsv9mW4THoh+p+FEbIxngWBmJsvY46lUXrlcXJZp44kOBHInCsIKEl2CBaRJDJprN2Ho46KDsSOWc1HcWBQnWaEvBBUORR+mJp04z8Y3CPfJeR0EPhwAAAAASUVORK5CYII="
+                                                        class="error-image"
+                                                    />
+                                                    <span
+                                                        id="error-message"
+                                                        class="error-message"
+                                                        style="
+                                                            color: rgb(
+                                                                242,
+                                                                23,
+                                                                36
+                                                            );
+                                                        "
+                                                        >필수항목입니다.</span
+                                                    >
+                                                </div>
                                             </div>
                                             <div>
                                                 <div
@@ -187,11 +234,11 @@
                                                 </div>
                                                 <label
                                                     id="inputLabel"
-                                                    class="ijBQbT"
+                                                    class="ijBQbT phoneNumber"
                                                 >
                                                     <input
                                                         id="inputField"
-                                                        class="phonNumber"
+                                                        class="phoneNumber"
                                                         maxlength="11"
                                                         value="01019181716"
                                                         oninput="validateInput()"
