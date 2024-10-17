@@ -89,7 +89,7 @@ html body #root #app .wrap {
     border: 1px solid rgb(241, 241, 241);
     background-color: rgb(255, 255, 255);
     margin-bottom: 16px;
-    padding: 40px 40px 72px;
+    padding: 40px 40px
 }
 
 .cRFSjf .edit-content__content-title {
@@ -204,10 +204,16 @@ input, select {
     margin-bottom: 20px;
 }
 
-.cRFSjf .edit-content__input-label .star {
+.cRFSjf .edit-content__input-label .bluestar {
     padding-left: 2px;
     color: rgb(38, 86, 246);
 }
+
+.cRFSjf .edit-content__input-label .orangestar {
+    padding-left: 2px;
+    color: orange;
+}
+
 .geHalw {
     position: relative;
 }

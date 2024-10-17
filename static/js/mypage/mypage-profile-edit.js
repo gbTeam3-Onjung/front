@@ -9,9 +9,7 @@
 // 클래스명이 추가되야 할 label모음집
 const inputLabel = [".nickName", ".oneLine", ".name", ".phoneNumber"];
 // 이벤트가 발생해야 될 input모음집
-const allInputs = document.querySelectorAll(
-    "input.nickName, input.oneLine, input.name, input.phoneNumber"
-);
+const allInputs = document.querySelectorAll("input.nickName, input.oneLine");
 
 allInputs.forEach((input) => {
     input.addEventListener("focus", (e) => {
@@ -40,18 +38,3 @@ allInputs.forEach((input) => {
 });
 
 // input 필드와 span 요소들을 모두 미리 선택해놓기
-const addDivError = [];
-const inputEssentialFields = [".nickName", ".name", ".phoneNumber"];
-const inputs = inputEssentialFields.flatMap((field) =>
-    Array.from(document.querySelectorAll(`input${field}`))
-);
-
-// 유효성 검사
-inputs.forEach((input, index) => {
-    if (input.value === "") {
-        const labelElement = spans[index]; // input과 동일한 index의 span을 가져옴
-        if (labelElement) {
-            labelElement.classList.add("error");
-        }
-    }
-});

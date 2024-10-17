@@ -66,31 +66,21 @@
                                                     class="edit-content__input-label"
                                                     style="margin-bottom: 50px"
                                                 >
-                                                    <strong
-                                                        ><h2>
-                                                            닉네임&nbsp;<span
-                                                                class="star"
-                                                                >*</span
-                                                            >, 이름<span
-                                                                class="star"
-                                                                >*</span
-                                                            >, &nbsp;
-                                                            전화번호<span
-                                                                class="star"
-                                                                >*</span
-                                                            >&nbsp;는&nbsp;
-                                                            필수&nbsp;
-                                                            입력&nbsp;
-                                                            항목입니다.
-                                                        </h2></strong
-                                                    >
+                                                    <h1>
+                                                        <span class="bluestar"
+                                                            >*</span
+                                                        >&nbsp; 닉네임은&nbsp;
+                                                        필수&nbsp; 입력&nbsp;
+                                                        항목입니다.<br />
+                                                    </h1>
                                                 </div>
-
                                                 <div
                                                     class="edit-content__input-label"
                                                 >
                                                     <span>닉네임</span
-                                                    ><span class="star">*</span>
+                                                    ><span class="bluestar"
+                                                        >*</span
+                                                    >
                                                 </div>
                                                 <label
                                                     id="inputLabel"
@@ -186,7 +176,9 @@
                                                     class="edit-content__input-label"
                                                 >
                                                     <span>이름</span>
-                                                    <span class="star">*</span>
+                                                    <span class="orangestar"
+                                                        >*</span
+                                                    >
                                                 </div>
                                                 <label
                                                     id="inputLabel"
@@ -198,39 +190,18 @@
                                                         maxlength="5"
                                                         value="한민규"
                                                         oninput="validateInput()"
+                                                        readonly
                                                     />
-                                                    <div class="max-length5">
-                                                        <span>0</span>/5
-                                                    </div>
                                                 </label>
-                                                <div
-                                                    id="nickNameCheck"
-                                                    style="display: none"
-                                                >
-                                                    <img
-                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHUSURBVHgBtVVdTsJAEJ5ZVtQHtX0RH2siiY96ArmB3kA9AXgC4AbcAI6gN9ATwKOJJPQRfKEqiT9sO84UIREKLFq+pEm73Z2/ne8bhAUgx3MGWV0EhAIBerzijX5AgAitCOAui+Z2u+v782xg0uL7wbFnyNQJoAAWUISNjBpWkxyp6YVBLl8cRqZpa1wQIV0NSTdfckel6X+/MnjbPyoTQgX+ASSo7Dy3qzMOJPIIqAYpgLO/2eu1axMHUnMpC385kA6CDTSncifxHQyjsGJjPERzGKI+hOVwDOm6vGAcPZnO8jPo7/aeYuOvuXxn0rKLAvo0rvoicwFrgtrSJcU1Ooc1QRGcKSI4gTVB2K9S7JwkF56Cv4DIOigt3WHTEbJnsJ+vR8IdtHYQaATymXmezW7RHFgBzOKWihAerE+wTI8ytoPIOfZZ8zObum+xP2DixETLZHXHlvnKDfyAU7mH5XD0lj6Rx6rzEBsua1Esdn2Wi0yaYselDJU5dcdi53YffZ4DVUgJYsv9mW4THoh+p+FEbIxngWBmJsvY46lUXrlcXJZp44kOBHInCsIKEl2CBaRJDJprN2Ho46KDsSOWc1HcWBQnWaEvBBUORR+mJp04z8Y3CPfJeR0EPhwAAAAASUVORK5CYII="
-                                                        class="error-image"
-                                                    />
-                                                    <span
-                                                        id="error-message"
-                                                        class="error-message"
-                                                        style="
-                                                            color: rgb(
-                                                                242,
-                                                                23,
-                                                                36
-                                                            );
-                                                        "
-                                                        >필수항목입니다.</span
-                                                    >
-                                                </div>
                                             </div>
                                             <div>
                                                 <div
                                                     class="edit-content__input-label"
                                                 >
                                                     <span>전화번호</span>
-                                                    <span class="star">*</span>
+                                                    <span class="orangestar"
+                                                        >*</span
+                                                    >
                                                 </div>
                                                 <label
                                                     id="inputLabel"
@@ -242,12 +213,24 @@
                                                         maxlength="11"
                                                         value="01019181716"
                                                         oninput="validateInput()"
-                                                        placeholder="- 는 빼고 작성해주세요"
+                                                        readonly
                                                     />
-                                                    <div class="max-length11">
-                                                        <span>0</span>/11
-                                                    </div>
                                                 </label>
+                                            </div>
+                                            <div
+                                                class="edit-content__input-label"
+                                                style="
+                                                    margin-bottom: 20px;
+                                                    margin-top: 20px;
+                                                "
+                                            >
+                                                <h2 style="margin-top: 15px">
+                                                    <span class="orangestar"
+                                                        >*</span
+                                                    >&nbsp; 이름,&nbsp;
+                                                    전화번호&nbsp;변경은
+                                                    고객센터로 문의해주세요.
+                                                </h2>
                                             </div>
                                         </div>
                                     </div>
