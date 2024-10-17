@@ -1254,7 +1254,7 @@ const renderApplications = () => {
                             application.status
                         }</td>
                         <td class="news-center-table-body-category">${
-                            application.nickName + application.name
+                            application.nickName + "/" + application.name
                         }</td>
                         <td class="news-center-table-body-title"><span>${
                             application.phonNumber
@@ -1271,25 +1271,25 @@ const renderApplications = () => {
         `;
     }
 };
-renderDonaitions(applications);
+renderApplications(applications);
 
 // 전체 항목 숫자 증가
 const applicationTotalCount = applications.filter(
     (application) =>
-        application.status === "완료" || application.status === "취소"
+        application.status === "대기" || application.status === "승인"
 ).length;
 document.getElementById("application-totalCount").textContent =
     applicationTotalCount;
 
 // 봉사 신청 대기 증가
 const applicationStanby = applications.filter(
-    (application) => application.status === "완료"
+    (application) => application.status === "대기"
 ).length;
 document.getElementById("application-stanby").textContent = applicationStanby;
 
 // 봉사 승인 숫자 증가
 const donaitionApproval = applications.filter(
-    (application) => application.status === "취소"
+    (application) => application.status === "승인"
 ).length;
 document.getElementById("application-approval").textContent = donaitionApproval;
 
