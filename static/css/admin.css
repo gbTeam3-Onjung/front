@@ -1,0 +1,7 @@
+section.admin-page {
+    display: none;
+}
+
+section.admin-page.selected {
+    display: block;
+}
