@@ -527,7 +527,7 @@ const charges = [
     },
     {
         id: 4,
-        status: "완료",
+        status: "충전 완료",
         chargeprice: "1000",
         myprice: "7000",
         date: "2024.03.04",
