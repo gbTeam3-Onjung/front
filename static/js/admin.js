@@ -8,11 +8,10 @@ submenus.forEach((submenu) => {
         console.log("hi");
         sections.forEach((section) => {
             section.classList.remove("selected");
-            console.log(section);
         });
         const selectedSection = sections.filter(
-            (section) => submenu.textContent === section.value
+            (section) => submenu.textContent === section.dataset.value
         );
-        selectedSection.classList.add("selected");
+        selectedSection[0].classList.add("selected");
     });
 });
