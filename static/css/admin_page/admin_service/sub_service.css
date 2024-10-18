@@ -6,12 +6,12 @@
     margin-right: 20px;
 }
 
-.sort-filter-option.selected {
+.post-filter-option.selected {
     font-weight: 700;
     line-height: 1.5;
 }
 
-.sort-filter-option {
+.post-filter-option {
     cursor: pointer;
     font-size: 14px;
 }
