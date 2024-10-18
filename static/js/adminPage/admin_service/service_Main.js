@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const addServiceBtn = document.getElementById("addServiceBtn");
+    // const addServiceBtn = document.getElementById("addServiceBtn");
     const deleteSelectedBtn = document.getElementById("deleteSelectedBtn");
     const headerCheckbox = document.getElementById("selectAll"); // 헤더 체크박스
     const rowCheckboxes = document.querySelectorAll(".userCheckbox"); // 목록의 체크박스들
@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 700); // 0.7초 후에 원래 색으로 돌아옴
     }
 
-    addServiceBtn.addEventListener("click", function () {
-        addTemporaryClass(addServiceBtn);
-    });
+    // addServiceBtn.addEventListener("click", function () {
+    //     addTemporaryClass(addServiceBtn);
+    // });
 
     deleteSelectedBtn.addEventListener("click", function () {
         addTemporaryClass(deleteSelectedBtn);

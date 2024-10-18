@@ -80,7 +80,7 @@
 
 .ServiceTable_cell {
     display: table-cell;
-    padding: 10px;
+    padding: 10px 25px 10px 25px;
     box-sizing: border-box;
     text-align: center;
     vertical-align: middle; /* 수직 가운데 정렬 */
@@ -124,43 +124,49 @@
 
 .headerCell:nth-child(3),
 .ServiceTable_cell:nth-child(3) {
-    width: 190px; /* Name 열 너비 */
+    width: 150px; /* 신고날짜 열 너비 */
 }
 
 .headerCell:nth-child(4),
 .ServiceTable_cell:nth-child(4) {
-    width: 200px; /* Name 열 너비 */
+    width: 150px; /* 신고한 사용자 열 너비 */
 }
 
 .headerCell:nth-child(5),
 .ServiceTable_cell:nth-child(5) {
-    width: 330px; /* Email 열 너비 */
+    width: 150px; /* 신고된 사용자 열 너비 */
 }
 
 .headerCell:nth-child(6),
 .ServiceTable_cell:nth-child(6) {
-    width: 100px; /* Role 열 너비 */
+    width: 300px; /* 신고된 게시글 제목 열 너비 */
+    
+    
 }
 
 .headerCell:nth-child(7),
 .ServiceTable_cell:nth-child(7) {
     
-    width: 190px; /* Role 열 너비 */
+    /* width: 250px; 신고사유 열 너비 */
+    
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    max-width: 250px;
     
 }
 
 .headerCell:nth-child(8),
 .ServiceTable_cell:nth-child(8) {
     
-    width: 100px; /* Role 열 너비 */
+    width: 100px; /* 처리상태 열 너비 */
     
 }
 
-.headerCell:nth-child(9),
+/* .headerCell:nth-child(9),
 .ServiceTable_cell:nth-child(9) {
     width: 99px; /* Role 열 너비 */
     
-}
+/*} */
 
 .pagination {
     margin: auto;
@@ -219,4 +225,48 @@ ul {
     background-color: #000000; /* 배경을 검정색으로 */
     color: #ffffff; /* 글자를 하얀색으로 */
 }
+
+.ServiceTable_cell.post_title {
+    white-space: nowrap; /* 한 줄로 만들기 */
+    overflow: hidden;    /* 넘치는 내용 숨기기 */
+    text-overflow: ellipsis; /* 넘친 부분을 '...'으로 표시 */
+    max-width: 247px; /* 원하는 최대 너비 설정 */
+}
+
+
+/* 위치 맞추기 */
+#post_ID{
+    padding-left: 52px;
+}
+
+#join_Date{
+    padding-left: 55px;
+}
+
+#reporter_name{
+    padding-left: 23px;
+}
+
+#reported_name{
+    padding-right: 64px;
+}
+
+#post_Title{
+    padding-right: 36px;
+}
+
+#report_Cause{
+    padding-left: 55px;
+}
+
+#report_status{
+    padding-right: 60px;
+    padding-left: 10px;
+}
+
+#edit_Btn{
+    padding-left: 25px;
+    padding-right: 50px;
+}
+
 
