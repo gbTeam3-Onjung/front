@@ -80,7 +80,7 @@
 
 .ServiceTable_cell {
     display: table-cell;
-    padding: 10px;
+    padding: 10px 25px 10px 25px;
     box-sizing: border-box;
     text-align: center;
     vertical-align: middle; /* 수직 가운데 정렬 */
@@ -120,32 +120,35 @@
 .headerCell:nth-child(2),
 .ServiceTable_cell:nth-child(2) {
     width: 49px; /* ID 열 너비 */
+    
 }
 
 .headerCell:nth-child(3),
 .ServiceTable_cell:nth-child(3) {
-    width: 190px; /* Name 열 너비 */
+    width: 150px; /* Name 열 너비 */
 }
 
 .headerCell:nth-child(4),
 .ServiceTable_cell:nth-child(4) {
-    width: 200px; /* Name 열 너비 */
+    width: 150px; /* Name 열 너비 */
 }
 
 .headerCell:nth-child(5),
 .ServiceTable_cell:nth-child(5) {
-    width: 330px; /* Email 열 너비 */
+    width: 150px; /* Email 열 너비 */
 }
 
 .headerCell:nth-child(6),
 .ServiceTable_cell:nth-child(6) {
-    width: 100px; /* Role 열 너비 */
+    width: 300px;
+    padding: 10px 30px 10px 30px; /* Role 열 너비 */
 }
 
 .headerCell:nth-child(7),
 .ServiceTable_cell:nth-child(7) {
     
-    width: 190px; /* Role 열 너비 */
+    width: 250px; /* Role 열 너비 */
+    padding-left: 0px;
     
 }
 
@@ -219,4 +222,6 @@ ul {
     background-color: #000000; /* 배경을 검정색으로 */
     color: #ffffff; /* 글자를 하얀색으로 */
 }
+
+
 
