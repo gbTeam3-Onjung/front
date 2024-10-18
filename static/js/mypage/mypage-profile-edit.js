@@ -42,18 +42,22 @@ const nickNameCheckDiv1 = document.querySelector("#nickNameCheck1");
 // 유효성 검사에 따른 에러메시지2
 const nickNameCheckDiv2 = document.querySelector("#nickNameCheck2");
 
-console.log("hi");
+// 유효성 검사 후 disable될 저장버튼
+const disableButton = document.getElementById("disableButton");
+
+// console.log("hi");
 // 이벤트 리스너 추가
 nickNameInput.addEventListener("input", () => {
     // 첫 번째 조건: 입력값이 비어 있는 경우
-
-    // 두 번째 조건: '_'를 제외한 모든 특수문자가 포함된 경우
+    // 두 번째 조건: 값이 있으면서 '_'를 제외한 모든 특수문자가 포함된 경우
+    // 세 번째 조건: 값이 있는데 '_'를 제외한 특수문자가 포함되지않은 경우
     const specialCharRegex = /[!@#$%^&*()\-+={}\[\]:;"'<>,.?/\\|`~]/;
-    if (nickNameInput.value && !specialCharRegex.test(nickNameInput.value)) {
-        nickNameLabel.classList.remove("error");
-        nickNameInput.classList.remove("error");
+    if (!nickNameInput.value) {
+        nickNameLabel.classList.add("error");
+        nickNameInput.classList.add("error");
+        nickNameCheckDiv1.style.display = "block";
         nickNameCheckDiv2.style.display = "none";
-        nickNameCheckDiv1.style.display = "none";
+        disableButton.classList.add("disable"); // 버튼 비활성화
     } else if (
         nickNameInput.value &&
         specialCharRegex.test(nickNameInput.value)
@@ -62,11 +66,16 @@ nickNameInput.addEventListener("input", () => {
         nickNameInput.classList.add("error");
         nickNameCheckDiv2.style.display = "block";
         nickNameCheckDiv1.style.display = "none";
-    } else if (!nickNameInput.value) {
-        nickNameLabel.classList.add("error");
-        nickNameInput.classList.add("error");
-        nickNameCheckDiv1.style.display = "block";
+        disableButton.classList.add("disable"); // 버튼 비활성화
+    } else if (
+        nickNameInput.value &&
+        !specialCharRegex.test(nickNameInput.value)
+    ) {
+        nickNameLabel.classList.remove("error");
+        nickNameInput.classList.remove("error");
         nickNameCheckDiv2.style.display = "none";
+        nickNameCheckDiv1.style.display = "none";
+        disableButton.classList.remove("disable"); // 버튼 활성화
     }
 });
 
@@ -109,3 +118,21 @@ postContent2.addEventListener("keyup", (e) => {
 postContent2.addEventListener("blur", (e) => {
     wordLength2.innerText = `${postContent2.value.length}/${maxWordLength20}`;
 });
+
+// 이미지
+document.getElementById("profile_image").addEventListener("change", (event) => {
+    const file = event.target.files[0];
+
+    if (file) {
+        const reader = new FileReader();
+
+        reader.onload = (e) => {
+            const newImageSrc = e.target.result;
+            document.querySelector(".hdWpKs").src = newImageSrc;
+        };
+        reader.readAsDataURL(file);
+    }
+});
+
+// 저장할 수 있는 조건이 아닐때 저장하기 버튼 비활성화
+// const disableButton = document.getElementById("#disableButton");
