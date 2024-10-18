@@ -8,21 +8,30 @@ html body #root {
     margin: 0;
     padding: 0;
 }
-a, h1, h2, h3, h4, h5, h6 {
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: inherit;
     font-size: inherit;
 }
 
-body, html {
+body,
+html {
     background-color: #fff;
-    font: 12px / 18px "Noto Sans KR", NanumGothic, "나눔고딕", "Nanum Gothic", "맑은 고딕", "Malgun Gothic", Dotum;
+    font: 12px / 18px "Noto Sans KR", NanumGothic, "나눔고딕", "Nanum Gothic",
+        "맑은 고딕", "Malgun Gothic", Dotum;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
     text-align: left;
     width: 100%;
 }
-body, html {
+body,
+html {
     -webkit-text-size-adjust: none;
     -moz-text-size-adjust: none;
     text-size-adjust: none;
@@ -97,7 +106,8 @@ img {
     z-index: 1;
     right: 0px;
 }
-.slick-prev, .slick-next {
+.slick-prev,
+.slick-next {
     background: transparent;
     border: none;
     color: transparent;
@@ -138,7 +148,8 @@ img {
     display: flex;
     margin: 0px;
 }
-.slick-track::before, .slick-track::after {
+.slick-track::before,
+.slick-track::after {
     content: "";
     display: table;
 }
@@ -311,6 +322,7 @@ img {
 }
 .slick-slide img {
     display: block;
+    object-fit: scale-down !important;
 }
 .ksntxd img {
     object-fit: cover;
@@ -326,6 +338,7 @@ img {
     background-color: rgb(59, 120, 255);
     display: flex !important;
 }
+
 .clnuty .banner-content-wrapper.inner1 {
     max-width: 1440px;
     width: 100%;
@@ -879,7 +892,6 @@ img {
     width: 100%;
 }
 
-
 .jmqkoz > .inner.max-inner {
     padding: 0px 80px;
 }
@@ -939,9 +951,9 @@ img {
     font-size: 12px;
     line-height: 18px;
     letter-spacing: -0.25px;
-    --color: #8E94A0;
-    --sub-color: #6F778512;
-    --border-color: #8E94A04C;
+    --color: #8e94a0;
+    --sub-color: #6f778512;
+    --border-color: #8e94a04c;
 }
 .jgkeau {
     display: inline-block;
@@ -1258,4 +1270,6 @@ img {
     letter-spacing: -0.25px;
     font-weight: 500;
     color: rgb(142, 148, 160);
+}
+.slick-slide img {
 }
