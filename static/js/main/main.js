@@ -8,89 +8,144 @@ let count = 0; // 현재 배너 위치를 나타내는 카운터를 0으로 초�
 let arrowCheck = true; // 화살표 버튼의 중복 클릭을 방지하기 위한 플래그
 
 firstBanner.innerHTML = `
-<div
-    data-index="-9"
-    tabindex="-1"
-    class="slick-slide slick-cloned"
-    aria-hidden="true"
-    id="first"
->
-    <div>
-        <a
-            tabindex="-1"
-            href=""
-            target="_self"
-            class="lggyey ejtbh banner-link pc"
-            style="width: 100%; display: inline-block;"
-        >
-            <div class="banner-content-wrapper inner1">
-                <div class="banner-content-wrapper inner2">
-                    <div class="banner-content-wrapper inner3">
-                        <span class="cotmec banner-web-sub-title">10월에도 쏟아지는 9만 원의 혜택!</span>
-                        <span class="cotmec banner-web-title">가을맞이 FLEX WEEK! 매주 변하는 카테고리 혜택</span>
-                    </div>
-                    <button class="elrdiz banner-button-primary">
-                        자세히 알아보기
-                        <svg viewBox="0 0 12 12" class="ifpvod banner-button-arrow">
-                            <path
-                                fill-rule="evenodd"
-                                clip-rule="evenodd"
-                                d="M3.68888 11.0004C3.85188 11.0004 4.01388 10.9424 4.13688 10.8264L8.81688 6.43738C9.06088 6.20738 9.06088 5.83638 8.81588 5.60738L4.07988 1.17438C3.83288 0.942377 3.43288 0.942377 3.18588 1.17138C2.93888 1.40038 2.93788 1.77238 3.18388 2.00338L7.47788 6.02238L3.24088 9.99738C2.99588 10.2294 2.99688 10.6014 3.24488 10.8294C3.36788 10.9434 3.52888 11.0004 3.68888 11.0004Z"
-                            ></path>
-                        </svg>
-                    </button>
-                </div>
-                <img
-                    class="hkaqym banner-web-image"
-                    src="https://cdn-dantats.stunning.kr/prod/banner/9d2eecc2-683d-42df-a52d-809c62062933/webimage/PXT8QHCDz5Cq5aT9.%E1%84%8F%E1%85%A9%E1%86%AB%E1%84%90%E1%85%A6%E1%84%89%E1%85%B3%E1%84%90%E1%85%B3%20%E1%84%86%E1%85%AE%E1%84%92%E1%85%A1%E1%86%AB%E1%84%90%E1%85%B5%E1%84%8F%E1%85%A6%E1%86%BA%20%E1%84%92%E1%85%A9%E1%86%B7%20%E1%84%87%E1%85%A2%E1%84%82%E1%85%A5.png.small?t=crop&q=100&s=1160x640"
-                />
-            </div>
-        </a>
-    </div>
-</div>`; // 첫 번째 배너의 HTML 설정
+ <div
+                                                        data-index="-9"
+                                                        tabindex="-1"
+                                                        class="slick-slide slick-cloned"
+                                                        aria-hidden="true"
+                                                        id="first"
+                                                    >
+                                                        <div>
+                                                            <a
+                                                                tabindex="-1"
+                                                                href=""
+                                                                target="_self"
+                                                                class="lggyey ejtbh banner-link pc"
+                                                                style="
+                                                                    width: 100%;
+                                                                    display: inline-block;
+                                                                "
+                                                            >
+                                                                <div
+                                                                    class="banner-content-wrapper inner1"
+                                                                >
+                                                                    <div
+                                                                        class="banner-content-wrapper inner2"
+                                                                    >
+                                                                        <div
+                                                                            class="banner-content-wrapper inner3"
+                                                                        >
+                                                                            <span
+                                                                                class="cotmec banner-web-sub-title"
+                                                                                >후원
+                                                                                게시판</span
+                                                                            >
+                                                                            <span
+                                                                                class="cotmec banner-web-title"
+                                                                                >아픈
+                                                                                딸에게
+                                                                                아무
+                                                                                것도
+                                                                                해줄
+                                                                                수가
+                                                                                없습니다</span
+                                                                            >
+                                                                        </div>
+                                                                        <button
+                                                                            class="elrdiz banner-button-primary"
+                                                                        >
+                                                                            자세히
+                                                                            알아보기
+                                                                            <svg
+                                                                                viewBox="0 0 12 12"
+                                                                                class="ifpvod banner-button-arrow"
+                                                                            >
+                                                                                <path
+                                                                                    fill-rule="evenodd"
+                                                                                    clip-rule="evenodd"
+                                                                                    d="M3.68888 11.0004C3.85188 11.0004 4.01388 10.9424 4.13688 10.8264L8.81688 6.43738C9.06088 6.20738 9.06088 5.83638 8.81588 5.60738L4.07988 1.17438C3.83288 0.942377 3.43288 0.942377 3.18588 1.17138C2.93888 1.40038 2.93788 1.77238 3.18388 2.00338L7.47788 6.02238L3.24088 9.99738C2.99588 10.2294 2.99688 10.6014 3.24488 10.8294C3.36788 10.9434 3.52888 11.0004 3.68888 11.0004Z"
+                                                                                ></path>
+                                                                            </svg>
+                                                                        </button>
+                                                                    </div>
+                                                                    <img
+                                                                        class="hkaqym banner-web-image"
+                                                                        src="../../static/images/banner2.jpg"
+                                                                    />
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>`; // 첫 번째 배너의 HTML 설정
 banner.appendChild(firstBanner); // 첫 번째 배너를 배너 컨테이너 끝에 추가
 
 lastBanner.innerHTML = `
-<div
-    data-index="-1"
-    tabindex="-1"
-    class="slick-slide slick-cloned"
-    aria-hidden="true"
->
-    <div>
-        <a
-            tabindex="-1"
-            href=""
-            target="_blank"
-            class="bnqwuj ejtbh banner-link pc"
-            style="width: 100%; display: inline-block;"
-            id="last"
-        >
-            <div class="banner-content-wrapper inner1">
-                <div class="banner-content-wrapper inner2">
-                    <div class="banner-content-wrapper inner3">
-                        <span class="cotmec banner-web-sub-title">국내 NO.1 인쇄물 제작업체!</span>
-                        <span class="cotmec banner-web-title">당일 주문/제작/발송 국내 최저가 오직! 프린트시티</span>
-                    </div>
-                    <button class="gkeyjr banner-button-primary">
-                        믿고 맡기는 라우드 제작
-                        <svg viewBox="0 0 12 12" class="ifpvod banner-button-arrow">
-                            <path
-                                fill-rule="evenodd"
-                                clip-rule="evenodd"
-                                d="M3.68888 11.0004C3.85188 11.0004 4.01388 10.9424 4.13688 10.8264L8.81688 6.43738C9.06088 6.20738 9.06088 5.83638 8.81588 5.60738L4.07988 1.17438C3.83288 0.942377 3.43288 0.942377 3.18588 1.17138C2.93888 1.40038 2.93788 1.77238 3.18388 2.00338L7.47788 6.02238L3.24088 9.99738C2.99588 10.2294 2.99688 10.6014 3.24488 10.8294C3.36788 10.9434 3.52888 11.0004 3.68888 11.0004Z"
-                            ></path>
-                        </svg>
-                    </button>
-                </div>
-                <img
-                    class="hkaqym banner-web-image"
-                    src="https://cdn-dantats.stunning.kr/prod/banner/8aca0f63-1d3b-4e6d-a3ec-4404690b63e4/webimage/4GiYSQ9SNR75Z7jU.KakaoTalk_20240924_172446790_01.jpg.small?t=crop&q=100&s=1160x640"
-                />
-            </div>
-        </a>
-    </div>
-</div>`; // 마지막 배너의 HTML 설정
+ <div
+                                                        data-index="-1"
+                                                        tabindex="-1"
+                                                        class="slick-slide slick-cloned"
+                                                        aria-hidden="true"
+                                                    >
+                                                        <div>
+                                                            <a
+                                                                tabindex="-1"
+                                                                href=""
+                                                                target="_blank"
+                                                                class="bnqwuj ejtbh banner-link pc"
+                                                                style="
+                                                                    width: 100%;
+                                                                    display: inline-block;
+                                                                "
+                                                                id="last"
+                                                            >
+                                                                <div
+                                                                    class="banner-content-wrapper inner1"
+                                                                >
+                                                                    <div
+                                                                        class="banner-content-wrapper inner2"
+                                                                    >
+                                                                        <div
+                                                                            class="banner-content-wrapper inner3"
+                                                                        >
+                                                                            <span
+                                                                                class="cotmec banner-web-sub-title"
+                                                                                >후원게시판</span
+                                                                            >
+                                                                            <span
+                                                                                class="cotmec banner-web-title"
+                                                                                >학교에
+                                                                                가고
+                                                                                싶은
+                                                                                키르기스스탄
+                                                                                장애아동들을
+                                                                                도와주세요!</span
+                                                                            >
+                                                                        </div>
+                                                                        <button
+                                                                            class="gkeyjr banner-button-primary"
+                                                                        >
+                                                                            자세히
+                                                                            알아보기
+                                                                            <svg
+                                                                                viewBox="0 0 12 12"
+                                                                                class="ifpvod banner-button-arrow"
+                                                                            >
+                                                                                <path
+                                                                                    fill-rule="evenodd"
+                                                                                    clip-rule="evenodd"
+                                                                                    d="M3.68888 11.0004C3.85188 11.0004 4.01388 10.9424 4.13688 10.8264L8.81688 6.43738C9.06088 6.20738 9.06088 5.83638 8.81588 5.60738L4.07988 1.17438C3.83288 0.942377 3.43288 0.942377 3.18588 1.17138C2.93888 1.40038 2.93788 1.77238 3.18388 2.00338L7.47788 6.02238L3.24088 9.99738C2.99588 10.2294 2.99688 10.6014 3.24488 10.8294C3.36788 10.9434 3.52888 11.0004 3.68888 11.0004Z"
+                                                                                ></path>
+                                                                            </svg>
+                                                                        </button>
+                                                                    </div>
+                                                                    <img
+                                                                        class="hkaqym banner-web-image"
+                                                                        src="../../static/images/banner9.jpg
+                                                                        "
+                                                                    />
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>`; // 마지막 배너의 HTML 설정
 banner.prepend(lastBanner); // 마지막 배너를 배너 컨테이너 맨 앞에 추가
 
 banner.style.transform = `translate3d(4248px,0px,0px)`; // 초기 배너 위치를 조정하여 첫 번째 배너가 보이도록 설정
@@ -114,7 +169,7 @@ const autoSlide = () => {
     }
 };
 // 3초 간격으로 자동 슬라이드 실행
-autoSlideInterval = setInterval(autoSlide, 500);
+// autoSlideInterval = setInterval(autoSlide, 300);
 
 // 좌우 화살표 클릭 이벤트 처리
 arrows.forEach((arrow) => {
@@ -161,7 +216,7 @@ arrows.forEach((arrow) => {
             }
         }
 
-        autoSlideInterval = setInterval(autoSlide, 3000); // 자동 슬라이드 재개
+        // autoSlideInterval = setInterval(autoSlide, 3000); // 자동 슬라이드 재개
 
         setTimeout(() => {
             arrowCheck = true; // 클릭 가능 상태로 플래그 재설정

@@ -263,21 +263,9 @@ let cardHTML = `
                         </div>
                     </div>
                     <div class="expert-card-info-meta">
+                       
                         <div class="info-meta-container expert-card-info-meta-item">
-                            <span class="expert-card-info-meta-item-title">총 수익</span>
-                            <div class="expert-card-info-meta-item-spacer"></div>
-                            <div class="expert-card-info-meta-item-value">
-                                <p title=" 원+">
-                                    <span class="number-text-number-container">
-                                        <span class="number number-text-number">3</span>
-                                       
-                                    </span>
-                                    <span class="number-text-suffix">억원+ </span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="info-meta-container expert-card-info-meta-item">
-                            <span class="expert-card-info-meta-item-title">우승</span>
+                            <span class="expert-card-info-meta-item-title">봉사활동 모집 수</span>
                             <div class="expert-card-info-meta-item-spacer"></div>
                             <div class="expert-card-info-meta-item-value">
                                 <p class="info-meta-default" title="00">
@@ -289,22 +277,10 @@ let cardHTML = `
                                 </p>
                             </div>
                         </div>
-                        <div class="info-meta-container expert-card-info-meta-item">
-                            <span class="expert-card-info-meta-item-title">총 거래</span>
-                            <div class="expert-card-info-meta-item-spacer"></div>
-                            <div class="expert-card-info-meta-item-value">
-                                <p class="info-meta-default" title=" 건+">
-                                    <span class="number-text-number-container">
-                                        <span class="number number-text-number">700</span>
-                                       
-                                    </span>
-                                    <span class="number-text-suffix">건+</span>
-                                </p>
-                            </div>
-                        </div>
+                     
                      
                         <div class="info-meta-container expert-card-info-meta-item">
-                            <span class="expert-card-info-meta-item-title">리뷰</span>
+                            <span class="expert-card-info-meta-item-title">후기</span>
                             <div class="expert-card-info-meta-item-spacer"></div>
                             <div class="expert-card-info-meta-item-value">
                                 <p class="info-meta-default" title="00">
@@ -324,7 +300,7 @@ let cardHTML = `
                         </div>
                     </div>
                     <button class="inquiry-button expert-card-inquire">
-                        <span class="visual-correction">견적 문의</span>
+                        <span class="visual-correction">정보 보기</span>
                     </button>
                 </div>
             </div>

@@ -53,20 +53,20 @@
 }
 
 /* 공용 모달창 스타일 */
-.modal {
-    display: none; /* 기본적으로 모달창은 보이지 않음 */
+/* .modal {
+    display: none; 
     position: fixed;
     z-index: 1000;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%); /* 모달창을 화면 중앙에 위치 */
-    width: 60%; /* 화면의 70%를 차지 */
-    height: 90%; /* 화면의 70%를 차지 */
+    transform: translate(-50%, -50%); 
+    width: 60%; 
+    height: 90%; 
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow-y: auto; /* 모달창 안에만 스크롤바 표시 */
+    overflow-y: auto; 
     border-radius: 8px;
-}
+} */
 
 /* 공용 모달창 외부를 어둡게 처리 */
 .modal-overlay {
