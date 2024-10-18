@@ -101,7 +101,7 @@ const autoSlide = () => {
     banner.style.transition = `transform 0.5s`; // 배너 이동 애니메이션 설정
     banner.style.transform = `translate3d(${4248 - 1062 * count}px, 0, 0)`; // 배너 이동
 
-    console.log(`현재 배너 인덱스: ${count}`); // 현재 인덱스 출력
+    // console.log(`현재 배너 인덱스: ${count}`); // 현재 인덱스 출력
 
     if (count === 9) {
         // 마지막 배너 위치를 넘었을 경우
@@ -109,11 +109,10 @@ const autoSlide = () => {
             banner.style.transition = `transform 0s`; // 애니메이션 없이 배너 위치 초기화
             banner.style.transform = `translate3d(4248px, 0, 0)`; // 처음 위치로 초기화
             count = 0; // 카운터를 첫 번째 배너로 초기화
-            console.log(`현재 배너 인덱스: ${count}`); // 첫 번째 배너로 초기화 후 인덱스 출력
+            // console.log(`현재 배너 인덱스: ${count}`); // 첫 번째 배너로 초기화 후 인덱스 출력
         }, 500);
     }
 };
-
 // 3초 간격으로 자동 슬라이드 실행
 autoSlideInterval = setInterval(autoSlide, 500);
 
@@ -167,5 +166,25 @@ arrows.forEach((arrow) => {
         setTimeout(() => {
             arrowCheck = true; // 클릭 가능 상태로 플래그 재설정
         }, 500);
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector("#roller1").style.left = "0px";
+        document.querySelector("#roller2").style.left =
+            document.querySelector(".rfm-initial-child-container").offsetWidth +
+            "px";
+
+        // 롤링 배너 복제본 생성
+        let roller = document.querySelector(".rfm-initial-child-container");
+        roller.id = "roller1"; // 아이디 부여
+
+        let clone = roller.cloneNode(true); // 복제본 생성
+        clone.id = "roller2";
+        document.querySelector(".rfm-marquee").appendChild(clone); // rfm-marquee 하위에 추가
+
+        roller.classList.add("original");
+        clone.classList.add("clone");
     });
 });

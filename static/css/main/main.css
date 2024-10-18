@@ -866,7 +866,7 @@ img {
 }
 .jmqkoz .review-title > h2 {
     margin-top: 14px;
-    white-space: pre-wrap;
+    /* white-space: pre-wrap; */
     font-size: 32px;
     line-height: 44px;
     letter-spacing: -0.5px;
@@ -1013,6 +1013,7 @@ img {
     animation-play-state: var(--play);
     animation-delay: var(--delay);
     animation-direction: var(--direction);
+    animation: roll 30s linear infinite;
 }
 .rfm-initial-child-container {
     flex: 0 0 auto;
@@ -1163,13 +1164,13 @@ img {
     gap: 4px;
 }
 .jqtfdi {
-    display: -webkit-box;
+    /* display: -webkit-box; */
     text-overflow: ellipsis;
-    white-space: pre-wrap;
+    /* white-space: pre-wrap; */
     line-height: inherit;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    -webkit-line-clamp: 1;
+    /* -webkit-line-clamp: 1; */
     word-break: break-word;
 }
 .diltce {
@@ -1206,11 +1207,14 @@ img {
 .ffbtyh {
     display: -webkit-box;
     text-overflow: ellipsis;
-    white-space: pre-wrap;
+    -webkit-box-orient: vertical;
+    /* white-space: pre-wrap; */
     line-height: inherit;
     -webkit-box-orient: vertical;
     overflow: hidden;
     -webkit-line-clamp: 4;
+    line-clamp: 4; /* 표준 속성으로 추가 */
+    line-height: inherit;
     word-break: keep-all;
 }
 .iookvl .content-wrapper .bottom-info {
@@ -1259,3 +1263,40 @@ img {
     font-weight: 500;
     color: rgb(142, 148, 160);
 }
+.hjwjst .main-home-review-card > a:hover {
+    position: relative;
+    transform: translateY(-10px);
+    transition-property: box-shadow, transform;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 20px;
+}
+.hlisls:not([disabled]):hover, .hlisls:not([disabled]):focus {
+    opacity: 0.8;
+}
+
+.rfm-initial-child-container.original {
+	animation: rollingleft1 33s linear infinite;
+}
+
+.rfm-initial-child-container.clone {
+	animation: rollingleft2 33s linear infinite;
+}
+
+/* 롤링 배너 애니메이션 */
+@keyframes roll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* 마르퀴 애니메이션 */
+  .rfm-marquee {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    animation: roll 30s linear infinite;
+  }
