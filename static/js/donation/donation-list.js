@@ -104,8 +104,7 @@ const createListItem = () => {
                                                         <label
                                                             class="deadline state active"
                                                             >18일 남음</label
-                                                        >기타<span
-                                                        ></span>일반/기타
+                                                        >
                                                     </div>
                                                     <div
                                                         class="outline-info-title"
@@ -230,12 +229,12 @@ const createListItem = () => {
                                                         ></path>
                                                         <defs></defs>
                                                     </svg>
-                                                    <span>총 상금</span>
+                                                    <span>목표 기부액</span>
                                                 </div>
                                                 <div
                                                     class="prize-info-row-label"
                                                 >
-                                                    1,600만원
+                                                    1,600 포인트
                                                 </div>
                                             </li>
                                             <li class="prize-info-row">
