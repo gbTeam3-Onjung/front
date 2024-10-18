@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // 모든 lnb-item 요소를 선택
     const Items = document.querySelectorAll(".lnb-item");
 
-    // if (Items.length === 0) {
+    // if (Items.length === 0) { /**점검**/
     //     console.error("lnb-item 요소를 찾을 수 없습니다. HTML을 확인해주세요.");
     // } else {
     //     console.log(`총 ${Items.length}개의 lnb-item 요소를 찾았습니다.`);
@@ -99,12 +99,12 @@ document
 
 ////////////////////////////////////////////////////////////////////////
 
-// 결제 관리 - 결제 내역 js
-document.addEventListener("DOMContentLoaded", function () {
-    const labelElement = document.querySelector(".fIGvfF.date-range");
-    if (labelElement) {
-        labelElement.addEventListener("click", function () {
-            this.classList.toggle("active");
-        });
-    }
-});
+// // 결제 관리 - 결제 내역 js
+// document.addEventListener("DOMContentLoaded", function () {
+//     const labelElement = document.querySelector(".fIGvfF.date-range");
+//     if (labelElement) {
+//         labelElement.addEventListener("click", function () {
+//             this.classList.toggle("active");
+//         });
+//     }
+// });
