@@ -225,21 +225,21 @@ arrows.forEach((arrow) => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    document.addEventListener("DOMContentLoaded", function () {
-        document.querySelector("#roller1").style.left = "0px";
-        document.querySelector("#roller2").style.left =
-            document.querySelector(".rfm-initial-child-container").offsetWidth +
-            "px";
+    // 롤링 배너 복제본 생성
+    let roller = document.querySelector(".rfm-initial-child-container");
+    roller.id = "roller1"; // 첫 번째 롤러 아이디 설정
 
-        // 롤링 배너 복제본 생성
-        let roller = document.querySelector(".rfm-initial-child-container");
-        roller.id = "roller1"; // 아이디 부여
+    let clone = roller.cloneNode(true); // 자식까지 복제하도록 true 설정
+    clone.id = "roller2"; // 복제본에 아이디 부여
+    document.querySelector(".rfm-marquee").appendChild(clone); // wrap 대신 rfm-marquee에 복제본 추가
 
-        let clone = roller.cloneNode(true); // 복제본 생성
-        clone.id = "roller2";
-        document.querySelector(".rfm-marquee").appendChild(clone); // rfm-marquee 하위에 추가
+    // 첫 번째 배너 위치 설정
+    document.querySelector("#roller1").style.left = "0px";
 
-        roller.classList.add("original");
-        clone.classList.add("clone");
-    });
+    // 두 번째 배너를 첫 번째 배너 크기만큼 옆에 위치시킴
+    document.querySelector("#roller2").style.left = roller.offsetWidth + "px";
+
+    // 스타일 클래스 추가
+    roller.classList.add("original");
+    clone.classList.add("clone");
 });
