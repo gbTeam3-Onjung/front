@@ -1,7 +1,7 @@
 const sections = document.querySelectorAll("section.admin-page");
 const submenus = document.querySelectorAll("a.MenuItems_submenu");
 const inquiryButtons = document.querySelectorAll("button.inquiry-button");
-const notificationWrap = document.querySelector(".notification-wrap");
+const notificationListWrap = document.querySelector(".notification-list-wrap");
 
 NodeList.prototype.filter = Array.prototype.filter;
 
@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 let notificationContainer = `<li class="notification-container">
-                                <a href="" class="notification notification-table"
+                                <a href="#" class="notification notification-table"
                                     ><p class="notification-num notification-table">8</p>
                                     <h4 class="notification-title">10.22 업데이트 내용 및 바뀐 회원정보 관리 방식 안내</h4>
                                     <p class="notification-date notification-table">2024.10.21</p></a>
@@ -170,7 +170,7 @@ text += notificationContainer;
 text += notificationContainer;
 text += notificationContainer;
 
-notificationWrap.innerHTML = text;
+notificationListWrap.innerHTML = text;
 
 let notificationLinks = document.querySelectorAll(
     "a.notification.notification-table"

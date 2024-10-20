@@ -37,3 +37,7 @@ section.admin-page.selected {
 .ServiceHeader_container .ServiceHeader_title.notification-title {
     margin: 24px 16px;
 }
+
+.sidebar > ul > li {
+    height: 40px;
+}
