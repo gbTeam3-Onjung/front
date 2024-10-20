@@ -230,7 +230,7 @@ const createListItem = () => {
                                                         ></path>
                                                         <defs></defs>
                                                     </svg>
-                                                    <span>총 상금</span>
+                                                    <span>목표 기부액</span>
                                                 </div>
                                                 <div
                                                     class="prize-info-row-label"
