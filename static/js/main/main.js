@@ -169,7 +169,7 @@ const autoSlide = () => {
     }
 };
 // 3초 간격으로 자동 슬라이드 실행
-// autoSlideInterval = setInterval(autoSlide, 300);
+autoSlideInterval = setInterval(autoSlide, 2000);
 
 // 좌우 화살표 클릭 이벤트 처리
 arrows.forEach((arrow) => {
