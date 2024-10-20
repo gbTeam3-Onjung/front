@@ -371,3 +371,24 @@ input:focus {
     border-color:blue; 
     outline: none;
 }
+body form[name=login-form] .warning-msg {
+    display: block;
+    font-size: 12px;
+    color: #f21724;
+    white-space: break-spaces;
+    background: url(https://accounts-front.stunning.kr/assets/img/common/ico-caution.png) 0 0 no-repeat;
+    background-size: 12px 12px;
+    padding-left: 15px;
+    margin-top: 12px;
+}
+
+input.warning {
+    border-color: #f21724;
+    padding-right: 8%;
+}
+/* 비밀번호 입력 필드의 스타일을 통일 */
+input[type="password"],
+input[type="text"] {
+    font-family: inherit; 
+    padding-left: 10px; 
+}
