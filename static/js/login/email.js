@@ -1,15 +1,31 @@
 document.addEventListener("DOMContentLoaded", function () {
     const checkbox = document.querySelector("#chk-agree");
     const completeButton = document.querySelector(".register-btn-complete");
+
+    // 이메일
     const emailInput = document.getElementById("email");
     const sendAuthButton = document.querySelector(".button-btn-send");
-    const sendAuthButton2 = document.querySelector(".button-btn-send2");
     const emailCodeInput = document.getElementById("email-code");
-    const passwordInput = document.getElementById("password");
-    const passwordConfirmInput = document.getElementById("password-confirm");
     const emailCodeBox = document.querySelector(".register-email-code-box");
     const countdownTimer = document.getElementById("countdown-timer");
     const emailRegex = /^[^\s@]+@[^\s@]+\.(com|net)$/;
+
+    // 전화번호
+    const phoneInput = document.getElementById("phone-number");
+    const sendPhoneAuthButton = document.querySelector(
+        ".button-btn-send-phone"
+    );
+    const phoneCodeInput = document.getElementById("phone-code");
+    const phoneCodeBox = document.querySelector(".register-phone-code-box");
+    const phoneCountdownTimer = document.getElementById(
+        "countdown-timer-phone"
+    );
+    const phoneRegex = /^01[016789]\d{7,8}$/;
+
+    // 비밀번호
+    const passwordInput = document.getElementById("password");
+    const passwordConfirmInput = document.getElementById("password-confirm");
+
     const passwordWarningMessage = document.querySelector(
         ".password-warning-msg"
     );
@@ -19,12 +35,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const passwordShowBtns = document.querySelectorAll(".password-show-btn");
     const checkboxWarningMessage = document.querySelector(".warning-msg2");
 
-    let timerInterval; // 타이머 인터벌 변수
-    let isCodeSent = false; // 인증번호 발송 여부를 나타내는 플래그
+    let emailTimerInterval;
+    let phoneTimerInterval;
+    let isEmailCodeSent = false;
+    let isPhoneCodeSent = false;
 
     // 인증번호 입력란을 초기에는 숨김
     emailCodeBox.style.display = "none";
+    phoneCodeBox.style.display = "none";
 
+    // ================================================================================================
     // 이메일 입력 필드에서 입력이 변경될 때 호출되는 함수
     emailInput.addEventListener("input", function () {
         const emailValue = emailInput.value.trim();
@@ -49,7 +69,18 @@ document.addEventListener("DOMContentLoaded", function () {
             if (successMessage) successMessage.style.display = "none";
         }
     });
+    // 인증 번호 입력 시 인증 완료 버튼 활성화 로직 추가 (이메일 인증번호)
+    emailCodeInput.addEventListener("input", function () {
+        const emailCodeValue = emailCodeInput.value.trim();
 
+        if (emailCodeValue.length > 0) {
+            confirmButton.classList.add("button-send-active"); // 인증 완료 버튼 활성화
+            confirmButton.style.cursor = "pointer"; // 커서 스타일 변경
+        } else {
+            confirmButton.classList.remove("button-send-active"); // 입력값이 없으면 비활성화
+            confirmButton.style.cursor = "default";
+        }
+    });
     // 인증 버튼 클릭 시 이메일 유효성 검사 및 인증번호 발송
     sendAuthButton.addEventListener("click", function () {
         const emailValue = emailInput.value.trim();
@@ -86,13 +117,13 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             emailCodeBox.style.display = "block"; // 인증번호 입력란 표시
-            isCodeSent = true; // 인증번호 발송 상태로 설정
+            isEmailCodeSent = true; // 인증번호 발송 상태로 설정
 
             // 10분 카운트다운 시작
             let timeLeft = 10 * 60; // 10분
-            clearInterval(timerInterval);
+            clearInterval(emailTimerInterval);
             countdownTimer.style.display = "block"; // 타이머 표시
-            timerInterval = setInterval(() => {
+            emailTimerInterval = setInterval(() => {
                 const minutes = Math.floor(timeLeft / 60);
                 const seconds = timeLeft % 60;
                 countdownTimer.textContent = `${String(minutes).padStart(
@@ -102,14 +133,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // 시간이 다 되면
                 if (timeLeft <= 0) {
-                    clearInterval(timerInterval);
+                    clearInterval(emailTimerInterval);
                     countdownTimer.textContent = ""; // 타이머 초기화
                     showWarningMessage(
                         "입력 시간을 초과하였습니다.",
                         emailCodeInput
                     ); // 경고 메시지 표시
                     emailCodeBox.style.display = "none"; // 인증번호 입력란 숨기기
-                    isCodeSent = false; // 인증번호 발송 상태 초기화
+                    isEmailCodeSent = false; // 인증번호 발송 상태 초기화
                 }
                 timeLeft--;
             }, 1000);
@@ -123,75 +154,125 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // 이메일 입력 필드에서 경고 메시지 숨기기
-    emailInput.addEventListener("input", function () {
-        const existingWarningMessage = document.querySelector(
-            ".desc-span.warning-msg"
-        );
+    // 전화번호 입력 필드에서 입력이 변경될 때 호출되는 함수
+    phoneInput.addEventListener("input", function () {
+        const phoneValue = phoneInput.value.trim();
         const successMessage = document.querySelector(".desc-span.success-msg");
+        const warningMessage = document.querySelector(".desc-span.warning-msg");
 
-        // 입력 필드가 비어 있을 때
-        if (emailInput.value.length === 0) {
-            emailInput.classList.remove("success-sign", "warning");
-            emailInput.style.borderColor = "#ccc";
-            emailInput.style.outline = "";
-            emailCodeBox.style.display = "none"; // 인증번호 입력란 숨기기
-            sendAuthButton.textContent = "인증"; // 버튼 텍스트 변경
-            emailCodeInput.value = "";
-            countdownTimer.textContent = ""; // 타이머 초기화
-            clearInterval(timerInterval);
+        // 전화번호 값이 없을 경우
+        if (phoneValue === "") {
+            phoneInput.classList.remove("success-sign", "warning");
+            phoneInput.style.border = "1px solid #ccc"; // 기본 테두리 색상
+            phoneInput.style.outline = ""; // 기본 아웃라인
+            sendPhoneAuthButton.classList.remove("button-send-phone-active");
 
-            if (existingWarningMessage) {
-                existingWarningMessage.style.display = "none";
-            }
-            if (successMessage) {
-                successMessage.style.display = "none";
-            }
+            // 성공 및 경고 메시지 숨기기
+            if (successMessage) successMessage.style.display = "none";
+            if (warningMessage) warningMessage.style.display = "none";
         } else {
-            if (existingWarningMessage) {
-                existingWarningMessage.style.display = "none";
-            }
-            sendAuthButton.textContent = "인증"; // 버튼 텍스트 변경
-            emailCodeBox.style.display = "none"; // 인증번호 입력란 숨기기
+            sendPhoneAuthButton.classList.add("button-send-phone-active"); // 인증 버튼 활성화
+            phoneInput.classList.remove("warning");
+            phoneInput.style.borderColor = "blue"; // 포커스 색상
+
+            if (successMessage) successMessage.style.display = "none";
         }
     });
 
-    // 인증 번호 입력 필드에서 값을 지웠을 때 처리
-    emailCodeInput.addEventListener("input", function () {
-        const successMessage = document.querySelector(
-            ".register-email-code-box .desc-span.success-msg"
-        );
+    // 인증 버튼 클릭 시 전화번호 유효성 검사 및 인증번호 발송
+    sendPhoneAuthButton.addEventListener("click", function () {
+        const phoneValue = phoneInput.value.trim();
 
-        // 입력값이 6자 미만일 때 성공 메시지 숨기기
-        if (emailCodeInput.value.length < 6) {
-            if (successMessage) {
-                successMessage.style.display = "none";
+        // 전화번호 유효성 검사
+        if (phoneRegex.test(phoneValue)) {
+            phoneInput.classList.remove("warning");
+            phoneInput.classList.add("success-sign"); // 성공 스타일 추가
+            phoneInput.style.border = "1px solid #189f14"; // 성공 색상 적용
+
+            // 인증번호 발송 성공 메시지 표시
+            showSuccessMessage("인증 번호가 발송되었습니다.", phoneInput);
+
+            // 인증번호 입력란 초기화
+            phoneCodeInput.value = ""; // 인증번호 입력란 값 초기화
+            phoneCodeInput.classList.remove("success-sign", "warning");
+            phoneCodeInput.style.borderColor = "#ccc"; // 기본 테두리 색상 복원
+            phoneCodeInput.style.outline = ""; // 기본 아웃라인 복원
+
+            // 기존 성공 및 경고 메시지 삭제
+            const existingSuccessMessage = phoneCodeBox.querySelector(
+                ".desc-span.success-msg"
+            );
+            const existingWarningMessage = phoneCodeBox.querySelector(
+                ".desc-span.warning-msg"
+            );
+
+            if (existingSuccessMessage) {
+                existingSuccessMessage.remove();
             }
-        }
 
-        // 입력값이 없을 때 초기화
-        if (emailCodeInput.value.length === 0) {
-            emailCodeInput.classList.remove("success-sign", "warning");
-            emailCodeInput.style.borderColor = "#ccc";
-            emailCodeInput.style.outline = "";
-            confirmButton.classList.remove("button-send-active");
+            if (existingWarningMessage) {
+                existingWarningMessage.remove();
+            }
+
+            phoneCodeBox.style.display = "block"; // 인증번호 입력란 표시
+            isPhoneCodeSent = true; // 인증번호 발송 상태로 설정
+
+            // 10분 카운트다운 시작
+            let timeLeft = 10 * 60; // 10분
+            clearInterval(phoneTimerInterval);
+            phoneCountdownTimer.style.display = "block"; // 타이머 표시
+            phoneTimerInterval = setInterval(() => {
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                phoneCountdownTimer.textContent = `${String(minutes).padStart(
+                    2,
+                    "0"
+                )}:${String(seconds).padStart(2, "0")}`;
+
+                // 시간이 다 되면
+                if (timeLeft <= 0) {
+                    clearInterval(phoneTimerInterval);
+                    phoneCountdownTimer.textContent = ""; // 타이머 초기화
+                    showWarningMessage(
+                        "입력 시간을 초과하였습니다.",
+                        phoneCodeInput
+                    ); // 경고 메시지 표시
+                    phoneCodeBox.style.display = "none"; // 인증번호 입력란 숨기기
+                    isPhoneCodeSent = false; // 인증번호 발송 상태 초기화
+                }
+                timeLeft--;
+            }, 1000);
+
+            sendPhoneAuthButton.textContent = "재전송"; // 버튼 텍스트 변경
         } else {
-            confirmButton.classList.add("button-send-active");
-            emailCodeInput.style.borderColor = "blue"; // 포커스 색상
+            // 전화번호 유효성 검사 실패 시 경고 메시지 표시
+            phoneInput.classList.add("warning");
+            phoneInput.style.borderColor = "#f05050"; // 경고 색상으로 변경
+            showWarningMessage(
+                "전화번호 형식이 올바르지 않습니다.",
+                phoneInput
+            );
+        }
+    });
+    // 인증 번호 입력 시 인증 완료 버튼 활성화 로직 추가 (전화번호 인증번호)
+    phoneCodeInput.addEventListener("input", function () {
+        const phoneCodeValue = phoneCodeInput.value.trim();
+
+        if (phoneCodeValue.length > 0) {
+            confirmPhoneButton.classList.add("button-send-phone-active"); // 인증 완료 버튼 활성화
+            confirmPhoneButton.style.cursor = "pointer"; // 커서 스타일 변경
+        } else {
+            confirmPhoneButton.classList.remove("button-send-phone-active"); // 입력값이 없으면 비활성화
+            confirmPhoneButton.style.cursor = "default";
         }
     });
 
-    // 인증 완료 버튼 클릭 시 유효성 검사
+    // 인증 완료 버튼 클릭 시 유효성 검사 (이메일 인증번호)
     const confirmButton = document.querySelector(
         ".register-email-code-box .button-btn-send"
     );
-    // 인증 완료 버튼 클릭 시 유효성 검사
-    const confirmButton2 = document.querySelector(
-        ".register-email-code-box .button-btn-send2"
-    );
-
     confirmButton.addEventListener("click", function () {
-        if (isCodeSent) {
+        if (isEmailCodeSent) {
             const inputCode = emailCodeInput.value.trim();
             const correctCode = "123456"; // 예시: 올바른 인증번호
 
@@ -214,7 +295,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 emailCodeInput.style.borderColor = "#f05050";
             } else {
                 // 인증 성공 시 성공 메시지 표시 및 스타일 적용
-                clearInterval(timerInterval);
+                clearInterval(emailTimerInterval);
                 countdownTimer.textContent = ""; // 타이머 초기화
                 emailCodeInput.classList.remove("warning");
                 emailCodeInput.classList.add("success-sign");
@@ -229,12 +310,54 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    // 인증 완료 버튼 클릭 시 유효성 검사 (전화번호 인증번호)
+    const confirmPhoneButton = document.querySelector(
+        ".register-phone-code-box .button-btn-send-phone"
+    );
+    confirmPhoneButton.addEventListener("click", function () {
+        if (isPhoneCodeSent) {
+            const inputCode = phoneCodeInput.value.trim();
+            const correctCode = "123456"; // 예시: 올바른 인증번호
+
+            const warningMessage = phoneCodeInput
+                .closest(".register-with-btn-box")
+                .querySelector(".desc-span.warning-msg");
+
+            // 입력값이 없을 때 경고 메시지 표시
+            if (inputCode === "") {
+                showWarningMessage("인증번호를 입력해 주세요.", phoneCodeInput);
+                phoneCodeInput.classList.add("warning");
+                phoneCodeInput.style.borderColor = "#f05050";
+            } else if (inputCode !== correctCode) {
+                // 인증번호가 틀렸을 때 경고 메시지 표시
+                showWarningMessage(
+                    "인증번호가 일치하지 않습니다.",
+                    phoneCodeInput
+                );
+                phoneCodeInput.classList.add("warning");
+                phoneCodeInput.style.borderColor = "#f05050";
+            } else {
+                // 인증 성공 시 성공 메시지 표시 및 스타일 적용
+                clearInterval(phoneTimerInterval);
+                phoneCountdownTimer.textContent = ""; // 타이머 초기화
+                phoneCodeInput.classList.remove("warning");
+                phoneCodeInput.classList.add("success-sign");
+                phoneCodeInput.style.borderColor = "#189f14"; // 성공 시 색상 적용
+
+                if (warningMessage) {
+                    warningMessage.style.display = "none";
+                }
+
+                showSuccessMessage("인증 되었습니다.", phoneCodeInput);
+            }
+        }
+    });
+
     completeButton.addEventListener("click", function () {
         const emailValue = emailInput.value.trim();
         const emailCodeValue = emailCodeInput.value.trim();
-        console.log("Complete button clicked!"); // 버튼 클릭 로그
-        console.log("Checkbox checked:", checkbox.checked); // 체크박스 상태 확인
-        console.log(checkboxWarningMessage); // 이 메시지를 통해 요소가 선택되는지 확인
+        const phoneValue = phoneInput.value.trim();
+        const phoneCodeValue = phoneCodeInput.value.trim();
 
         // 이메일 입력 필드가 비어 있을 때 경고 메시지 표시
         if (emailValue.length === 0) {
@@ -250,9 +373,22 @@ document.addEventListener("DOMContentLoaded", function () {
             emailCodeInput.style.borderColor = "#f05050"; // 경고 색상으로 변경
         }
 
+        // 전화번호 입력 필드가 비어 있을 때 경고 메시지 표시
+        if (phoneValue.length === 0) {
+            showWarningMessage("전화번호를 입력해 주세요.", phoneInput);
+            phoneInput.classList.add("warning");
+            phoneInput.style.borderColor = "#f05050"; // 경고 색상으로 변경
+        }
+
+        // 전화번호 인증번호 입력 필드가 비어 있을 때 경고 메시지 표시
+        if (phoneCodeValue.length === 0) {
+            showWarningMessage("인증번호를 입력해 주세요.", phoneCodeInput);
+            phoneCodeInput.classList.add("warning");
+            phoneCodeInput.style.borderColor = "#f05050"; // 경고 색상으로 변경
+        }
+
         if (!checkbox.checked) {
             checkboxWarningMessage.style.display = "block"; // 경고 메시지 표시
-            console.log("경고 메시지 표시됨: 이용약관에 동의해야합니다.");
         } else {
             checkboxWarningMessage.style.display = "none"; // 체크박스가 체크되면 경고 메시지 숨기기
         }
@@ -264,11 +400,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (checkbox.checked) {
             checkboxWarningMessage.style.display = "none"; // 체크박스가 체크되면 경고 메시지 숨기기
         }
-    });
-
-    // 완료 버튼 클릭 시 비밀번호 유효성 검사 함수
-    completeButton.addEventListener("click", function () {
-        validatePasswords(); // 비밀번호 유효성 검사 함수 호출
     });
 
     // 비밀번호 입력 필드에서 포커스 스타일 적용
