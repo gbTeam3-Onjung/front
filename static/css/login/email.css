@@ -237,6 +237,29 @@ button.button-btn-send.button-send-active:hover {
     color: #fff !important; /* 활성화된 텍스트 색상 */
     cursor: pointer; /* 포인터 커서 */
 }
+/* 버튼 초기 상태 스타일 */
+button.button-btn-send2, button.button-btn-send2:hover {
+    padding: 0 28px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 42px;
+    flex-shrink: 0;
+    background: #f6f6f6 !important; /* 초기 배경색 */
+    border: none;
+    border-radius: 4px;
+    color: #dfdfdf !important; /* 초기 텍스트 색상 */
+    cursor: default; /* 비활성화 상태에서 기본 커서 */
+}
+
+/* 버튼 활성화 상태 스타일 */
+button.button-btn-send2.button-send-active,
+button.button-btn-send2.button-send-active:hover {
+    background: #141414 !important; /* 활성화된 배경색 */
+    border-color: #141414;
+    color: #fff !important; /* 활성화된 텍스트 색상 */
+    cursor: pointer; /* 포인터 커서 */
+}
 
 button {
     appearance: auto;

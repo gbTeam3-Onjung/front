@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const completeButton = document.querySelector(".register-btn-complete");
     const emailInput = document.getElementById("email");
     const sendAuthButton = document.querySelector(".button-btn-send");
+    const sendAuthButton2 = document.querySelector(".button-btn-send2");
     const emailCodeInput = document.getElementById("email-code");
     const passwordInput = document.getElementById("password");
     const passwordConfirmInput = document.getElementById("password-confirm");
@@ -183,6 +184,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // 인증 완료 버튼 클릭 시 유효성 검사
     const confirmButton = document.querySelector(
         ".register-email-code-box .button-btn-send"
+    );
+    // 인증 완료 버튼 클릭 시 유효성 검사
+    const confirmButton2 = document.querySelector(
+        ".register-email-code-box .button-btn-send2"
     );
 
     confirmButton.addEventListener("click", function () {
