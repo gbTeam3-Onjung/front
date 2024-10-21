@@ -1,6 +1,7 @@
 const sections = document.querySelectorAll("section.admin-page");
 const submenus = document.querySelectorAll("a.MenuItems_submenu");
 const inquiryButtons = document.querySelectorAll("button.inquiry-button");
+const notificationListWrap = document.querySelector(".notification-list-wrap");
 
 NodeList.prototype.filter = Array.prototype.filter;
 
@@ -150,5 +151,40 @@ document.addEventListener("DOMContentLoaded", function () {
             // 선택된 옵션에 따라 정렬 또는 필터링 수행
             sortPosts(order);
         });
+    });
+});
+
+let notificationContainer = `<li class="notification-container">
+                                <a href="#" class="notification notification-table"
+                                    ><p class="notification-num notification-table">8</p>
+                                    <h4 class="notification-title">10.22 업데이트 내용 및 바뀐 회원정보 관리 방식 안내</h4>
+                                    <p class="notification-date notification-table">2024.10.21</p></a>
+                            </li>`;
+let text = ``;
+text += notificationContainer;
+text += notificationContainer;
+text += notificationContainer;
+text += notificationContainer;
+text += notificationContainer;
+text += notificationContainer;
+text += notificationContainer;
+text += notificationContainer;
+
+notificationListWrap.innerHTML = text;
+
+let notificationLinks = document.querySelectorAll(
+    "a.notification.notification-table"
+);
+
+notificationLinks.forEach((notificationLink) => {
+    notificationLink.addEventListener("click", (e) => {
+        sections.forEach((section) => {
+            section.classList.remove("selected");
+        });
+        const notificationInquirySection = sections.filter(
+            (section) => section.dataset.value === "공지사항 조회"
+        );
+        console.log(notificationInquirySection);
+        notificationInquirySection[0].classList.add("selected");
     });
 });
