@@ -21,7 +21,7 @@ document.addEventListener("click", function (event) {
         dateRange.classList.remove("active");
     }
 });
-// 사이드배너 전환▲    ▼임시 데이터 목록
+// 사이드배너 전환▲
 
 // 목록
 const payments = [
@@ -723,8 +723,9 @@ const renderVolunteers = () => {
                 <colgroup>
                     <col style="width: 60px;">
                     <col style="width: 60px;">
-                    <col style="width: 200px;">
+                    <col style="width: 110px;">
                     <col style="width: 104px;">
+                    <col style="width: 80px;">
                 </colgroup>
                 <thead class="news-center-table-head">
                     <tr>
@@ -732,6 +733,7 @@ const renderVolunteers = () => {
                         <th>봉사 시간</th>
                         <th>봉사 게시글 제목</th>
                         <th>날짜</th>
+                        <th>작성/수정</th>
                     </tr>
                 </thead>
                 <tbody class="news-center-table-body">
@@ -751,6 +753,23 @@ const renderVolunteers = () => {
                         <td class="news-center-table-body-date">${
                             volunteer.date
                         }</td>
+                        <td>
+                            <a
+                                class="jBsNEF btn-request btn-request--case-2"
+                                href="#"
+                                style="
+                                    margin:0px;
+                                "
+                                ><span
+                                    class="visual-correction"
+                                    >후기&nbsp;
+                                    작성하기
+                                    <div
+                                        class="request-description-tooltip"
+                                    ></div>
+                                </span>
+                            </a>
+                        </td>
                     </tr>
                 `
                     )
@@ -1159,7 +1178,7 @@ const renderApplications = () => {
                         <th>승인 여부</th>
                         <th>닉네임 / 이름</th>
                         <th>핸드폰 번호</th>
-                        <th>결제 일</th>
+                        <th>신청 일</th>
                     </tr>
                     </a>
                 </thead>
