@@ -1283,11 +1283,11 @@ img {
 }
 
 .rfm-initial-child-container.original {
-	animation: rollingleft1 33s linear infinite;
+	animation: rollingleft1 60s linear infinite;
 }
 
 .rfm-initial-child-container.clone {
-	animation: rollingleft2 33s linear infinite;
+	animation: rollingleft2 60s linear infinite;
 }
 
 @keyframes rollingleft1 {
