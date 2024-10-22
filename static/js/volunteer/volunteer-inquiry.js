@@ -38,7 +38,7 @@ document.querySelector(".graph-status .num").textContent = percentage;
 document.querySelector(".graph-bar span").style.width = `${percentage}%`;
 document.querySelector(
     ".total-prize"
-).textContent = `${currentPrize} 포인트 / ${totalPrize} 포인트`;
+).textContent = `${currentPrize} 명/ ${totalPrize} 명`;
 
 // 예시 댓글 데이터 배열
 const comments = [
