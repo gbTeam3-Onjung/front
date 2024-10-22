@@ -103,6 +103,7 @@ const renderComments = () => {
                         </div>
                     </div>
                     <div class="contest-comment-buttons"></div>
+                    <button id= "delete-btn">삭제</button>
                 </div>
             </article>
         `;
