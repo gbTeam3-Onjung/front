@@ -486,9 +486,7 @@ h6 {
 }
 
 /***********************************************/
-.etjTbk {
-    padding-top: 35px;
-}
+
 
 .mypage-wrap.mypage-right-area {
     width: calc(100% - 223px);
@@ -841,7 +839,6 @@ h6 {
     font-size: 15px;
     line-height: 23px;
     letter-spacing: -0.5px;
-    /* margin-top: 124px; */
     text-align: left;
 }
 
@@ -851,11 +848,6 @@ h6 {
 
 img {
     vertical-align: bottom;
-}
-
-.etjTbk .profile-contents-box-wrap {
-    margin-left: 59px;
-    padding: 0px 0px 209px 20px;
 }
 
 .iOhuaS {
