@@ -291,6 +291,25 @@ img {
 .download-all-btn .visual-correction {
     padding-bottom: 1px;
 }
+#delete-btn {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 0px;
+    text-align: center;
+    box-sizing: border-box;
+    color: rgb(38, 86, 246);
+    border: 1px solid rgb(38, 86, 246);
+    font-size: 15px;
+    line-height: 23px;
+    letter-spacing: -0.5px;
+    width: 10%;
+    background-color: white;
+    left: 600px;
+}
 .attach-list {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -624,6 +643,12 @@ a {
 
 .donation-btn-style:hover {
     background-color: rgb(78, 118, 249);
+}
+.donation-btn-style2:hover {
+    background-color: rgb(244, 245, 248);
+}
+#delete-btn:hover {
+    background-color: rgb(244, 245, 248);
 }
 
 .comment-wrap-fr {
