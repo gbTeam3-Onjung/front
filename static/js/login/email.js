@@ -56,7 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
         emailCodeInput.value = ""; // 인증번호 입력란 초기화
         countdownTimer.style.display = "none"; // 타이머 숨기기
         clearInterval(emailTimerInterval); // 타이머 초기화
-
         // 이메일 값이 없을 경우
         if (emailValue === "") {
             emailInput.classList.remove("success-sign", "warning");
@@ -105,6 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
             emailCodeInput.classList.remove("success-sign", "warning");
             emailCodeInput.style.borderColor = "#ccc"; // 기본 테두리 색상 복원
             emailCodeInput.style.outline = ""; // 기본 아웃라인 복원
+            warningMessage.style.display = "none";
 
             // 기존 성공 및 경고 메시지 삭제
             const existingSuccessMessage = emailCodeBox.querySelector(
@@ -172,6 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
         phoneCodeInput.value = ""; // 인증번호 입력란 초기화
         phoneCountdownTimer.style.display = "none"; // 타이머 숨기기
         clearInterval(phoneTimerInterval); // 타이머 초기화
+        warningMessage.style.display = "none";
 
         // 전화번호 값이 없을 경우
         if (phoneValue === "") {
