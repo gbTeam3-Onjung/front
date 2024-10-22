@@ -331,7 +331,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //             ".userCheckbox:checked"
     //         );
     //         selectedCheckboxes.forEach((checkbox) => {
-    //             const row = checkbox.closest(".UserTable_row__1Qg9b");
+    //             const row = checkbox.closest(".UserTable_row-1Qg9b");
     //             row.parentNode.removeChild(row);
     //         });
     //     };
