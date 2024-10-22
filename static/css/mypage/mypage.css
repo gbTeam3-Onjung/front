@@ -68,16 +68,16 @@ html body #root #app .wrap {
     flex-direction: column;
 }
 
-.Guzgb {
+.mypage-whole {
     padding-top: 35px;
 }
 
-.Guzgb .mypage-whole-wrap {
+.mypage-whole .mypage-whole-wrap {
     overflow-x: hidden;
     margin-bottom: 200px;
 }
 
-.Guzgb .mypage-whole-wrap .mypage-box {
+.mypage-whole .mypage-whole-wrap .mypage-box {
     box-sizing: border-box;
     margin: 0px auto;
     max-width: 1440px;
@@ -87,18 +87,18 @@ html body #root #app .wrap {
     width: 100%;
 }
 
-.Guzgb .mypage-wrap.mypage-left-area {
+.mypage-whole .mypage-wrap.mypage-left-area {
     transition: 0.5s;
     min-width: 218px;
     max-width: 218px;
 }
 
-.Guzgb .mypage-whole-wrap .mypage-wrap {
+.mypage-whole .mypage-whole-wrap .mypage-wrap {
     display: inline-block;
     vertical-align: top;
 }
 
-.laWyuX {
+.mypage-member-container {
     background: rgb(255, 255, 255);
     border: 1px solid rgb(233, 235, 237);
     border-radius: 8px;
@@ -106,21 +106,21 @@ html body #root #app .wrap {
     min-width: 14.5%;
 }
 
-.laWyuX .mypage-member-info {
+.mypage-member-container .mypage-member-info {
     display: flex;
     flex-direction: column;
     -webkit-box-align: center;
     align-items: center;
 }
 
-.laWyuX .mypage-member-info .profile-thumb-img {
+.mypage-member-container .mypage-member-info .profile-thumb-img {
     position: relative;
     width: 54px;
     height: 54px;
     margin-bottom: 12px;
 }
 
-.laWyuX .mypage-member-info .profile-thumb-img .member-thumb {
+.mypage-member-container .mypage-member-info .profile-thumb-img .member-thumb {
     background-color: rgb(238, 238, 238);
     background-position: center center;
     background-repeat: no-repeat;
@@ -133,14 +133,14 @@ html body #root #app .wrap {
     object-fit: cover;
 }
 
-.laWyuX .mypage-member-info .member-id {
+.mypage-member-container .mypage-member-info .member-id {
     display: flex;
     flex-direction: column;
     -webkit-box-align: center;
     align-items: center;
 }
 
-.laWyuX .mypage-member-info .member-id .info-role {
+.mypage-member-container .mypage-member-info .member-id .info-role {
     background: rgba(38, 86, 246, 0.07);
     border-radius: 80px;
     box-sizing: border-box;
@@ -156,7 +156,7 @@ html body #root #app .wrap {
     font-weight: 700;
 }
 
-.laWyuX .mypage-member-info .member-id .info-nick {
+.mypage-member-container .mypage-member-info .member-id .info-nick {
     display: -webkit-box;
     /* overflow: hidden; */
     text-overflow: ellipsis;
@@ -172,7 +172,7 @@ html body #root #app .wrap {
     margin-bottom: 4px;
 }
 
-.laWyuX .mypage-member-info .member-id .info-email {
+.mypage-member-container .mypage-member-info .member-id .info-email {
     margin-bottom: 20px;
     color: rgb(142, 148, 160);
     font-size: 12px;
@@ -181,7 +181,7 @@ html body #root #app .wrap {
     font-weight: 400;
 }
 
-.laWyuX .member-profile {
+.mypage-member-container .member-profile {
     width: 91px;
     height: 32px;
     padding: 0px;
@@ -421,11 +421,11 @@ h6 {
     height: 12px;
 }
 
-.dTHWVR .share-btn {
+.share-btn {
     display: none;
 }
 
-.dTHWVR .button {
+.profile-main-wirte .button {
     border-radius: 4px;
     font-weight: 400;
     font-size: 14px;
@@ -434,36 +434,23 @@ h6 {
     width: 100%;
 }
 
-.fUTKVI {
-    display: flex;
-    flex-direction: row-reverse;
-}
 
-.eUhkSO {
+.profile-edit-button {
     background-color: transparent;
     color: rgb(64, 74, 92);
     border: 1px solid rgb(219, 222, 226);
-    -webkit-box-pack: center;
-    justify-content: center;
     margin-top: 8px;
     cursor: pointer;
-    border-radius: 4px;
     width: 100%;
     height: 38px;
     -webkit-box-align: center;
-    align-items: center;
     font-weight: normal;
-}
-
-.hpehoT {
     position: relative;
     display: inline-flex;
     -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
     align-items: center;
     border-radius: 4px;
-    cursor: pointer;
     text-align: center;
     box-sizing: border-box;
     background-color: rgb(255 255 255 / 0%);
@@ -473,7 +460,10 @@ h6 {
     line-height: 21px;
     letter-spacing: -0.25px;
     font-weight: 500;
+    display: flex;
+    flex-direction: row-reverse;
 }
+
 
 .tab-content {
     min-height: 900px;
