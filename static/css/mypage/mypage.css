@@ -449,7 +449,7 @@ h6 {
     padding: 0px 0px 209px 20px;
 }
 
-.duyEZE {
+.right-contents-header {
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
@@ -476,7 +476,7 @@ h6 {
     font-weight: 500;
 }
 
-.gYyxfE .date-filter {
+.right-contents-main .date-filter {
     background-color: rgb(249, 250, 251);
     width: 100%;
     border-radius: 8px;
@@ -488,7 +488,7 @@ h6 {
     margin-bottom: 24px;
 }
 
-.gYyxfE .date-filter > .title {
+.right-contents-main .date-filter > .title {
     font-size: 14px;
     line-height: 21px;
     letter-spacing: -0.25px;
@@ -497,7 +497,7 @@ h6 {
     margin-right: 16px;
 }
 
-.gYyxfE .date-filter > .date-input {
+.right-contents-main .date-filter > .date-input {
     /* background-color: white; */
     margin-right: 15px;
 }
@@ -547,16 +547,16 @@ h6 {
     height: 24px;
 }
 
-.gYyxfE .date-filter .date-button {
+.right-contents-main .date-filter .date-button {
     display: flex;
     margin-right: 16px;
 }
 
-.gYyxfE .date-filter .date-button > label:first-child {
+.right-contents-main .date-filter .date-button > label:first-child {
     border-radius: 4px 0px 0px 4px;
 }
 
-.gYyxfE .date-filter .date-button > label {
+.right-contents-main .date-filter .date-button > label {
     background-color: rgb(255, 255, 255);
     border-radius: 0px;
 }
@@ -596,7 +596,7 @@ h6 {
     border-color: rgb(38, 86, 246);
 }
 
-.gYyxfE .date-filter .date-button > label.active::before {
+.right-contents-main .date-filter .date-button > label.active::before {
     border-right-width: 1px;
 }
 
@@ -627,20 +627,20 @@ h6 {
 .fItXBi.active .check {
     display: inline-block;
 }
-.gYyxfE .date-filter .date-button > label:first-child::before {
+.right-contents-main .date-filter .date-button > label:first-child::before {
     border-radius: 4px 0px 0px 4px;
 }
 
-.gYyxfE .date-filter .date-button > label::before {
+.right-contents-main .date-filter .date-button > label::before {
     border-radius: 0px;
     border-right-width: 0px;
 }
 
-.gYyxfE .date-filter .date-button > label:last-child {
+.right-contents-main .date-filter .date-button > label:last-child {
     border-radius: 0px 4px 4px 0px;
 }
 
-.gYyxfE .date-filter .date-button > label:last-child::before {
+.right-contents-main .date-filter .date-button > label:last-child::before {
     border-radius: 0px 4px 4px 0px;
     border-right-width: 1px;
 }
@@ -777,7 +777,7 @@ h6 {
     border-bottom: 2px solid rgb(16, 28, 51);
 }
 
-.gYyxfE .empty {
+.right-contents-main .empty {
     padding: 80px;
 }
 

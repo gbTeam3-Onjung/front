@@ -1300,10 +1300,9 @@ tabs.forEach((tab) => {
 
 const sideBanerWrapElement = document.querySelector(".side-baner-wrap");
 const dateButtons = document.querySelectorAll(".date-button .fItXBi.toggle");
-const lnbItems =
-    side - sideBanerWrapElement - wrapElement
-        ? side - baner - sideBanerWrapElement.querySelectorAll(".lnb-item")
-        : [];
+const lnbItems = sideBanerWrapElement
+    ? sideBanerWrapElement.querySelectorAll(".lnb-item")
+    : [];
 const tabsContainers = document.querySelectorAll(".bqkLME.tabs");
 
 // 초기화 버튼에 이벤트 리스너 등록
