@@ -334,19 +334,6 @@ const boostTotalCount = boosts.filter(
 ).length;
 document.getElementById("boost-totalCount").textContent = boostTotalCount;
 
-// 후원 완료 숫자 증가
-const boostCompletedCount = boosts.filter(
-    (boost) => boost.status === "완료"
-).length;
-document.getElementById("boost-completedCount").textContent =
-    boostCompletedCount;
-
-// 후원 취소 숫자 감소
-const boostCancelCount = boosts.filter(
-    (boost) => boost.status === "취소"
-).length;
-document.getElementById("boost-cancelCount").textContent = boostCancelCount;
-
 /*********************기부**********************/
 const donaitions = [
     {
@@ -487,20 +474,6 @@ const donaitionTotalCount = donaitions.filter(
 ).length;
 document.getElementById("donaition-totalCount").textContent =
     donaitionTotalCount;
-
-// 기부 완료 숫자 증가
-const donaitionCompletedCount = donaitions.filter(
-    (donaition) => donaition.status === "완료"
-).length;
-document.getElementById("donaition-completedCount").textContent =
-    donaitionCompletedCount;
-
-// 기부 취소 숫자 감소
-const donaitionCancelCount = donaitions.filter(
-    (donaition) => donaition.status === "취소"
-).length;
-document.getElementById("donaition-cancelCount").textContent =
-    donaitionCancelCount;
 
 /*******************충전 하기********************/
 const charges = [
@@ -1104,7 +1077,7 @@ const gratitudeTotalCount = gratitudes.length;
 document.getElementById("gratitude-totalCount").textContent =
     gratitudeTotalCount;
 
-/*********************기부**********************/
+/*********************봉사 활동 신청 현황**********************/
 const applications = [
     {
         id: 1,
@@ -1148,7 +1121,7 @@ const applications = [
     },
 ];
 
-// 기부 내역 렌더링▼
+// 봉사 활동 신청 현황 렌더링▼
 const renderApplications = () => {
     // 1. boost 배열 확인
     console.log(applications); // boost 배열이 제대로 정의되고, 데이터가 있는지 확인
@@ -1171,6 +1144,7 @@ const renderApplications = () => {
         applicationList.innerHTML = `
             <table class="news-center-table" style="margin-top: 0; margin-bottom: 20px;">
                 <colgroup>
+                    <col style="width: 40px;>     
                     <col style="width: 57px;">
                     <col style="width: 132px;">
                     <col style="width: 150px;">
@@ -1179,6 +1153,9 @@ const renderApplications = () => {
                 <thead class="news-center-table-head">
                     <a href="">
                     <tr>
+                        <th>
+                            <input type="checkbox" id="selectAll" />
+                        </th>
                         <th>승인 여부</th>
                         <th>닉네임 / 이름</th>
                         <th>핸드폰 번호</th>
@@ -1191,6 +1168,9 @@ const renderApplications = () => {
                     .map(
                         (application) => `
                     <tr class="news-data-rows" data-forloop="${application.id}">
+                        <td>
+                            <input type="checkbox" id="checkbox_idx" />
+                        </td>
                         <td class="news-center-table-body-number">${
                             application.status
                         }</td>
@@ -1333,4 +1313,30 @@ lnbItems.forEach((lnbItem) => {
         attributes: true,
         attributeFilter: ["class"],
     });
+});
+
+const selectAll = document.getElementById("selectAll");
+
+// 전체 선택 체크박스 로직
+selectAll.addEventListener("change", () => {
+    const isChecked = selectAll.checked;
+    const individualCheckboxes = document.querySelectorAll(
+        'input[type="checkbox"].checkbox_idx'
+    );
+    individualCheckboxes.forEach((checkbox) => {
+        checkbox.checked = isChecked;
+    });
+});
+
+// 개별 체크박스 변경 시 전체 선택 체크박스 상태 업데이트
+jobList.addEventListener("change", (event) => {
+    if (event.target.classList.contains("checkbox_idx")) {
+        const individualCheckboxes = document.querySelectorAll(
+            'input[type="checkbox"].checkbox_idx'
+        );
+        const allChecked = Array.from(individualCheckboxes).every(
+            (cb) => cb.checked
+        );
+        selectAll.checked = allChecked;
+    }
 });
