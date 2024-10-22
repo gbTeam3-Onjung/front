@@ -1353,7 +1353,7 @@ div > ul {
     line-height: 21px;
     letter-spacing: -0.25px;
     font-weight: 700;
-    margin-left: 565px;
+    margin-left: 650px;
     margin-bottom: 15px;
 }
 
@@ -1602,4 +1602,16 @@ div > ul {
 .InpBox .Chk input:checked ~ .Lbl:after {
     display: inline-block;
     border-color: var(--white);
+}
+
+.withdraw-btn:hover{
+    background-color: rgb(56, 122, 252);
+}
+
+.btn-request:hover{
+    background-color: rgb(56, 122, 252);
+}
+
+td.padding5{
+    padding:5px;
 }
