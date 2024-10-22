@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const phoneCountdownTimer = document.getElementById(
         "countdown-timer-phone"
     );
-    const phoneRegex = /^01[016789]\d{7,8}$/;
+    const phoneRegex = /^[0-9]{3}[0-9]{4}[0-9]{4}$/;
 
     // 비밀번호
     const passwordInput = document.getElementById("password");
@@ -50,6 +50,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const emailValue = emailInput.value.trim();
         const successMessage = document.querySelector(".desc-span.success-msg");
         const warningMessage = document.querySelector(".desc-span.warning-msg");
+
+        // 이메일 값이 변경될 때 인증번호 입력란을 숨기고 초기화
+        emailCodeBox.style.display = "none"; // 인증번호 입력란 숨기기
+        emailCodeInput.value = ""; // 인증번호 입력란 초기화
+        countdownTimer.style.display = "none"; // 타이머 숨기기
+        clearInterval(emailTimerInterval); // 타이머 초기화
 
         // 이메일 값이 없을 경우
         if (emailValue === "") {
@@ -153,12 +159,19 @@ document.addEventListener("DOMContentLoaded", function () {
             showWarningMessage("이메일 형식이 올바르지 않습니다.", emailInput);
         }
     });
+    // ===============================================================================================
 
     // 전화번호 입력 필드에서 입력이 변경될 때 호출되는 함수
     phoneInput.addEventListener("input", function () {
         const phoneValue = phoneInput.value.trim();
         const successMessage = document.querySelector(".desc-span.success-msg");
         const warningMessage = document.querySelector(".desc-span.warning-msg");
+
+        // 전화번호 값이 변경될 때 인증번호 입력란을 숨기고 초기화
+        phoneCodeBox.style.display = "none"; // 인증번호 입력란 숨기기
+        phoneCodeInput.value = ""; // 인증번호 입력란 초기화
+        phoneCountdownTimer.style.display = "none"; // 타이머 숨기기
+        clearInterval(phoneTimerInterval); // 타이머 초기화
 
         // 전화번호 값이 없을 경우
         if (phoneValue === "") {
@@ -266,6 +279,20 @@ document.addEventListener("DOMContentLoaded", function () {
             confirmPhoneButton.style.cursor = "default";
         }
     });
+    // 인증 번호 입력 시 인증 완료 버튼 활성화 및 기본 포커스 스타일 적용 (이메일 인증번호)
+    emailCodeInput.addEventListener("input", function () {
+        const emailCodeValue = emailCodeInput.value.trim();
+
+        if (emailCodeValue.length > 0) {
+            confirmButton.classList.add("button-send-active"); // 인증 완료 버튼 활성화
+            confirmButton.style.cursor = "pointer"; // 커서 스타일 변경
+            emailCodeInput.style.borderColor = "blue"; // 기본 포커스 스타일 적용
+        } else {
+            confirmButton.classList.remove("button-send-active"); // 입력값이 없으면 비활성화
+            confirmButton.style.cursor = "default";
+            emailCodeInput.style.borderColor = "#ccc"; // 기본 테두리 색상으로 복원
+        }
+    });
 
     // 인증 완료 버튼 클릭 시 유효성 검사 (이메일 인증번호)
     const confirmButton = document.querySelector(
@@ -307,6 +334,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 showSuccessMessage("인증 되었습니다.", emailCodeInput);
             }
+        }
+    });
+    // 인증 번호 입력 시 인증 완료 버튼 활성화 및 기본 포커스 스타일 적용 (전화번호 인증번호)
+    phoneCodeInput.addEventListener("input", function () {
+        const phoneCodeValue = phoneCodeInput.value.trim();
+
+        if (phoneCodeValue.length > 0) {
+            confirmPhoneButton.classList.add("button-send-phone-active"); // 인증 완료 버튼 활성화
+            confirmPhoneButton.style.cursor = "pointer"; // 커서 스타일 변경
+            phoneCodeInput.style.borderColor = "blue"; // 기본 포커스 스타일 적용
+        } else {
+            confirmPhoneButton.classList.remove("button-send-phone-active"); // 입력값이 없으면 비활성화
+            confirmPhoneButton.style.cursor = "default";
+            phoneCodeInput.style.borderColor = "#ccc"; // 기본 테두리 색상으로 복원
         }
     });
 
@@ -394,6 +435,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         validatePasswords();
     });
+    // ===================================================================================================
 
     // 체크박스 상태가 변경될 때 경고 메시지 표시/숨기기
     checkbox.addEventListener("change", function () {
@@ -401,6 +443,7 @@ document.addEventListener("DOMContentLoaded", function () {
             checkboxWarningMessage.style.display = "none"; // 체크박스가 체크되면 경고 메시지 숨기기
         }
     });
+    // ===================================================================================================
 
     // 비밀번호 입력 필드에서 포커스 스타일 적용
     passwordInput.addEventListener("focus", function () {
