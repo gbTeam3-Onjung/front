@@ -134,5 +134,15 @@ document.getElementById("profile_image").addEventListener("change", (event) => {
     }
 });
 
-// 저장할 수 있는 조건이 아닐때 저장하기 버튼 비활성화
-// const disableButton = document.getElementById("#disableButton");
+// 모달의 "확인" 버튼 클릭 시 모달창 및 오버레이 숨기기
+modalConfirmButton.addEventListener("click", function () {
+    modalContainer.style.display = "none"; // 모달창 숨기기
+    overlay.style.display = "none"; // 오버레이 숨기기
+});
+
+// 모달 관련 요소
+const modalContainer = document.querySelector(".modal"); // 모달의 최상위 컨테이너
+const overlay = modalContainer.querySelector(".last-modal"); // 모달의 오버레이 부분
+const modalConfirmButton = modalContainer.querySelector(
+    ".alert-btn-complete-1qcb1"
+); // 모달의 "확인" 버튼
