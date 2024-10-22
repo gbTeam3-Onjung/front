@@ -134,15 +134,17 @@ document.getElementById("profile_image").addEventListener("change", (event) => {
     }
 });
 
-// 모달의 "확인" 버튼 클릭 시 모달창 및 오버레이 숨기기
-modalConfirmButton.addEventListener("click", function () {
-    modalContainer.style.display = "none"; // 모달창 숨기기
-    overlay.style.display = "none"; // 오버레이 숨기기
+// 저장하기 버튼 누를시 나올 모달 이벤트
+disableButton.addEventListener("click", (e) => {
+    if (e.target.id === "disableButton") {
+        if (!disableButton.classList.contains("disable")) {
+            document.querySelector(".modal").style.display = "flex";
+        }
+    }
 });
 
-// 모달 관련 요소
-const modalContainer = document.querySelector(".modal"); // 모달의 최상위 컨테이너
-const overlay = modalContainer.querySelector(".last-modal"); // 모달의 오버레이 부분
-const modalConfirmButton = modalContainer.querySelector(
-    ".alert-btn-complete-1qcb1"
-); // 모달의 "확인" 버튼
+document.getElementById("closeModal").addEventListener("click", (e) => {
+    if (e.target.id === "closeModal") {
+        document.querySelector(".modal").style.display = "none";
+    }
+});

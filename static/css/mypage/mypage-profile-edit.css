@@ -366,16 +366,12 @@ body,html {
     border: 1px solid rgb(242, 23, 36);
 }
 
-.dnkuMk.disable:hover {
-    opacity: 1;
-}
-
 .dnkuMk.disable {
     color: rgb(191, 198, 210);
     background-color: rgb(233, 235, 237);
 }
 
-.dnkuMk.disable {
+.dnkuMk.disable:hover {
     cursor: default;
 }
 
@@ -388,9 +384,14 @@ body,html {
 }
 
 
-#disableButton:hover{
+#disableButton:hover {
     background-color: rgba(38, 86, 246, 0.866);
 }
+
+#disableButton.dnkuMk.disable:hover {
+    background-color: rgb(233, 235, 237);
+}
+
 
 
 .alert-modal-inner-1u03v {
@@ -401,8 +402,62 @@ body,html {
     border-radius: 16px;
 }
 
+.alert-txt-box-2bji8 {
+    text-align: center;
+}
 
+.alert-txt-box-2bji8 span.alert-ico-1mtdg {
+    margin-bottom: 25px;
+    display: inline-block;
+    width: 60px;
+    height: 61px;
+    background: url(https://accounts-front.stunning.kr/assets/img/common/img-correct-check@2x.png) 50% 50% no-repeat;
+    background-size: 60px 61px;
+}
 
+.alert-ico-1mtdg{
+    word-break: keep-all;
+}
+
+.alert-txt-box-2bji8 p {
+    font-size: 15px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: -.288462px;
+}
+
+.alert-txt-box-2bji8 p {
+    font-weight: 700;
+    color: #6f7785;
+}
+
+p {
+    display: block;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+.alert-btn-complete-1qcb1 {
+    margin-top: 52px;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    background: #141414;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    vertical-align: middle;
+    font-family: "Pretendard" !important;
+    -webkit-font-smoothing: antialiased;
+}
 
 
 
