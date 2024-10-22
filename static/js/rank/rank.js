@@ -235,7 +235,7 @@ let cardHTML = `
                                     </label>
 
                                     <div class="tooltip-content ">
-                                    우승 10회 이상 전문가
+                                    인증된 봉사 단체 회원
                                     </div>
                                 </div>
                                 
