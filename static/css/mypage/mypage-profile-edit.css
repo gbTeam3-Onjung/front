@@ -92,7 +92,7 @@ html body #root #app .wrap {
     padding: 40px 40px
 }
 
-.cRFSjf .edit-content__content-title {
+.cRFSjf .edit-content-content-title {
     font-size: 18px;
     font-weight: bold;
     line-height: 1.44;
@@ -191,7 +191,7 @@ input, select {
     width: 100%;
 }
 
-.cRFSjf .edit-content__input-label {
+.cRFSjf .edit-content-input-label {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
@@ -204,12 +204,12 @@ input, select {
     margin-bottom: 20px;
 }
 
-.cRFSjf .edit-content__input-label .bluestar {
+.cRFSjf .edit-content-input-label .bluestar {
     padding-left: 2px;
     color: rgb(38, 86, 246);
 }
 
-.cRFSjf .edit-content__input-label .orangestar {
+.cRFSjf .edit-content-input-label .orangestar {
     padding-left: 2px;
     color: orange;
 }
@@ -265,7 +265,7 @@ input, select {
     flex-shrink: 0;
 }
 
-.ecrUQs .edit-content__input-label {
+.ecrUQs .edit-content-input-label {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
@@ -288,14 +288,14 @@ body,html {
     width: 100%
 }
 
-.ecrUQs .edit-content__update-btns {
+.ecrUQs .edit-content-update-btns {
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
     margin-bottom: 100px;
 }
 
-.ecrUQs .edit-content__update-btns button {
+.ecrUQs .edit-content-update-btns button {
     margin-right: 8px;
 }
 
