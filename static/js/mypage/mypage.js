@@ -48,7 +48,7 @@ const showTab = (tabId, element) => {
     document.getElementById(tabId).classList.add("active");
 
     // 사이드바 메뉴의 활성화 상태 변경
-    const tablinks = document.querySelectorAll(".gNTKJg a");
+    const tablinks = document.querySelectorAll(".side-baner-wrap a");
     tablinks.forEach((link) => {
         link.classList.remove("active");
     });

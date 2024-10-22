@@ -189,53 +189,15 @@ html body #root #app .wrap {
     font-weight: 400;
 }
 
-.biYqFz .visual-correction {
-    /* padding-bottom: 2px; */
-    content: "";
-    position: absolute;
-    inset: 0px;
-    border: 1px solid;
-    border-radius: 4px;
-    border-color: rgb(219, 222, 226);
-    width: 89px;
-    height: 20px;
-}
-
-.biYqFz {
-    position: relative;
-    display: inline-flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    border-radius: 4px;
-    cursor: pointer;
-    border: 0px;
-    text-align: center;
-    box-sizing: border-box;
-    background-color: rgb(255, 255, 255);
-    color: rgb(64, 74, 92);
-    padding: 6px 17px;
-    font-size: 12px;
-    line-height: 18px;
-    letter-spacing: -0.25px;
-    font-weight: 700;
-}
-
-.gNTzg {
-    padding-top: 24px;
-    padding-bottom: 80px;
-}
-
-.fLaAlD:first-child {
+.side-baner-header:first-child {
     border-top: unset;
 }
 
-.fLaAlD:first-child {
+.side-baner-header:first-child {
     padding: 0px 0px 16px;
 }
 
-.fLaAlD .lnb-title {
+.side-baner-header .lnb-title {
     width: 100%;
     padding: 11px 0px;
     color: rgb(16, 28, 51);
@@ -245,19 +207,19 @@ html body #root #app .wrap {
     font-weight: 700;
 }
 
-.fLaAlD .lnb-title > img {
+.side-baner-header .lnb-title > img {
     width: 18px;
     height: auto;
     margin-right: 13px;
 }
 /**************************************************************/
 /* li .없애기 */
-/* .hHDwuD > li{
+/* .side-baner-content-wrap > li{
     display: block;
 } */
 
 /* 최초 페이지(마이 프로필) */
-.hHDwuD .lnb-item.active > a {
+.side-baner-content-wrap .lnb-item.active > a {
     color: rgb(38, 86, 246);
     font-weight: 700;
     background: rgb(245, 248, 255);
@@ -265,7 +227,7 @@ html body #root #app .wrap {
 }
 
 /* 기본 css */
-.hHDwuD .lnb-item > a {
+.side-baner-content-wrap .lnb-item > a {
     width: 218px;
     padding: 10px 32px;
     box-sizing: border-box;
@@ -291,7 +253,7 @@ html body #root #app .wrap {
 
 /************************************************************************/
 
-.hLIslS {
+.side-baner-content {
     display: inline-block;
 }
 
@@ -313,12 +275,12 @@ h6 {
     font-size: inherit;
 }
 
-.fLaAlD {
+.side-baner-header {
     border-top: 1px solid rgb(219, 222, 226);
     padding: 16px 0px;
 }
 
-.hHDwuD .lnb-item {
+.side-baner-content-wrap .lnb-item {
     width: 100%;
     height: 41px;
 }
@@ -331,15 +293,15 @@ h6 {
     max-width: calc(100% - 302px);
 }
 
-.dSCesS .profile-page-contents {
+.dSCesS .profile-page-wrap {
     padding: 32px 0px 120px;
 }
 
-.cuAJGg {
+.profile-page-self-introduction {
     width: 100%;
 }
 
-.cuAJGg .sub-title1 {
+.profile-page-self-introduction .sub-title1 {
     font-size: 18px;
     line-height: 26px;
     letter-spacing: -0.5px;
@@ -347,7 +309,7 @@ h6 {
     margin-bottom: 16px;
 }
 
-.cuAJGg .content.empty {
+.profile-page-self-introduction .content.empty {
     color: rgb(111, 119, 133);
 }
 
@@ -392,7 +354,7 @@ h6 {
     font-weight: 500;
 }
 
-.cuAJGg .sub-title1 {
+.profile-page-self-introduction .sub-title1 {
     font-size: 18px;
     line-height: 26px;
     letter-spacing: -0.5px;
@@ -408,7 +370,7 @@ h6 {
     max-width: calc(100% - 302px);
 }
 
-.hpehoT > svg {
+.share-btn > svg {
     margin-right: 4px;
 }
 
@@ -576,7 +538,7 @@ h6 {
     color: rgb(191, 198, 210);
 }
 
-.cAfwXx {
+.profile-page-svg {
     user-select: none;
     display: inline-block;
     fill: currentcolor;
@@ -951,7 +913,7 @@ img {
     color: rgb(38, 86, 246);
 }
 
-.hLIslS {
+.side-baner-content {
     display: inline-block;
 }
 
@@ -1346,7 +1308,7 @@ div > ul {
 .bPfQvA
     .toolbar-area
     .toolbar-row
-    .btn-request--case-2
+    .btn-request-case-2
     .request-description-tooltip {
     background: rgb(255, 255, 255);
     border: 1.5px solid rgb(219, 222, 226);
@@ -1365,7 +1327,7 @@ div > ul {
 .bPfQvA
     .toolbar-area
     .toolbar-row
-    .btn-request--case-2
+    .btn-request-case-2
     .request-description-tooltip
     .info {
     display: flex;
@@ -1381,7 +1343,7 @@ div > ul {
 .bPfQvA
     .toolbar-area
     .toolbar-row
-    .btn-request--case-2
+    .btn-request-case-2
     .request-description-tooltip
     .info
     .icon {
@@ -1436,7 +1398,7 @@ div > ul {
     margin-bottom: 24px;
 }
 
-.jeOGCH {
+.profile-page-content {
     padding: 20px;
     width: 168px;
     height: 155px;
@@ -1448,14 +1410,14 @@ div > ul {
     margin: 10px;
 }
 
-.jeOGCH > svg {
+.profile-page-content > svg {
     display: block;
     width: 32px;
     height: 32px;
     color: rgb(191, 198, 210);
 }
 
-.cAfwXx {
+.profile-page-svg {
     user-select: none;
     display: inline-block;
     fill: currentcolor;
@@ -1468,13 +1430,13 @@ div > ul {
     margin: 10px;
 }
 
-.jeOGCH .career-info-content {
+.profile-page-content .career-info-content {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
 }
 
-.jeOGCH .sub-title2 {
+.profile-page-content .sub-title2 {
     margin-top: 4px;
     display: flex;
     flex-direction: row;
@@ -1482,7 +1444,7 @@ div > ul {
     align-items: center;
 }
 
-.jeOGCH .h1 {
+.profile-page-content .h1 {
     margin-top: 14px;
     font-size: 25px;
     line-height: 44px;
@@ -1490,7 +1452,7 @@ div > ul {
     font-weight: 700;
 }
 
-.jeOGCH .diff {
+.profile-page-content .diff {
     font-size: 14px;
     line-height: 21px;
     letter-spacing: -0.25px;
