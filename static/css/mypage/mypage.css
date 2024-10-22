@@ -421,11 +421,11 @@ h6 {
     height: 12px;
 }
 
-.dTHWVR .share-btn {
-    /* display: none; */
+.share-btn {
+    display: none;
 }
 
-.dTHWVR .button {
+.profile-main-wirte .button {
     border-radius: 4px;
     font-weight: 400;
     font-size: 14px;
