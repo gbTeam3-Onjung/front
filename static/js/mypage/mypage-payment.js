@@ -753,7 +753,7 @@ const renderVolunteers = () => {
                         <td class="news-center-table-body-date">${
                             volunteer.date
                         }</td>
-                        <td>
+                        <td class="padding5">
                             <a
                                 class="jBsNEF btn-request btn-request--case-2"
                                 href="#"
