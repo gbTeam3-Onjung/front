@@ -19,18 +19,15 @@ body {
     font-size: 14px;
 }
 
-body,
-html {
+body, html {
     -webkit-text-size-adjust: none;
     -moz-text-size-adjust: none;
     text-size-adjust: none;
 }
 
-body,
-html {
+body, html {
     background-color: #fff;
-    font: 12px / 18px "Noto Sans KR", NanumGothic, "나눔고딕", "Nanum Gothic",
-        "맑은 고딕", "Malgun Gothic", Dotum;
+    font: 12px / 18px "Noto Sans KR", NanumGothic, "나눔고딕", "Nanum Gothic", "맑은 고딕", "Malgun Gothic", Dotum;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
@@ -67,8 +64,7 @@ html body #root #app .wrap {
     background-color: rgb(249, 250, 251);
 }
 
-.FPdYO > main,
-.FPdYO > menu.sub-tab {
+.FPdYO > main, .FPdYO > menu.sub-tab {
     margin: 0px auto;
     width: 1280px;
     height: 100%;
@@ -93,10 +89,10 @@ html body #root #app .wrap {
     border: 1px solid rgb(241, 241, 241);
     background-color: rgb(255, 255, 255);
     margin-bottom: 16px;
-    padding: 40px 40px;
+    padding: 40px 40px
 }
 
-.cRFSjf .edit-content-content-title {
+.cRFSjf .edit-content__content-title {
     font-size: 18px;
     font-weight: bold;
     line-height: 1.44;
@@ -156,8 +152,7 @@ img {
     height: 0px;
 }
 
-input,
-select {
+input, select {
     vertical-align: middle;
 }
 
@@ -196,7 +191,7 @@ select {
     width: 100%;
 }
 
-.cRFSjf .edit-content-input-label {
+.cRFSjf .edit-content__input-label {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
@@ -209,12 +204,12 @@ select {
     margin-bottom: 20px;
 }
 
-.cRFSjf .edit-content-input-label .bluestar {
+.cRFSjf .edit-content__input-label .bluestar {
     padding-left: 2px;
     color: rgb(38, 86, 246);
 }
 
-.cRFSjf .edit-content-input-label .orangestar {
+.cRFSjf .edit-content__input-label .orangestar {
     padding-left: 2px;
     color: orange;
 }
@@ -270,7 +265,7 @@ select {
     flex-shrink: 0;
 }
 
-.ecrUQs .edit-content-input-label {
+.ecrUQs .edit-content__input-label {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
@@ -283,26 +278,24 @@ select {
     margin-bottom: 20px;
 }
 
-body,
-html {
+body,html {
     background-color: #fff;
-    font: 12px/18px "Noto Sans KR", NanumGothic, "나눔고딕", "Nanum Gothic",
-        "맑은 고딕", "Malgun Gothic", Dotum;
+    font: 12px/18px "Noto Sans KR",NanumGothic,"나눔고딕","Nanum Gothic","맑은 고딕","Malgun Gothic",Dotum;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
     text-align: left;
-    width: 100%;
+    width: 100%
 }
 
-.ecrUQs .edit-content-update-btns {
+.ecrUQs .edit-content__update-btns {
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
     margin-bottom: 100px;
 }
 
-.ecrUQs .edit-content-update-btns button {
+.ecrUQs .edit-content__update-btns button {
     margin-right: 8px;
 }
 
@@ -347,7 +340,7 @@ html {
     margin-right: 4px;
 }
 
-.height128 {
+.height128{
     height: 128px !important;
 }
 
@@ -357,7 +350,7 @@ html {
     height: 12px;
     margin-right: 4px;
     margin-bottom: 2px;
-    color: rgb(242, 23, 36);
+    color: rgb(242, 23, 36);;
 }
 
 .ijBQbT.error {
@@ -367,6 +360,7 @@ html {
 .ijBQbT.focus {
     border: 1px solid rgb(38, 86, 246);
 }
+
 
 .ijBQbT.focus.error {
     border: 1px solid rgb(242, 23, 36);
@@ -381,11 +375,11 @@ html {
     cursor: default;
 }
 
-.name {
+.name{
     background-color: #e9e9e9;
 }
 
-.phoneNumber {
+.phoneNumber{
     background-color: #e9e9e9;
 }
 
@@ -400,15 +394,7 @@ html {
 
 
 
-.alert-approvemodal-inner-1u03v {
-    padding: 40px 51px;
-    box-shadow: rgba(0, 0, 0, .3);
-    box-sizing: border-box;
-    background: #fff;
-    border-radius: 16px;
-}
-
-.alert-refusemodal-inner-1u03v {
+.alert-modal-inner-1u03v {
     padding: 40px 51px;
     box-shadow: rgba(0, 0, 0, .3);
     box-sizing: border-box;
