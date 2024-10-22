@@ -16,12 +16,12 @@ dateInput.addEventListener("click", handleDateInputClick);
 
 // 문서 전체 클릭 시 동작 정의
 // date-input 내부의 요소를 제외하고 클릭하면 active 클래스 제거
-document.addEventListener("click", function (event) {
-    if (!event.target.closest(".date-input")) {
-        dateRange.classList.remove("active");
-    }
-});
-// 사이드배너 전환▲    ▼임시 데이터 목록
+// document.addEventListener("click", function (event) {
+//     if (!event.target.closest(".date-input")) {
+//         dateRange.classList.remove("active");
+//     }
+// });
+// 사이드배너 전환▲
 
 // 목록
 const payments = [
@@ -334,19 +334,6 @@ const boostTotalCount = boosts.filter(
 ).length;
 document.getElementById("boost-totalCount").textContent = boostTotalCount;
 
-// 후원 완료 숫자 증가
-const boostCompletedCount = boosts.filter(
-    (boost) => boost.status === "완료"
-).length;
-document.getElementById("boost-completedCount").textContent =
-    boostCompletedCount;
-
-// 후원 취소 숫자 감소
-const boostCancelCount = boosts.filter(
-    (boost) => boost.status === "취소"
-).length;
-document.getElementById("boost-cancelCount").textContent = boostCancelCount;
-
 /*********************기부**********************/
 const donaitions = [
     {
@@ -487,20 +474,6 @@ const donaitionTotalCount = donaitions.filter(
 ).length;
 document.getElementById("donaition-totalCount").textContent =
     donaitionTotalCount;
-
-// 기부 완료 숫자 증가
-const donaitionCompletedCount = donaitions.filter(
-    (donaition) => donaition.status === "완료"
-).length;
-document.getElementById("donaition-completedCount").textContent =
-    donaitionCompletedCount;
-
-// 기부 취소 숫자 감소
-const donaitionCancelCount = donaitions.filter(
-    (donaition) => donaition.status === "취소"
-).length;
-document.getElementById("donaition-cancelCount").textContent =
-    donaitionCancelCount;
 
 /*******************충전 하기********************/
 const charges = [
@@ -750,8 +723,9 @@ const renderVolunteers = () => {
                 <colgroup>
                     <col style="width: 60px;">
                     <col style="width: 60px;">
-                    <col style="width: 200px;">
+                    <col style="width: 110px;">
                     <col style="width: 104px;">
+                    <col style="width: 80px;">
                 </colgroup>
                 <thead class="news-center-table-head">
                     <tr>
@@ -759,6 +733,7 @@ const renderVolunteers = () => {
                         <th>봉사 시간</th>
                         <th>봉사 게시글 제목</th>
                         <th>날짜</th>
+                        <th>작성/수정</th>
                     </tr>
                 </thead>
                 <tbody class="news-center-table-body">
@@ -778,6 +753,23 @@ const renderVolunteers = () => {
                         <td class="news-center-table-body-date">${
                             volunteer.date
                         }</td>
+                        <td>
+                            <a
+                                class="jBsNEF btn-request btn-request--case-2"
+                                href="#"
+                                style="
+                                    margin:0px;
+                                "
+                                ><span
+                                    class="visual-correction"
+                                    >후기&nbsp;
+                                    작성하기
+                                    <div
+                                        class="request-description-tooltip"
+                                    ></div>
+                                </span>
+                            </a>
+                        </td>
                     </tr>
                 `
                     )
@@ -1104,7 +1096,7 @@ const gratitudeTotalCount = gratitudes.length;
 document.getElementById("gratitude-totalCount").textContent =
     gratitudeTotalCount;
 
-/*********************기부**********************/
+/*********************봉사 활동 신청 현황**********************/
 const applications = [
     {
         id: 1,
@@ -1148,12 +1140,12 @@ const applications = [
     },
 ];
 
-// 기부 내역 렌더링▼
+// 봉사 활동 신청 현황 렌더링▼
 const renderApplications = () => {
-    // 1. boost 배열 확인
+    // boost 배열 확인
     console.log(applications); // boost 배열이 제대로 정의되고, 데이터가 있는지 확인
 
-    // 2. HTML 요소 선택 확인
+    // HTML 요소 선택 확인
     const applicationList = document.querySelector(".application-list");
     const emptyComponent = document.querySelector(
         "#application .empty-component"
@@ -1161,8 +1153,13 @@ const renderApplications = () => {
 
     console.log(applicationList, emptyComponent); // 요소들이 정상적으로 선택되고 있는지 확인
 
-    // 이후 기존의 코드
-    if (applicationList.length === 0) {
+    // applicationList가 올바르게 선택되었는지 확인합니다.
+    if (!applicationList) {
+        console.error("applicationList 요소가 존재하지 않습니다.");
+        return;
+    }
+
+    if (applications.length === 0) {
         applicationList.style.display = "none";
         emptyComponent.style.display = "block";
     } else {
@@ -1171,26 +1168,31 @@ const renderApplications = () => {
         applicationList.innerHTML = `
             <table class="news-center-table" style="margin-top: 0; margin-bottom: 20px;">
                 <colgroup>
+                    <col style="width: 40px;">     
                     <col style="width: 57px;">
                     <col style="width: 132px;">
                     <col style="width: 150px;">
                     <col style="width: 104px;">
                 </colgroup>
                 <thead class="news-center-table-head">
-                    <a href="">
                     <tr>
+                        <th>
+                            <input type="checkbox" id="selectAll" />
+                        </th>
                         <th>승인 여부</th>
                         <th>닉네임 / 이름</th>
                         <th>핸드폰 번호</th>
-                        <th>결제 일</th>
+                        <th>신청 일</th>
                     </tr>
-                    </a>
                 </thead>
                 <tbody class="news-center-table-body">
                 ${applications
                     .map(
                         (application) => `
                     <tr class="news-data-rows" data-forloop="${application.id}">
+                        <td>
+                            <input type="checkbox" class="checkbox_idx" />
+                        </td>
                         <td class="news-center-table-body-number">${
                             application.status
                         }</td>
@@ -1210,11 +1212,23 @@ const renderApplications = () => {
                 </tbody>
             </table>
         `;
+
+        // 이벤트 리스너를 재설정합니다.
+        const selectAll = document.getElementById("selectAll");
+        if (selectAll) {
+            selectAll.addEventListener("change", () => {
+                const isChecked = selectAll.checked;
+                const individualCheckboxes =
+                    document.querySelectorAll(".checkbox_idx");
+                individualCheckboxes.forEach((checkbox) => {
+                    checkbox.checked = isChecked;
+                });
+            });
+        }
     }
 };
-renderApplications(applications);
 
-// 전체 항목 숫자 증가
+// // 전체 항목 숫자 증가
 const applicationTotalCount = applications.filter(
     (application) =>
         application.status === "대기" || application.status === "승인"
@@ -1233,6 +1247,24 @@ const donaitionApproval = applications.filter(
     (application) => application.status === "승인"
 ).length;
 document.getElementById("application-approval").textContent = donaitionApproval;
+
+// // 전체 선택 체크박스 로직
+
+document.addEventListener("DOMContentLoaded", () => {
+    renderApplications(); // 먼저 HTML을 렌더링합니다.
+
+    const selectAll = document.getElementById("selectAll");
+    if (selectAll) {
+        selectAll.addEventListener("change", () => {
+            const isChecked = selectAll.checked;
+            const individualCheckboxes =
+                document.querySelectorAll(".checkbox_idx");
+            individualCheckboxes.forEach((checkbox) => {
+                checkbox.checked = isChecked;
+            });
+        });
+    }
+});
 
 /*********************공통*********************/
 

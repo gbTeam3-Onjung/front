@@ -388,7 +388,9 @@ body,html {
 }
 
 
-
+#disableButton:hover{
+    background-color: rgba(38, 86, 246, 0.866);
+}
 
 
 

@@ -169,7 +169,7 @@ const autoSlide = () => {
     }
 };
 // 3초 간격으로 자동 슬라이드 실행
-autoSlideInterval = setInterval(autoSlide, 2000);
+autoSlideInterval = setInterval(autoSlide, 5000);
 
 // 좌우 화살표 클릭 이벤트 처리
 arrows.forEach((arrow) => {
@@ -216,7 +216,7 @@ arrows.forEach((arrow) => {
             }
         }
 
-        // autoSlideInterval = setInterval(autoSlide, 3000); // 자동 슬라이드 재개
+        autoSlideInterval = setInterval(autoSlide, 5000); // 자동 슬라이드 재개
 
         setTimeout(() => {
             arrowCheck = true; // 클릭 가능 상태로 플래그 재설정
