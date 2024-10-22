@@ -648,7 +648,7 @@ main .review-list-wrap {
     align-items: center;
     margin-bottom: 12px;
 }
-.avatar-container .review-content__avatar {
+.avatar-container .review-content-avatar {
     margin-right: 8px;
 }
 .avatar-default {
