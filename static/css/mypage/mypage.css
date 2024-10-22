@@ -1515,3 +1515,78 @@ div > ul {
 .announcement{
     margin-left: -0px;
 }
+
+.InpBox .Chk {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+.InpBox .Chk input {
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+}
+.InpBox .Chk .Lbl {
+    display: block;
+    position: relative;
+    color: var(--gray100);
+    font-size: 14px;
+    line-height: 20px;
+}
+.InpBox.Line .Chk .Lbl:before {
+    margin-right: 4px;
+    border-color: var(--white);
+}
+.InpBox .Chk input:checked ~ .Lbl:before {
+    border-color: var(--blue90);
+    background: var(--blue90);
+}
+.InpBox .Chk .Lbl:before {
+    display: inline-block;
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--gray70);
+    border-radius: 4px;
+    vertical-align: top;
+    background: #fff;
+    content: "";
+}
+
+.InpBox.Line .Chk .Lbl:after {
+    display: inline-block;
+    border-color: var(--gray80);
+}
+.InpBox.Line span .Lbl:after {
+    top: 5px;
+    left: 5px;
+}
+.InpBox.Line .Chk .Lbl:after {
+    display: inline-block;
+    border-color: var(--gray80);
+}
+.InpBox.Line span .Lbl:after {
+    top: 5px;
+    left: 5px;
+}
+.InpBox .Chk .Lbl:after {
+    display: none;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 8px;
+    height: 5px;
+    border-bottom: 2px solid var(--white);
+    border-left: 2px solid var(--white);
+    border-radius: 1px;
+    transform: rotate(-45deg);
+    content: "";
+}
+.InpBox .Chk input:checked ~ .Lbl:after {
+    display: inline-block;
+    border-color: var(--white);
+}

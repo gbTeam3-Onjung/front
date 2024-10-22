@@ -57,45 +57,45 @@ const showTab = (tabId, element) => {
     element.parentElement.classList.add("active");
 };
 
-document
-    .getElementById("mypage-link")
-    .addEventListener("click", () => showTab("mypage", this));
+// document
+//     .getElementById("mypage-link")
+//     .addEventListener("click", () => showTab("mypage", this));
 
-document
-    .getElementById("payment-link")
-    .addEventListener("click", () => showTab("payment", this));
+// document
+//     .getElementById("payment-link")
+//     .addEventListener("click", () => showTab("payment", this));
 
-document
-    .getElementById("boost-link")
-    .addEventListener("click", () => showTab("boost", this));
+// document
+//     .getElementById("boost-link")
+//     .addEventListener("click", () => showTab("boost", this));
 
-document
-    .getElementById("donation-link")
-    .addEventListener("click", () => showTab("donation", this));
+// document
+//     .getElementById("donation-link")
+//     .addEventListener("click", () => showTab("donation", this));
 
-document
-    .getElementById("charge-link")
-    .addEventListener("click", () => showTab("charge", this));
+// document
+//     .getElementById("charge-link")
+//     .addEventListener("click", () => showTab("charge", this));
 
-document
-    .getElementById("notice-link")
-    .addEventListener("click", () => showTab("notice", this));
+// document
+//     .getElementById("notice-link")
+//     .addEventListener("click", () => showTab("notice", this));
 
-document
-    .getElementById("volunteer-link")
-    .addEventListener("click", () => showTab("volunteer", this));
+// document
+//     .getElementById("volunteer-link")
+//     .addEventListener("click", () => showTab("volunteer", this));
 
-document
-    .getElementById("inquiry-link")
-    .addEventListener("click", () => showTab("inquiry", this));
+// document
+//     .getElementById("inquiry-link")
+//     .addEventListener("click", () => showTab("inquiry", this));
 
-document
-    .getElementById("postscript-link")
-    .addEventListener("click", () => showTab("postscript", this));
+// document
+//     .getElementById("postscript-link")
+//     .addEventListener("click", () => showTab("postscript", this));
 
-document
-    .getElementById("gratitude-link")
-    .addEventListener("click", () => showTab("gratitude", this));
+// document
+//     .getElementById("gratitude-link")
+//     .addEventListener("click", () => showTab("gratitude", this));
 
 ////////////////////////////////////////////////////////////////////////
 
