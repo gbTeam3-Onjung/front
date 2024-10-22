@@ -33,10 +33,91 @@ inquiryButtons.forEach((inquiryButton) => {
 
 document.addEventListener("DOMContentLoaded", function () {
     const options = document.querySelectorAll(".post-filter-option");
+    const inquiryOptions = document.querySelectorAll(
+        ".sort-filter-option.inquiry-list"
+    );
     const postListContainer = document.querySelector(
         ".ServiceTable_row_wrapper"
     );
+    const inquiryTableContainer = document.querySelector(
+        ".inquiryTable_container"
+    );
+    const inquiryTableHeader = document.querySelector(
+        ".inquiryTable_row.inquiryTable_header"
+    );
     let sortOrder = {}; // 각 옵션의 정렬 순서를 기억하기 위한 객체
+
+    function sortHelps(order) {
+        const helps = Array.from(
+            inquiryTableContainer.querySelectorAll(".inquiryTable_row.data_row")
+        );
+
+        helps.forEach((help) => (help.style.display = "flex"));
+
+        if (order === "작성일 순") {
+            helps.sort((a, b) => {
+                const dateA = new Date(
+                    a.querySelector(
+                        ".inquiryTable_cell.inquiry_date"
+                    ).textContent
+                );
+                const dateB = new Date(
+                    b.querySelector(
+                        ".inquiryTable_cell.inquiry_date"
+                    ).textContent
+                );
+                return sortOrder[order] === "asc"
+                    ? dateA - dateB
+                    : dateB - dateA;
+            });
+        } else if (order === "일반 문의") {
+            helps.forEach((help) => {
+                const type = help.querySelector(
+                    ".inquiryTable_cell.inquiry_type"
+                ).textContent;
+                if (!type.includes("일반 문의")) {
+                    help.style.display = "none";
+                }
+            });
+        } else if (order === "봉사단체 가입 문의") {
+            helps.forEach((help) => {
+                const type = help.querySelector(
+                    ".inquiryTable_cell.inquiry_type"
+                ).textContent;
+                if (!type.includes("봉사단체 가입 문의")) {
+                    help.style.display = "none";
+                }
+            });
+        }
+
+        inquiryTableContainer.innerHTML = ``;
+        inquiryTableContainer.innerHTML += inquiryTableHeader;
+        helps.forEach((help) => {
+            inquiryTableContainer.appendChild(help);
+        });
+    }
+
+    sortHelps();
+
+    inquiryOptions.forEach(function (inquiryOption) {
+        inquiryOption.addEventListener("click", function () {
+            const order = inquiryOption.textContent.trim();
+
+            // 클릭 시마다 정렬 순서 변경
+            sortOrder[order] = sortOrder[order] === "asc" ? "desc" : "asc";
+
+            // 모든 옵션의 선택된 클래스 초기화
+            inquiryOptions.forEach((inquiryOpt) =>
+                inquiryOpt.classList.remove("selected")
+            );
+
+            // 클릭된 옵션에 선택된 클래스 추가
+            inquiryOption.classList.add("selected");
+
+            // 선택된 옵션에 따라 정렬 또는 필터링 수행
+            sortHelps(order);
+        });
+    });
 
     function sortPosts(order) {
         const posts = Array.from(
@@ -186,5 +267,21 @@ notificationLinks.forEach((notificationLink) => {
         );
         console.log(notificationInquirySection);
         notificationInquirySection[0].classList.add("selected");
+    });
+});
+
+const inquiryAnswerButtons = document.querySelectorAll(
+    ".inquiryTable_cell button.editBtn"
+);
+
+inquiryAnswerButtons.forEach((inquiryAnswerButton) => {
+    inquiryAnswerButton.addEventListener("click", (e) => {
+        sections.forEach((section) => {
+            section.classList.remove("selected");
+        });
+        const inquiryAnswerSection = sections.filter(
+            (section) => section.dataset.value === "고객센터 문의 답변"
+        );
+        console.log(inquiryAnswerSection[0].classList.add("selected"));
     });
 });
