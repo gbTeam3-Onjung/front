@@ -28,14 +28,20 @@ tabs[0].classList.add("active"); // 첫 번째 탭 활성화
 commentSection.style.display = "none";
 commentInputSection.style.display = "none"; // 처음에는 댓글 작성 창 숨기기
 
-// 예시로 넣은 데이터
 const totalPrize = 50000;
-const currentPrize = 30000;
+const currentPrize = 30000; // 예시로 100% 이상을 넘는 값
 
+// 퍼센트 계산 (100% 이상일 수 있음)
 const percentage = Math.floor((currentPrize / totalPrize) * 100);
 
-document.querySelector(".graph-status .num").textContent = percentage;
-document.querySelector(".graph-bar span").style.width = `${percentage}%`;
+document.querySelector(".graph-status .num").textContent = `${percentage}`;
+
+// 그래프의 width는 최대 100%로 제한
+document.querySelector(".graph-bar span").style.width = `${Math.min(
+    percentage,
+    100
+)}%`;
+
 document.querySelector(
     ".total-prize"
 ).textContent = `${currentPrize} 포인트 / ${totalPrize} 포인트`;
@@ -102,8 +108,10 @@ const renderComments = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="contest-comment-buttons"></div>
+                    <div class="contest-comment-buttons">
+                    <button id= "update-btn">수정</button>
                     <button id= "delete-btn">삭제</button>
+                    </div>
                 </div>
             </article>
         `;
