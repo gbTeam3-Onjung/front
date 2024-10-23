@@ -400,7 +400,15 @@ html {
 
 
 
-.alert-modal-inner-1u03v {
+.alert-approvemodal-inner-1u03v {
+    padding: 40px 51px;
+    box-shadow: rgba(0, 0, 0, .3);
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 16px;
+}
+
+.alert-refusemodal-inner-1u03v {
     padding: 40px 51px;
     box-shadow: rgba(0, 0, 0, .3);
     box-sizing: border-box;
