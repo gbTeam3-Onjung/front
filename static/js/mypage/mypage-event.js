@@ -1313,32 +1313,29 @@ document.body.addEventListener("click", function (event) {
 });
 
 // 초기화 버튼 클릭 시 모든 .toggle의 active 클래스만 제거 (lnb-item의 active와 탭의 active는 유지)
-function resetToggleActiveClasses() {
-    dateButtons.forEach((toggleElement) =>
-        toggleElement.classList.remove("active")
-    );
-}
+dateButtons.forEach((toggleElement) =>
+    toggleElement.classList.remove("active")
+);
 
 // 모든 lnb-item이 active 상태로 변경될 때 해당 탭 컨테이너의 첫 번째 탭에 active 추가
-function activateFirstTab(lnbItem) {
-    // 모든 date-button의 active 상태 제거
-    dateButtons.forEach((toggleElement) => {
-        toggleElement.classList.remove("active");
-    });
 
-    // lnb-item과 관련된 tabsContainer의 첫 번째 탭에 active 추가
-    if (tabsContainers.length > 0) {
-        tabsContainers.forEach((tabsContainer) => {
-            if (lnbItem.classList.contains("active")) {
-                const tabs = tabsContainer.querySelectorAll(".tab");
-                tabs.forEach((tab) => tab.classList.remove("active"));
-                const firstTab = tabs[0];
-                if (firstTab) {
-                    firstTab.classList.add("active");
-                }
+// 모든 date-button의 active 상태 제거
+dateButtons.forEach((toggleElement) => {
+    toggleElement.classList.remove("active");
+});
+
+// lnb-item과 관련된 tabsContainer의 첫 번째 탭에 active 추가
+if (tabsContainers.length > 0) {
+    tabsContainers.forEach((tabsContainer) => {
+        if (lnbItem.classList.contains("active")) {
+            const tabs = tabsContainer.querySelectorAll(".tab");
+            tabs.forEach((tab) => tab.classList.remove("active"));
+            const firstTab = tabs[0];
+            if (firstTab) {
+                firstTab.classList.add("active");
             }
-        });
-    }
+        }
+    });
 }
 
 lnbItems.forEach((lnbItem) => {
@@ -1366,6 +1363,8 @@ lnbItems.forEach((lnbItem) => {
         attributeFilter: ["class"],
     });
 });
+
+/*************************************************************/
 
 // 승인버튼
 const approve = document.getElementById("approve");
