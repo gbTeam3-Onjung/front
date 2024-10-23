@@ -308,8 +308,27 @@ img {
     letter-spacing: -0.5px;
     width: 10%;
     background-color: white;
-    left: 600px;
+    margin-left: 5px;
 }
+#update-btn {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 0px;
+    text-align: center;
+    box-sizing: border-box;
+    color: rgb(38, 86, 246);
+    border: 1px solid rgb(38, 86, 246);
+    font-size: 15px;
+    line-height: 23px;
+    letter-spacing: -0.5px;
+    width: 10%;
+    background-color: white;
+}
+
 .attach-list {
     padding-top: 20px;
     padding-bottom: 20px;
