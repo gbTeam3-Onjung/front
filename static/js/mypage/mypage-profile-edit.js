@@ -134,5 +134,17 @@ document.getElementById("profile_image").addEventListener("change", (event) => {
     }
 });
 
-// 저장할 수 있는 조건이 아닐때 저장하기 버튼 비활성화
-// const disableButton = document.getElementById("#disableButton");
+// 저장하기 버튼 누를시 나올 모달 이벤트
+disableButton.addEventListener("click", (e) => {
+    if (e.target.id === "disableButton") {
+        if (!disableButton.classList.contains("disable")) {
+            document.querySelector(".modal").style.display = "flex";
+        }
+    }
+});
+
+document.getElementById("closeModal").addEventListener("click", (e) => {
+    if (e.target.id === "closeModal") {
+        document.querySelector(".modal").style.display = "none";
+    }
+});

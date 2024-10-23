@@ -753,7 +753,7 @@ const renderVolunteers = () => {
                         <td class="news-center-table-body-date">${
                             volunteer.date
                         }</td>
-                        <td>
+                        <td class="padding5">
                             <a
                                 class="jBsNEF btn-request btn-request--case-2"
                                 href="#"
@@ -1365,4 +1365,37 @@ lnbItems.forEach((lnbItem) => {
         attributes: true,
         attributeFilter: ["class"],
     });
+});
+
+// 승인버튼
+const approve = document.getElementById("approve");
+
+// 승인하기 버튼 누를시 나올 모달 이벤트
+approve.addEventListener("click", (e) => {
+    e.target.id === "approve";
+    document.querySelector(".approvemodal").style.display = "flex";
+});
+
+// 모달 닫는 버튼으로 display none으로 만드는 이벤트(승인)
+document.getElementById("approvecloseModal").addEventListener("click", (e) => {
+    if (e.target.id === "approvecloseModal") {
+        document.querySelector(".approvemodal").style.display = "none";
+    }
+});
+/****************************************************************/
+
+// 거절버튼
+const refuse = document.getElementById("refuse");
+
+// 거절하기 버튼 누를시 나올 모달 이벤트
+refuse.addEventListener("click", (e) => {
+    e.target.id === "refuse";
+    document.querySelector(".refusemodal").style.display = "flex";
+});
+
+// 모달 닫는 버튼으로 display none으로 만드는 이벤트(거절)
+document.getElementById("refusecloseModal").addEventListener("click", (e) => {
+    if (e.target.id === "refusecloseModal") {
+        document.querySelector(".refusemodal").style.display = "none";
+    }
 });
