@@ -86,12 +86,56 @@ document.addEventListener("DOMContentLoaded", function () {
             confirmButton.style.cursor = "default";
         }
     });
+    // 인증 완료 버튼 클릭 시 유효성 검사 (이메일 인증번호)
+    const confirmButton = document.querySelector(
+        ".register-email-code-box .button-btn-send"
+    );
+    confirmButton.addEventListener("click", function () {
+        if (isEmailCodeSent) {
+            const inputCode = emailCodeInput.value.trim();
+            const correctCode = "123456"; // 예시: 올바른 인증번호
+
+            const warningMessage = emailCodeInput
+                .closest(".register-with-btn-box")
+                .querySelector(".desc-span.warning-msg");
+
+            // 입력값이 없을 때 경고 메시지 표시
+            if (inputCode === "") {
+                showWarningMessage("인증번호를 입력해 주세요.", emailCodeInput);
+                emailCodeInput.classList.add("warning");
+                emailCodeInput.style.borderColor = "#f05050";
+            } else if (inputCode !== correctCode) {
+                // 인증번호가 틀렸을 때 경고 메시지 표시
+                showWarningMessage(
+                    "인증번호가 일치하지 않습니다.",
+                    emailCodeInput
+                );
+                emailCodeInput.classList.add("warning");
+                emailCodeInput.style.borderColor = "#f05050";
+            } else {
+                // 인증 성공 시 성공 메시지 표시 및 스타일 적용
+                clearInterval(emailTimerInterval);
+                countdownTimer.textContent = ""; // 타이머 초기화
+                emailCodeInput.classList.remove("warning");
+                emailCodeInput.classList.add("success-sign");
+                emailCodeInput.style.borderColor = "#189f14"; // 성공 시 색상 적용
+
+                if (warningMessage) {
+                    warningMessage.style.display = "none";
+                }
+
+                showSuccessMessage("인증 되었습니다.", emailCodeInput);
+            }
+        }
+    });
     // 인증 버튼 클릭 시 이메일 유효성 검사 및 인증번호 발송
     sendAuthButton.addEventListener("click", function () {
+        console.log("이메일 인증 버튼이 클릭되었습니다."); // 클릭 이벤트 확인용
         const emailValue = emailInput.value.trim();
 
         // 이메일 유효성 검사
         if (emailRegex.test(emailValue)) {
+            console.log("이메일 형식이 올바릅니다."); // 이메일 유효성 확인
             emailInput.classList.remove("warning");
             emailInput.classList.add("success-sign"); // 성공 스타일 추가
             emailInput.style.border = "1px solid #189f14"; // 성공 색상 적용
@@ -104,7 +148,6 @@ document.addEventListener("DOMContentLoaded", function () {
             emailCodeInput.classList.remove("success-sign", "warning");
             emailCodeInput.style.borderColor = "#ccc"; // 기본 테두리 색상 복원
             emailCodeInput.style.outline = ""; // 기본 아웃라인 복원
-            warningMessage.style.display = "none";
 
             // 기존 성공 및 경고 메시지 삭제
             const existingSuccessMessage = emailCodeBox.querySelector(
@@ -123,6 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             emailCodeBox.style.display = "block"; // 인증번호 입력란 표시
+            console.log("인증번호 입력란이 표시되었습니다.");
             isEmailCodeSent = true; // 인증번호 발송 상태로 설정
 
             // 10분 카운트다운 시작
@@ -158,6 +202,62 @@ document.addEventListener("DOMContentLoaded", function () {
             emailInput.style.borderColor = "#f05050"; // 경고 색상으로 변경
             showWarningMessage("이메일 형식이 올바르지 않습니다.", emailInput);
         }
+    });
+    // 인증 번호 입력 시 인증 완료 버튼 활성화 및 기본 포커스 스타일 적용 (이메일 인증번호)
+    emailCodeInput.addEventListener("input", function () {
+        const emailCodeValue = emailCodeInput.value.trim();
+
+        if (emailCodeValue.length > 0) {
+            confirmButton.classList.add("button-send-active"); // 인증 완료 버튼 활성화
+            confirmButton.style.cursor = "pointer"; // 커서 스타일 변경
+            emailCodeInput.style.borderColor = "blue"; // 기본 포커스 스타일 적용
+        } else {
+            confirmButton.classList.remove("button-send-active"); // 입력값이 없으면 비활성화
+            confirmButton.style.cursor = "default";
+            emailCodeInput.style.borderColor = "#ccc"; // 기본 테두리 색상으로 복원
+        }
+    });
+
+    completeButton.addEventListener("click", function () {
+        const emailValue = emailInput.value.trim();
+        const emailCodeValue = emailCodeInput.value.trim();
+        const phoneValue = phoneInput.value.trim();
+        const phoneCodeValue = phoneCodeInput.value.trim();
+
+        // 이메일 입력 필드가 비어 있을 때 경고 메시지 표시
+        if (emailValue.length === 0) {
+            showWarningMessage("이메일 주소를 입력해 주세요.", emailInput);
+            emailInput.classList.add("warning");
+            emailInput.style.borderColor = "#f05050"; // 경고 색상으로 변경
+        }
+
+        // 인증번호 입력 필드가 비어 있을 때 경고 메시지 표시
+        if (emailCodeValue.length === 0) {
+            showWarningMessage("인증번호를 입력해 주세요.", emailCodeInput);
+            emailCodeInput.classList.add("warning");
+            emailCodeInput.style.borderColor = "#f05050"; // 경고 색상으로 변경
+        }
+
+        // 전화번호 입력 필드가 비어 있을 때 경고 메시지 표시
+        if (phoneValue.length === 0) {
+            showWarningMessage("전화번호를 입력해 주세요.", phoneInput);
+            phoneInput.classList.add("warning");
+            phoneInput.style.borderColor = "#f05050"; // 경고 색상으로 변경
+        }
+
+        // 전화번호 인증번호 입력 필드가 비어 있을 때 경고 메시지 표시
+        if (phoneCodeValue.length === 0) {
+            showWarningMessage("인증번호를 입력해 주세요.", phoneCodeInput);
+            phoneCodeInput.classList.add("warning");
+            phoneCodeInput.style.borderColor = "#f05050"; // 경고 색상으로 변경
+        }
+
+        if (!checkbox.checked) {
+            checkboxWarningMessage.style.display = "block"; // 경고 메시지 표시
+        } else {
+            checkboxWarningMessage.style.display = "none"; // 체크박스가 체크되면 경고 메시지 숨기기
+        }
+        validatePasswords();
     });
     // ===============================================================================================
 
@@ -275,75 +375,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (phoneCodeValue.length > 0) {
             confirmPhoneButton.classList.add("button-send-phone-active"); // 인증 완료 버튼 활성화
             confirmPhoneButton.style.cursor = "pointer"; // 커서 스타일 변경
-        } else {
-            confirmPhoneButton.classList.remove("button-send-phone-active"); // 입력값이 없으면 비활성화
-            confirmPhoneButton.style.cursor = "default";
-        }
-    });
-    // 인증 번호 입력 시 인증 완료 버튼 활성화 및 기본 포커스 스타일 적용 (이메일 인증번호)
-    emailCodeInput.addEventListener("input", function () {
-        const emailCodeValue = emailCodeInput.value.trim();
-
-        if (emailCodeValue.length > 0) {
-            confirmButton.classList.add("button-send-active"); // 인증 완료 버튼 활성화
-            confirmButton.style.cursor = "pointer"; // 커서 스타일 변경
-            emailCodeInput.style.borderColor = "blue"; // 기본 포커스 스타일 적용
-        } else {
-            confirmButton.classList.remove("button-send-active"); // 입력값이 없으면 비활성화
-            confirmButton.style.cursor = "default";
-            emailCodeInput.style.borderColor = "#ccc"; // 기본 테두리 색상으로 복원
-        }
-    });
-
-    // 인증 완료 버튼 클릭 시 유효성 검사 (이메일 인증번호)
-    const confirmButton = document.querySelector(
-        ".register-email-code-box .button-btn-send"
-    );
-    confirmButton.addEventListener("click", function () {
-        if (isEmailCodeSent) {
-            const inputCode = emailCodeInput.value.trim();
-            const correctCode = "123456"; // 예시: 올바른 인증번호
-
-            const warningMessage = emailCodeInput
-                .closest(".register-with-btn-box")
-                .querySelector(".desc-span.warning-msg");
-
-            // 입력값이 없을 때 경고 메시지 표시
-            if (inputCode === "") {
-                showWarningMessage("인증번호를 입력해 주세요.", emailCodeInput);
-                emailCodeInput.classList.add("warning");
-                emailCodeInput.style.borderColor = "#f05050";
-            } else if (inputCode !== correctCode) {
-                // 인증번호가 틀렸을 때 경고 메시지 표시
-                showWarningMessage(
-                    "인증번호가 일치하지 않습니다.",
-                    emailCodeInput
-                );
-                emailCodeInput.classList.add("warning");
-                emailCodeInput.style.borderColor = "#f05050";
-            } else {
-                // 인증 성공 시 성공 메시지 표시 및 스타일 적용
-                clearInterval(emailTimerInterval);
-                countdownTimer.textContent = ""; // 타이머 초기화
-                emailCodeInput.classList.remove("warning");
-                emailCodeInput.classList.add("success-sign");
-                emailCodeInput.style.borderColor = "#189f14"; // 성공 시 색상 적용
-
-                if (warningMessage) {
-                    warningMessage.style.display = "none";
-                }
-
-                showSuccessMessage("인증 되었습니다.", emailCodeInput);
-            }
-        }
-    });
-    // 인증 번호 입력 시 인증 완료 버튼 활성화 및 기본 포커스 스타일 적용 (전화번호 인증번호)
-    phoneCodeInput.addEventListener("input", function () {
-        const phoneCodeValue = phoneCodeInput.value.trim();
-
-        if (phoneCodeValue.length > 0) {
-            confirmPhoneButton.classList.add("button-send-phone-active"); // 인증 완료 버튼 활성화
-            confirmPhoneButton.style.cursor = "pointer"; // 커서 스타일 변경
             phoneCodeInput.style.borderColor = "blue"; // 기본 포커스 스타일 적용
         } else {
             confirmPhoneButton.classList.remove("button-send-phone-active"); // 입력값이 없으면 비활성화
@@ -395,47 +426,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    completeButton.addEventListener("click", function () {
-        const emailValue = emailInput.value.trim();
-        const emailCodeValue = emailCodeInput.value.trim();
-        const phoneValue = phoneInput.value.trim();
-        const phoneCodeValue = phoneCodeInput.value.trim();
-
-        // 이메일 입력 필드가 비어 있을 때 경고 메시지 표시
-        if (emailValue.length === 0) {
-            showWarningMessage("이메일 주소를 입력해 주세요.", emailInput);
-            emailInput.classList.add("warning");
-            emailInput.style.borderColor = "#f05050"; // 경고 색상으로 변경
-        }
-
-        // 인증번호 입력 필드가 비어 있을 때 경고 메시지 표시
-        if (emailCodeValue.length === 0) {
-            showWarningMessage("인증번호를 입력해 주세요.", emailCodeInput);
-            emailCodeInput.classList.add("warning");
-            emailCodeInput.style.borderColor = "#f05050"; // 경고 색상으로 변경
-        }
-
-        // 전화번호 입력 필드가 비어 있을 때 경고 메시지 표시
-        if (phoneValue.length === 0) {
-            showWarningMessage("전화번호를 입력해 주세요.", phoneInput);
-            phoneInput.classList.add("warning");
-            phoneInput.style.borderColor = "#f05050"; // 경고 색상으로 변경
-        }
-
-        // 전화번호 인증번호 입력 필드가 비어 있을 때 경고 메시지 표시
-        if (phoneCodeValue.length === 0) {
-            showWarningMessage("인증번호를 입력해 주세요.", phoneCodeInput);
-            phoneCodeInput.classList.add("warning");
-            phoneCodeInput.style.borderColor = "#f05050"; // 경고 색상으로 변경
-        }
-
-        if (!checkbox.checked) {
-            checkboxWarningMessage.style.display = "block"; // 경고 메시지 표시
-        } else {
-            checkboxWarningMessage.style.display = "none"; // 체크박스가 체크되면 경고 메시지 숨기기
-        }
-        validatePasswords();
-    });
     // ===================================================================================================
 
     // 체크박스 상태가 변경될 때 경고 메시지 표시/숨기기
