@@ -1,4 +1,5 @@
-document.querySelector(".hkjhsp").addEventListener("click", function () {
+// 알림 팝업 토글
+document.querySelector(".notice-inner").addEventListener("click", function () {
     const notiPopup = document.querySelector(".noti-popup");
     const profilePopup = document.querySelector(".profile-popup");
 
@@ -25,6 +26,7 @@ document.querySelector("#gnb").addEventListener("mouseleave", function () {
     profilePopup.style.display = "none";
 });
 
+// 프로필 팝업 토글
 document.querySelector(".opener").addEventListener("click", function () {
     const profilePopup = document.querySelector(".profile-popup");
     const notiPopup = document.querySelector(".noti-popup");
