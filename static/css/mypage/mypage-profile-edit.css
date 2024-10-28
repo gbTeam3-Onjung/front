@@ -19,18 +19,15 @@ body {
     font-size: 14px;
 }
 
-body,
-html {
+body, html {
     -webkit-text-size-adjust: none;
     -moz-text-size-adjust: none;
     text-size-adjust: none;
 }
 
-body,
-html {
+body, html {
     background-color: #fff;
-    font: 12px / 18px "Noto Sans KR", NanumGothic, "나눔고딕", "Nanum Gothic",
-        "맑은 고딕", "Malgun Gothic", Dotum;
+    font: 12px / 18px "Noto Sans KR", NanumGothic, "나눔고딕", "Nanum Gothic", "맑은 고딕", "Malgun Gothic", Dotum;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
@@ -67,8 +64,7 @@ html body #root #app .wrap {
     background-color: rgb(249, 250, 251);
 }
 
-.FPdYO > main,
-.FPdYO > menu.sub-tab {
+.FPdYO > main, .FPdYO > menu.sub-tab {
     margin: 0px auto;
     width: 1280px;
     height: 100%;
@@ -93,7 +89,7 @@ html body #root #app .wrap {
     border: 1px solid rgb(241, 241, 241);
     background-color: rgb(255, 255, 255);
     margin-bottom: 16px;
-    padding: 40px 40px;
+    padding: 40px 40px
 }
 
 .cRFSjf .edit-content-content-title {
@@ -156,8 +152,7 @@ img {
     height: 0px;
 }
 
-input,
-select {
+input, select {
     vertical-align: middle;
 }
 
@@ -283,16 +278,14 @@ select {
     margin-bottom: 20px;
 }
 
-body,
-html {
+body,html {
     background-color: #fff;
-    font: 12px/18px "Noto Sans KR", NanumGothic, "나눔고딕", "Nanum Gothic",
-        "맑은 고딕", "Malgun Gothic", Dotum;
+    font: 12px/18px "Noto Sans KR",NanumGothic,"나눔고딕","Nanum Gothic","맑은 고딕","Malgun Gothic",Dotum;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
     text-align: left;
-    width: 100%;
+    width: 100%
 }
 
 .ecrUQs .edit-content-update-btns {
@@ -347,7 +340,7 @@ html {
     margin-right: 4px;
 }
 
-.height128 {
+.height128{
     height: 128px !important;
 }
 
@@ -357,7 +350,7 @@ html {
     height: 12px;
     margin-right: 4px;
     margin-bottom: 2px;
-    color: rgb(242, 23, 36);
+    color: rgb(242, 23, 36);;
 }
 
 .ijBQbT.error {
@@ -368,12 +361,9 @@ html {
     border: 1px solid rgb(38, 86, 246);
 }
 
+
 .ijBQbT.focus.error {
     border: 1px solid rgb(242, 23, 36);
-}
-
-.dnkuMk.disable:hover {
-    opacity: 1;
 }
 
 .dnkuMk.disable {
@@ -381,18 +371,93 @@ html {
     background-color: rgb(233, 235, 237);
 }
 
-.dnkuMk.disable {
+.dnkuMk.disable:hover {
     cursor: default;
 }
 
-.name {
+.name{
     background-color: #e9e9e9;
 }
 
-.phoneNumber {
+.phoneNumber{
     background-color: #e9e9e9;
 }
+
 
 #disableButton:hover {
     background-color: rgba(38, 86, 246, 0.866);
 }
+
+#disableButton.dnkuMk.disable:hover {
+    background-color: rgb(233, 235, 237);
+}
+
+
+
+.alert-modal-inner-1u03v {
+    padding: 40px 51px;
+    box-shadow: rgba(0, 0, 0, .3);
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 16px;
+}
+
+.alert-txt-box-2bji8 {
+    text-align: center;
+}
+
+.alert-txt-box-2bji8 span.alert-ico-1mtdg {
+    margin-bottom: 25px;
+    display: inline-block;
+    width: 60px;
+    height: 61px;
+    background: url(https://accounts-front.stunning.kr/assets/img/common/img-correct-check@2x.png) 50% 50% no-repeat;
+    background-size: 60px 61px;
+}
+
+.alert-ico-1mtdg{
+    word-break: keep-all;
+}
+
+.alert-txt-box-2bji8 p {
+    font-size: 15px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: -.288462px;
+}
+
+.alert-txt-box-2bji8 p {
+    font-weight: 700;
+    color: #6f7785;
+}
+
+p {
+    display: block;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+.alert-btn-complete-1qcb1 {
+    margin-top: 52px;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    background: #141414;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    vertical-align: middle;
+    font-family: "Pretendard" !important;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+

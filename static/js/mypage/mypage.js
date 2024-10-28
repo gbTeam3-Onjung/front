@@ -48,7 +48,7 @@ const showTab = (tabId, element) => {
     document.getElementById(tabId).classList.add("active");
 
     // 사이드바 메뉴의 활성화 상태 변경
-    const tablinks = document.querySelectorAll(".gNTKJg a");
+    const tablinks = document.querySelectorAll(".side-baner-wrap a");
     tablinks.forEach((link) => {
         link.classList.remove("active");
     });
@@ -56,55 +56,3 @@ const showTab = (tabId, element) => {
     // 현재 클릭된 요소의 부모 li에 active 클래스 추가
     element.parentElement.classList.add("active");
 };
-
-// document
-//     .getElementById("mypage-link")
-//     .addEventListener("click", () => showTab("mypage", this));
-
-// document
-//     .getElementById("payment-link")
-//     .addEventListener("click", () => showTab("payment", this));
-
-// document
-//     .getElementById("boost-link")
-//     .addEventListener("click", () => showTab("boost", this));
-
-// document
-//     .getElementById("donation-link")
-//     .addEventListener("click", () => showTab("donation", this));
-
-// document
-//     .getElementById("charge-link")
-//     .addEventListener("click", () => showTab("charge", this));
-
-// document
-//     .getElementById("notice-link")
-//     .addEventListener("click", () => showTab("notice", this));
-
-// document
-//     .getElementById("volunteer-link")
-//     .addEventListener("click", () => showTab("volunteer", this));
-
-// document
-//     .getElementById("inquiry-link")
-//     .addEventListener("click", () => showTab("inquiry", this));
-
-// document
-//     .getElementById("postscript-link")
-//     .addEventListener("click", () => showTab("postscript", this));
-
-// document
-//     .getElementById("gratitude-link")
-//     .addEventListener("click", () => showTab("gratitude", this));
-
-////////////////////////////////////////////////////////////////////////
-
-// // 결제 관리 - 결제 내역 js
-// document.addEventListener("DOMContentLoaded", function () {
-//     const labelElement = document.querySelector(".fIGvfF.date-range");
-//     if (labelElement) {
-//         labelElement.addEventListener("click", function () {
-//             this.classList.toggle("active");
-//         });
-//     }
-// });

@@ -68,16 +68,16 @@ html body #root #app .wrap {
     flex-direction: column;
 }
 
-.Guzgb {
+.mypage-whole {
     padding-top: 35px;
 }
 
-.Guzgb .mypage-whole-wrap {
+.mypage-whole .mypage-whole-wrap {
     overflow-x: hidden;
     margin-bottom: 200px;
 }
 
-.Guzgb .mypage-whole-wrap .mypage-box {
+.mypage-whole .mypage-whole-wrap .mypage-box {
     box-sizing: border-box;
     margin: 0px auto;
     max-width: 1440px;
@@ -87,18 +87,18 @@ html body #root #app .wrap {
     width: 100%;
 }
 
-.Guzgb .mypage-wrap.mypage-left-area {
+.mypage-whole .mypage-wrap.mypage-left-area {
     transition: 0.5s;
     min-width: 218px;
     max-width: 218px;
 }
 
-.Guzgb .mypage-whole-wrap .mypage-wrap {
+.mypage-whole .mypage-whole-wrap .mypage-wrap {
     display: inline-block;
     vertical-align: top;
 }
 
-.laWyuX {
+.mypage-member-container {
     background: rgb(255, 255, 255);
     border: 1px solid rgb(233, 235, 237);
     border-radius: 8px;
@@ -106,21 +106,21 @@ html body #root #app .wrap {
     min-width: 14.5%;
 }
 
-.laWyuX .mypage-member-info {
+.mypage-member-container .mypage-member-info {
     display: flex;
     flex-direction: column;
     -webkit-box-align: center;
     align-items: center;
 }
 
-.laWyuX .mypage-member-info .profile-thumb-img {
+.mypage-member-container .mypage-member-info .profile-thumb-img {
     position: relative;
     width: 54px;
     height: 54px;
     margin-bottom: 12px;
 }
 
-.laWyuX .mypage-member-info .profile-thumb-img .member-thumb {
+.mypage-member-container .mypage-member-info .profile-thumb-img .member-thumb {
     background-color: rgb(238, 238, 238);
     background-position: center center;
     background-repeat: no-repeat;
@@ -133,14 +133,14 @@ html body #root #app .wrap {
     object-fit: cover;
 }
 
-.laWyuX .mypage-member-info .member-id {
+.mypage-member-container .mypage-member-info .member-id {
     display: flex;
     flex-direction: column;
     -webkit-box-align: center;
     align-items: center;
 }
 
-.laWyuX .mypage-member-info .member-id .info-role {
+.mypage-member-container .mypage-member-info .member-id .info-role {
     background: rgba(38, 86, 246, 0.07);
     border-radius: 80px;
     box-sizing: border-box;
@@ -156,7 +156,7 @@ html body #root #app .wrap {
     font-weight: 700;
 }
 
-.laWyuX .mypage-member-info .member-id .info-nick {
+.mypage-member-container .mypage-member-info .member-id .info-nick {
     display: -webkit-box;
     /* overflow: hidden; */
     text-overflow: ellipsis;
@@ -172,7 +172,7 @@ html body #root #app .wrap {
     margin-bottom: 4px;
 }
 
-.laWyuX .mypage-member-info .member-id .info-email {
+.mypage-member-container .mypage-member-info .member-id .info-email {
     margin-bottom: 20px;
     color: rgb(142, 148, 160);
     font-size: 12px;
@@ -181,7 +181,7 @@ html body #root #app .wrap {
     font-weight: 400;
 }
 
-.laWyuX .member-profile {
+.mypage-member-container .member-profile {
     width: 91px;
     height: 32px;
     padding: 0px;
@@ -189,53 +189,15 @@ html body #root #app .wrap {
     font-weight: 400;
 }
 
-.biYqFz .visual-correction {
-    /* padding-bottom: 2px; */
-    content: "";
-    position: absolute;
-    inset: 0px;
-    border: 1px solid;
-    border-radius: 4px;
-    border-color: rgb(219, 222, 226);
-    width: 89px;
-    height: 20px;
-}
-
-.biYqFz {
-    position: relative;
-    display: inline-flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    border-radius: 4px;
-    cursor: pointer;
-    border: 0px;
-    text-align: center;
-    box-sizing: border-box;
-    background-color: rgb(255, 255, 255);
-    color: rgb(64, 74, 92);
-    padding: 6px 17px;
-    font-size: 12px;
-    line-height: 18px;
-    letter-spacing: -0.25px;
-    font-weight: 700;
-}
-
-.gNTzg {
-    padding-top: 24px;
-    padding-bottom: 80px;
-}
-
-.fLaAlD:first-child {
+.side-baner-header:first-child {
     border-top: unset;
 }
 
-.fLaAlD:first-child {
+.side-baner-header:first-child {
     padding: 0px 0px 16px;
 }
 
-.fLaAlD .lnb-title {
+.side-baner-header .lnb-title {
     width: 100%;
     padding: 11px 0px;
     color: rgb(16, 28, 51);
@@ -245,19 +207,19 @@ html body #root #app .wrap {
     font-weight: 700;
 }
 
-.fLaAlD .lnb-title > img {
+.side-baner-header .lnb-title > img {
     width: 18px;
     height: auto;
     margin-right: 13px;
 }
 /**************************************************************/
 /* li .없애기 */
-/* .hHDwuD > li{
+/* .side-baner-content-wrap > li{
     display: block;
 } */
 
 /* 최초 페이지(마이 프로필) */
-.hHDwuD .lnb-item.active > a {
+.side-baner-content-wrap .lnb-item.active > a {
     color: rgb(38, 86, 246);
     font-weight: 700;
     background: rgb(245, 248, 255);
@@ -265,7 +227,7 @@ html body #root #app .wrap {
 }
 
 /* 기본 css */
-.hHDwuD .lnb-item > a {
+.side-baner-content-wrap .lnb-item > a {
     width: 218px;
     padding: 10px 32px;
     box-sizing: border-box;
@@ -291,7 +253,7 @@ html body #root #app .wrap {
 
 /************************************************************************/
 
-.hLIslS {
+.side-baner-content {
     display: inline-block;
 }
 
@@ -313,12 +275,12 @@ h6 {
     font-size: inherit;
 }
 
-.fLaAlD {
+.side-baner-header {
     border-top: 1px solid rgb(219, 222, 226);
     padding: 16px 0px;
 }
 
-.hHDwuD .lnb-item {
+.side-baner-content-wrap .lnb-item {
     width: 100%;
     height: 41px;
 }
@@ -331,15 +293,15 @@ h6 {
     max-width: calc(100% - 302px);
 }
 
-.dSCesS .profile-page-contents {
+.dSCesS .profile-page-wrap {
     padding: 32px 0px 120px;
 }
 
-.cuAJGg {
+.profile-page-self-introduction {
     width: 100%;
 }
 
-.cuAJGg .sub-title1 {
+.profile-page-self-introduction .sub-title1 {
     font-size: 18px;
     line-height: 26px;
     letter-spacing: -0.5px;
@@ -347,7 +309,7 @@ h6 {
     margin-bottom: 16px;
 }
 
-.cuAJGg .content.empty {
+.profile-page-self-introduction .content.empty {
     color: rgb(111, 119, 133);
 }
 
@@ -392,7 +354,7 @@ h6 {
     font-weight: 500;
 }
 
-.cuAJGg .sub-title1 {
+.profile-page-self-introduction .sub-title1 {
     font-size: 18px;
     line-height: 26px;
     letter-spacing: -0.5px;
@@ -408,7 +370,7 @@ h6 {
     max-width: calc(100% - 302px);
 }
 
-.hpehoT > svg {
+.share-btn > svg {
     margin-right: 4px;
 }
 
@@ -421,11 +383,11 @@ h6 {
     height: 12px;
 }
 
-.dTHWVR .share-btn {
+.share-btn {
     display: none;
 }
 
-.dTHWVR .button {
+.profile-main-wirte .button {
     border-radius: 4px;
     font-weight: 400;
     font-size: 14px;
@@ -434,36 +396,23 @@ h6 {
     width: 100%;
 }
 
-.fUTKVI {
-    display: flex;
-    flex-direction: row-reverse;
-}
 
-.eUhkSO {
+.profile-edit-button {
     background-color: transparent;
     color: rgb(64, 74, 92);
     border: 1px solid rgb(219, 222, 226);
-    -webkit-box-pack: center;
-    justify-content: center;
     margin-top: 8px;
     cursor: pointer;
-    border-radius: 4px;
     width: 100%;
     height: 38px;
     -webkit-box-align: center;
-    align-items: center;
     font-weight: normal;
-}
-
-.hpehoT {
     position: relative;
     display: inline-flex;
     -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
     align-items: center;
     border-radius: 4px;
-    cursor: pointer;
     text-align: center;
     box-sizing: border-box;
     background-color: rgb(255 255 255 / 0%);
@@ -473,7 +422,10 @@ h6 {
     line-height: 21px;
     letter-spacing: -0.25px;
     font-weight: 500;
+    display: flex;
+    flex-direction: row-reverse;
 }
+
 
 .tab-content {
     min-height: 900px;
@@ -486,9 +438,7 @@ h6 {
 }
 
 /***********************************************/
-.etjTbk {
-    padding-top: 35px;
-}
+
 
 .mypage-wrap.mypage-right-area {
     width: calc(100% - 223px);
@@ -499,7 +449,7 @@ h6 {
     padding: 0px 0px 209px 20px;
 }
 
-.duyEZE {
+.right-contents-header {
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
@@ -526,7 +476,7 @@ h6 {
     font-weight: 500;
 }
 
-.gYyxfE .date-filter {
+.right-contents-main .date-filter {
     background-color: rgb(249, 250, 251);
     width: 100%;
     border-radius: 8px;
@@ -538,7 +488,7 @@ h6 {
     margin-bottom: 24px;
 }
 
-.gYyxfE .date-filter > .title {
+.right-contents-main .date-filter > .title {
     font-size: 14px;
     line-height: 21px;
     letter-spacing: -0.25px;
@@ -547,7 +497,7 @@ h6 {
     margin-right: 16px;
 }
 
-.gYyxfE .date-filter > .date-input {
+.right-contents-main .date-filter > .date-input {
     /* background-color: white; */
     margin-right: 15px;
 }
@@ -588,7 +538,7 @@ h6 {
     color: rgb(191, 198, 210);
 }
 
-.cAfwXx {
+.profile-page-svg {
     user-select: none;
     display: inline-block;
     fill: currentcolor;
@@ -597,16 +547,16 @@ h6 {
     height: 24px;
 }
 
-.gYyxfE .date-filter .date-button {
+.right-contents-main .date-filter .date-button {
     display: flex;
     margin-right: 16px;
 }
 
-.gYyxfE .date-filter .date-button > label:first-child {
+.right-contents-main .date-filter .date-button > label:first-child {
     border-radius: 4px 0px 0px 4px;
 }
 
-.gYyxfE .date-filter .date-button > label {
+.right-contents-main .date-filter .date-button > label {
     background-color: rgb(255, 255, 255);
     border-radius: 0px;
 }
@@ -646,7 +596,7 @@ h6 {
     border-color: rgb(38, 86, 246);
 }
 
-.gYyxfE .date-filter .date-button > label.active::before {
+.right-contents-main .date-filter .date-button > label.active::before {
     border-right-width: 1px;
 }
 
@@ -677,20 +627,20 @@ h6 {
 .fItXBi.active .check {
     display: inline-block;
 }
-.gYyxfE .date-filter .date-button > label:first-child::before {
+.right-contents-main .date-filter .date-button > label:first-child::before {
     border-radius: 4px 0px 0px 4px;
 }
 
-.gYyxfE .date-filter .date-button > label::before {
+.right-contents-main .date-filter .date-button > label::before {
     border-radius: 0px;
     border-right-width: 0px;
 }
 
-.gYyxfE .date-filter .date-button > label:last-child {
+.right-contents-main .date-filter .date-button > label:last-child {
     border-radius: 0px 4px 4px 0px;
 }
 
-.gYyxfE .date-filter .date-button > label:last-child::before {
+.right-contents-main .date-filter .date-button > label:last-child::before {
     border-radius: 0px 4px 4px 0px;
     border-right-width: 1px;
 }
@@ -827,7 +777,7 @@ h6 {
     border-bottom: 2px solid rgb(16, 28, 51);
 }
 
-.gYyxfE .empty {
+.right-contents-main .empty {
     padding: 80px;
 }
 
@@ -841,7 +791,6 @@ h6 {
     font-size: 15px;
     line-height: 23px;
     letter-spacing: -0.5px;
-    /* margin-top: 124px; */
     text-align: left;
 }
 
@@ -851,11 +800,6 @@ h6 {
 
 img {
     vertical-align: bottom;
-}
-
-.etjTbk .profile-contents-box-wrap {
-    margin-left: 59px;
-    padding: 0px 0px 209px 20px;
 }
 
 .iOhuaS {
@@ -969,7 +913,7 @@ img {
     color: rgb(38, 86, 246);
 }
 
-.hLIslS {
+.side-baner-content {
     display: inline-block;
 }
 
@@ -1353,7 +1297,7 @@ div > ul {
     line-height: 21px;
     letter-spacing: -0.25px;
     font-weight: 700;
-    margin-left: 565px;
+    margin-left: 650px;
     margin-bottom: 15px;
 }
 
@@ -1364,7 +1308,7 @@ div > ul {
 .bPfQvA
     .toolbar-area
     .toolbar-row
-    .btn-request--case-2
+    .btn-request-case-2
     .request-description-tooltip {
     background: rgb(255, 255, 255);
     border: 1.5px solid rgb(219, 222, 226);
@@ -1383,7 +1327,7 @@ div > ul {
 .bPfQvA
     .toolbar-area
     .toolbar-row
-    .btn-request--case-2
+    .btn-request-case-2
     .request-description-tooltip
     .info {
     display: flex;
@@ -1399,7 +1343,7 @@ div > ul {
 .bPfQvA
     .toolbar-area
     .toolbar-row
-    .btn-request--case-2
+    .btn-request-case-2
     .request-description-tooltip
     .info
     .icon {
@@ -1454,7 +1398,7 @@ div > ul {
     margin-bottom: 24px;
 }
 
-.jeOGCH {
+.profile-page-content {
     padding: 20px;
     width: 168px;
     height: 155px;
@@ -1466,14 +1410,14 @@ div > ul {
     margin: 10px;
 }
 
-.jeOGCH > svg {
+.profile-page-content > svg {
     display: block;
     width: 32px;
     height: 32px;
     color: rgb(191, 198, 210);
 }
 
-.cAfwXx {
+.profile-page-svg {
     user-select: none;
     display: inline-block;
     fill: currentcolor;
@@ -1486,13 +1430,13 @@ div > ul {
     margin: 10px;
 }
 
-.jeOGCH .career-info-content {
+.profile-page-content .career-info-content {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
 }
 
-.jeOGCH .sub-title2 {
+.profile-page-content .sub-title2 {
     margin-top: 4px;
     display: flex;
     flex-direction: row;
@@ -1500,7 +1444,7 @@ div > ul {
     align-items: center;
 }
 
-.jeOGCH .h1 {
+.profile-page-content .h1 {
     margin-top: 14px;
     font-size: 25px;
     line-height: 44px;
@@ -1508,7 +1452,7 @@ div > ul {
     font-weight: 700;
 }
 
-.jeOGCH .diff {
+.profile-page-content .diff {
     font-size: 14px;
     line-height: 21px;
     letter-spacing: -0.25px;
@@ -1602,4 +1546,86 @@ div > ul {
 .InpBox .Chk input:checked ~ .Lbl:after {
     display: inline-block;
     border-color: var(--white);
+}
+
+.withdraw-btn:hover{
+    background-color: rgb(56, 122, 252);
+}
+
+.btn-request:hover{
+    background-color: rgb(56, 122, 252);
+}
+
+td.padding5{
+    padding:5px;
+}
+
+
+#disableButton:hover {
+    background-color: rgba(38, 86, 246, 0.866);
+}
+
+.alert-modal-inner-1u03v {
+    padding: 40px 51px;
+    box-shadow: rgba(0, 0, 0, .3);
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 16px;
+}
+
+.alert-txt-box-2bji8 {
+    text-align: center;
+}
+
+.alert-txt-box-2bji8 span.alert-ico-1mtdg {
+    margin-bottom: 25px;
+    display: inline-block;
+    width: 60px;
+    height: 61px;
+    background: url(https://accounts-front.stunning.kr/assets/img/common/img-correct-check@2x.png) 50% 50% no-repeat;
+    background-size: 60px 61px;
+}
+
+.alert-ico-1mtdg{
+    word-break: keep-all;
+}
+
+.alert-txt-box-2bji8 p {
+    font-size: 15px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: -.288462px;
+}
+
+.alert-txt-box-2bji8 p {
+    font-weight: 700;
+    color: #6f7785;
+}
+
+p {
+    display: block;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+.alert-btn-complete-1qcb1 {
+    margin-top: 52px;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    background: #141414;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    vertical-align: middle;
+    font-family: "Pretendard" !important;
+    -webkit-font-smoothing: antialiased;
 }
