@@ -77,7 +77,7 @@ p {
     background-color: white;
     border-bottom: 1px solid rgb(219, 222, 226);
 }
-.ipkyrr .toolbar {
+.container .toolbar {
     background-color: rgb(255, 255, 255);
     min-width: 1200px;
     position: sticky;
@@ -86,7 +86,7 @@ p {
     width: 100%;
     z-index: 100;
 }
-.bpfqva .toolbar-area {
+.toobal-inner .toolbar-area {
     display: flex;
     flex-direction: column;
     margin: 0px auto;
@@ -96,7 +96,7 @@ p {
     min-width: 1200px;
     width: 100%;
 }
-.bpfqva .toolbar-area .toolbar-row {
+.toobal-inner .toolbar-area .toolbar-row {
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
@@ -104,22 +104,22 @@ p {
     align-items: center;
     height: 56px;
 }
-.bpfqva .toolbar-area .toolbar-row .toolbar-logo-wrap {
+.toobal-inner .toolbar-area .toolbar-row .toolbar-logo-wrap {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
 }
-.bpfqva .toolbar-area .toolbar-row .toolbar-logo-wrap .logo-wrap {
+.toobal-inner .toolbar-area .toolbar-row .toolbar-logo-wrap .logo-wrap {
     -webkit-box-align: center;
     align-items: center;
     cursor: pointer;
     display: flex;
 }
 
-.hlisis {
+.display-op {
     display: inline-block;
 }
-.bpfqva .toolbar-area .toolbar-row .toolbar-logo-wrap .logo-wrap .main-logo {
+.toobal-inner .toolbar-area .toolbar-row .toolbar-logo-wrap .logo-wrap .main-logo {
     width: 99px;
     image-rendering: -webkit-optimize-contrast;
     margin-right: 19px;
@@ -186,11 +186,11 @@ p {
     right: 16px;
     cursor: pointer;
 }
-.bpfqva .toolbar-area .toolbar-row .util {
+.toobal-inner .toolbar-area .toolbar-row .util {
     display: inline-block;
     margin-left: auto;
 }
-.bpfqva .toolbar-area .toolbar-row .util .util-btns > li {
+.toobal-inner .toolbar-area .toolbar-row .util .util-btns > li {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
@@ -198,10 +198,10 @@ p {
     margin-right: 14px;
     height: 56px;
 }
-.bpfqva .toolbar-area .toolbar-row ul.group > li {
+.toobal-inner .toolbar-area .toolbar-row ul.group > li {
     float: left;
 }
-.bpfqva .toolbar-area .toolbar-row .util .util-btns > li.btn-agency > a {
+.toobal-inner .toolbar-area .toolbar-row .util .util-btns > li.btn-agency > a {
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
@@ -209,7 +209,7 @@ p {
     align-items: start;
     color: rgb(16, 28, 51);
 }
-.bpfqva .toolbar-area .toolbar-row .util .util-btns > li > a {
+.toobal-inner .toolbar-area .toolbar-row .util .util-btns > li > a {
     display: block;
     position: relative;
     z-index: 1;
@@ -221,7 +221,7 @@ p {
     letter-spacing: -0.25px;
     font-weight: 500;
 }
-.bpfqva .toolbar-area .toolbar-row .util .util-btns > li.btn-agency > a div.hot {
+.toobal-inner .toolbar-area .toolbar-row .util .util-btns > li.btn-agency > a div.hot {
     color: rgb(255, 255, 255);
     border-radius: 32px;
     font-size: 10px;
@@ -229,7 +229,7 @@ p {
     letter-spacing: -0.25px;
     font-weight: 700;
 }
-.bpfqva .toolbar-area .toolbar-row .util .util-btns > li.btn-agency > a div {
+.toobal-inner .toolbar-area .toolbar-row .util .util-btns > li.btn-agency > a div {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -238,10 +238,10 @@ p {
     background: rgb(0, 189, 47);
     margin-left: 2px;
 }
-.bpfqva .toolbar-area .toolbar-row .util .util-btns > li:last-child {
+.toobal-inner .toolbar-area .toolbar-row .util .util-btns > li:last-child {
     margin-right: 0px;
 }
-.bpfqva .toolbar-area .toolbar-row .util .util-btns > li.btn-agency .agency-hover {
+.toobal-inner .toolbar-area .toolbar-row .util .util-btns > li.btn-agency .agency-hover {
     background: rgb(255, 255, 255);
     border: 1.5px solid rgb(219, 222, 226);
     border-radius: 80px;
@@ -255,15 +255,15 @@ p {
     box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 8px;
     z-index: 2;
 }
-.bpfqva .toolbar-area .toolbar-row .util .util-btns > li.btn-agency .agency-hover .info {
+.toobal-inner .toolbar-area .toolbar-row .util .util-btns > li.btn-agency .agency-hover .info {
     color: rgb(16, 28, 51);
 }
-.bpfqva .toolbar-area .toolbar-row .util .util-btns > li.btn-agency .agency-hover .info img {
+.toobal-inner .toolbar-area .toolbar-row .util .util-btns > li.btn-agency .agency-hover .info img {
     width: 13px;
     height: 13px;
     vertical-align: middle;
 }
-.bpfqva .toolbar-area .toolbar-row .util .util-btns > li.btn-agency .agency-hover .info .text {
+.toobal-inner .toolbar-area .toolbar-row .util .util-btns > li.btn-agency .agency-hover .info .text {
     font-weight: 700;
     font-size: 12px;
     line-height: 19.76px;
@@ -381,13 +381,13 @@ p {
     font-weight: 700;
     color: rgb(0, 189, 47);
 }
-.bpfqva .toolbar-area .toolbar-row.gnb-wrap .contest-btn-wrap {
+.toobal-inner .toolbar-area .toolbar-row.gnb-wrap .contest-btn-wrap {
     display: flex;
     flex-direction: row;
     -webkit-box-align: center;
     align-items: center;
 }
-.bpfqva .toolbar-area .toolbar-row.gnb-wrap .contest-btn-wrap .contest-btn-desc {
+.toobal-inner .toolbar-area .toolbar-row.gnb-wrap .contest-btn-wrap .contest-btn-desc {
     visibility: visible;
     padding-right: 12px;
     color: rgb(16, 28, 51);
@@ -396,13 +396,13 @@ p {
     font-size: 14px;
     font-weight: 500;
 }
-.bpfqva .toolbar-area .toolbar-row.gnb-wrap .contest-btn-wrap .contest-btn-desc .underline {
+.toobal-inner .toolbar-area .toolbar-row.gnb-wrap .contest-btn-wrap .contest-btn-desc .underline {
     text-decoration: underline;
 }
-.bpfqva .toolbar-area .toolbar-row .btn-request-case-2 {
+.toobal-inner .toolbar-area .toolbar-row .btn-request-case-2 {
     position: relative;
 }
-.bpfqva .toolbar-area .toolbar-row .btn-request {
+.toobal-inner .toolbar-area .toolbar-row .btn-request {
     border-radius: 80px;
     font-size: 15px;
     line-height: 23px;
@@ -410,7 +410,7 @@ p {
     font-weight: 700;
     padding: 6px 22px;
 }
-.jbsnef {
+.container-botton {
     position: relative;
     display: inline-flex;
     -webkit-box-pack: center;
@@ -430,10 +430,10 @@ p {
     letter-spacing: -0.25px;
     font-weight: 700;
 }
-.jbsnef .visual-correction {
+.container-botton .visual-correction {
     padding-bottom: 1px;
 }
-.bpfqva .toolbar-area .toolbar-row .btn-request-case-2 .request-description-tooltip {
+.toobal-inner .toolbar-area .toolbar-row .btn-request-case-2 .request-description-tooltip {
     background: rgb(255, 255, 255);
     border: 1.5px solid rgb(219, 222, 226);
     border-radius: 80px;
@@ -447,7 +447,7 @@ p {
     box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 8px;
     z-index: 2;
 }
-.bpfqva .toolbar-area .toolbar-row .btn-request-case-2 .request-description-tooltip .info {
+.toobal-inner .toolbar-area .toolbar-row .btn-request-case-2 .request-description-tooltip .info {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
@@ -457,11 +457,11 @@ p {
     letter-spacing: -0.25px;
     font-weight: 700;
 }
-.bpfqva .toolbar-area .toolbar-row .btn-request-case-2 .request-description-tooltip .info .icon {
+.toobal-inner .toolbar-area .toolbar-row .btn-request-case-2 .request-description-tooltip .info .icon {
     color: rgb(191, 198, 210);
     margin-right: 8px;
 }
-.bpfqva .toolbar-area .toolbar-row .btn-request-case-2 .request-description-tooltip .info .blue500 {
+.toobal-inner .toolbar-area .toolbar-row .btn-request-case-2 .request-description-tooltip .info .blue500 {
     color: rgb(38, 86, 246);
 }
 
@@ -472,17 +472,17 @@ p {
 .hrbuoa .toolbar-nav-item-link:hover {
     color: rgb(38, 86, 246);
 }
-.bpfqva .toolbar-area .toolbar-row .util .util-btns > li > a:hover {
+.toobal-inner .toolbar-area .toolbar-row .util .util-btns > li > a:hover {
     opacity: 0.7;
 }
-.hlisis:not([disabled]):hover, .hlisis:not([disabled]):focus {
+.display-op:not([disabled]):hover, .display-op:not([disabled]):focus {
     opacity: 0.8;
 }
-.bpfqva .toolbar-area .toolbar-row .util .util-btns > li.btn-agency:hover .agency-hover {
+.toobal-inner .toolbar-area .toolbar-row .util .util-btns > li.btn-agency:hover .agency-hover {
     visibility: visible;
     animation: 0.3s ease 0s 1 normal none running fadeInUp;
 }
-.bpfqva .toolbar-area .toolbar-row .btn-request-case-2:hover .request-description-tooltip {
+.toobal-inner .toolbar-area .toolbar-row .btn-request-case-2:hover .request-description-tooltip {
     visibility: visible;
     animation: 0.3s ease 0s 1 normal none running fadeInUp;
 }

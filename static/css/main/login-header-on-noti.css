@@ -84,7 +84,7 @@ p {
     background-color: white;
     border-bottom: 1px solid rgb(219, 222, 226);
 }
-.ipkyrr .toolbar {
+.container-toolbar .toolbar {
     background-color: rgb(255, 255, 255);
     min-width: 1200px;
     position: sticky;
@@ -93,7 +93,7 @@ p {
     width: 100%;
     z-index: 100;
 }
-.bpfqva .toolbar-area {
+.toobal-inner .toolbar-area {
     display: flex;
     flex-direction: column;
     margin: 0px auto;
@@ -103,7 +103,7 @@ p {
     min-width: 1200px;
     width: 100%;
 }
-.bpfqva .toolbar-area .toolbar-row {
+.toobal-inner .toolbar-area .toolbar-row {
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
@@ -111,22 +111,22 @@ p {
     align-items: center;
     height: 56px;
 }
-.bpfqva .toolbar-area .toolbar-row .toolbar-logo-wrap {
+.toobal-inner .toolbar-area .toolbar-row .toolbar-logo-wrap {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
 }
-.bpfqva .toolbar-area .toolbar-row .toolbar-logo-wrap .logo-wrap {
+.toobal-inner .toolbar-area .toolbar-row .toolbar-logo-wrap .logo-wrap {
     -webkit-box-align: center;
     align-items: center;
     cursor: pointer;
     display: flex;
 }
 
-.hlisis {
+.display-op {
     display: inline-block;
 }
-.bpfqva .toolbar-area .toolbar-row .toolbar-logo-wrap .logo-wrap .main-logo {
+.toobal-inner .toolbar-area .toolbar-row .toolbar-logo-wrap .logo-wrap .main-logo {
     width: 99px;
     image-rendering: -webkit-optimize-contrast;
     margin-right: 19px;
@@ -194,11 +194,11 @@ p {
     right: 16px;
     cursor: pointer;
 }
-.bpfqva .toolbar-area .toolbar-row .util {
+.toobal-inner .toolbar-area .toolbar-row .util {
     display: inline-block;
     margin-left: auto;
 }
-.bpfqva .toolbar-area .toolbar-row .util .util-btns > li {
+.toobal-inner .toolbar-area .toolbar-row .util .util-btns > li {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
@@ -206,10 +206,10 @@ p {
     margin-right: 14px;
     height: 56px;
 }
-.bpfqva .toolbar-area .toolbar-row ul.group > li {
+.toobal-inner .toolbar-area .toolbar-row ul.group > li {
     float: left;
 }
-.bpfqva .toolbar-area .toolbar-row .util .util-btns > li.btn-agency > a {
+.toobal-inner .toolbar-area .toolbar-row .util .util-btns > li.btn-agency > a {
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
@@ -217,7 +217,7 @@ p {
     align-items: start;
     color: rgb(16, 28, 51);
 }
-.bpfqva .toolbar-area .toolbar-row .util .util-btns > li > a {
+.toobal-inner .toolbar-area .toolbar-row .util .util-btns > li > a {
     display: block;
     position: relative;
     z-index: 1;
@@ -229,7 +229,7 @@ p {
     letter-spacing: -0.25px;
     font-weight: 500;
 }
-.bpfqva
+.toobal-inner
     .toolbar-area
     .toolbar-row
     .util
@@ -244,7 +244,7 @@ p {
     letter-spacing: -0.25px;
     font-weight: 700;
 }
-.bpfqva .toolbar-area .toolbar-row .util .util-btns > li.btn-agency > a div {
+.toobal-inner .toolbar-area .toolbar-row .util .util-btns > li.btn-agency > a div {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -253,10 +253,10 @@ p {
     background: rgb(0, 189, 47);
     margin-left: 2px;
 }
-.bpfqva .toolbar-area .toolbar-row .util .util-btns > li:last-child {
+.toobal-inner .toolbar-area .toolbar-row .util .util-btns > li:last-child {
     margin-right: 0px;
 }
-.bpfqva
+.toobal-inner
     .toolbar-area
     .toolbar-row
     .util
@@ -276,7 +276,7 @@ p {
     box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 8px;
     z-index: 2;
 }
-.bpfqva
+.toobal-inner
     .toolbar-area
     .toolbar-row
     .util
@@ -286,7 +286,7 @@ p {
     .info {
     color: rgb(16, 28, 51);
 }
-.bpfqva
+.toobal-inner
     .toolbar-area
     .toolbar-row
     .util
@@ -299,7 +299,7 @@ p {
     height: 13px;
     vertical-align: middle;
 }
-.bpfqva
+.toobal-inner
     .toolbar-area
     .toolbar-row
     .util
@@ -319,20 +319,20 @@ p {
     width: 1px;
     height: 10px;
 }
-.cgvbnx {
+.nav-container {
     -webkit-box-flex: 1;
     flex-grow: 1;
     overflow: auto;
 }
-.cgvbnx > ul {
+.nav-container > ul {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
 }
-.ibzkmy {
+.nav-inner {
     flex-shrink: 0;
 }
-.ibzkmy .toolbar-nav-item-link {
+.nav-inner .toolbar-nav-item-link {
     padding: 15px 0px 18px;
     display: flex;
     -webkit-box-align: center;
@@ -344,17 +344,17 @@ p {
     letter-spacing: -0.5px;
     font-weight: 700;
 }
-.ibzkmy .toolbar-nav-item-link > p {
+.nav-inner .toolbar-nav-item-link > p {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
 }
-.ibzkmy .toolbar-nav-item-link .toolbar-nav-item-icon {
+.nav-inner .toolbar-nav-item-link .toolbar-nav-item-icon {
     width: 12px;
     height: 12px;
     margin-right: 4px;
 }
-.cafwxx {
+.img-op {
     user-select: none;
     display: inline-block;
     fill: currentcolor;
@@ -362,11 +362,11 @@ p {
     width: 24px;
     height: 24px;
 }
-.cgvbnx > ul > li + li {
+.nav-container > ul > li + li {
     margin-left: 24px;
 }
 
-.ibzkmy .toolbar-nav-item-link .toolbar-nav-item-sup {
+.nav-inner .toolbar-nav-item-link .toolbar-nav-item-sup {
     margin-left: 4px;
     align-self: start;
     display: flex;
@@ -378,12 +378,12 @@ p {
     font-weight: 700;
     color: rgb(0, 189, 47);
 }
-.hrbuoa .toolbar-nav-item-link > p {
+.service-inner .toolbar-nav-item-link > p {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
 }
-.ifpvod {
+.icon-inner {
     user-select: none;
     display: inline-block;
     fill: currentcolor;
@@ -396,10 +396,10 @@ p {
     width: 1px;
     height: 16px;
 }
-.hrbuoa {
+.service-inner {
     flex-shrink: 0;
 }
-.hrbuoa .toolbar-nav-item-link {
+.service-inner .toolbar-nav-item-link {
     padding: 15px 0px 18px;
     /* display: flex; */
     -webkit-box-align: center;
@@ -413,7 +413,7 @@ p {
     position: absolute; /*추가*/
     margin-top: -27px; /*추가*/
 }
-.hrbuoa .toolbar-nav-item-link .toolbar-nav-item-sup {
+.service-inner .toolbar-nav-item-link .toolbar-nav-item-sup {
     margin-left: 4px;
     align-self: start;
     display: flex;
@@ -425,13 +425,13 @@ p {
     font-weight: 700;
     color: rgb(0, 189, 47);
 }
-.bpfqva .toolbar-area .toolbar-row.gnb-wrap .contest-btn-wrap {
+.toobal-inner .toolbar-area .toolbar-row.gnb-wrap .contest-btn-wrap {
     display: flex;
     flex-direction: row;
     -webkit-box-align: center;
     align-items: center;
 }
-.bpfqva
+.toobal-inner
     .toolbar-area
     .toolbar-row.gnb-wrap
     .contest-btn-wrap
@@ -444,7 +444,7 @@ p {
     font-size: 14px;
     font-weight: 500;
 }
-.bpfqva
+.toobal-inner
     .toolbar-area
     .toolbar-row.gnb-wrap
     .contest-btn-wrap
@@ -452,10 +452,10 @@ p {
     .underline {
     text-decoration: underline;
 }
-.bpfqva .toolbar-area .toolbar-row .btn-request-case-2 {
+.toobal-inner .toolbar-area .toolbar-row .btn-request-case-2 {
     position: relative;
 }
-.bpfqva .toolbar-area .toolbar-row .btn-request {
+.toobal-inner .toolbar-area .toolbar-row .btn-request {
     border-radius: 80px;
     font-size: 15px;
     line-height: 23px;
@@ -463,7 +463,7 @@ p {
     font-weight: 700;
     padding: 6px 22px;
 }
-.jbsnef {
+.button-container {
     position: relative;
     display: inline-flex;
     -webkit-box-pack: center;
@@ -483,10 +483,10 @@ p {
     letter-spacing: -0.25px;
     font-weight: 700;
 }
-.jbsnef .visual-correction {
+.button-container .visual-correction {
     padding-bottom: 1px;
 }
-.bpfqva
+.toobal-inner
     .toolbar-area
     .toolbar-row
     .btn-request-case-2
@@ -504,7 +504,7 @@ p {
     box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 8px;
     z-index: 2;
 }
-.bpfqva
+.toobal-inner
     .toolbar-area
     .toolbar-row
     .btn-request-case-2
@@ -519,7 +519,7 @@ p {
     letter-spacing: -0.25px;
     font-weight: 700;
 }
-.bpfqva
+.toobal-inner
     .toolbar-area
     .toolbar-row
     .btn-request-case-2
@@ -529,7 +529,7 @@ p {
     color: rgb(191, 198, 210);
     margin-right: 8px;
 }
-.bpfqva
+.toobal-inner
     .toolbar-area
     .toolbar-row
     .btn-request-case-2
@@ -539,21 +539,21 @@ p {
     color: rgb(38, 86, 246);
 }
 
-.ibzkmy .toolbar-nav-item-link:hover {
+.nav-inner .toolbar-nav-item-link:hover {
     color: rgb(38, 86, 246);
 }
 
-.hrbuoa .toolbar-nav-item-link:hover {
+.service-inner .toolbar-nav-item-link:hover {
     color: rgb(38, 86, 246);
 }
-.bpfqva .toolbar-area .toolbar-row .util .util-btns > li > a:hover {
+.toobal-inner .toolbar-area .toolbar-row .util .util-btns > li > a:hover {
     opacity: 0.7;
 }
-.hlisis:not([disabled]):hover,
-.hlisis:not([disabled]):focus {
+.display-op:not([disabled]):hover,
+.display-op:not([disabled]):focus {
     opacity: 0.8;
 }
-.bpfqva
+.toobal-inner
     .toolbar-area
     .toolbar-row
     .util
@@ -563,7 +563,7 @@ p {
     visibility: visible;
     animation: 0.3s ease 0s 1 normal none running fadeInUp;
 }
-.bpfqva
+.toobal-inner
     .toolbar-area
     .toolbar-row
     .btn-request-case-2:hover
@@ -572,10 +572,10 @@ p {
     animation: 0.3s ease 0s 1 normal none running fadeInUp;
 }
 
-.bpfqva .toolbar-area .toolbar-row .util .util-btns > li.notice {
+.toobal-inner .toolbar-area .toolbar-row .util .util-btns > li.notice {
     margin-right: 0px;
 }
-.bpfqva .toolbar-area .toolbar-row .util .util-btns > li.notice > a {
+.toobal-inner .toolbar-area .toolbar-row .util .util-btns > li.notice > a {
     width: 35px;
     height: 40px;
     display: flex;
@@ -586,7 +586,7 @@ p {
     margin-top: 0px;
     margin-right: 0px;
 }
-.bpfqva .toolbar-area .toolbar-row .util .util-btns > li.member div.opener {
+.toobal-inner .toolbar-area .toolbar-row .util .util-btns > li.member div.opener {
     display: flex;
     position: relative;
     height: 40px;
@@ -595,7 +595,7 @@ p {
     -webkit-box-align: center;
     align-items: center;
 }
-.bpfqva .toolbar-area .toolbar-row .util .util-btns > li.member .profile {
+.toobal-inner .toolbar-area .toolbar-row .util .util-btns > li.member .profile {
     background: rgb(245, 245, 245);
     border: 1px solid rgb(245, 245, 245);
     border-radius: 50%;
@@ -604,7 +604,7 @@ p {
     height: 34px;
     object-fit: cover;
 }
-.bpfqva
+.toobal-inner
     .toolbar-area
     .toolbar-row
     .util
@@ -613,7 +613,7 @@ p {
     div.opener::after {
     transform: rotate(-180deg);
 }
-.bpfqva
+.toobal-inner
     .toolbar-area
     .toolbar-row
     .util
@@ -630,12 +630,12 @@ p {
     transition: transform 0.3s;
     width: 12px;
 }
-.bpfqva .toolbar-area .toolbar-row .util .util-popup {
+.toobal-inner .toolbar-area .toolbar-row .util .util-popup {
     position: absolute;
     top: 16px;
     right: 12px;
 }
-.hvowwg {
+.profile-container {
     display: flex;
     font-size: 15px;
     line-height: 23px;
@@ -644,10 +644,10 @@ p {
     right: 0px;
     top: 30px;
 }
-.hvowwg .tooltip-content.show {
+.profile-container .tooltip-content.show {
     visibility: visible;
 }
-.hvowwg .tooltip-content {
+.profile-container .tooltip-content {
     background: rgb(255, 255, 255);
     box-shadow: rgba(7, 42, 68, 0.2) 0px 4px 14px 0px;
     border-radius: 5px;
@@ -657,7 +657,7 @@ p {
     transform: translate(-100%, 0px);
     padding: 24px 16px 0px;
 }
-.hvowwg .tooltip-content {
+.profile-container .tooltip-content {
     margin-top: 16px;
     --top: 0;
     --bottom: 0;
@@ -668,7 +668,7 @@ p {
     left: 50%;
     top: 100%;
 }
-.hvowwg .tooltip-content {
+.profile-container .tooltip-content {
     /* white-space: pre; */
     text-align: center;
     position: absolute;
@@ -682,7 +682,7 @@ p {
     border-radius: 5px;
     z-index: 10;
 }
-.hvowwg .tooltip-content::before {
+.profile-container .tooltip-content::before {
     position: absolute;
     height: 0px;
     width: 0px;
@@ -702,7 +702,7 @@ p {
         rgba(255, 255, 255, 0) rgb(219, 222, 226);
 }
 
-.hvowwg .tooltip-content::after {
+.profile-container .tooltip-content::after {
     position: absolute;
     height: 0px;
     width: 0px;
@@ -722,17 +722,17 @@ p {
         rgba(255, 255, 255, 0) rgb(255, 255, 255);
     margin-top: 1px;
 }
-.hvowwg .gnb-profile-box-content {
+.profile-container .gnb-profile-box-content {
     width: 349px;
     display: flex;
     flex-direction: column;
     -webkit-box-align: center;
     align-items: center;
 }
-.hvowwg .gnb-profile-box-content .gnb-profile-box-user > a {
+.profile-container .gnb-profile-box-content .gnb-profile-box-user > a {
     position: relative;
 }
-.imlsut {
+.img-profile {
     display: block;
     width: fit-content;
     height: fit-content;
@@ -740,14 +740,14 @@ p {
     background-color: white;
     border-radius: 50%;
 }
-.imlsut > img {
+.img-profile > img {
     width: 86px;
     height: 86px;
     display: block;
     border-radius: 50%;
     border: 1px solid rgb(245, 246, 247);
 }
-.hvowwg
+.profile-container
     .gnb-profile-box-content
     .gnb-profile-box-user
     > a
@@ -761,7 +761,7 @@ p {
     background-color: white;
     border-radius: 50%;
 }
-.hvowwg
+.profile-container
     .gnb-profile-box-content
     .gnb-profile-box-user
     > a
@@ -770,13 +770,13 @@ p {
     height: 10px;
     width: 10px;
 }
-.hvowwg
+.profile-container
     .gnb-profile-box-content
     .gnb-profile-box-user
     .gnb-profile-box-user-badge {
     margin: 8px 0px;
 }
-.hmilgb {
+.uesr-status {
     display: inline-flex;
     -webkit-box-pack: center;
     justify-content: center;
@@ -797,20 +797,20 @@ p {
     --sub-color: #2656f612;
     --border-color: #2656f64c;
 }
-.hvowwg .gnb-profile-box-content .gnb-profile-box-user .user-nick-wrapper {
+.profile-container .gnb-profile-box-content .gnb-profile-box-user .user-nick-wrapper {
     font-size: 15px;
     line-height: 23px;
     letter-spacing: -0.5px;
     font-weight: 700;
 }
-.ktmctf {
+.nick-container {
     display: flex;
     width: fit-content;
     -webkit-box-align: center;
     align-items: center;
     gap: 4px;
 }
-.jqtfdi {
+.nick-inner {
     display: -webkit-box;
     text-overflow: ellipsis;
     white-space: pre-wrap;
@@ -820,14 +820,14 @@ p {
     /* -webkit-line-clamp: 1; */
     word-break: break-word;
 }
-.hvowwg .gnb-profile-box-content .gnb-profile-box-menus {
+.profile-container .gnb-profile-box-content .gnb-profile-box-menus {
     display: flex;
     flex-wrap: wrap;
     -webkit-box-pack: center;
     justify-content: center;
     margin: 24px 0px;
 }
-.hvowwg
+.profile-container
     .gnb-profile-box-content
     .gnb-profile-box-menus
     .gnb-profile-box-menus-item {
@@ -841,7 +841,7 @@ p {
     padding: 24px 0px;
     font-weight: 400;
 }
-.hvowwg
+.profile-container
     .gnb-profile-box-content
     .gnb-profile-box-menus
     .gnb-profile-box-menus-item
@@ -850,7 +850,7 @@ p {
     height: 32px;
     margin-bottom: 8px;
 }
-.hvowwg .gnb-profile-box-content .gnb-profile-box-actions {
+.profile-container .gnb-profile-box-content .gnb-profile-box-actions {
     width: 100%;
     display: flex;
     -webkit-box-align: center;
@@ -858,7 +858,7 @@ p {
     border-top: 1px solid rgb(233, 235, 237);
     font-weight: 400;
 }
-.hvowwg .gnb-profile-box-content .gnb-profile-box-actions a {
+.profile-container .gnb-profile-box-content .gnb-profile-box-actions a {
     position: relative;
     padding: 24px 0px;
     width: 100%;
@@ -868,14 +868,14 @@ p {
     -webkit-box-pack: center;
     justify-content: center;
 }
-.hvowwg .gnb-profile-box-content .gnb-profile-box-actions a + a::before {
+.profile-container .gnb-profile-box-content .gnb-profile-box-actions a + a::before {
     content: "";
     position: absolute;
     left: 0px;
     height: 1em;
     border-left: 1px solid rgb(233, 235, 237);
 }
-.bvvilt {
+.tooltip-container {
     display: flex;
     font-size: 15px;
     line-height: 23px;
@@ -884,10 +884,10 @@ p {
     right: -61px;
     top: 30px;
 }
-.bvvilt .tooltip-content.show {
+.tooltip-container .tooltip-content.show {
     visibility: visible;
 }
-.bvvilt .tooltip-content {
+.tooltip-container .tooltip-content {
     --translateX: 160px;
     transform: translate(-100%, 0px);
     padding: 0px;
@@ -914,7 +914,7 @@ p {
     justify-content: center;
     z-index: 10;
 }
-.bvvilt .tooltip-content::before {
+.tooltip-container .tooltip-content::before {
     position: absolute;
     height: 0px;
     width: 0px;
@@ -933,7 +933,7 @@ p {
     border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0)
         rgba(255, 255, 255, 0) rgb(219, 222, 226);
 }
-.bvvilt .tooltip-content::after {
+.tooltip-container .tooltip-content::after {
     position: absolute;
     height: 0px;
     width: 0px;
@@ -953,11 +953,11 @@ p {
         rgba(255, 255, 255, 0) rgb(255, 255, 255);
     margin-top: 1px;
 }
-.jtevuk {
+.tooltip-inner {
     width: 292px;
     height: 411px;
 }
-.jtevuk .noti-head {
+.tooltip-inner .noti-head {
     text-align: left;
     height: 41px;
     padding: 10px 20px;
@@ -968,11 +968,11 @@ p {
     font-weight: 500;
     /* border-bottom: 1px solid rgb(219, 222, 226); */
 }
-.jtevuk .noti-head > span {
+.tooltip-inner .noti-head > span {
     color: rgb(38, 86, 246);
     margin-left: 4px;
 }
-.jtevuk .no-noti {
+.tooltip-inner .no-noti {
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
@@ -983,12 +983,12 @@ p {
     text-align: center;
     padding: 0px;
 }
-.jtevuk .no-noti > div > img {
+.tooltip-inner .no-noti > div > img {
     width: 28px;
     height: 28px;
     margin-bottom: 4px;
 }
-.jtevuk .no-noti > div > p {
+.tooltip-inner .no-noti > div > p {
     margin-bottom: 8px;
     color: rgb(16, 28, 51);
     font-size: 14px;
@@ -996,7 +996,7 @@ p {
     letter-spacing: -0.25px;
     font-weight: 400;
 }
-.jtevuk .no-noti > div > span {
+.tooltip-inner .no-noti > div > span {
     text-align: center;
     color: rgb(111, 119, 133);
     font-size: 12px;
@@ -1004,7 +1004,7 @@ p {
     letter-spacing: -0.25px;
     font-weight: 500;
 }
-.jtevuk .no-noti > div > span {
+.tooltip-inner .no-noti > div > span {
     text-align: center;
     color: rgb(111, 119, 133);
     font-size: 12px;
@@ -1018,14 +1018,14 @@ p {
 .profile-popup {
     display: none; /* 처음에 숨겨진 상태로 설정 */
 }
-.hkjhsp {
+.notice-inner {
     display: inline-block;
     margin-top: 5px;
     margin-right: -7px;
     margin-left: -3px;
 }
 
-.hvowwg .gnb-profile-box-content .gnb-profile-box-user {
+.profile-container .gnb-profile-box-content .gnb-profile-box-user {
     display: flex;
     flex-direction: column;
     -webkit-box-align: center;
@@ -1067,7 +1067,7 @@ p {
 .noti-box {
     border-bottom: 1px solid rgb(219, 222, 226);
 }
-.bpfqva
+.toobal-inner
     .toolbar-area
     .toolbar-row
     .util
@@ -1076,7 +1076,7 @@ p {
     div.opener:hover {
     opacity: 0.7;
 }
-.hkjhsp::after {
+.notice-inner::after {
     content: "•";
     color: #f00;
     position: absolute;
